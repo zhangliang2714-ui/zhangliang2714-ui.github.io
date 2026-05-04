@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>折纸结构 3D 可视化</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>典型折纸结构 3D 可视化</h1>
+    <p>鼠标左键旋转、滚轮缩放、右键平移。按 <kbd>R</kbd> 重置视角。</p>
+  </header>
+
+  <main>
+    <aside class="panel">
+      <h2>模型列表</h2>
+      <button data-model="miura" class="active">Miura-ori 折纸板</button>
+      <button data-model="waterbomb">Waterbomb 管</button>
+      <button data-model="kresling">Kresling 折纸筒</button>
+      <p class="hint">你可以先从 Kresling 折纸筒开始，它和你示例图中的螺旋折纹最接近。</p>
+    </aside>
+    <section id="viewer"></section>
+  </main>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>
