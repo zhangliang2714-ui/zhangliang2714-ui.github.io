@@ -16,6 +16,9 @@
     .panel h2 { margin:4px 0 10px; font-size:16px; }
     .panel button { width:100%; text-align:left; border:1px solid #45557f; background:#24314d; color:var(--text); border-radius:10px; padding:10px; margin:0 0 8px; cursor:pointer; }
     .panel button.active { border-color:var(--accent); background:#334670; }
+    .panel label { display:block; font-size:13px; margin:10px 0 4px; opacity:.9; }
+    .panel input[type="range"] { width:100%; }
+    .value { font-size:12px; opacity:.85; margin-bottom:8px; }
     .tip { font-size:13px; opacity:.85; line-height:1.5; }
     #viewer { border:1px solid var(--line); border-radius:14px; overflow:hidden; min-height:420px; }
     kbd { background:#2e3c61; border-radius:4px; padding:0 6px; }
@@ -34,6 +37,9 @@
       <button data-model="miura">Miura-ori 折纸板</button>
       <button data-model="waterbomb">Waterbomb 管</button>
       <button data-model="kresling" class="active">Kresling 折纸筒</button>
+      <label for="compression">轴向压缩（受力变形）</label>
+      <input id="compression" type="range" min="0" max="100" value="0" />
+      <div class="value">压缩量：<span id="compressionValue">0%</span></div>
       <p class="tip">这是单一 <code>index.html</code> 文件，不需要安装依赖。你可以直接双击打开，或用本地服务打开。</p>
     </aside>
     <section id="viewer"></section>
@@ -67,6 +73,10 @@
 
     const modelGroup = new THREE.Group();
     scene.add(modelGroup);
+    const compressionInput = document.getElementById('compression');
+    const compressionValueEl = document.getElementById('compressionValue');
+    let currentModel = 'kresling';
+    let compression = 0;
 
     function clearModels(){ while(modelGroup.children.length) modelGroup.remove(modelGroup.children[0]); }
 
@@ -125,16 +135,19 @@
       modelGroup.add(new THREE.Mesh(geo, mat));
     }
 
-    function buildKresling(){
+    function buildKresling(c = 0){
       clearModels();
       const mat=new THREE.MeshStandardMaterial({ color:0xb59cff, metalness:0.25, roughness:0.35, side:THREE.DoubleSide });
       const h=5.2,n=8,levels=9,r=1.5;
       const geo=new THREE.BufferGeometry(), vertices=[], indices=[];
+      const compressedHeight = h * (1 - 0.55 * c);
+      const maxTwist = Math.PI * (0.95 + 0.9 * c);
+      const bulge = 0.16 + 0.3 * c;
       for(let j=0;j<=levels;j++){
-        const v=j/levels, twist=v*Math.PI*0.95, yy=(v-0.5)*h;
+        const v=j/levels, twist=v*maxTwist, yy=(v-0.5)*compressedHeight;
         for(let i=0;i<n;i++){
           const angle=(i/n)*Math.PI*2+twist;
-          const rr=r+Math.sin((i+j)*Math.PI)*0.16;
+          const rr=r+Math.sin((i+j)*Math.PI)*bulge;
           vertices.push(Math.cos(angle)*rr,yy,Math.sin(angle)*rr);
         }
       }
@@ -149,13 +162,23 @@
       modelGroup.add(new THREE.Mesh(geo, mat));
     }
 
-    const builders = { miura:buildMiura, waterbomb:buildWaterbomb, kresling:buildKresling };
+    function renderModelByName(name){
+      if(name === 'kresling') buildKresling(compression);
+      else if(name === 'miura') buildMiura();
+      else buildWaterbomb();
+    }
     document.querySelectorAll('button[data-model]').forEach(btn=>{
       btn.addEventListener('click',()=>{
         document.querySelectorAll('button[data-model]').forEach(b=>b.classList.remove('active'));
         btn.classList.add('active');
-        builders[btn.dataset.model]();
+        currentModel = btn.dataset.model;
+        renderModelByName(currentModel);
       });
+    });
+    compressionInput.addEventListener('input', () => {
+      compression = Number(compressionInput.value) / 100;
+      compressionValueEl.textContent = `${compressionInput.value}%`;
+      if (currentModel === 'kresling') renderModelByName('kresling');
     });
 
     window.addEventListener('keydown', e=>{
@@ -171,7 +194,7 @@
     }
     window.addEventListener('resize', resize);
     resize();
-    buildKresling();
+    renderModelByName('kresling');
 
     (function animate(){
       requestAnimationFrame(animate);
