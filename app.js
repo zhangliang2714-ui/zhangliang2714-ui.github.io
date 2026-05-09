@@ -994,6 +994,53 @@ const openNodes = new Set(["mechanism-root", "frontier-root", "news-root"]);
 const treeEl = document.querySelector("#tree");
 const searchInput = document.querySelector("#searchInput");
 const tabButtons = document.querySelectorAll(".tab");
+const intelControls = {
+  search: document.querySelector("#intelSearch"),
+  topic: document.querySelector("#intelTopic"),
+  type: document.querySelector("#intelType"),
+  review: document.querySelector("#intelReview"),
+  sort: document.querySelector("#intelSort")
+};
+
+const intelligenceState = {
+  metadata: null,
+  items: []
+};
+
+const topicLabels = {
+  "fast-charge": "快充",
+  "sodium-ion": "钠离子",
+  "solid-state": "固态电池",
+  "dry-electrode": "干法电极",
+  separator: "隔膜",
+  electrolyte: "电解液/电解质",
+  bms: "BMS",
+  "thermal-management": "热管理",
+  catl: "CATL",
+  byd: "BYD",
+  tesla: "Tesla"
+};
+
+const typeLabels = {
+  paper: "论文",
+  news: "新闻",
+  "news-search": "新闻检索",
+  video: "视频",
+  "patent-search": "专利"
+};
+
+const reviewLabels = {
+  unreviewed: "未审核线索",
+  reviewed: "已审核",
+  important: "重点",
+  discarded: "已丢弃"
+};
+
+const evidenceLabels = {
+  high: "高证据",
+  medium: "中证据",
+  low: "线索"
+};
 
 function flatten(nodes) {
   return nodes.flatMap((node) => [node, ...flatten(node.children || [])]);
@@ -1658,6 +1705,7 @@ function renderDetail(node) {
   renderProgress(node.progress);
   renderLinks("#sourceLinks", node.sources);
   renderLinks("#videoLinks", node.videos);
+  renderRelatedIntel(node);
 }
 
 function openGlossary(termId) {
@@ -1708,6 +1756,80 @@ function formatFeedDate(value) {
   return date.toISOString().slice(0, 10);
 }
 
+function ensureArray(value) {
+  return Array.isArray(value) ? value : [];
+}
+
+function itemSearchText(item) {
+  return [
+    item.title,
+    item.source,
+    item.query,
+    item.type,
+    ...ensureArray(item.topics),
+    ...ensureArray(item.companies),
+    ...ensureArray(item.technologyRoutes)
+  ].filter(Boolean).join(" ").toLowerCase();
+}
+
+function itemDateValue(item) {
+  const date = new Date(item.publishedAt || item.collectedAt || 0);
+  return Number.isNaN(date.getTime()) ? 0 : date.getTime();
+}
+
+function evidenceRank(item) {
+  return { high: 3, medium: 2, low: 1 }[item.evidenceLevel] || 0;
+}
+
+function normalizeClientItem(item, fallbackType) {
+  return {
+    ...item,
+    type: item.type || fallbackType,
+    topics: ensureArray(item.topics),
+    companies: ensureArray(item.companies),
+    technologyRoutes: ensureArray(item.technologyRoutes),
+    evidenceLevel: item.evidenceLevel || (fallbackType === "video" ? "low" : "medium"),
+    review: item.review || item.status || "unreviewed"
+  };
+}
+
+function tagsForItem(item) {
+  return [
+    ...ensureArray(item.topics).map((topic) => topicLabels[topic] || topic),
+    ...ensureArray(item.companies).map((company) => topicLabels[company] || company.toUpperCase()),
+    ...ensureArray(item.technologyRoutes)
+  ].slice(0, 6);
+}
+
+function renderIntelCards(targetId, items, emptyText, limit = 12) {
+  const el = document.querySelector(targetId);
+  if (!el) return;
+  el.innerHTML = "";
+  if (!items || !items.length) {
+    el.innerHTML = `<p class="empty">${escapeHtml(emptyText)}</p>`;
+    return;
+  }
+  items.slice(0, limit).forEach((item) => {
+    const card = document.createElement("article");
+    card.className = `intel-card ${item.review === "discarded" ? "is-discarded" : ""}`;
+    const tags = tagsForItem(item);
+    card.innerHTML = `
+      <a href="${escapeHtml(item.url)}" target="_blank" rel="noreferrer">${escapeHtml(item.title)}</a>
+      <p>${escapeHtml(item.query ? `匹配来源：${item.query}` : item.source || "自动采集线索")}</p>
+      <div class="intel-meta">
+        <span>${escapeHtml(typeLabels[item.type] || item.type || "线索")}</span>
+        <span>${escapeHtml(item.source || "Unknown source")}</span>
+        <span class="evidence-${escapeHtml(item.evidenceLevel || "low")}">${escapeHtml(evidenceLabels[item.evidenceLevel] || "线索")}</span>
+        <span class="review-${escapeHtml(item.review || "unreviewed")}">${escapeHtml(reviewLabels[item.review] || item.review || "未审核线索")}</span>
+        <span>发布：${escapeHtml(formatFeedDate(item.publishedAt))}</span>
+        <span>采集：${escapeHtml(formatFeedDate(item.collectedAt))}</span>
+      </div>
+      <div class="intel-tags">${tags.map((tag) => `<span>${escapeHtml(tag)}</span>`).join("")}</div>
+    `;
+    el.appendChild(card);
+  });
+}
+
 function renderFeed(targetId, items, emptyText) {
   const el = document.querySelector(targetId);
   if (!el) return;
@@ -1729,6 +1851,93 @@ function renderFeed(targetId, items, emptyText) {
     `;
     el.appendChild(card);
   });
+}
+
+function intelligenceFilters() {
+  return {
+    search: (intelControls.search?.value || "").trim().toLowerCase(),
+    topic: intelControls.topic?.value || "all",
+    type: intelControls.type?.value || "all",
+    review: intelControls.review?.value || "all",
+    sort: intelControls.sort?.value || "newest"
+  };
+}
+
+function filteredIntelligenceItems() {
+  const filters = intelligenceFilters();
+  const items = intelligenceState.items.filter((item) => {
+    if (filters.type !== "all") {
+      const typeMatches = filters.type === "news" ? ["news", "news-search"].includes(item.type) : item.type === filters.type;
+      if (!typeMatches) return false;
+    }
+    if (filters.review !== "all" && item.review !== filters.review) return false;
+    if (filters.topic !== "all") {
+      const buckets = [...item.topics, ...item.companies, ...item.technologyRoutes];
+      if (!buckets.includes(filters.topic)) return false;
+    }
+    if (filters.search && !itemSearchText(item).includes(filters.search)) return false;
+    return true;
+  });
+  return items.sort((a, b) => {
+    if (filters.sort === "evidence") return evidenceRank(b) - evidenceRank(a) || itemDateValue(b) - itemDateValue(a);
+    return itemDateValue(b) - itemDateValue(a) || evidenceRank(b) - evidenceRank(a);
+  });
+}
+
+function inferNodeTopics(node) {
+  const text = [node.id, node.title, node.tag, node.summary, ...(node.keyPoints || [])].join(" ").toLowerCase();
+  const matches = [];
+  const rules = [
+    ["fast-charge", ["快充", "超充", "fast", "lfp-fast-charge"]],
+    ["sodium-ion", ["钠", "sodium", "hard carbon"]],
+    ["solid-state", ["固态", "solid"]],
+    ["dry-electrode", ["干法", "干电极", "dry"]],
+    ["separator", ["隔膜", "separator"]],
+    ["electrolyte", ["电解", "sei", "cei", "electrolyte"]],
+    ["bms", ["bms", "管理系统"]],
+    ["thermal-management", ["热", "thermal", "安全"]],
+    ["catl", ["catl", "宁德"]],
+    ["byd", ["byd", "比亚迪", "刀片"]],
+    ["tesla", ["tesla", "特斯拉", "4680", "maxwell"]]
+  ];
+  rules.forEach(([topic, keywords]) => {
+    if (keywords.some((keyword) => text.includes(keyword))) matches.push(topic);
+  });
+  return matches;
+}
+
+function relatedItemsForNode(node) {
+  const topics = inferNodeTopics(node);
+  if (!topics.length) return intelligenceState.items.slice().sort((a, b) => itemDateValue(b) - itemDateValue(a)).slice(0, 6);
+  return intelligenceState.items
+    .filter((item) => {
+      const buckets = [...item.topics, ...item.companies, ...item.technologyRoutes];
+      return topics.some((topic) => buckets.includes(topic));
+    })
+    .sort((a, b) => evidenceRank(b) - evidenceRank(a) || itemDateValue(b) - itemDateValue(a))
+    .slice(0, 8);
+}
+
+function renderRelatedIntel(node) {
+  const status = document.querySelector("#relatedIntelStatus");
+  const items = relatedItemsForNode(node);
+  if (status) {
+    const topics = inferNodeTopics(node).map((topic) => topicLabels[topic] || topic);
+    status.textContent = topics.length ? topics.join(" / ") : "综合线索";
+  }
+  renderIntelCards("#relatedIntelList", items, "等待自动更新数据；数据加载后会按当前词条匹配相关论文、新闻、视频和专利。", 8);
+}
+
+function renderIntelligenceCenter() {
+  const items = filteredIntelligenceItems();
+  const count = document.querySelector("#intelligenceCount");
+  const meta = document.querySelector("#intelligenceMeta");
+  if (count) count.textContent = `${items.length} 条线索`;
+  if (meta) {
+    const collectedAt = intelligenceState.metadata?.collectedAt;
+    meta.textContent = collectedAt ? `最近采集：${formatFeedDate(collectedAt)}` : "等待自动更新数据";
+  }
+  renderIntelCards("#intelligenceList", items, "没有匹配的情报线索。可以换一个主题、类型或搜索词。", 24);
 }
 
 async function loadJson(path) {
@@ -1758,19 +1967,36 @@ async function loadDynamicFeeds() {
       loadJson("data/videos.json"),
       loadJson("data/patents.json")
     ]);
+    intelligenceState.metadata = metadata;
+    intelligenceState.items = [
+      ...papers.map((item) => normalizeClientItem(item, "paper")),
+      ...news.map((item) => normalizeClientItem(item, item.type || "news")),
+      ...videos.map((item) => normalizeClientItem(item, "video")),
+      ...patents.map((item) => normalizeClientItem(item, "patent-search"))
+    ];
     status.textContent = metadata.collectedAt ? `更新：${formatFeedDate(metadata.collectedAt)}` : "等待首次更新";
     renderFeed("#latestPapers", papers, "等待 GitHub Actions 首次采集论文。");
     renderFeed("#latestNews", news, "等待 GitHub Actions 首次采集新闻。");
     renderFeed("#latestVideos", videos, "等待 GitHub Actions 生成视频入口。");
     renderFeed("#latestPatents", patents, "等待 GitHub Actions 生成专利线索。");
+    renderIntelligenceCenter();
+    renderRelatedIntel(findNode(selectedId));
   } catch (error) {
     status.textContent = "加载失败";
+    intelligenceState.items = [];
     renderFeed("#latestPapers", [], "自动更新数据暂时不可用，请检查 data/*.json 是否存在。");
     renderFeed("#latestNews", [], "自动更新数据暂时不可用，请检查 GitHub Pages 部署路径。");
     renderFeed("#latestVideos", [], "自动更新数据暂时不可用。");
     renderFeed("#latestPatents", [], "自动更新数据暂时不可用。");
+    renderIntelligenceCenter();
+    renderRelatedIntel(findNode(selectedId));
   }
 }
+
+Object.values(intelControls).forEach((control) => {
+  control?.addEventListener("input", renderIntelligenceCenter);
+  control?.addEventListener("change", renderIntelligenceCenter);
+});
 
 renderTree();
 renderDetail(findNode(selectedId));

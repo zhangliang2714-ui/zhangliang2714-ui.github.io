@@ -4,39 +4,75 @@
     "url": "https://patents.google.com/?q=(CATL%20fast%20charging%20battery%20electrode%20electrolyte)",
     "source": "Google Patents search",
     "publishedAt": null,
-    "collectedAt": "2026-05-09T14:48:45.082Z",
+    "collectedAt": "2026-05-09T14:58:52.065Z",
     "query": "CATL fast charging battery electrode electrolyte",
     "type": "patent-search",
-    "review": "unreviewed"
+    "review": "unreviewed",
+    "topics": [
+      "fast-charge",
+      "electrolyte"
+    ],
+    "companies": [
+      "catl"
+    ],
+    "technologyRoutes": [],
+    "evidenceLevel": "medium"
   },
   {
     "title": "Google Patents search: BYD blade battery pack thermal safety",
     "url": "https://patents.google.com/?q=(BYD%20blade%20battery%20pack%20thermal%20safety)",
     "source": "Google Patents search",
     "publishedAt": null,
-    "collectedAt": "2026-05-09T14:48:45.082Z",
+    "collectedAt": "2026-05-09T14:58:52.065Z",
     "query": "BYD blade battery pack thermal safety",
     "type": "patent-search",
-    "review": "unreviewed"
+    "review": "unreviewed",
+    "topics": [
+      "thermal-management"
+    ],
+    "companies": [
+      "byd"
+    ],
+    "technologyRoutes": [],
+    "evidenceLevel": "medium"
   },
   {
     "title": "Google Patents search: Tesla dry electrode 4680 battery",
     "url": "https://patents.google.com/?q=(Tesla%20dry%20electrode%204680%20battery)",
     "source": "Google Patents search",
     "publishedAt": null,
-    "collectedAt": "2026-05-09T14:48:45.082Z",
+    "collectedAt": "2026-05-09T14:58:52.065Z",
     "query": "Tesla dry electrode 4680 battery",
     "type": "patent-search",
-    "review": "unreviewed"
+    "review": "unreviewed",
+    "topics": [
+      "dry-electrode"
+    ],
+    "companies": [
+      "tesla"
+    ],
+    "technologyRoutes": [
+      "4680"
+    ],
+    "evidenceLevel": "medium"
   },
   {
     "title": "Google Patents search: sodium ion battery hard carbon electrolyte",
     "url": "https://patents.google.com/?q=(sodium%20ion%20battery%20hard%20carbon%20electrolyte)",
     "source": "Google Patents search",
     "publishedAt": null,
-    "collectedAt": "2026-05-09T14:48:45.082Z",
+    "collectedAt": "2026-05-09T14:58:52.065Z",
     "query": "sodium ion battery hard carbon electrolyte",
     "type": "patent-search",
-    "review": "unreviewed"
+    "review": "unreviewed",
+    "topics": [
+      "sodium-ion",
+      "electrolyte"
+    ],
+    "companies": [],
+    "technologyRoutes": [
+      "sodium-hard-carbon"
+    ],
+    "evidenceLevel": "medium"
   }
 ]

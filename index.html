@@ -121,14 +121,77 @@
             <div id="videoLinks" class="link-list"></div>
           </article>
 
+          <article class="detail-panel wide">
+            <div class="panel-header">
+              <h3>当前词条相关情报</h3>
+              <span id="relatedIntelStatus">等待数据</span>
+            </div>
+            <div id="relatedIntelList" class="intel-list"></div>
+          </article>
+
           <article class="detail-panel wide auto-updates">
             <div class="panel-header">
-              <h3>自动更新情报</h3>
+              <h3>情报中心</h3>
               <span id="autoUpdateStatus">等待加载</span>
             </div>
             <div class="update-note">
-              GitHub Actions 会定期更新论文、新闻、视频入口和专利检索线索；每条信息都保留采集时间，方便判断时效性。
+              GitHub Actions 会定期更新论文、新闻、视频入口和专利检索线索；自动抓取内容默认是未审核线索，需要结合原文和证据等级判断。
             </div>
+            <div class="intel-controls" aria-label="情报筛选">
+              <label>
+                <span>搜索</span>
+                <input id="intelSearch" type="search" placeholder="CATL、钠离子、SEI、dry electrode" />
+              </label>
+              <label>
+                <span>主题</span>
+                <select id="intelTopic">
+                  <option value="all">全部主题</option>
+                  <option value="fast-charge">快充</option>
+                  <option value="sodium-ion">钠离子</option>
+                  <option value="solid-state">固态电池</option>
+                  <option value="dry-electrode">干法电极</option>
+                  <option value="separator">隔膜</option>
+                  <option value="electrolyte">电解液/电解质</option>
+                  <option value="bms">BMS</option>
+                  <option value="thermal-management">热管理</option>
+                  <option value="catl">CATL</option>
+                  <option value="byd">BYD</option>
+                  <option value="tesla">Tesla</option>
+                </select>
+              </label>
+              <label>
+                <span>类型</span>
+                <select id="intelType">
+                  <option value="all">全部类型</option>
+                  <option value="paper">论文</option>
+                  <option value="news">新闻</option>
+                  <option value="video">视频</option>
+                  <option value="patent-search">专利</option>
+                </select>
+              </label>
+              <label>
+                <span>审核</span>
+                <select id="intelReview">
+                  <option value="all">全部状态</option>
+                  <option value="unreviewed">未审核线索</option>
+                  <option value="reviewed">已审核</option>
+                  <option value="important">重点</option>
+                  <option value="discarded">已丢弃</option>
+                </select>
+              </label>
+              <label>
+                <span>排序</span>
+                <select id="intelSort">
+                  <option value="newest">最新优先</option>
+                  <option value="evidence">证据等级优先</option>
+                </select>
+              </label>
+            </div>
+            <div class="intel-summary">
+              <span id="intelligenceCount">0 条线索</span>
+              <span id="intelligenceMeta">等待自动更新数据</span>
+            </div>
+            <div id="intelligenceList" class="intel-list"></div>
             <div class="feed-grid">
               <section>
                 <h4>最新论文</h4>

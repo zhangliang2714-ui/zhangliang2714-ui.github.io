@@ -10,6 +10,7 @@
 - 专业词汇：正文中的 SOC、SOH、SEI、C-rate、N/P ratio 等术语可点击跳转到词汇解释。
 - 图解模块：每个主要机理和现状主题都有对应的示意图或动态图解区。
 - 自动更新情报：通过 GitHub Actions 定期生成 `data/*.json`，网页在 GitHub Pages 上自动读取最新论文、新闻、视频入口和专利检索线索。
+- 情报中心：自动采集内容会被统一成数据卡片，支持按主题、类型、审核状态和关键词筛选，并和当前知识图谱词条联动。
 
 ## 本地预览
 
@@ -59,6 +60,16 @@ http://localhost:4173
 - 专利：生成 Google Patents 检索入口，方便持续跟踪企业技术布局。
 
 注意：自动抓取结果是“线索”，不是结论。重要内容仍需要人工复核原文、发布日期、测试条件和证据等级。
+
+## 第二阶段数据字段
+
+`data/*.json` 中的每条线索会尽量包含：
+
+- `topics`：快充、钠离子、固态电池、干法电极、隔膜、电解液、BMS、热管理等主题。
+- `companies`：CATL、BYD、Tesla 等企业标签。
+- `technologyRoutes`：LFP、NCM/NCA、LMFP、CTP/CTB、4680、钠电硬碳等路线。
+- `evidenceLevel`：`high`、`medium`、`low`，用于提醒证据强弱。
+- `review`：`unreviewed`、`reviewed`、`important`、`discarded`，默认是未审核线索。
 
 ## 后续升级方向
 
