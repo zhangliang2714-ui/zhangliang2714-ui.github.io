@@ -1,40 +1,157 @@
 <!doctype html>
 <html lang="zh-CN">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>折纸结构 3D 可视化（在线版）</title>
-  <link rel="stylesheet" href="styles.css" />
-  <script type="importmap">
-    {
-      "imports": {
-        "three": "https://cdn.jsdelivr.net/npm/three@0.164.1/build/three.module.js"
-      }
-    }
-  </script>
-</head>
-<body>
-  <header>
-    <h1>典型折纸结构 3D 可视化（在线版）</h1>
-    <p>左键旋转、滚轮缩放、右键平移。按 <kbd>R</kbd> 重置视角。</p>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>锂/钠电池技术学习图谱</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <p class="eyebrow">Battery Research Map</p>
+          <h1>锂/钠电池技术学习图谱</h1>
+          <p>像 NotebookLM 思维导图一样展开知识节点，按机理、前沿和新闻进入学习。</p>
+        </div>
 
-  <main>
-    <aside class="panel">
-      <h2>模型</h2>
-      <button data-model="miura">Miura-ori 折纸板</button>
-      <button data-model="waterbomb">Waterbomb 管</button>
-      <button data-model="kresling" class="active">Kresling 折纸筒</button>
+        <label class="search-box">
+          <span>检索词条</span>
+          <input id="searchInput" type="search" placeholder="例如：干电极、钠离子、刀片电池" />
+        </label>
 
-      <label for="compression">Kresling 轴向压缩（受力变形）</label>
-      <input id="compression" type="range" min="0" max="100" value="0" />
-      <div class="value">压缩量：<span id="compressionValue">0%</span></div>
+        <nav class="tabs" aria-label="内容板块">
+          <button class="tab is-active" data-section="mechanism">机理</button>
+          <button class="tab" data-section="frontier">前沿</button>
+          <button class="tab" data-section="news">新闻</button>
+        </nav>
 
-      <p class="hint">建议发布到 GitHub Pages 后访问（在线版）。</p>
-    </aside>
-    <section id="viewer"></section>
-  </main>
+        <div class="tree-tools">
+          <button id="expandAll" type="button">全部展开</button>
+          <button id="collapseAll" type="button">全部收起</button>
+        </div>
 
-  <script type="module" src="main.js"></script>
-</body>
+        <div id="tree" class="tree" aria-label="知识图谱"></div>
+      </aside>
+
+      <main class="content">
+        <section class="hero-panel">
+          <div>
+            <p id="sectionLabel" class="eyebrow">机理板块</p>
+            <h2 id="nodeTitle">选择一个词条开始学习</h2>
+            <p id="nodeSummary">左侧节点可逐级展开。点击词条后，这里会显示原理、学习路径、最新进展、资料来源和视频入口。</p>
+          </div>
+          <div class="status-card">
+            <span>更新策略</span>
+            <strong>每周跟踪</strong>
+            <small>官方发布 / 专利 / 论文 / 工信部目录 / 视频</small>
+          </div>
+        </section>
+
+        <section class="detail-grid">
+          <article class="detail-panel visual-panel wide">
+            <div class="panel-header">
+              <h3>图解</h3>
+              <span id="visualType">机制图</span>
+            </div>
+            <div id="visualStage" class="visual-stage"></div>
+          </article>
+
+          <article class="detail-panel wide">
+            <div class="panel-header">
+              <h3>小白速读</h3>
+              <span>Beginner</span>
+            </div>
+            <div id="beginnerGuide" class="explainer-grid"></div>
+          </article>
+
+          <article class="detail-panel">
+            <div class="panel-header">
+              <h3>学习要点</h3>
+              <span id="difficultyBadge">入门</span>
+            </div>
+            <ul id="keyPoints"></ul>
+          </article>
+
+          <article class="detail-panel">
+            <div class="panel-header">
+              <h3>研究问题</h3>
+              <span>Academic</span>
+            </div>
+            <ul id="researchQuestions"></ul>
+          </article>
+
+          <article class="detail-panel wide">
+            <div class="panel-header">
+              <h3>关键指标与行业判断</h3>
+              <span>Metrics</span>
+            </div>
+            <div id="metricList" class="metric-list"></div>
+          </article>
+
+          <article id="glossaryPanel" class="detail-panel wide is-hidden">
+            <div class="panel-header">
+              <h3>专业词汇表</h3>
+              <span>Glossary</span>
+            </div>
+            <div id="glossaryList" class="glossary-list"></div>
+          </article>
+
+          <article class="detail-panel wide">
+            <div class="panel-header">
+              <h3>最新进展与证据</h3>
+              <span id="updatedAt">2026-05-09</span>
+            </div>
+            <div id="progressList" class="progress-list"></div>
+          </article>
+
+          <article class="detail-panel">
+            <div class="panel-header">
+              <h3>资料链接</h3>
+              <span>Sources</span>
+            </div>
+            <div id="sourceLinks" class="link-list"></div>
+          </article>
+
+          <article class="detail-panel">
+            <div class="panel-header">
+              <h3>视频入口</h3>
+              <span>Video</span>
+            </div>
+            <div id="videoLinks" class="link-list"></div>
+          </article>
+
+          <article class="detail-panel wide auto-updates">
+            <div class="panel-header">
+              <h3>自动更新情报</h3>
+              <span id="autoUpdateStatus">等待加载</span>
+            </div>
+            <div class="update-note">
+              GitHub Actions 会定期更新论文、新闻、视频入口和专利检索线索；每条信息都保留采集时间，方便判断时效性。
+            </div>
+            <div class="feed-grid">
+              <section>
+                <h4>最新论文</h4>
+                <div id="latestPapers" class="feed-list"></div>
+              </section>
+              <section>
+                <h4>行业新闻</h4>
+                <div id="latestNews" class="feed-list"></div>
+              </section>
+              <section>
+                <h4>视频入口</h4>
+                <div id="latestVideos" class="feed-list"></div>
+              </section>
+              <section>
+                <h4>专利线索</h4>
+                <div id="latestPatents" class="feed-list"></div>
+              </section>
+            </div>
+          </article>
+        </section>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
 </html>

@@ -1,0 +1,13 @@
+{
+  "name": "battery-research-map",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "update:data": "node scripts/update-data.mjs",
+    "serve": "node server.js"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
