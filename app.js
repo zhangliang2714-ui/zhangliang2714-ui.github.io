@@ -984,6 +984,23 @@ const sections = {
         ]
       }
     ]
+  },
+  visualization: {
+    label: "可视化板块",
+    roots: [
+      {
+        id: "market-dashboard",
+        title: "市场与技术现状可视化",
+        tag: "Dashboard",
+        difficulty: "一眼看懂",
+        summary: "用 KPI、企业排名、技术雷达、应用占比、趋势线和地区热力，把电池行业市场与技术现状放在一屏内比较。",
+        keyPoints: [],
+        researchQuestions: [],
+        progress: [],
+        sources: [],
+        videos: []
+      }
+    ]
   }
 };
 
@@ -1040,6 +1057,43 @@ const evidenceLabels = {
   high: "高证据",
   medium: "中证据",
   low: "线索"
+};
+
+const marketVisualData = {
+  updatedAt: "整理：2026-05-09",
+  sources: [
+    "企业份额与装机口径：SNE Research、EV Volumes、公司公告等公开信息综合，需以后续年度报告复核。",
+    "趋势与价格口径：IEA、BNEF、行业公开报告综合，用于可视化学习，不作为投资或采购决策。",
+    "钠离子数据仍处早期，当前更多体现工程化进度和示范项目，不等同成熟商业份额。"
+  ],
+  companies: [
+    { name: "CATL", share: 37, technology: 92, growth: 18, color: "#1f8f6a", battery: ["lithium", "sodium"], apps: ["ev", "ess"], metrics: [92, 88, 94, 82, 96] },
+    { name: "BYD", share: 17, technology: 86, growth: 24, color: "#2878b5", battery: ["lithium", "sodium"], apps: ["ev", "ess"], metrics: [82, 92, 88, 90, 90] },
+    { name: "LG Energy", share: 12, technology: 84, growth: 8, color: "#7b6fd0", battery: ["lithium"], apps: ["ev", "ess", "consumer"], metrics: [88, 82, 76, 74, 88] },
+    { name: "Panasonic", share: 7, technology: 80, growth: 5, color: "#c28b2c", battery: ["lithium"], apps: ["ev", "consumer"], metrics: [86, 78, 76, 70, 84] },
+    { name: "Samsung SDI", share: 5, technology: 81, growth: 6, color: "#d45c5c", battery: ["lithium"], apps: ["ev", "ess", "consumer"], metrics: [84, 80, 74, 72, 82] },
+    { name: "Others", share: 22, technology: 68, growth: 14, color: "#95a0aa", battery: ["lithium", "sodium"], apps: ["ev", "ess", "consumer"], metrics: [68, 70, 64, 70, 66] }
+  ],
+  applications: [
+    { id: "ev", label: "动力电池", value: 70, color: "#1f8f6a" },
+    { id: "ess", label: "储能", value: 18, color: "#2878b5" },
+    { id: "consumer", label: "消费电子", value: 12, color: "#c28b2c" }
+  ],
+  trends: [
+    { year: 2021, shipments: 310, price: 141, density: 250 },
+    { year: 2022, shipments: 520, price: 151, density: 255 },
+    { year: 2023, shipments: 705, price: 139, density: 265 },
+    { year: 2024, shipments: 890, price: 115, density: 275 },
+    { year: 2025, shipments: 1120, price: 103, density: 285 },
+    { year: 2026, shipments: 1330, price: 96, density: 295 }
+  ],
+  regions: [
+    { name: "中国", value: 72, note: "产能与供应链最集中" },
+    { name: "欧洲", value: 12, note: "本土化与法规驱动" },
+    { name: "美国", value: 9, note: "IRA 与本土制造拉动" },
+    { name: "日韩", value: 7, note: "材料、电芯和整车绑定" }
+  ],
+  radarAxes: ["能量密度", "循环寿命", "快充", "成本", "量产"]
 };
 
 function flatten(nodes) {
@@ -1690,12 +1744,186 @@ const visuals = {
   `
 };
 
+function marketFilters() {
+  return {
+    battery: document.querySelector("#marketBatteryType")?.value || "all",
+    application: document.querySelector("#marketApplication")?.value || "all",
+    year: Number(document.querySelector("#marketYear")?.value || 2026),
+    sort: document.querySelector("#marketSort")?.value || "share"
+  };
+}
+
+function filteredMarketCompanies() {
+  const filters = marketFilters();
+  return marketVisualData.companies
+    .filter((company) => filters.battery === "all" || company.battery.includes(filters.battery))
+    .filter((company) => filters.application === "all" || company.apps.includes(filters.application))
+    .sort((a, b) => (b[filters.sort] || 0) - (a[filters.sort] || 0));
+}
+
+function renderMarketKpis(companies) {
+  const topShare = companies[0] || marketVisualData.companies[0];
+  const topTech = companies.slice().sort((a, b) => b.technology - a.technology)[0] || topShare;
+  const trend = marketVisualData.trends.find((item) => item.year === marketFilters().year) || marketVisualData.trends.at(-1);
+  const sodiumSignal = marketFilters().battery === "sodium" ? "示范转量产早期" : "锂电规模化主导";
+  document.querySelector("#marketKpis").innerHTML = [
+    { label: "份额领先", value: topShare.name, note: `${topShare.share}% 参考份额` },
+    { label: "技术评分领先", value: topTech.name, note: `${topTech.technology}/100 综合评分` },
+    { label: "年度出货趋势", value: `${trend.shipments} GWh`, note: `${trend.year} 年估算/统计口径` },
+    { label: "路线判断", value: sodiumSignal, note: marketVisualData.updatedAt }
+  ].map((item) => `
+    <div class="market-kpi">
+      <span>${escapeHtml(item.label)}</span>
+      <strong>${escapeHtml(item.value)}</strong>
+      <small>${escapeHtml(item.note)}</small>
+    </div>
+  `).join("");
+}
+
+function renderCompanyShare(companies) {
+  const max = Math.max(...companies.map((company) => company.share), 1);
+  document.querySelector("#companyShareChart").innerHTML = companies.map((company) => `
+    <div class="bar-row" title="${escapeHtml(company.name)}：份额 ${company.share}% / 技术 ${company.technology} / 增长 ${company.growth}%">
+      <strong>${escapeHtml(company.name)}</strong>
+      <div class="bar-track"><div class="bar-fill" style="width:${(company.share / max) * 100}%; background:${company.color}"></div></div>
+      <span>${company.share}%</span>
+    </div>
+  `).join("");
+}
+
+function radarPoint(value, index, total, radius, center) {
+  const angle = -Math.PI / 2 + (index / total) * Math.PI * 2;
+  const scaled = (value / 100) * radius;
+  return {
+    x: center + Math.cos(angle) * scaled,
+    y: center + Math.sin(angle) * scaled
+  };
+}
+
+function renderTechRadar(companies) {
+  const top = companies.slice(0, 3);
+  const center = 145;
+  const radius = 105;
+  const axes = marketVisualData.radarAxes;
+  const rings = [25, 50, 75, 100].map((value) => {
+    const points = axes.map((_, index) => radarPoint(value, index, axes.length, radius, center));
+    return `<polygon points="${points.map((point) => `${point.x},${point.y}`).join(" ")}" fill="none" stroke="#d9e2dd" />`;
+  }).join("");
+  const axisLines = axes.map((axis, index) => {
+    const end = radarPoint(100, index, axes.length, radius, center);
+    const label = radarPoint(115, index, axes.length, radius, center);
+    return `<line x1="${center}" y1="${center}" x2="${end.x}" y2="${end.y}" stroke="#d9e2dd" /><text x="${label.x}" y="${label.y}" text-anchor="middle" font-size="11" fill="#596760">${axis}</text>`;
+  }).join("");
+  const shapes = top.map((company) => {
+    const points = company.metrics.map((value, index) => radarPoint(value, index, axes.length, radius, center));
+    return `<polygon points="${points.map((point) => `${point.x},${point.y}`).join(" ")}" fill="${company.color}22" stroke="${company.color}" stroke-width="2" />`;
+  }).join("");
+  const legend = top.map((company, index) => `<text x="16" y="${24 + index * 18}" font-size="12" fill="${company.color}">● ${company.name}</text>`).join("");
+  document.querySelector("#techRadarChart").innerHTML = `<svg viewBox="0 0 320 310" role="img" aria-label="技术雷达图">${rings}${axisLines}${shapes}${legend}</svg>`;
+}
+
+function donutSlice(start, end, radius, center) {
+  const startAngle = (start - 25) / 100 * Math.PI * 2;
+  const endAngle = (end - 25) / 100 * Math.PI * 2;
+  const large = end - start > 50 ? 1 : 0;
+  const x1 = center + Math.cos(startAngle) * radius;
+  const y1 = center + Math.sin(startAngle) * radius;
+  const x2 = center + Math.cos(endAngle) * radius;
+  const y2 = center + Math.sin(endAngle) * radius;
+  return `M ${x1} ${y1} A ${radius} ${radius} 0 ${large} 1 ${x2} ${y2}`;
+}
+
+function renderApplicationDonut() {
+  let cursor = 0;
+  const center = 140;
+  const radius = 88;
+  const slices = marketVisualData.applications.map((item) => {
+    const start = cursor;
+    cursor += item.value;
+    return `<path d="${donutSlice(start, cursor, radius, center)}" fill="none" stroke="${item.color}" stroke-width="34" />`;
+  }).join("");
+  const legend = marketVisualData.applications.map((item, index) => `<text x="22" y="${246 + index * 18}" font-size="12" fill="${item.color}">● ${item.label} ${item.value}%</text>`).join("");
+  document.querySelector("#applicationDonutChart").innerHTML = `
+    <svg viewBox="0 0 320 310" role="img" aria-label="应用市场占比环形图">
+      ${slices}
+      <circle cx="${center}" cy="${center}" r="52" fill="#fff" />
+      <text x="${center}" y="${center - 4}" text-anchor="middle" font-size="22" font-weight="800" fill="#1c2924">应用</text>
+      <text x="${center}" y="${center + 18}" text-anchor="middle" font-size="12" fill="#596760">市场占比</text>
+      ${legend}
+    </svg>
+  `;
+}
+
+function linePoints(values, key, width, height, pad) {
+  const min = Math.min(...values.map((item) => item[key]));
+  const max = Math.max(...values.map((item) => item[key]));
+  return values.map((item, index) => {
+    const x = pad + index * ((width - pad * 2) / (values.length - 1));
+    const y = height - pad - ((item[key] - min) / (max - min || 1)) * (height - pad * 2);
+    return { x, y };
+  });
+}
+
+function renderTrendLine() {
+  const data = marketVisualData.trends;
+  const width = 520;
+  const height = 250;
+  const pad = 42;
+  const shipments = linePoints(data, "shipments", width, height, pad);
+  const price = linePoints(data, "price", width, height, pad);
+  const toPath = (points) => points.map((point, index) => `${index ? "L" : "M"}${point.x},${point.y}`).join(" ");
+  const yearLabels = data.map((item, index) => `<text x="${shipments[index].x}" y="${height - 12}" text-anchor="middle" font-size="11" fill="#596760">${item.year}</text>`).join("");
+  document.querySelector("#trendLineChart").innerHTML = `
+    <svg viewBox="0 0 ${width} ${height}" role="img" aria-label="出货量与价格趋势线">
+      <line x1="${pad}" y1="${height - pad}" x2="${width - pad}" y2="${height - pad}" stroke="#d9e2dd" />
+      <line x1="${pad}" y1="${pad}" x2="${pad}" y2="${height - pad}" stroke="#d9e2dd" />
+      <path d="${toPath(shipments)}" fill="none" stroke="#1f8f6a" stroke-width="3" />
+      <path d="${toPath(price)}" fill="none" stroke="#c28b2c" stroke-width="3" />
+      ${shipments.map((point) => `<circle cx="${point.x}" cy="${point.y}" r="4" fill="#1f8f6a" />`).join("")}
+      ${price.map((point) => `<circle cx="${point.x}" cy="${point.y}" r="4" fill="#c28b2c" />`).join("")}
+      ${yearLabels}
+      <text x="${pad}" y="18" font-size="12" fill="#1f8f6a">● 出货量 GWh</text>
+      <text x="150" y="18" font-size="12" fill="#c28b2c">● 电芯价格 $/kWh</text>
+    </svg>
+  `;
+}
+
+function renderRegionHeat() {
+  const max = Math.max(...marketVisualData.regions.map((region) => region.value), 1);
+  document.querySelector("#regionHeatChart").innerHTML = `
+    <div class="heat-grid">
+      ${marketVisualData.regions.map((region) => {
+        const alpha = 0.16 + (region.value / max) * 0.55;
+        return `<div class="heat-cell" style="background:rgba(31,143,106,${alpha})" title="${escapeHtml(region.note)}">
+          <strong>${escapeHtml(region.name)}</strong>
+          <span>${region.value}%</span>
+          <small>${escapeHtml(region.note)}</small>
+        </div>`;
+      }).join("")}
+    </div>
+  `;
+}
+
+function renderMarketDashboard() {
+  const companies = filteredMarketCompanies();
+  document.querySelector("#marketDataDate").textContent = marketVisualData.updatedAt;
+  renderMarketKpis(companies);
+  renderCompanyShare(companies);
+  renderTechRadar(companies);
+  renderApplicationDonut();
+  renderTrendLine();
+  renderRegionHeat();
+  document.querySelector("#marketSources").innerHTML = marketVisualData.sources.map((source) => `<p>${escapeHtml(source)}</p>`).join("");
+}
+
 function renderDetail(node) {
+  document.body.classList.toggle("is-visualization", activeSection === "visualization");
   document.querySelector("#sectionLabel").textContent = sections[activeSection].label;
   document.querySelector("#nodeTitle").textContent = node.title;
   document.querySelector("#nodeSummary").innerHTML = linkifyTerms(node.summary);
   document.querySelector("#difficultyBadge").textContent = node.difficulty;
   document.querySelector("#updatedAt").textContent = "2026-05-09";
+  if (activeSection === "visualization") renderMarketDashboard();
   renderVisual(node);
   renderCards("#beginnerGuide", node.beginnerGuide, defaultBeginnerGuide(node));
   renderList("#keyPoints", node.keyPoints);
@@ -1996,6 +2224,10 @@ async function loadDynamicFeeds() {
 Object.values(intelControls).forEach((control) => {
   control?.addEventListener("input", renderIntelligenceCenter);
   control?.addEventListener("change", renderIntelligenceCenter);
+});
+
+["#marketBatteryType", "#marketApplication", "#marketYear", "#marketSort"].forEach((selector) => {
+  document.querySelector(selector)?.addEventListener("change", renderMarketDashboard);
 });
 
 renderTree();

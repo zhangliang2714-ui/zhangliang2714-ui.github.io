@@ -24,6 +24,7 @@
           <button class="tab is-active" data-section="mechanism">机理</button>
           <button class="tab" data-section="frontier">前沿</button>
           <button class="tab" data-section="news">新闻</button>
+          <button class="tab" data-section="visualization">可视化</button>
         </nav>
 
         <div class="tree-tools">
@@ -49,6 +50,87 @@
         </section>
 
         <section class="detail-grid">
+          <article class="detail-panel wide market-dashboard">
+            <div class="panel-header">
+              <h3>市场与技术现状可视化</h3>
+              <span id="marketDataDate">2026-05-09</span>
+            </div>
+            <div class="market-controls" aria-label="市场可视化筛选">
+              <label>
+                <span>电池类型</span>
+                <select id="marketBatteryType">
+                  <option value="all">锂电 + 钠电</option>
+                  <option value="lithium">锂电</option>
+                  <option value="sodium">钠电</option>
+                </select>
+              </label>
+              <label>
+                <span>应用场景</span>
+                <select id="marketApplication">
+                  <option value="all">全部场景</option>
+                  <option value="ev">动力电池</option>
+                  <option value="ess">储能</option>
+                  <option value="consumer">消费电子</option>
+                </select>
+              </label>
+              <label>
+                <span>视图年份</span>
+                <select id="marketYear">
+                  <option value="2026">2026</option>
+                  <option value="2025">2025</option>
+                  <option value="2024">2024</option>
+                </select>
+              </label>
+              <label>
+                <span>排序</span>
+                <select id="marketSort">
+                  <option value="share">市场份额</option>
+                  <option value="technology">技术评分</option>
+                  <option value="growth">增长动量</option>
+                </select>
+              </label>
+            </div>
+            <div id="marketKpis" class="market-kpis"></div>
+            <div class="market-grid">
+              <section class="market-card">
+                <div class="panel-header">
+                  <h4>企业份额与排名</h4>
+                  <span>水平条形图</span>
+                </div>
+                <div id="companyShareChart" class="chart-stage"></div>
+              </section>
+              <section class="market-card">
+                <div class="panel-header">
+                  <h4>技术领先雷达</h4>
+                  <span>能量/寿命/快充/成本/量产</span>
+                </div>
+                <div id="techRadarChart" class="chart-stage"></div>
+              </section>
+              <section class="market-card">
+                <div class="panel-header">
+                  <h4>应用市场占比</h4>
+                  <span>环形图</span>
+                </div>
+                <div id="applicationDonutChart" class="chart-stage"></div>
+              </section>
+              <section class="market-card">
+                <div class="panel-header">
+                  <h4>出货量与价格趋势</h4>
+                  <span>折线图</span>
+                </div>
+                <div id="trendLineChart" class="chart-stage"></div>
+              </section>
+              <section class="market-card wide">
+                <div class="panel-header">
+                  <h4>地区产能/市场热力</h4>
+                  <span>区域对比</span>
+                </div>
+                <div id="regionHeatChart" class="chart-stage"></div>
+              </section>
+            </div>
+            <div id="marketSources" class="source-note"></div>
+          </article>
+
           <article class="detail-panel visual-panel wide">
             <div class="panel-header">
               <h3>图解</h3>
