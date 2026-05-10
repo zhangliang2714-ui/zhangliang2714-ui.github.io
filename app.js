@@ -987,9 +987,7 @@ const sections = {
               { label: "Nature Energy battery research", url: "https://www.nature.com/nenergy/" },
               { label: "ScienceDirect battery research", url: "https://www.sciencedirect.com/search?qs=lithium%20sodium%20battery" }
             ],
-            videos: [
-              { label: "YouTube: battery paper review", url: "https://www.youtube.com/results?search_query=battery+paper+review+lithium+ion" }
-            ]
+            videos: []
           },
           {
             id: "news-patent",
@@ -1021,9 +1019,7 @@ const sections = {
               { label: "Lens.org patents", url: "https://www.lens.org/" },
               { label: "CNIPA 中国专利检索入口", url: "https://pss-system.cponline.cnipa.gov.cn/" }
             ],
-            videos: [
-              { label: "YouTube: how to read battery patents", url: "https://www.youtube.com/results?search_query=how+to+read+battery+patents" }
-            ]
+            videos: []
           },
           {
             id: "news-video",
@@ -2562,9 +2558,14 @@ function inferNodeTopics(node) {
 }
 
 function relatedItemsForNode(node) {
+  const forcedType = activeSection === "news" ? node?.intelType : null;
   const topics = inferNodeTopics(node);
-  if (!topics.length) return intelligenceState.items.slice().sort((a, b) => itemDateValue(b) - itemDateValue(a)).slice(0, 6);
-  return intelligenceState.items
+  const baseItems = forcedType ? intelligenceState.items.filter((item) => {
+    if (forcedType === "news") return ["news", "news-search"].includes(item.type);
+    return item.type === forcedType;
+  }) : intelligenceState.items;
+  if (!topics.length) return baseItems.slice().sort((a, b) => itemDateValue(b) - itemDateValue(a)).slice(0, 6);
+  return baseItems
     .filter((item) => {
       const buckets = [...item.topics, ...item.companies, ...item.technologyRoutes];
       return topics.some((topic) => buckets.includes(topic));
@@ -2578,9 +2579,16 @@ function renderRelatedIntel(node) {
   const items = relatedItemsForNode(node);
   if (status) {
     const topics = inferNodeTopics(node).map((topic) => topicLabels[topic] || topic);
-    status.textContent = topics.length ? topics.join(" / ") : "综合线索";
+    const forcedType = activeSection === "news" ? node?.intelType : null;
+    status.textContent = forcedType ? `${typeLabels[forcedType] || forcedType}线索` : topics.length ? topics.join(" / ") : "综合线索";
   }
   renderIntelCards("#relatedIntelList", items, "等待自动更新数据；数据加载后会按当前词条匹配相关论文、新闻、视频和专利。", 8);
+}
+
+function syncFeedSections(forcedType) {
+  document.querySelectorAll("[data-feed-type]").forEach((section) => {
+    section.hidden = Boolean(forcedType) && section.dataset.feedType !== forcedType;
+  });
 }
 
 function renderIntelligenceCenter() {
@@ -2597,6 +2605,7 @@ function renderIntelligenceCenter() {
     const prefix = forcedType ? `当前入口：${typeLabels[forcedType] || forcedType}；` : "";
     meta.textContent = collectedAt ? `${prefix}最近采集：${formatFeedDate(collectedAt)}` : `${prefix}等待自动更新数据`;
   }
+  syncFeedSections(forcedType);
   renderIntelCards("#intelligenceList", items, "没有匹配的情报线索。可以换一个主题、类型或搜索词。", 24);
 }
 
