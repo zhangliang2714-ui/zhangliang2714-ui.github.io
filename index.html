@@ -21,11 +21,12 @@
         </label>
 
         <nav class="tabs" aria-label="内容板块">
-          <button class="tab is-active" data-section="mechanism">机理</button>
+          <button class="tab is-active" data-section="overview">总览</button>
+          <button class="tab" data-section="mechanism">机理</button>
           <button class="tab" data-section="frontier">前沿</button>
-          <button class="tab" data-section="news">新闻</button>
-          <button class="tab" data-section="visualization">可视化</button>
           <button class="tab" data-section="companies">公司</button>
+          <button class="tab" data-section="visualization">可视化</button>
+          <button class="tab" data-section="news">情报</button>
         </nav>
 
         <div class="tree-tools">
@@ -51,6 +52,56 @@
         </section>
 
         <section class="detail-grid">
+          <article class="detail-panel wide overview-dashboard">
+            <div class="panel-header">
+              <h3>一眼看懂：电池行业学习路径</h3>
+              <span id="overviewDataDate">2026-05-10</span>
+            </div>
+            <div class="overview-grid">
+              <section class="overview-card accent-green" data-overview-target="mechanism">
+                <span>01</span>
+                <h4>先学机理</h4>
+                <p>从正极、负极、隔膜、电解液、集流体、BMS 和热管理理解性能来源。</p>
+              </section>
+              <section class="overview-card accent-blue" data-overview-target="frontier">
+                <span>02</span>
+                <h4>再看前沿</h4>
+                <p>跟踪快充、固态、钠离子、干法电极、硅碳负极和复合集流体。</p>
+              </section>
+              <section class="overview-card accent-gold" data-overview-target="companies">
+                <span>03</span>
+                <h4>定位公司</h4>
+                <p>按产业链环节查看 Top 公司、市场份额口径、供应关系和对应技术线索。</p>
+              </section>
+              <section class="overview-card accent-red" data-overview-target="visualization">
+                <span>04</span>
+                <h4>看懂格局</h4>
+                <p>用排名、雷达图、趋势线和地区热力图比较市场份额与技术指标。</p>
+              </section>
+            </div>
+            <div class="overview-map" aria-label="网站内容分布">
+              <div>
+                <strong>学习层</strong>
+                <span>组成 → 机理 → 失效 → 词汇</span>
+              </div>
+              <div>
+                <strong>技术层</strong>
+                <span>路线 → 难点 → 公司 → 论文/专利</span>
+              </div>
+              <div>
+                <strong>产业层</strong>
+                <span>公司 → 供应链 → 份额 → 客户关系</span>
+              </div>
+              <div>
+                <strong>情报层</strong>
+                <span>新闻 → 论文 → 视频 → 审核状态</span>
+              </div>
+            </div>
+            <p class="source-note small-note">
+              信息来源：公开论文数据库、公司公告/年报、行业研究机构、专利检索入口和新闻媒体公开报道；自动抓取内容仅作为线索，需结合证据等级和人工审核判断。
+            </p>
+          </article>
+
           <article class="detail-panel wide company-dashboard">
             <div class="panel-header">
               <h3>电池产业链公司图谱</h3>
@@ -352,6 +403,14 @@
                 <div id="latestPatents" class="feed-list"></div>
               </section>
             </div>
+          </article>
+
+          <article class="detail-panel wide data-source-panel">
+            <div class="panel-header">
+              <h3>信息来源与口径说明</h3>
+              <span id="sourceAuditStatus">Source note</span>
+            </div>
+            <p id="pageSourceNote" class="source-note small-note"></p>
           </article>
         </section>
       </main>

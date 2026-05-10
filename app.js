@@ -1,4 +1,47 @@
 const sections = {
+  overview: {
+    label: "总览首页",
+    roots: [
+      {
+        id: "overview-root",
+        title: "电池行业知识库总览",
+        tag: "入口",
+        difficulty: "学习路径",
+        summary: "从总览进入学习、技术、公司、市场和情报五条路径：先理解机理，再判断技术路线，最后用公司与数据验证行业格局。",
+        beginnerGuide: [
+          { title: "小白入口", text: "先看机理学习，建立材料、界面、制造和系统四层框架。" },
+          { title: "行业入口", text: "再看公司与产业链，理解电池厂、材料厂、设备厂和回收公司的位置。" },
+          { title: "跟踪入口", text: "最后看情报中心，把新闻、论文、视频和专利当作待审核线索。" }
+        ],
+        keyPoints: [
+          "机理学习回答：为什么电池会有能量密度、快充、安全和寿命差异。",
+          "前沿技术回答：哪些路线正在推进，难点在哪里，哪些公司在布局。",
+          "公司与可视化回答：谁处在产业链哪个环节，份额、客户和供应关系如何。"
+        ],
+        researchQuestions: [
+          "某家公司声称的技术领先，是否有论文、专利、量产客户或出货量证据支撑？",
+          "某个市场份额排名的统计口径，是全球、中国、动力、储能，还是某一材料细分品类？"
+        ],
+        progress: [
+          {
+            title: "网站结构已按学习路径重排",
+            date: "整理：2026-05-10",
+            evidence: "站内结构",
+            level: "high",
+            text: "总览负责导航，机理负责学习，前沿负责技术路线，公司负责产业链，可视化负责市场格局，情报负责动态跟踪。"
+          }
+        ],
+        sources: [
+          { label: "SNE Research", url: "https://www.sneresearch.com/en/", date: "入口：2026-05-10" },
+          { label: "Google Scholar battery research", url: "https://scholar.google.com/scholar?q=lithium+sodium+battery+research", date: "检索：2026-05-10" },
+          { label: "Google Patents battery search", url: "https://patents.google.com/?q=battery", date: "检索：2026-05-10" }
+        ],
+        videos: [
+          { label: "YouTube: battery industry explained", url: "https://www.youtube.com/results?search_query=battery+industry+explained+CATL+BYD+Tesla", date: "检索：2026-05-10" }
+        ]
+      }
+    ]
+  },
   mechanism: {
     label: "机理板块",
     roots: [
@@ -1021,9 +1064,9 @@ const sections = {
   }
 };
 
-let activeSection = "mechanism";
-let selectedId = "mechanism-root";
-const openNodes = new Set(["mechanism-root", "frontier-root", "news-root"]);
+let activeSection = "overview";
+let selectedId = "overview-root";
+const openNodes = new Set(["overview-root", "mechanism-root", "frontier-root", "news-root"]);
 
 const treeEl = document.querySelector("#tree");
 const searchInput = document.querySelector("#searchInput");
@@ -2195,6 +2238,41 @@ function renderCompanyDashboard() {
   renderCompanySources();
 }
 
+const pageSourceNotes = {
+  overview: {
+    status: "总览口径",
+    text: "信息来源：站内结构化知识、公开论文数据库、公司公告/年报、行业研究机构、专利检索入口和新闻媒体公开报道。数据整理时间：2026-05-10。自动抓取内容仅作为线索，未审核内容不代表最终结论。"
+  },
+  mechanism: {
+    status: "学习资料",
+    text: "信息来源：教材型电化学知识、公开综述论文、Google Scholar 检索入口、Battery University 等公开学习资料；机理内容用于学习框架，具体参数需回到原文测试条件。"
+  },
+  frontier: {
+    status: "技术线索",
+    text: "信息来源：论文、专利、公司发布会、年报/公告、行业新闻和视频入口。前沿技术以“证据等级 + 发布时间 + 审核状态”判断可靠性，未审核线索不直接作为结论。"
+  },
+  news: {
+    status: "自动抓取",
+    text: "信息来源：GitHub Actions 定期采集的论文、新闻、视频和专利检索入口。发布时间、采集时间、来源、证据等级和审核状态会显示在卡片中；建议点击原文复核。"
+  },
+  visualization: {
+    status: "数据图表",
+    text: "信息来源：SNE Research、公司年报/公告、行业公开报告、新闻报道和站内 data/*.json。市场份额受统计口径影响，需区分全球/中国、动力/储能、出货量/装机量。"
+  },
+  companies: {
+    status: "公司口径",
+    text: "信息来源：公司年报/公告、SNE、EVTank、GGII、SMM、公开新闻和专利/论文入口。公司份额与排名按公开口径整理，缺少一致公开份额的条目会标注为待核验。"
+  }
+};
+
+function renderPageSourceNote() {
+  const note = pageSourceNotes[activeSection] || pageSourceNotes.overview;
+  const status = document.querySelector("#sourceAuditStatus");
+  const text = document.querySelector("#pageSourceNote");
+  if (status) status.textContent = note.status;
+  if (text) text.textContent = note.text;
+}
+
 async function loadCompanyData() {
   try {
     companyState.data = await loadJson("data/companies.json");
@@ -2208,6 +2286,8 @@ async function loadCompanyData() {
 }
 
 function renderDetail(node) {
+  document.body.classList.toggle("is-overview", activeSection === "overview");
+  document.body.classList.toggle("is-news", activeSection === "news");
   document.body.classList.toggle("is-visualization", activeSection === "visualization");
   document.body.classList.toggle("is-companies", activeSection === "companies");
   document.querySelector("#sectionLabel").textContent = sections[activeSection].label;
@@ -2227,6 +2307,7 @@ function renderDetail(node) {
   renderLinks("#sourceLinks", node.sources);
   renderLinks("#videoLinks", node.videos);
   renderRelatedIntel(node);
+  renderPageSourceNote();
 }
 
 function openGlossary(termId) {
@@ -2258,6 +2339,19 @@ document.addEventListener("click", (event) => {
   if (!link) return;
   event.preventDefault();
   openGlossary(link.dataset.term);
+});
+
+document.addEventListener("click", (event) => {
+  const card = event.target.closest("[data-overview-target]");
+  if (!card) return;
+  const nextSection = card.dataset.overviewTarget;
+  if (!sections[nextSection]) return;
+  activeSection = nextSection;
+  selectedId = sections[nextSection].roots[0].id;
+  tabButtons.forEach((tab) => tab.classList.toggle("is-active", tab.dataset.section === nextSection));
+  openNodes.add(selectedId);
+  renderTree();
+  renderDetail(findNode(selectedId));
 });
 
 document.querySelector("#expandAll").addEventListener("click", () => {
