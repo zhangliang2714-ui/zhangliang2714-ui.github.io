@@ -275,10 +275,6 @@ body.is-news .auto-updates {
   display: block;
 }
 
-body.is-news .detail-grid > .detail-panel:not(.auto-updates):not(.data-source-panel) {
-  display: none;
-}
-
 .overview-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
