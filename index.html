@@ -25,6 +25,7 @@
           <button class="tab" data-section="frontier">前沿</button>
           <button class="tab" data-section="news">新闻</button>
           <button class="tab" data-section="visualization">可视化</button>
+          <button class="tab" data-section="companies">公司</button>
         </nav>
 
         <div class="tree-tools">
@@ -50,6 +51,65 @@
         </section>
 
         <section class="detail-grid">
+          <article class="detail-panel wide company-dashboard">
+            <div class="panel-header">
+              <h3>电池产业链公司图谱</h3>
+              <span id="companyDataDate">等待数据</span>
+            </div>
+            <div class="update-note">
+              按电池产业链环节整理 Top 10 公司、份额/排名口径、代表技术和供应关系。公司名称可点击，自动联动相关新闻、技术和专利线索。
+            </div>
+            <div class="company-controls" aria-label="公司筛选">
+              <label>
+                <span>产业链环节</span>
+                <select id="companySegment"></select>
+              </label>
+              <label>
+                <span>搜索公司/客户/技术</span>
+                <input id="companySearch" type="search" placeholder="宁德时代、璞泰来、隔膜、LFP" />
+              </label>
+              <label>
+                <span>排序</span>
+                <select id="companySort">
+                  <option value="rank">行业排名</option>
+                  <option value="share">市场份额</option>
+                  <option value="evidence">证据等级</option>
+                </select>
+              </label>
+            </div>
+            <div class="company-layout">
+              <section class="company-card-panel">
+                <div class="panel-header">
+                  <h4>Top 10 排名</h4>
+                  <span id="companySegmentNote">按公开口径整理</span>
+                </div>
+                <div id="companyRankList" class="company-rank-list"></div>
+              </section>
+              <section class="company-card-panel">
+                <div class="panel-header">
+                  <h4>公司详情</h4>
+                  <span id="selectedCompanyBadge">点击公司查看</span>
+                </div>
+                <div id="companyDetail" class="company-detail"></div>
+              </section>
+              <section class="company-card-panel wide">
+                <div class="panel-header">
+                  <h4>公司关系网</h4>
+                  <span>供应 / 客户 / 合作</span>
+                </div>
+                <div id="companyNetwork" class="network-stage"></div>
+              </section>
+              <section class="company-card-panel wide">
+                <div class="panel-header">
+                  <h4>相关情报</h4>
+                  <span id="companyIntelStatus">新闻 / 技术 / 专利</span>
+                </div>
+                <div id="companyIntelList" class="intel-list"></div>
+              </section>
+            </div>
+            <div id="companySources" class="source-note"></div>
+          </article>
+
           <article class="detail-panel wide market-dashboard">
             <div class="panel-header">
               <h3>市场与技术现状可视化</h3>

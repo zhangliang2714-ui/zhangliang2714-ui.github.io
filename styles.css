@@ -90,7 +90,7 @@ input {
 .tabs,
 .tree-tools {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 8px;
 }
 
@@ -252,11 +252,17 @@ input {
   display: none;
 }
 
-body.is-visualization .market-dashboard {
+body.is-visualization .market-dashboard,
+body.is-companies .company-dashboard {
   display: block;
 }
 
-body.is-visualization .detail-grid > .detail-panel:not(.market-dashboard) {
+body.is-visualization .detail-grid > .detail-panel:not(.market-dashboard),
+body.is-companies .detail-grid > .detail-panel:not(.company-dashboard) {
+  display: none;
+}
+
+.company-dashboard {
   display: none;
 }
 
@@ -1044,6 +1050,167 @@ ul {
   line-height: 1.65;
 }
 
+.company-controls {
+  display: grid;
+  grid-template-columns: minmax(170px, 0.8fr) minmax(220px, 1.4fr) minmax(140px, 0.7fr);
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.company-controls label {
+  display: grid;
+  gap: 6px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.company-controls input,
+.company-controls select {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 10px 11px;
+  background: #fff;
+  color: var(--ink);
+  font: inherit;
+}
+
+.company-layout {
+  display: grid;
+  grid-template-columns: minmax(300px, 0.9fr) minmax(320px, 1.1fr);
+  gap: 14px;
+}
+
+.company-card-panel {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 16px;
+  background: #fff;
+}
+
+.company-card-panel.wide {
+  grid-column: 1 / -1;
+}
+
+.company-rank-list,
+.company-detail {
+  display: grid;
+  gap: 10px;
+}
+
+.company-row {
+  display: grid;
+  grid-template-columns: 34px 1fr 58px;
+  gap: 10px;
+  align-items: center;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 10px;
+  background: #fbfdfc;
+  cursor: pointer;
+}
+
+.company-row.is-selected {
+  border-color: #8cbca9;
+  background: #eef8f3;
+}
+
+.company-rank {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  background: var(--green);
+  color: #fff;
+  font-weight: 800;
+  font-size: 12px;
+}
+
+.company-main strong {
+  display: block;
+  margin-bottom: 4px;
+}
+
+.company-main span,
+.company-row small {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.share-bar {
+  grid-column: 2 / 4;
+  height: 8px;
+  border-radius: 999px;
+  background: #edf3f0;
+  overflow: hidden;
+}
+
+.share-bar div {
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--green), var(--blue));
+}
+
+.company-detail-card {
+  display: grid;
+  gap: 10px;
+}
+
+.company-detail-card h4 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.company-detail-card p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.company-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.company-tags span {
+  border-radius: 999px;
+  padding: 4px 8px;
+  background: #edf3f0;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.network-stage {
+  min-height: 430px;
+  overflow: hidden;
+}
+
+.network-stage svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.network-node {
+  cursor: pointer;
+  transition: transform 0.18s ease;
+}
+
+.network-node:hover circle,
+.network-node.is-active circle {
+  stroke-width: 4;
+  filter: drop-shadow(0 8px 12px rgba(31, 143, 106, 0.25));
+}
+
+.network-label {
+  pointer-events: none;
+  font-size: 11px;
+  fill: #26352f;
+  font-weight: 700;
+}
+
 @media (max-width: 980px) {
   .app-shell {
     grid-template-columns: 1fr;
@@ -1076,6 +1243,8 @@ ul {
 
   .intel-controls,
   .intel-list,
+  .company-controls,
+  .company-layout,
   .market-controls,
   .market-kpis,
   .market-grid {
@@ -1083,6 +1252,10 @@ ul {
   }
 
   .market-card.wide {
+    grid-column: auto;
+  }
+
+  .company-card-panel.wide {
     grid-column: auto;
   }
 }

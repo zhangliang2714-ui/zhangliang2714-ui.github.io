@@ -1001,6 +1001,23 @@ const sections = {
         videos: []
       }
     ]
+  },
+  companies: {
+    label: "公司板块",
+    roots: [
+      {
+        id: "company-map",
+        title: "电池产业链公司图谱",
+        tag: "Company",
+        difficulty: "行业地图",
+        summary: "按电芯、正极、负极、隔膜、电解液、集流体、粘结剂/导电剂、设备、回收等环节查看 Top 10 公司、技术路线和供应关系。",
+        keyPoints: [],
+        researchQuestions: [],
+        progress: [],
+        sources: [],
+        videos: []
+      }
+    ]
   }
 };
 
@@ -1022,6 +1039,11 @@ const intelControls = {
 const intelligenceState = {
   metadata: null,
   items: []
+};
+
+const companyState = {
+  data: null,
+  selectedId: null
 };
 
 const topicLabels = {
@@ -1916,14 +1938,214 @@ function renderMarketDashboard() {
   document.querySelector("#marketSources").innerHTML = marketVisualData.sources.map((source) => `<p>${escapeHtml(source)}</p>`).join("");
 }
 
+function companyFilters() {
+  return {
+    segment: document.querySelector("#companySegment")?.value || "cell-pack",
+    search: (document.querySelector("#companySearch")?.value || "").trim().toLowerCase(),
+    sort: document.querySelector("#companySort")?.value || "rank"
+  };
+}
+
+function segmentById(id) {
+  return companyState.data?.segments.find((segment) => segment.id === id);
+}
+
+function companyById(id) {
+  return companyState.data?.companies.find((company) => company.id === id);
+}
+
+function companySearchText(company) {
+  return [
+    company.name,
+    company.segment,
+    company.shareLabel,
+    ...(company.technologyRoutes || []),
+    ...(company.customers || []),
+    ...(company.aliases || [])
+  ].join(" ").toLowerCase();
+}
+
+function evidenceCompanyRank(company) {
+  return { high: 3, medium: 2, low: 1 }[company.evidenceLevel] || 0;
+}
+
+function filteredCompanies() {
+  if (!companyState.data) return [];
+  const filters = companyFilters();
+  return companyState.data.companies
+    .filter((company) => company.segment === filters.segment)
+    .filter((company) => !filters.search || companySearchText(company).includes(filters.search))
+    .sort((a, b) => {
+      if (filters.sort === "share") return (b.marketShare || 0) - (a.marketShare || 0) || a.rank - b.rank;
+      if (filters.sort === "evidence") return evidenceCompanyRank(b) - evidenceCompanyRank(a) || a.rank - b.rank;
+      return a.rank - b.rank;
+    });
+}
+
+function relatedCompanyIntel(company) {
+  if (!company) return [];
+  const names = [company.name, ...(company.aliases || [])].map((item) => item.toLowerCase());
+  return intelligenceState.items
+    .filter((item) => names.some((name) => itemSearchText(item).includes(name)))
+    .sort((a, b) => evidenceRank(b) - evidenceRank(a) || itemDateValue(b) - itemDateValue(a))
+    .slice(0, 8);
+}
+
+function renderCompanySegments() {
+  const select = document.querySelector("#companySegment");
+  if (!select || !companyState.data) return;
+  select.innerHTML = companyState.data.segments
+    .map((segment) => `<option value="${escapeHtml(segment.id)}">${escapeHtml(segment.name)}</option>`)
+    .join("");
+}
+
+function renderCompanyRankList() {
+  const list = document.querySelector("#companyRankList");
+  const companies = filteredCompanies();
+  const maxShare = Math.max(...companies.map((company) => company.marketShare || 0), 1);
+  if (!companies.length) {
+    list.innerHTML = '<p class="empty">没有匹配的公司。</p>';
+    return;
+  }
+  if (!companyState.selectedId || !companies.some((company) => company.id === companyState.selectedId)) {
+    companyState.selectedId = companies[0].id;
+  }
+  list.innerHTML = companies.map((company) => `
+    <article class="company-row ${company.id === companyState.selectedId ? "is-selected" : ""}" data-company-id="${escapeHtml(company.id)}" title="${escapeHtml(company.shareLabel)}">
+      <span class="company-rank">${company.rank}</span>
+      <span class="company-main">
+        <strong>${escapeHtml(company.name)}</strong>
+        <span>${escapeHtml(company.technologyRoutes.join(" / "))}</span>
+      </span>
+      <small>${company.marketShare ? `${company.marketShare}%` : "待核验"}</small>
+      <div class="share-bar"><div style="width:${company.marketShare ? (company.marketShare / maxShare) * 100 : Math.max(8, 100 - company.rank * 7)}%"></div></div>
+    </article>
+  `).join("");
+}
+
+function renderCompanyDetail() {
+  const company = companyById(companyState.selectedId);
+  const segment = company && segmentById(company.segment);
+  const detail = document.querySelector("#companyDetail");
+  const badge = document.querySelector("#selectedCompanyBadge");
+  if (!company) {
+    detail.innerHTML = '<p class="empty">点击左侧公司查看详情。</p>';
+    if (badge) badge.textContent = "点击公司查看";
+    renderIntelCards("#companyIntelList", [], "选择公司后显示相关新闻、技术和专利线索。", 8);
+    return;
+  }
+  if (badge) badge.textContent = segment?.name || "公司详情";
+  detail.innerHTML = `
+    <article class="company-detail-card">
+      <h4>${escapeHtml(company.name)}</h4>
+      <p><strong>所属环节：</strong>${escapeHtml(segment?.name || company.segment)}；<strong>排名：</strong>Top ${company.rank}</p>
+      <p>${escapeHtml(company.shareLabel)}</p>
+      <div class="company-tags">
+        ${(company.technologyRoutes || []).map((tag) => `<span>${escapeHtml(tag)}</span>`).join("")}
+        ${(company.customers || []).map((id) => `<span>客户/关联：${escapeHtml(companyById(id)?.name || id)}</span>`).join("")}
+        <span>${escapeHtml(evidenceLabels[company.evidenceLevel] || company.evidenceLevel)}</span>
+      </div>
+    </article>
+  `;
+  const items = relatedCompanyIntel(company);
+  document.querySelector("#companyIntelStatus").textContent = items.length ? `${items.length} 条相关线索` : "暂无自动匹配";
+  renderIntelCards("#companyIntelList", items, "暂未从自动新闻/论文/专利中匹配到该公司；后续抓取会继续补充。", 8);
+}
+
+function renderCompanyNetwork() {
+  const stage = document.querySelector("#companyNetwork");
+  if (!stage || !companyState.data) return;
+  const segment = companyFilters().segment;
+  const companies = filteredCompanies().slice(0, 10);
+  const visibleIds = new Set(companies.map((company) => company.id));
+  companyState.data.relations.forEach((relation) => {
+    if (visibleIds.has(relation.source)) visibleIds.add(relation.target);
+    if (visibleIds.has(relation.target)) visibleIds.add(relation.source);
+  });
+  const nodes = companyState.data.companies.filter((company) => visibleIds.has(company.id)).slice(0, 24);
+  const width = 900;
+  const height = 430;
+  const center = { x: width / 2, y: height / 2 };
+  const cellIndexById = new Map(nodes.filter((node) => node.segment === "cell-pack").map((node, index) => [node.id, index]));
+  const positions = new Map(nodes.map((company, index) => {
+    if (company.segment === "cell-pack") return [company.id, { x: 680, y: 80 + (cellIndexById.get(company.id) || 0) * 46 }];
+    const angle = (index / Math.max(nodes.length, 1)) * Math.PI * 2;
+    const radius = company.segment === segment ? 145 : 185;
+    return [company.id, { x: center.x + Math.cos(angle) * radius, y: center.y + Math.sin(angle) * radius }];
+  }));
+  const active = companyState.selectedId;
+  const links = companyState.data.relations.filter((relation) => positions.has(relation.source) && positions.has(relation.target));
+  stage.innerHTML = `
+    <svg viewBox="0 0 ${width} ${height}" role="img" aria-label="公司供应关系网">
+      ${links.map((relation) => {
+        const s = positions.get(relation.source);
+        const t = positions.get(relation.target);
+        const hot = relation.source === active || relation.target === active;
+        return `<line x1="${s.x}" y1="${s.y}" x2="${t.x}" y2="${t.y}" stroke="${hot ? "#1f8f6a" : "#cbd8d2"}" stroke-width="${hot ? 3 : 1.5}"><title>${escapeHtml(relation.label)}</title></line>`;
+      }).join("")}
+      ${nodes.map((company) => {
+        const p = positions.get(company.id);
+        const isActive = company.id === active;
+        const isSegment = company.segment === segment;
+        const radius = (company.marketShare ? Math.min(30, 12 + company.marketShare / 2) : 14) + (isActive ? 7 : 0);
+        const fill = isSegment ? "#1f8f6a" : company.segment === "cell-pack" ? "#2878b5" : "#c28b2c";
+        return `<g class="network-node ${isActive ? "is-active" : ""}" data-company-id="${escapeHtml(company.id)}">
+          <circle cx="${p.x}" cy="${p.y}" r="${radius}" fill="${fill}" fill-opacity="${isActive ? 0.95 : 0.78}" stroke="#fff" stroke-width="2">
+            <title>${escapeHtml(company.name)}｜${escapeHtml(company.shareLabel)}</title>
+          </circle>
+          <text class="network-label" x="${p.x}" y="${p.y + radius + 15}" text-anchor="middle">${escapeHtml(company.name.split(" ")[0].slice(0, 8))}</text>
+        </g>`;
+      }).join("")}
+    </svg>
+  `;
+}
+
+function renderCompanySources() {
+  const el = document.querySelector("#companySources");
+  if (!el || !companyState.data) return;
+  el.innerHTML = [
+    `<p>${escapeHtml(companyState.data.note)}</p>`,
+    ...companyState.data.sources.map((source) => `<p><a href="${escapeHtml(source.url)}" target="_blank" rel="noreferrer">${escapeHtml(source.label)}</a></p>`)
+  ].join("");
+}
+
+function renderCompanyDashboard() {
+  if (!companyState.data) {
+    document.querySelector("#companyDataDate").textContent = "等待数据";
+    document.querySelector("#companyRankList").innerHTML = '<p class="empty">正在加载公司数据库。</p>';
+    return;
+  }
+  document.querySelector("#companyDataDate").textContent = companyState.data.updatedAt;
+  const segment = segmentById(companyFilters().segment);
+  document.querySelector("#companySegmentNote").textContent = segment?.description || "按公开口径整理";
+  renderCompanyRankList();
+  renderCompanyDetail();
+  renderCompanyNetwork();
+  renderCompanySources();
+}
+
+async function loadCompanyData() {
+  try {
+    companyState.data = await loadJson("data/companies.json");
+    renderCompanySegments();
+    companyState.selectedId = filteredCompanies()[0]?.id || null;
+    renderCompanyDashboard();
+  } catch (error) {
+    document.querySelector("#companyDataDate").textContent = "加载失败";
+    document.querySelector("#companyRankList").innerHTML = '<p class="empty">公司数据库暂时不可用，请检查 data/companies.json。</p>';
+  }
+}
+
 function renderDetail(node) {
   document.body.classList.toggle("is-visualization", activeSection === "visualization");
+  document.body.classList.toggle("is-companies", activeSection === "companies");
   document.querySelector("#sectionLabel").textContent = sections[activeSection].label;
   document.querySelector("#nodeTitle").textContent = node.title;
   document.querySelector("#nodeSummary").innerHTML = linkifyTerms(node.summary);
   document.querySelector("#difficultyBadge").textContent = node.difficulty;
   document.querySelector("#updatedAt").textContent = "2026-05-09";
   if (activeSection === "visualization") renderMarketDashboard();
+  if (activeSection === "companies") renderCompanyDashboard();
   renderVisual(node);
   renderCards("#beginnerGuide", node.beginnerGuide, defaultBeginnerGuide(node));
   renderList("#keyPoints", node.keyPoints);
@@ -2230,6 +2452,26 @@ Object.values(intelControls).forEach((control) => {
   document.querySelector(selector)?.addEventListener("change", renderMarketDashboard);
 });
 
+["#companySegment", "#companySearch", "#companySort"].forEach((selector) => {
+  const control = document.querySelector(selector);
+  control?.addEventListener("input", () => {
+    companyState.selectedId = filteredCompanies()[0]?.id || null;
+    renderCompanyDashboard();
+  });
+  control?.addEventListener("change", () => {
+    companyState.selectedId = filteredCompanies()[0]?.id || null;
+    renderCompanyDashboard();
+  });
+});
+
+document.addEventListener("click", (event) => {
+  const companyNode = event.target.closest("[data-company-id]");
+  if (!companyNode) return;
+  companyState.selectedId = companyNode.dataset.companyId;
+  renderCompanyDashboard();
+});
+
 renderTree();
 renderDetail(findNode(selectedId));
 loadDynamicFeeds();
+loadCompanyData();
