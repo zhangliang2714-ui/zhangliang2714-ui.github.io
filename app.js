@@ -885,7 +885,7 @@ const sections = {
     ]
   },
   news: {
-    label: "新闻板块",
+    label: "情报板块",
     roots: [
       {
         id: "news-root",
@@ -926,6 +926,7 @@ const sections = {
             title: "官方公告",
             tag: "高可信",
             difficulty: "入门",
+            intelType: "news",
             summary: "官方公告适合确认公司战略、产品名称、量产时间和指标口径。",
             keyPoints: [
               "看标题之外，还要找应用场景、客户车型、量产时间和工厂规模。",
@@ -957,37 +958,71 @@ const sections = {
             ]
           },
           {
-            id: "news-patent",
-            title: "专利与论文追踪",
-            tag: "研究",
+            id: "news-paper",
+            title: "论文库",
+            tag: "论文",
             difficulty: "进阶",
-            summary: "专利和论文通常比发布会更早暴露方向，但不能直接等同于量产。",
+            intelType: "paper",
+            summary: "论文库只聚合论文线索，用来追踪材料、界面、工艺和系统机理的研究进展。",
             keyPoints: [
-              "专利看申请人、发明人、优先权时间、权利要求和实施例。",
               "论文看材料体系、测试条件、载量、N/P 比、温度和循环圈数。",
-              "同一个方向如果同时出现论文、专利、招聘和产线信息，可信度显著提高。"
+              "优先看综述、顶刊、产业条件接近的全电池测试，而不是只看半电池漂亮曲线。",
+              "论文结论不能直接等同量产，需要继续找专利、客户、产线或公司公告验证。"
             ],
             researchQuestions: [
-              "某项专利的权利要求是否真的覆盖核心技术，还是只是外围保护？",
-              "论文中的面容量和电极厚度是否接近产业条件？"
+              "论文中的面容量和电极厚度是否接近产业条件？",
+              "它使用扣电、软包全电池，还是接近真实产品的电芯？"
             ],
             progress: [
               {
-                title: "建议建立关键词库",
+                title: "建议建立论文关键词库",
                 date: "长期",
                 evidence: "方法",
                 level: "high",
-                text: "关键词可包括 hard carbon、Prussian blue、dry electrode、LFP fast charging、CTP、CTB、solid electrolyte。"
+                text: "关键词可包括 hard carbon、Prussian blue、dry electrode、LFP fast charging、solid electrolyte、silicon anode、SEI。"
+              }
+            ],
+            sources: [
+              { label: "Google Scholar battery search", url: "https://scholar.google.com/scholar?q=lithium+sodium+battery+fast+charging+dry+electrode" },
+              { label: "Nature Energy battery research", url: "https://www.nature.com/nenergy/" },
+              { label: "ScienceDirect battery research", url: "https://www.sciencedirect.com/search?qs=lithium%20sodium%20battery" }
+            ],
+            videos: [
+              { label: "YouTube: battery paper review", url: "https://www.youtube.com/results?search_query=battery+paper+review+lithium+ion" }
+            ]
+          },
+          {
+            id: "news-patent",
+            title: "专利库",
+            tag: "专利",
+            difficulty: "进阶",
+            intelType: "patent-search",
+            summary: "专利库只聚合专利检索线索，用来观察公司真实布局、保护范围和可能的产品方向。",
+            keyPoints: [
+              "专利看申请人、发明人、优先权时间、权利要求和实施例。",
+              "重点看权利要求是否覆盖核心技术，还是只是外围结构或配方保护。",
+              "专利代表布局，不等于已经量产，需要与公告、招聘、产线和客户信息交叉验证。"
+            ],
+            researchQuestions: [
+              "某项专利的权利要求是否真的覆盖核心技术，还是只是外围保护？",
+              "同一公司是否围绕同一方向连续申请专利族？"
+            ],
+            progress: [
+              {
+                title: "建议按公司和技术路线建立专利监控",
+                date: "长期",
+                evidence: "方法",
+                level: "high",
+                text: "关键词可包括 CATL sodium-ion、BYD blade battery、Tesla dry electrode、solid electrolyte、composite current collector。"
               }
             ],
             sources: [
               { label: "Google Patents", url: "https://patents.google.com/" },
-              { label: "Google Scholar battery search", url: "https://scholar.google.com/scholar?q=lithium+sodium+battery+fast+charging+dry+electrode" },
-              { label: "Lens.org patents", url: "https://www.lens.org/" }
+              { label: "Lens.org patents", url: "https://www.lens.org/" },
+              { label: "CNIPA 中国专利检索入口", url: "https://pss-system.cponline.cnipa.gov.cn/" }
             ],
             videos: [
-              { label: "YouTube: how to read battery patents", url: "https://www.youtube.com/results?search_query=how+to+read+battery+patents" },
-              { label: "YouTube: battery paper review", url: "https://www.youtube.com/results?search_query=battery+paper+review+lithium+ion" }
+              { label: "YouTube: how to read battery patents", url: "https://www.youtube.com/results?search_query=how+to+read+battery+patents" }
             ]
           },
           {
@@ -995,6 +1030,7 @@ const sections = {
             title: "视频与拆解",
             tag: "视频",
             difficulty: "入门",
+            intelType: "video",
             summary: "视频可以帮助理解结构件、工艺现场和整包设计，但需要把视觉信息转化为可验证问题。",
             keyPoints: [
               "官方视频看发布措辞和工厂画面，第三方拆解看结构、电连接、热管理和维修性。",
@@ -1445,6 +1481,7 @@ function visualKindFor(node) {
     "frontier-root": "industry",
     "news-root": "evidence",
     "news-official": "evidence",
+    "news-paper": "evidence",
     "news-patent": "evidence",
     "news-video": "evidence",
     catl: "catl",
@@ -2307,6 +2344,7 @@ function renderDetail(node) {
   renderLinks("#sourceLinks", node.sources);
   renderLinks("#videoLinks", node.videos);
   renderRelatedIntel(node);
+  renderIntelligenceCenter();
   renderPageSourceNote();
 }
 
@@ -2469,10 +2507,12 @@ function renderFeed(targetId, items, emptyText) {
 }
 
 function intelligenceFilters() {
+  const node = findNode(selectedId);
+  const newsType = activeSection === "news" ? (node?.intelType || (selectedId === "news-root" ? "all" : null)) : null;
   return {
     search: (intelControls.search?.value || "").trim().toLowerCase(),
     topic: intelControls.topic?.value || "all",
-    type: intelControls.type?.value || "all",
+    type: newsType || intelControls.type?.value || "all",
     review: intelControls.review?.value || "all",
     sort: intelControls.sort?.value || "newest"
   };
@@ -2547,10 +2587,15 @@ function renderIntelligenceCenter() {
   const items = filteredIntelligenceItems();
   const count = document.querySelector("#intelligenceCount");
   const meta = document.querySelector("#intelligenceMeta");
-  if (count) count.textContent = `${items.length} 条线索`;
+  const node = findNode(selectedId);
+  const forcedType = activeSection === "news" ? node?.intelType : null;
+  if (intelControls.type && forcedType) intelControls.type.value = forcedType;
+  if (intelControls.type && activeSection === "news" && selectedId === "news-root") intelControls.type.value = "all";
+  if (count) count.textContent = forcedType ? `${typeLabels[forcedType] || "情报"}：${items.length} 条` : `${items.length} 条线索`;
   if (meta) {
     const collectedAt = intelligenceState.metadata?.collectedAt;
-    meta.textContent = collectedAt ? `最近采集：${formatFeedDate(collectedAt)}` : "等待自动更新数据";
+    const prefix = forcedType ? `当前入口：${typeLabels[forcedType] || forcedType}；` : "";
+    meta.textContent = collectedAt ? `${prefix}最近采集：${formatFeedDate(collectedAt)}` : `${prefix}等待自动更新数据`;
   }
   renderIntelCards("#intelligenceList", items, "没有匹配的情报线索。可以换一个主题、类型或搜索词。", 24);
 }
