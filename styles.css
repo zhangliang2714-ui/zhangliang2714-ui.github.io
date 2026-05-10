@@ -1183,13 +1183,19 @@ ul {
 }
 
 .network-stage {
-  min-height: 430px;
-  overflow: hidden;
+  min-height: 520px;
+  overflow: auto;
+  border: 1px solid #e2ebe6;
+  border-radius: 8px;
+  background:
+    linear-gradient(90deg, rgba(31, 143, 106, 0.05), transparent 26%, transparent 73%, rgba(40, 120, 181, 0.06)),
+    #fbfdfc;
 }
 
 .network-stage svg {
   display: block;
   width: 100%;
+  min-width: 820px;
   height: auto;
 }
 
@@ -1198,17 +1204,69 @@ ul {
   transition: transform 0.18s ease;
 }
 
-.network-node:hover circle,
+.network-node:hover {
+  transform-box: fill-box;
+  transform-origin: center;
+  transform: scale(1.08);
+}
+
+.network-node:hover circle:not(.network-node-halo),
 .network-node.is-active circle {
   stroke-width: 4;
   filter: drop-shadow(0 8px 12px rgba(31, 143, 106, 0.25));
 }
 
+.network-node:hover .network-node-halo,
+.network-node.is-active .network-node-halo {
+  opacity: 0.22;
+}
+
+.network-label-bg {
+  fill: rgba(255, 255, 255, 0.92);
+  stroke: #dfe9e4;
+  stroke-width: 1;
+  filter: drop-shadow(0 4px 10px rgba(33, 45, 39, 0.08));
+}
+
 .network-label {
   pointer-events: none;
-  font-size: 11px;
+  font-size: 13px;
   fill: #26352f;
   font-weight: 700;
+}
+
+.network-lane-title line {
+  stroke: #dfe9e4;
+  stroke-dasharray: 4 8;
+}
+
+.network-lane-title rect {
+  fill: #fff;
+  stroke: #dbe8e2;
+}
+
+.network-lane-title text {
+  fill: #52645c;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.network-link path {
+  opacity: 0.74;
+}
+
+.network-link.is-hot path {
+  opacity: 1;
+  filter: drop-shadow(0 4px 8px rgba(31, 143, 106, 0.18));
+}
+
+.network-relation-label {
+  paint-order: stroke;
+  stroke: #fff;
+  stroke-width: 5px;
+  fill: #157f5c;
+  font-size: 12px;
+  font-weight: 800;
 }
 
 @media (max-width: 980px) {

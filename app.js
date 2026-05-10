@@ -2056,44 +2056,115 @@ function renderCompanyNetwork() {
   const stage = document.querySelector("#companyNetwork");
   if (!stage || !companyState.data) return;
   const segment = companyFilters().segment;
-  const companies = filteredCompanies().slice(0, 10);
-  const visibleIds = new Set(companies.map((company) => company.id));
-  companyState.data.relations.forEach((relation) => {
-    if (visibleIds.has(relation.source)) visibleIds.add(relation.target);
-    if (visibleIds.has(relation.target)) visibleIds.add(relation.source);
-  });
-  const nodes = companyState.data.companies.filter((company) => visibleIds.has(company.id)).slice(0, 24);
-  const width = 900;
-  const height = 430;
-  const center = { x: width / 2, y: height / 2 };
-  const cellIndexById = new Map(nodes.filter((node) => node.segment === "cell-pack").map((node, index) => [node.id, index]));
-  const positions = new Map(nodes.map((company, index) => {
-    if (company.segment === "cell-pack") return [company.id, { x: 680, y: 80 + (cellIndexById.get(company.id) || 0) * 46 }];
-    const angle = (index / Math.max(nodes.length, 1)) * Math.PI * 2;
-    const radius = company.segment === segment ? 145 : 185;
-    return [company.id, { x: center.x + Math.cos(angle) * radius, y: center.y + Math.sin(angle) * radius }];
-  }));
+  const focusCompanies = filteredCompanies().slice(0, 10);
+  const focusIds = new Set(focusCompanies.map((company) => company.id));
+  if (companyState.selectedId) focusIds.add(companyState.selectedId);
+  const visibleIds = new Set(focusIds);
   const active = companyState.selectedId;
-  const links = companyState.data.relations.filter((relation) => positions.has(relation.source) && positions.has(relation.target));
+
+  companyState.data.relations.forEach((relation) => {
+    if (focusIds.has(relation.source) || focusIds.has(relation.target) || relation.source === active || relation.target === active) {
+      visibleIds.add(relation.source);
+      visibleIds.add(relation.target);
+    }
+  });
+
+  const nodes = companyState.data.companies
+    .filter((company) => visibleIds.has(company.id))
+    .sort((a, b) => {
+      const aFocus = a.segment === segment ? 0 : 1;
+      const bFocus = b.segment === segment ? 0 : 1;
+      return aFocus - bFocus || a.rank - b.rank;
+    })
+    .slice(0, 26);
+  const nodeIds = new Set(nodes.map((company) => company.id));
+  const links = companyState.data.relations.filter((relation) => nodeIds.has(relation.source) && nodeIds.has(relation.target));
+  const linkedToActive = new Set();
+  links.forEach((relation) => {
+    if (relation.source === active) linkedToActive.add(relation.target);
+    if (relation.target === active) linkedToActive.add(relation.source);
+  });
+
+  const laneFor = (company) => {
+    if (company.segment === segment) return "focus";
+    if (company.segment === "cell-pack") return segment === "cell-pack" ? "focus" : "customer";
+    if ((company.customers || []).some((id) => focusIds.has(id))) return "partner";
+    return "partner";
+  };
+  const lanes = {
+    partner: nodes.filter((company) => laneFor(company) === "partner"),
+    focus: nodes.filter((company) => laneFor(company) === "focus"),
+    customer: nodes.filter((company) => laneFor(company) === "customer")
+  };
+  const width = 1100;
+  const maxRows = Math.max(lanes.partner.length, lanes.focus.length, lanes.customer.length, 5);
+  const height = Math.max(520, 130 + maxRows * 72);
+  const xByLane = { partner: 190, focus: 550, customer: 910 };
+  const laneTitle = {
+    partner: segment === "cell-pack" ? "材料 / 设备 / 回收伙伴" : "上游与关联公司",
+    focus: segmentById(segment)?.name || "当前环节",
+    customer: "电芯 / 整包客户"
+  };
+  const positions = new Map();
+  Object.entries(lanes).forEach(([lane, laneNodes]) => {
+    const gap = laneNodes.length > 1 ? Math.min(76, (height - 165) / (laneNodes.length - 1)) : 0;
+    const startY = laneNodes.length > 1 ? 108 : height / 2;
+    laneNodes.forEach((company, index) => {
+      positions.set(company.id, { x: xByLane[lane], y: startY + index * gap, lane });
+    });
+  });
+  const shortName = (name) => name.split(" ")[0].replace("股份", "").replace("科技", "").slice(0, 8);
+  const relationColor = (type, hot) => {
+    if (hot) return "#157f5c";
+    return { supplier: "#83aaa0", equipment: "#9b8ad8", affiliate: "#d4a247", recycling: "#5aa7a5" }[type] || "#bdcbc6";
+  };
   stage.innerHTML = `
-    <svg viewBox="0 0 ${width} ${height}" role="img" aria-label="公司供应关系网">
+    <svg viewBox="0 0 ${width} ${height}" role="img" aria-label="公司供应链分层关系图">
+      <defs>
+        <marker id="companyArrow" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+          <path d="M0,0 L0,6 L8,3 z" fill="#83aaa0"></path>
+        </marker>
+        <marker id="companyArrowHot" markerWidth="10" markerHeight="10" refX="8" refY="3.5" orient="auto" markerUnits="strokeWidth">
+          <path d="M0,0 L0,7 L9,3.5 z" fill="#157f5c"></path>
+        </marker>
+      </defs>
+      ${Object.entries(xByLane).map(([lane, x]) => `
+        <g class="network-lane-title">
+          <line x1="${x}" y1="52" x2="${x}" y2="${height - 32}"></line>
+          <rect x="${x - 88}" y="22" width="176" height="32" rx="16"></rect>
+          <text x="${x}" y="43" text-anchor="middle">${escapeHtml(laneTitle[lane])}</text>
+        </g>
+      `).join("")}
       ${links.map((relation) => {
         const s = positions.get(relation.source);
         const t = positions.get(relation.target);
         const hot = relation.source === active || relation.target === active;
-        return `<line x1="${s.x}" y1="${s.y}" x2="${t.x}" y2="${t.y}" stroke="${hot ? "#1f8f6a" : "#cbd8d2"}" stroke-width="${hot ? 3 : 1.5}"><title>${escapeHtml(relation.label)}</title></line>`;
+        const midX = (s.x + t.x) / 2;
+        const midY = (s.y + t.y) / 2;
+        const curve = s.y === t.y ? 0 : Math.max(-70, Math.min(70, (t.y - s.y) / 5));
+        return `<g class="network-link ${hot ? "is-hot" : ""}">
+          <path d="M${s.x},${s.y} C${s.x + 115},${s.y + curve} ${t.x - 115},${t.y - curve} ${t.x},${t.y}" fill="none" stroke="${relationColor(relation.type, hot)}" stroke-width="${hot ? 3.2 : 1.6}" marker-end="url(#${hot ? "companyArrowHot" : "companyArrow"})">
+            <title>${escapeHtml(companyById(relation.source)?.name || relation.source)} → ${escapeHtml(companyById(relation.target)?.name || relation.target)}：${escapeHtml(relation.label)}</title>
+          </path>
+          ${hot ? `<text class="network-relation-label" x="${midX}" y="${midY - 8}" text-anchor="middle">${escapeHtml(relation.label.slice(0, 12))}</text>` : ""}
+        </g>`;
       }).join("")}
       ${nodes.map((company) => {
         const p = positions.get(company.id);
         const isActive = company.id === active;
+        const isRelated = linkedToActive.has(company.id);
         const isSegment = company.segment === segment;
-        const radius = (company.marketShare ? Math.min(30, 12 + company.marketShare / 2) : 14) + (isActive ? 7 : 0);
+        const radius = (company.marketShare ? Math.min(26, 11 + company.marketShare / 3) : 13) + (isActive ? 5 : 0);
         const fill = isSegment ? "#1f8f6a" : company.segment === "cell-pack" ? "#2878b5" : "#c28b2c";
+        const label = shortName(company.name);
+        const labelWidth = Math.max(62, Math.min(112, label.length * 14 + 20));
         return `<g class="network-node ${isActive ? "is-active" : ""}" data-company-id="${escapeHtml(company.id)}">
-          <circle cx="${p.x}" cy="${p.y}" r="${radius}" fill="${fill}" fill-opacity="${isActive ? 0.95 : 0.78}" stroke="#fff" stroke-width="2">
+          <circle class="network-node-halo" cx="${p.x}" cy="${p.y}" r="${radius + 7}" fill="${fill}" opacity="${isRelated || isActive ? 0.14 : 0}"></circle>
+          <circle cx="${p.x}" cy="${p.y}" r="${radius}" fill="${fill}" fill-opacity="${isActive ? 0.98 : 0.82}" stroke="${isActive ? "#0d5f46" : "#fff"}" stroke-width="${isActive ? 3 : 2}">
             <title>${escapeHtml(company.name)}｜${escapeHtml(company.shareLabel)}</title>
           </circle>
-          <text class="network-label" x="${p.x}" y="${p.y + radius + 15}" text-anchor="middle">${escapeHtml(company.name.split(" ")[0].slice(0, 8))}</text>
+          <rect class="network-label-bg" x="${p.x - labelWidth / 2}" y="${p.y + radius + 9}" width="${labelWidth}" height="24" rx="12"></rect>
+          <text class="network-label" x="${p.x}" y="${p.y + radius + 26}" text-anchor="middle">${escapeHtml(label)}</text>
         </g>`;
       }).join("")}
     </svg>
