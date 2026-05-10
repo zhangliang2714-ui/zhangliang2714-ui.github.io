@@ -1,38 +1,12 @@
 {
-  "collectedAt": "2026-05-09T14:58:52.065Z",
+  "collectedAt": "2026-05-10T07:33:09.587Z",
   "sources": {
     "papers": "OpenAlex API",
     "news": "Google News RSS",
     "videos": "YouTube search links",
     "patents": "Google Patents search links"
   },
-  "errors": [
-    {
-      "source": "Google News RSS",
-      "query": "CATL battery technology",
-      "message": "fetch failed"
-    },
-    {
-      "source": "Google News RSS",
-      "query": "BYD blade battery sodium ion",
-      "message": "fetch failed"
-    },
-    {
-      "source": "Google News RSS",
-      "query": "Tesla 4680 dry electrode battery",
-      "message": "fetch failed"
-    },
-    {
-      "source": "Google News RSS",
-      "query": "solid state battery automotive",
-      "message": "fetch failed"
-    },
-    {
-      "source": "Google News RSS",
-      "query": "sodium ion battery industry",
-      "message": "fetch failed"
-    }
-  ],
+  "errors": [],
   "taxonomy": {
     "topics": [
       "fast-charge",
