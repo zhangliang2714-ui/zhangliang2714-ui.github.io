@@ -24,6 +24,7 @@
           <button class="tab is-active" data-section="overview">总览</button>
           <button class="tab" data-section="mechanism">机理</button>
           <button class="tab" data-section="frontier">前沿</button>
+          <button class="tab" data-section="recycling">回收</button>
           <button class="tab" data-section="companies">公司</button>
           <button class="tab" data-section="visualization">可视化</button>
           <button class="tab" data-section="news">情报</button>
@@ -68,13 +69,18 @@
                 <h4>再看前沿</h4>
                 <p>跟踪快充、固态、钠离子、干法电极、硅碳负极和复合集流体。</p>
               </section>
-              <section class="overview-card accent-gold" data-overview-target="companies">
+              <section class="overview-card accent-green" data-overview-target="recycling">
                 <span>03</span>
+                <h4>理解回收</h4>
+                <p>学习梯次利用、拆解预处理、湿法/火法、直接再生和黑粉资源化。</p>
+              </section>
+              <section class="overview-card accent-gold" data-overview-target="companies">
+                <span>04</span>
                 <h4>定位公司</h4>
                 <p>按产业链环节查看 Top 公司、市场份额口径、供应关系和对应技术线索。</p>
               </section>
               <section class="overview-card accent-red" data-overview-target="visualization">
-                <span>04</span>
+                <span>05</span>
                 <h4>看懂格局</h4>
                 <p>用排名、雷达图、趋势线和地区热力图比较市场份额与技术指标。</p>
               </section>
@@ -100,6 +106,40 @@
             <p class="source-note small-note">
               信息来源：公开论文数据库、公司公告/年报、行业研究机构、专利检索入口和新闻媒体公开报道；自动抓取内容仅作为线索，需结合证据等级和人工审核判断。
             </p>
+          </article>
+
+          <article class="detail-panel wide recycling-dashboard">
+            <div class="panel-header">
+              <h3>电池回收技术与市场看板</h3>
+              <span id="recyclingDataDate">整理：2026-06-03</span>
+            </div>
+            <div class="update-note">
+              以中国动力/储能电池回收产业链为主，跟踪梯次利用、预处理、火法、湿法、直接再生、黑粉资源化、代表公司和专利/论文线索。
+            </div>
+            <div class="company-layout">
+              <section class="company-card-panel">
+                <div class="panel-header">
+                  <h4>核心技术路线</h4>
+                  <span>从退役电池到资源闭环</span>
+                </div>
+                <div id="recyclingRouteMap" class="recycling-route-map"></div>
+              </section>
+              <section class="company-card-panel">
+                <div class="panel-header">
+                  <h4>回收公司 Top 10</h4>
+                  <span>复用公司数据库</span>
+                </div>
+                <div id="recyclingCompanyList" class="company-rank-list"></div>
+              </section>
+              <section class="company-card-panel wide">
+                <div class="panel-header">
+                  <h4>回收论文 / 专利 / 新闻</h4>
+                  <span id="recyclingIntelStatus">等待数据</span>
+                </div>
+                <div id="recyclingIntelList" class="intel-list"></div>
+              </section>
+            </div>
+            <div id="recyclingSources" class="source-note"></div>
           </article>
 
           <article class="detail-panel wide company-dashboard">
@@ -347,6 +387,7 @@
                   <option value="electrolyte">电解液/电解质</option>
                   <option value="bms">BMS</option>
                   <option value="thermal-management">热管理</option>
+                  <option value="recycling">电池回收</option>
                   <option value="catl">CATL</option>
                   <option value="byd">BYD</option>
                   <option value="tesla">Tesla</option>

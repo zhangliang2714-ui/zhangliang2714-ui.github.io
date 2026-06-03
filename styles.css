@@ -90,7 +90,7 @@ input {
 .tabs,
 .tree-tools {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(7, 1fr);
   gap: 8px;
 }
 
@@ -250,11 +250,13 @@ input {
 
 .market-dashboard,
 .company-dashboard,
+.recycling-dashboard,
 .overview-dashboard {
   display: none;
 }
 
 body.is-overview .overview-dashboard,
+body.is-recycling .recycling-dashboard,
 body.is-visualization .market-dashboard,
 body.is-companies .company-dashboard {
   display: block;
@@ -360,6 +362,46 @@ body.is-news .auto-updates {
   color: var(--muted);
   font-size: 12px;
   line-height: 1.5;
+}
+
+.recycling-route-map {
+  display: grid;
+  gap: 10px;
+}
+
+.recycling-route-step {
+  display: grid;
+  grid-template-columns: 34px 1fr;
+  gap: 10px;
+  align-items: start;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 12px;
+  background: #fbfdfc;
+}
+
+.recycling-route-step span {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 999px;
+  background: var(--green);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.recycling-route-step strong {
+  display: block;
+  margin-bottom: 4px;
+}
+
+.recycling-route-step p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.55;
 }
 
 .visual-panel {

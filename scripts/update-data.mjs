@@ -9,7 +9,8 @@ const paperQueries = [
   "sodium ion battery hard carbon review",
   "dry electrode lithium ion battery manufacturing",
   "solid state battery electrolyte interface",
-  "lithium battery separator electrolyte safety"
+  "lithium battery separator electrolyte safety",
+  "lithium ion battery recycling black mass hydrometallurgy direct recycling"
 ];
 
 const newsQueries = [
@@ -17,21 +18,24 @@ const newsQueries = [
   "BYD blade battery sodium ion",
   "Tesla 4680 dry electrode battery",
   "solid state battery automotive",
-  "sodium ion battery industry"
+  "sodium ion battery industry",
+  "China lithium battery recycling black mass"
 ];
 
 const videoQueries = [
   "lithium ion battery mechanism explained",
   "CATL BYD Tesla battery technology",
   "sodium ion battery explained",
-  "solid state battery latest"
+  "solid state battery latest",
+  "lithium ion battery recycling process black mass"
 ];
 
 const patentQueries = [
   "CATL fast charging battery electrode electrolyte",
   "BYD blade battery pack thermal safety",
   "Tesla dry electrode 4680 battery",
-  "sodium ion battery hard carbon electrolyte"
+  "sodium ion battery hard carbon electrolyte",
+  "battery recycling black mass hydrometallurgy direct regeneration"
 ];
 
 const errors = [];
@@ -44,13 +48,20 @@ const taxonomy = {
     { id: "dry-electrode", labels: ["dry electrode", "dry coating", "solvent-free", "maxwell", "干法电极", "干电极"] },
     { id: "separator", labels: ["separator", "membrane", "polyolefin", "ceramic coating", "隔膜", "涂覆膜"] },
     { id: "electrolyte", labels: ["electrolyte", "sei", "cei", "lipf6", "lifsi", "additive", "电解液", "电解质", "添加剂"] },
+    { id: "recycling", labels: ["battery recycling", "recycling", "black mass", "hydrometallurgy", "pyrometallurgy", "direct recycling", "direct regeneration", "retired battery", "second life", "回收", "梯次利用", "黑粉", "湿法", "火法", "直接再生", "退役电池", "资源化", "镍钴锂回收"] },
     { id: "bms", labels: ["bms", "battery management", "soc", "soh", "sop", "电池管理"] },
     { id: "thermal-management", labels: ["thermal", "cooling", "heat", "thermal runaway", "热管理", "热失控", "液冷"] }
   ],
   companies: [
     { id: "catl", labels: ["catl", "contemporary amperex", "宁德时代"] },
     { id: "byd", labels: ["byd", "fin dreams", "blade battery", "比亚迪", "弗迪", "刀片电池"] },
-    { id: "tesla", labels: ["tesla", "4680", "maxwell", "特斯拉"] }
+    { id: "tesla", labels: ["tesla", "4680", "maxwell", "特斯拉"] },
+    { id: "brunp", labels: ["brunp", "邦普", "邦普循环"] },
+    { id: "gem", labels: ["gem", "格林美"] },
+    { id: "huayou", labels: ["huayou", "华友", "华友钴业"] },
+    { id: "redwood", labels: ["redwood materials", "redwood"] },
+    { id: "li-cycle", labels: ["li-cycle", "li cycle"] },
+    { id: "umicore", labels: ["umicore"] }
   ],
   routes: [
     { id: "lfp", labels: ["lfp", "lithium iron phosphate", "磷酸铁锂"] },
@@ -58,7 +69,12 @@ const taxonomy = {
     { id: "lmfp", labels: ["lmfp", "manganese iron phosphate", "磷酸锰铁锂"] },
     { id: "ctp-ctb", labels: ["ctp", "ctb", "cell to pack", "cell to body", "麒麟", "刀片"] },
     { id: "4680", labels: ["4680", "cylindrical", "圆柱"] },
-    { id: "sodium-hard-carbon", labels: ["hard carbon", "sodium", "钠", "硬碳"] }
+    { id: "sodium-hard-carbon", labels: ["hard carbon", "sodium", "钠", "硬碳"] },
+    { id: "battery-recycling", labels: ["battery recycling", "电池回收", "退役电池"] },
+    { id: "black-mass", labels: ["black mass", "黑粉"] },
+    { id: "hydrometallurgy", labels: ["hydrometallurgy", "湿法", "酸浸", "萃取"] },
+    { id: "pyrometallurgy", labels: ["pyrometallurgy", "火法", "高温冶炼"] },
+    { id: "direct-regeneration", labels: ["direct recycling", "direct regeneration", "直接再生", "正极再生"] }
   ]
 };
 
@@ -154,11 +170,15 @@ async function collectPapers() {
       url.searchParams.set("search", query);
       url.searchParams.set("filter", `from_publication_date:${fromDate}`);
       url.searchParams.set("sort", "publication_date:desc");
-      url.searchParams.set("per-page", "6");
+      url.searchParams.set("per-page", "4");
       const data = await fetchJson(url);
       for (const work of data.results || []) {
+        const title = work.title || "";
+        if (/recycling|black mass|hydrometallurgy|direct recycling/i.test(query) && !/battery|batteries|lithium|li-ion|cathode|black mass|accumulator/i.test(title)) {
+          continue;
+        }
         results.push({
-          title: work.title,
+          title,
           url: work.doi ? `https://doi.org/${work.doi.replace(/^https?:\/\/doi.org\//, "")}` : work.id,
           source: work.primary_location?.source?.display_name || "OpenAlex",
           publishedAt: work.publication_date,

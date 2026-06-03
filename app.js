@@ -1060,6 +1060,194 @@ const sections = {
       }
     ]
   },
+  recycling: {
+    label: "回收板块",
+    roots: [
+      {
+        id: "recycling-root",
+        title: "电池回收技术、市场与情报总览",
+        tag: "回收",
+        difficulty: "入门",
+        summary: "电池回收把退役动力/储能电池从安全处置、梯次利用、拆解预处理、火法/湿法/直接再生，连接到镍钴锂资源闭环和正极材料再制造。",
+        beginnerGuide: [
+          { title: "先分清对象", text: "退役电池可能进入梯次利用，也可能直接拆解回收；不同健康状态、化学体系和残值决定后续路线。" },
+          { title: "再看技术路线", text: "预处理解决安全和分选，火法偏稳健，湿法偏高回收率，直接再生追求保留材料结构。" },
+          { title: "最后看商业闭环", text: "回收公司的价值不只在回收量，还在黑粉、镍钴锂盐、前驱体、正极材料和电芯厂客户绑定。" }
+        ],
+        keyPoints: [
+          "回收不是单一工艺，而是退役评估、物流、安全放电、拆解、破碎分选、冶金提取和材料再制造的系统工程。",
+          "中国市场首版重点看邦普循环、格林美、华友钴业、赣锋锂业、天奇股份、光华科技等玩家。",
+          "海外案例用于对照 Redwood、Li-Cycle、Ascend Elements、Umicore 的闭环材料模式和商业化进度。"
+        ],
+        researchQuestions: [
+          "回收路线对应的是 LFP、NCM/NCA，还是混合黑粉？不同体系的经济性完全不同。",
+          "公司宣称的回收率是元素回收率、产品纯度、还是全流程综合回收率？",
+          "论文或专利中的直接再生是否能处理真实退役电池中的杂质、混料和结构损伤？"
+        ],
+        metrics: [
+          { title: "技术指标", text: "回收率、产品纯度、杂质控制、能耗、酸碱消耗、废水/废气处理和安全风险。" },
+          { title: "商业指标", text: "退役电池来源、黑粉采购能力、金属价格敏感性、前驱体/正极一体化和电芯厂客户绑定。" },
+          { title: "政策指标", text: "溯源管理、白名单/规范条件、生产者责任延伸、运输和危废合规。" }
+        ],
+        progress: [
+          {
+            title: "回收从资源补充走向供应链闭环",
+            date: "整理：2026-06-03",
+            evidence: "行业判断",
+            level: "medium",
+            text: "动力电池退役规模扩大后，回收企业会更多与电芯厂、车企和正极材料企业绑定，竞争点从单纯处理能力转向资源、客户和材料再制造能力。"
+          }
+        ],
+        sources: [
+          { label: "Google Scholar: battery recycling review", url: "https://scholar.google.com/scholar?q=lithium+ion+battery+recycling+review+hydrometallurgy+direct+recycling", date: "检索入口：2026-06-03" },
+          { label: "Google Patents: battery recycling", url: "https://patents.google.com/?q=battery+recycling+black+mass+hydrometallurgy+direct+recycling", date: "检索入口：2026-06-03" },
+          { label: "工信部：新能源汽车动力蓄电池回收利用", url: "https://www.miit.gov.cn/search/index.html?keywords=%E5%8A%A8%E5%8A%9B%E8%93%84%E7%94%B5%E6%B1%A0%E5%9B%9E%E6%94%B6", date: "政策检索入口：2026-06-03" }
+        ],
+        videos: [
+          { label: "YouTube: lithium ion battery recycling process", url: "https://www.youtube.com/results?search_query=lithium+ion+battery+recycling+process+black+mass" }
+        ],
+        children: [
+          {
+            id: "recycling-second-life",
+            title: "梯次利用",
+            tag: "Second life",
+            difficulty: "入门",
+            summary: "梯次利用是把仍有可用容量的退役电池用于低功率、低能量密度要求的储能或备电场景，核心是筛选、重组和安全管理。",
+            keyPoints: [
+              "梯次利用要先评估 SOH、内阻、一致性、历史滥用和安全风险。",
+              "适合低速车、通信备电、低要求储能等场景，但管理和质保成本不能忽视。",
+              "如果筛选成本高、剩余寿命不确定或安全责任难界定，直接回收可能更经济。"
+            ],
+            researchQuestions: ["如何快速、低成本地评估退役电池 SOH 和一致性？", "梯次利用项目的安全责任和保险机制如何界定？"],
+            metrics: [
+              { title: "核心指标", text: "SOH、内阻分布、容量一致性、热安全、重组成本、剩余寿命预测。" },
+              { title: "行业判断", text: "梯次利用更依赖场景匹配和责任闭环，不是所有退役电池都适合继续使用。" }
+            ],
+            progress: [],
+            sources: [{ label: "Google Scholar: second life battery energy storage", url: "https://scholar.google.com/scholar?q=second+life+lithium+ion+battery+energy+storage+SOH" }],
+            videos: [{ label: "YouTube: second life EV battery storage", url: "https://www.youtube.com/results?search_query=second+life+EV+battery+storage" }]
+          },
+          {
+            id: "recycling-pretreatment",
+            title: "预处理与拆解",
+            tag: "安全",
+            difficulty: "入门",
+            summary: "预处理包括放电、拆解、破碎、筛分、磁选、风选和黑粉分离，是后续火法、湿法或直接再生的前端基础。",
+            keyPoints: ["安全放电和热失控防控是预处理第一关。", "破碎分选影响黑粉纯度，也影响后续金属回收率和杂质控制。", "自动化拆解能降低人工风险，但电池包型号复杂会增加难度。"],
+            researchQuestions: ["不同电池包结构如何影响自动拆解效率？", "黑粉中的铜铝杂质如何影响湿法和直接再生？"],
+            metrics: [{ title: "关键指标", text: "黑粉回收率、铜铝杂质含量、粉尘控制、放电安全、自动化程度。" }],
+            progress: [],
+            sources: [{ label: "Google Scholar: battery recycling pretreatment black mass", url: "https://scholar.google.com/scholar?q=battery+recycling+pretreatment+black+mass" }],
+            videos: [{ label: "YouTube: battery recycling shredding black mass", url: "https://www.youtube.com/results?search_query=battery+recycling+shredding+black+mass" }]
+          },
+          {
+            id: "recycling-pyro",
+            title: "火法回收",
+            tag: "Pyro",
+            difficulty: "进阶",
+            summary: "火法回收通过高温冶炼处理电池材料，流程适应性强，但能耗高，锂、铝等元素回收和尾气处理是重要问题。",
+            keyPoints: ["火法对混料适应性较好，适合处理复杂物料。", "高温能破坏有机物和电解液，但带来能耗和排放压力。", "通常需要与湿法结合，进一步提取和纯化金属。"],
+            researchQuestions: ["火法路线在 LFP 回收中的经济性是否足够？", "高温过程如何控制氟、磷和有机物排放？"],
+            metrics: [{ title: "核心指标", text: "能耗、金属回收率、尾气处理、炉渣利用、后续湿法成本。" }],
+            progress: [],
+            sources: [{ label: "Google Scholar: pyrometallurgy lithium ion battery recycling", url: "https://scholar.google.com/scholar?q=pyrometallurgy+lithium+ion+battery+recycling" }],
+            videos: []
+          },
+          {
+            id: "recycling-hydro",
+            title: "湿法回收",
+            tag: "Hydro",
+            difficulty: "进阶",
+            summary: "湿法回收通常通过酸浸、还原、萃取、沉淀和结晶回收镍钴锰锂，回收率和产品纯度潜力高，但流程和环保管理复杂。",
+            keyPoints: ["湿法是当前高价值金属回收的重要路线。", "酸碱消耗、萃取剂、废水和杂质控制决定成本与环保压力。", "LFP 回收经济性更依赖锂回收、磷铁资源化和政策/规模支撑。"],
+            researchQuestions: ["如何在高回收率和低化学品消耗之间平衡？", "混合黑粉中的杂质如何影响电池级产品纯度？"],
+            metrics: [{ title: "核心指标", text: "浸出率、分离选择性、产品纯度、废水盐分、药剂消耗、单位处理成本。" }],
+            progress: [],
+            sources: [{ label: "Google Scholar: hydrometallurgy battery recycling lithium cobalt nickel", url: "https://scholar.google.com/scholar?q=hydrometallurgy+battery+recycling+lithium+cobalt+nickel" }],
+            videos: []
+          },
+          {
+            id: "recycling-direct",
+            title: "直接再生",
+            tag: "Direct",
+            difficulty: "研究前沿",
+            summary: "直接再生希望尽量保留正极材料晶体结构，通过补锂、修复和再烧结恢复性能，理论上能减少冶金分离步骤。",
+            keyPoints: ["直接再生对分选纯度要求高，混料和杂质会显著增加难度。", "核心挑战是结构损伤修复、成分补偿和批次一致性。", "更适合化学体系明确、来源稳定的闭环回收场景。"],
+            researchQuestions: ["真实退役正极材料的结构损伤能否稳定修复？", "直接再生产品能否满足电池级一致性和安全要求？"],
+            metrics: [{ title: "核心指标", text: "容量恢复率、循环寿命、杂质容忍度、补锂效率、再烧结能耗。" }],
+            progress: [],
+            sources: [{ label: "Google Scholar: direct recycling cathode regeneration lithium ion batteries", url: "https://scholar.google.com/scholar?q=direct+recycling+cathode+regeneration+lithium+ion+batteries" }],
+            videos: []
+          },
+          {
+            id: "recycling-black-mass",
+            title: "黑粉与资源化",
+            tag: "Black mass",
+            difficulty: "进阶",
+            summary: "黑粉是破碎分选后富含正负极活性物质和金属元素的混合粉体，是电池回收交易和湿法处理的重要中间品。",
+            keyPoints: ["黑粉价值受镍钴锂含量、铜铝杂质、水分和化学体系影响。", "NCM 黑粉金属价值更高，LFP 黑粉更依赖锂和磷铁资源化。", "黑粉标准化和溯源会影响跨区域交易和加工合规。"],
+            researchQuestions: ["黑粉定价如何反映金属含量和杂质惩罚？", "LFP 黑粉如何形成稳定商业闭环？"],
+            metrics: [{ title: "关键指标", text: "Ni/Co/Li/Mn/Fe/P 含量、铜铝杂质、水分、粒径、氟含量和来源可追溯性。" }],
+            progress: [],
+            sources: [{ label: "Google Scholar: black mass battery recycling", url: "https://scholar.google.com/scholar?q=black+mass+battery+recycling" }],
+            videos: []
+          },
+          {
+            id: "recycling-market-policy",
+            title: "回收市场与政策",
+            tag: "市场",
+            difficulty: "行业判断",
+            summary: "回收市场由退役规模、金属价格、政策合规、车企/电芯厂闭环和回收企业一体化能力共同驱动。",
+            keyPoints: ["中国市场重点看退役电池规模扩大、规范条件、溯源管理和电芯厂闭环。", "金属价格波动会强烈影响回收利润，尤其是镍钴锂相关路线。", "LFP 占比提升后，回收经济性从高价值金属转向规模、锂回收和政策约束。"],
+            researchQuestions: ["回收企业的利润来自处理费、金属价差，还是材料再制造？", "车企、电芯厂和材料厂谁掌握退役电池入口？"],
+            metrics: [{ title: "市场判断", text: "退役量、金属价格、渠道控制、规范资质、前驱体/正极一体化和客户闭环。" }],
+            progress: [],
+            sources: [{ label: "工信部动力电池回收政策检索", url: "https://www.miit.gov.cn/search/index.html?keywords=%E5%8A%A8%E5%8A%9B%E8%93%84%E7%94%B5%E6%B1%A0%E5%9B%9E%E6%94%B6" }],
+            videos: []
+          },
+          {
+            id: "recycling-companies",
+            title: "回收公司与供应链",
+            tag: "公司",
+            difficulty: "行业地图",
+            summary: "回收公司竞争点包括退役电池来源、黑粉处理能力、镍钴锂盐提取、前驱体/正极材料一体化，以及与电芯厂或车企的闭环关系。",
+            keyPoints: ["中国首版重点跟踪邦普循环、格林美、华友钴业、赣锋锂业、天奇股份和光华科技。", "海外对照看 Redwood、Li-Cycle、Ascend Elements 和 Umicore。", "公司排名以公开资料和站内公司数据库为线索，具体份额需持续核验。"],
+            researchQuestions: ["哪些公司掌握稳定退役电池来源？", "哪些公司能把回收材料重新导入前驱体/正极/电芯供应链？"],
+            metrics: [{ title: "供应链判断", text: "电芯厂绑定、车企渠道、材料一体化、处理资质、海外合规和项目投产进度。" }],
+            progress: [],
+            sources: [{ label: "站内 data/companies.json 回收环节", url: "data/companies.json" }],
+            videos: []
+          },
+          {
+            id: "recycling-paper",
+            title: "回收论文库",
+            tag: "论文",
+            difficulty: "研究",
+            intelType: "paper",
+            summary: "只显示电池回收主题论文线索，重点关注湿法、火法、直接再生、黑粉、LFP 回收和梯次利用。",
+            keyPoints: ["读论文时优先核查物料来源、化学体系、杂质水平和是否接近真实退役电池。", "半流程结果不能直接等同工业化，需看药剂消耗、废液、能耗和产品纯度。"],
+            researchQuestions: ["论文是否处理真实退役电池而非模拟材料？", "是否给出全流程物料衡算和环境指标？"],
+            progress: [],
+            sources: [{ label: "Google Scholar: battery recycling paper", url: "https://scholar.google.com/scholar?q=battery+recycling+black+mass+hydrometallurgy+direct+recycling" }],
+            videos: []
+          },
+          {
+            id: "recycling-patent",
+            title: "回收专利库",
+            tag: "专利",
+            difficulty: "研究",
+            intelType: "patent-search",
+            summary: "只显示电池回收主题专利线索，重点看申请人、权利要求、黑粉处理、湿法提锂、直接再生和设备自动化。",
+            keyPoints: ["专利代表布局，不等于已量产。", "重点看权利要求是否覆盖核心流程、关键试剂、设备结构或闭环材料产品。"],
+            researchQuestions: ["同一申请人是否围绕回收流程形成连续专利族？", "专利实施例是否给出真实黑粉或退役电池数据？"],
+            progress: [],
+            sources: [{ label: "Google Patents: battery recycling patents", url: "https://patents.google.com/?q=battery+recycling+black+mass+hydrometallurgy+direct+recycling" }],
+            videos: []
+          }
+        ]
+      }
+    ]
+  },
   visualization: {
     label: "可视化板块",
     roots: [
@@ -1098,7 +1286,7 @@ const sections = {
 
 let activeSection = "overview";
 let selectedId = "overview-root";
-const openNodes = new Set(["overview-root", "mechanism-root", "frontier-root", "news-root"]);
+const openNodes = new Set(["overview-root", "mechanism-root", "frontier-root", "recycling-root", "news-root"]);
 
 const treeEl = document.querySelector("#tree");
 const searchInput = document.querySelector("#searchInput");
@@ -1128,11 +1316,18 @@ const topicLabels = {
   "dry-electrode": "干法电极",
   separator: "隔膜",
   electrolyte: "电解液/电解质",
+  recycling: "电池回收",
   bms: "BMS",
   "thermal-management": "热管理",
   catl: "CATL",
   byd: "BYD",
-  tesla: "Tesla"
+  tesla: "Tesla",
+  brunp: "邦普循环",
+  gem: "格林美",
+  huayou: "华友钴业",
+  redwood: "Redwood",
+  "li-cycle": "Li-Cycle",
+  umicore: "Umicore"
 };
 
 const typeLabels = {
@@ -1480,11 +1675,22 @@ function visualKindFor(node) {
     "news-paper": "evidence",
     "news-patent": "evidence",
     "news-video": "evidence",
+    "recycling-root": "recycling",
+    "recycling-second-life": "recycling",
+    "recycling-pretreatment": "recycling",
+    "recycling-pyro": "recycling",
+    "recycling-hydro": "recycling",
+    "recycling-direct": "recycling",
+    "recycling-black-mass": "recycling",
+    "recycling-market-policy": "recycling",
+    "recycling-companies": "recycling",
+    "recycling-paper": "evidence",
+    "recycling-patent": "evidence",
     catl: "catl",
     byd: "byd",
     tesla: "tesla"
   };
-  return map[node.id] || (activeSection === "frontier" ? "industry" : "cell");
+  return map[node.id] || (activeSection === "frontier" ? "industry" : activeSection === "recycling" ? "recycling" : "cell");
 }
 
 function renderVisual(node) {
@@ -1509,6 +1715,7 @@ function renderVisual(node) {
     dryElectrode: "工艺图",
     industry: "现状图",
     evidence: "证据图",
+    recycling: "回收路线图",
     catl: "公司路线",
     byd: "公司路线",
     tesla: "公司路线"
@@ -1601,7 +1808,8 @@ function imageForVisual(node, kind) {
     electrolyte: byNode.electrolyte,
     fastCharge: byNode["lfp-fast-charge"],
     sodium: byNode["sodium-ion"],
-    dryElectrode: byNode["dry-electrode"]
+    dryElectrode: byNode["dry-electrode"],
+    recycling: byNode["industry-status"]
   };
   return byNode[node.id] || byKind[kind] || null;
 }
@@ -1807,6 +2015,19 @@ const visuals = {
         <div class="evidence-step"><strong>官方发布</strong><span>战略确认</span></div>
         <div class="evidence-step"><strong>车型公告</strong><span>接近量产</span></div>
         <div class="evidence-step"><strong>拆解测试</strong><span>落地验证</span></div>
+      </div>
+    </div>
+  `,
+  recycling: `
+    <div class="schematic">
+      <p class="visual-title">回收路线可以理解为“退役判断 → 安全预处理 → 材料分离 → 金属/材料再生 → 返回供应链”。</p>
+      <div class="flow-steps">
+        <div class="flow-step"><b>退役评估</b>SOH / 内阻 / 一致性 / 安全</div>
+        <div class="flow-step"><b>梯次利用</b>储能、备电等低要求场景</div>
+        <div class="flow-step"><b>预处理</b>放电、拆解、破碎、分选、黑粉</div>
+        <div class="flow-step"><b>湿法/火法</b>提取镍钴锰锂等元素</div>
+        <div class="flow-step"><b>直接再生</b>修复正极结构、补锂再烧结</div>
+        <div class="flow-step"><b>材料闭环</b>前驱体、正极、电芯供应链</div>
       </div>
     </div>
   `,
@@ -2284,6 +2505,10 @@ const pageSourceNotes = {
     status: "技术线索",
     text: "信息来源：论文、专利、公司发布会、年报/公告、行业新闻和视频入口。前沿技术以“证据等级 + 发布时间 + 审核状态”判断可靠性，未审核线索不直接作为结论。"
   },
+  recycling: {
+    status: "回收口径",
+    text: "信息来源：公司年报/公告、工信部/政策文件、SNE/EVTank/GGII/SMM 等行业资料、Google Scholar、Google Patents 和新闻媒体公开报道。回收市场份额公开口径不统一，首版以排名、公司定位、证据等级和来源说明为主。"
+  },
   news: {
     status: "自动抓取",
     text: "信息来源：GitHub Actions 定期采集的论文、新闻、视频和专利检索入口。发布时间、采集时间、来源、证据等级和审核状态会显示在卡片中；建议点击原文复核。"
@@ -2306,12 +2531,71 @@ function renderPageSourceNote() {
   if (text) text.textContent = note.text;
 }
 
+const recyclingRoutes = [
+  { title: "梯次利用", text: "先判断退役电池是否还能安全用于储能、备电等低要求场景。" },
+  { title: "预处理与拆解", text: "放电、拆包、破碎、筛分和分选，得到黑粉和金属/塑料组分。" },
+  { title: "火法回收", text: "高温冶炼处理复杂物料，流程稳健但能耗和尾气处理压力更高。" },
+  { title: "湿法回收", text: "酸浸、萃取、沉淀和结晶回收镍钴锰锂，回收率和纯度潜力高。" },
+  { title: "直接再生", text: "尽量保留正极晶体结构，通过补锂、修复和再烧结恢复性能。" },
+  { title: "材料闭环", text: "把回收产物导入前驱体、正极材料和电芯供应链，形成资源闭环。" }
+];
+
+function renderRecyclingDashboard() {
+  const routeMap = document.querySelector("#recyclingRouteMap");
+  if (routeMap) {
+    routeMap.innerHTML = recyclingRoutes.map((route, index) => `
+      <article class="recycling-route-step">
+        <span>${index + 1}</span>
+        <div><strong>${escapeHtml(route.title)}</strong><p>${escapeHtml(route.text)}</p></div>
+      </article>
+    `).join("");
+  }
+
+  const list = document.querySelector("#recyclingCompanyList");
+  if (list) {
+    const companies = companyState.data?.companies
+      .filter((company) => company.segment === "recycling")
+      .sort((a, b) => a.rank - b.rank) || [];
+    list.innerHTML = companies.length ? companies.map((company) => `
+      <article class="company-row" data-company-id="${escapeHtml(company.id)}" title="${escapeHtml(company.shareLabel)}">
+        <span class="company-rank">${company.rank}</span>
+        <span class="company-main">
+          <strong>${escapeHtml(company.name)}</strong>
+          <span>${escapeHtml((company.technologyRoutes || []).join(" / "))}</span>
+        </span>
+        <small>${escapeHtml(evidenceLabels[company.evidenceLevel] || company.evidenceLevel || "线索")}</small>
+        <div class="share-bar"><div style="width:${Math.max(10, 100 - company.rank * 7)}%"></div></div>
+      </article>
+    `).join("") : '<p class="empty">正在加载回收公司数据。</p>';
+  }
+
+  const items = intelligenceState.items
+    .filter((item) => {
+      const buckets = [...ensureArray(item.topics), ...ensureArray(item.companies), ...ensureArray(item.technologyRoutes)];
+      return buckets.includes("recycling")
+        || ["brunp", "gem", "huayou", "redwood", "li-cycle", "umicore"].some((id) => buckets.includes(id));
+    })
+    .sort((a, b) => evidenceRank(b) - evidenceRank(a) || itemDateValue(b) - itemDateValue(a));
+  const status = document.querySelector("#recyclingIntelStatus");
+  if (status) status.textContent = items.length ? `${items.length} 条回收线索` : "等待自动更新";
+  renderIntelCards("#recyclingIntelList", items, "等待自动更新数据；回收栏目会匹配回收主题的论文、专利、新闻和视频线索。", 12);
+
+  const sources = document.querySelector("#recyclingSources");
+  if (sources) {
+    sources.innerHTML = [
+      "信息来源：公司年报/公告、工信部/政策文件、SNE/EVTank/GGII/SMM 等行业资料、Google Scholar、Google Patents、新闻媒体公开报道。",
+      "口径说明：回收市场份额公开口径不统一，当前以公司排名、技术路线、客户关系和证据等级作为学习线索。"
+    ].map((item) => `<p>${escapeHtml(item)}</p>`).join("");
+  }
+}
+
 async function loadCompanyData() {
   try {
     companyState.data = await loadJson("data/companies.json");
     renderCompanySegments();
     companyState.selectedId = filteredCompanies()[0]?.id || null;
     renderCompanyDashboard();
+    renderRecyclingDashboard();
   } catch (error) {
     document.querySelector("#companyDataDate").textContent = "加载失败";
     document.querySelector("#companyRankList").innerHTML = '<p class="empty">公司数据库暂时不可用，请检查 data/companies.json。</p>';
@@ -2320,6 +2604,7 @@ async function loadCompanyData() {
 
 function renderDetail(node) {
   document.body.classList.toggle("is-overview", activeSection === "overview");
+  document.body.classList.toggle("is-recycling", activeSection === "recycling");
   document.body.classList.toggle("is-news", activeSection === "news");
   document.body.classList.toggle("is-visualization", activeSection === "visualization");
   document.body.classList.toggle("is-companies", activeSection === "companies");
@@ -2329,6 +2614,7 @@ function renderDetail(node) {
   document.querySelector("#difficultyBadge").textContent = node.difficulty;
   document.querySelector("#updatedAt").textContent = "2026-05-09";
   if (activeSection === "visualization") renderMarketDashboard();
+  if (activeSection === "recycling") renderRecyclingDashboard();
   if (activeSection === "companies") renderCompanyDashboard();
   renderVisual(node);
   renderCards("#beginnerGuide", node.beginnerGuide, defaultBeginnerGuide(node));
@@ -2505,10 +2791,12 @@ function renderFeed(targetId, items, emptyText) {
 function intelligenceFilters() {
   const node = findNode(selectedId);
   const newsType = activeSection === "news" ? (node?.intelType || (selectedId === "news-root" ? "all" : null)) : null;
+  const recyclingType = activeSection === "recycling" ? node?.intelType : null;
+  const recyclingTopic = activeSection === "recycling" ? "recycling" : null;
   return {
     search: (intelControls.search?.value || "").trim().toLowerCase(),
-    topic: intelControls.topic?.value || "all",
-    type: newsType || intelControls.type?.value || "all",
+    topic: recyclingTopic || intelControls.topic?.value || "all",
+    type: newsType || recyclingType || intelControls.type?.value || "all",
     review: intelControls.review?.value || "all",
     sort: intelControls.sort?.value || "newest"
   };
@@ -2545,6 +2833,7 @@ function inferNodeTopics(node) {
     ["dry-electrode", ["干法", "干电极", "dry"]],
     ["separator", ["隔膜", "separator"]],
     ["electrolyte", ["电解", "sei", "cei", "electrolyte"]],
+    ["recycling", ["回收", "梯次", "黑粉", "湿法", "火法", "直接再生", "退役", "资源化", "recycling", "black mass", "hydrometallurgy", "pyrometallurgy", "direct recycling", "second life"]],
     ["bms", ["bms", "管理系统"]],
     ["thermal-management", ["热", "thermal", "安全"]],
     ["catl", ["catl", "宁德"]],
@@ -2558,7 +2847,7 @@ function inferNodeTopics(node) {
 }
 
 function relatedItemsForNode(node) {
-  const forcedType = activeSection === "news" ? node?.intelType : null;
+  const forcedType = ["news", "recycling"].includes(activeSection) ? node?.intelType : null;
   const topics = inferNodeTopics(node);
   const baseItems = forcedType ? intelligenceState.items.filter((item) => {
     if (forcedType === "news") return ["news", "news-search"].includes(item.type);
@@ -2579,7 +2868,7 @@ function renderRelatedIntel(node) {
   const items = relatedItemsForNode(node);
   if (status) {
     const topics = inferNodeTopics(node).map((topic) => topicLabels[topic] || topic);
-    const forcedType = activeSection === "news" ? node?.intelType : null;
+    const forcedType = ["news", "recycling"].includes(activeSection) ? node?.intelType : null;
     status.textContent = forcedType ? `${typeLabels[forcedType] || forcedType}线索` : topics.length ? topics.join(" / ") : "综合线索";
   }
   renderIntelCards("#relatedIntelList", items, "等待自动更新数据；数据加载后会按当前词条匹配相关论文、新闻、视频和专利。", 8);
@@ -2596,13 +2885,15 @@ function renderIntelligenceCenter() {
   const count = document.querySelector("#intelligenceCount");
   const meta = document.querySelector("#intelligenceMeta");
   const node = findNode(selectedId);
-  const forcedType = activeSection === "news" ? node?.intelType : null;
+  const forcedType = ["news", "recycling"].includes(activeSection) ? node?.intelType : null;
+  const forcedTopic = activeSection === "recycling" ? "recycling" : null;
   if (intelControls.type && forcedType) intelControls.type.value = forcedType;
   if (intelControls.type && activeSection === "news" && selectedId === "news-root") intelControls.type.value = "all";
+  if (intelControls.topic && forcedTopic) intelControls.topic.value = forcedTopic;
   if (count) count.textContent = forcedType ? `${typeLabels[forcedType] || "情报"}：${items.length} 条` : `${items.length} 条线索`;
   if (meta) {
     const collectedAt = intelligenceState.metadata?.collectedAt;
-    const prefix = forcedType ? `当前入口：${typeLabels[forcedType] || forcedType}；` : "";
+    const prefix = forcedType ? `当前入口：${typeLabels[forcedType] || forcedType}；` : forcedTopic ? "当前主题：电池回收；" : "";
     meta.textContent = collectedAt ? `${prefix}最近采集：${formatFeedDate(collectedAt)}` : `${prefix}等待自动更新数据`;
   }
   syncFeedSections(forcedType);
@@ -2650,6 +2941,7 @@ async function loadDynamicFeeds() {
     renderFeed("#latestPatents", patents, "等待 GitHub Actions 生成专利线索。");
     renderIntelligenceCenter();
     renderRelatedIntel(findNode(selectedId));
+    renderRecyclingDashboard();
   } catch (error) {
     status.textContent = "加载失败";
     intelligenceState.items = [];
@@ -2659,6 +2951,7 @@ async function loadDynamicFeeds() {
     renderFeed("#latestPatents", [], "自动更新数据暂时不可用。");
     renderIntelligenceCenter();
     renderRelatedIntel(findNode(selectedId));
+    renderRecyclingDashboard();
   }
 }
 
