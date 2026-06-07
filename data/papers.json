@@ -4,7 +4,7 @@
     "url": "https://openalex.org/W7162162259",
     "source": "Lund University Publications (Lund University)",
     "publishedAt": "2026-06-12",
-    "collectedAt": "2026-06-06T23:16:41.454Z",
+    "collectedAt": "2026-06-07T23:19:29.809Z",
     "query": "lithium ion battery fast charging mechanism",
     "type": "paper",
     "review": "unreviewed",
@@ -16,45 +16,29 @@
     "evidenceLevel": "medium"
   },
   {
-    "title": "Monitoring Lithiation Gradients in Solid-state Batteries Using Operando Neutron Radiography",
-    "url": "https://doi.org/10.21203/rs.3.rs-9486004/v1",
-    "source": "Research Square",
-    "publishedAt": "2026-06-05",
-    "collectedAt": "2026-06-06T23:16:41.454Z",
+    "title": "Grain boundary engineered aluminum current collector for energy-dense initially anode-free sodium metal batteries",
+    "url": "https://doi.org/10.1038/s41467-026-74177-8",
+    "source": "Nature Communications",
+    "publishedAt": "2026-06-06",
+    "collectedAt": "2026-06-07T23:19:29.809Z",
     "query": "lithium ion battery fast charging mechanism",
     "type": "paper",
     "review": "unreviewed",
     "topics": [
-      "fast-charge",
-      "solid-state"
+      "fast-charge"
     ],
     "companies": [],
-    "technologyRoutes": [],
+    "technologyRoutes": [
+      "sodium-hard-carbon"
+    ],
     "evidenceLevel": "medium"
   },
   {
-    "title": "Li-In-S composite foil with built-in electric fields to stabilize Li/Li6PS5Cl interface for long-life all-solid-state batteries",
-    "url": "https://doi.org/10.1038/s41467-026-74049-1",
+    "title": "All-water supercapacitor enabled by 1-nm clay channels",
+    "url": "https://doi.org/10.1038/s41467-026-73924-1",
     "source": "Nature Communications",
     "publishedAt": "2026-06-05",
-    "collectedAt": "2026-06-06T23:16:41.454Z",
-    "query": "lithium ion battery fast charging mechanism",
-    "type": "paper",
-    "review": "unreviewed",
-    "topics": [
-      "fast-charge",
-      "solid-state"
-    ],
-    "companies": [],
-    "technologyRoutes": [],
-    "evidenceLevel": "medium"
-  },
-  {
-    "title": "Optimal planning of grid-connected energy storage and renewable energy sources integration using an improved whale algorithm",
-    "url": "https://doi.org/10.1038/s41598-026-54055-5",
-    "source": "Scientific Reports",
-    "publishedAt": "2026-06-04",
-    "collectedAt": "2026-06-06T23:16:41.454Z",
+    "collectedAt": "2026-06-07T23:19:29.809Z",
     "query": "lithium ion battery fast charging mechanism",
     "type": "paper",
     "review": "unreviewed",
@@ -63,6 +47,59 @@
     ],
     "companies": [],
     "technologyRoutes": [],
+    "evidenceLevel": "medium"
+  },
+  {
+    "title": "Manipulating electrolyte solvation structures to build high-voltage concentration batteries for efficient energy storage",
+    "url": "https://doi.org/10.1038/s41467-026-74015-x",
+    "source": "Nature Communications",
+    "publishedAt": "2026-06-05",
+    "collectedAt": "2026-06-07T23:19:29.809Z",
+    "query": "lithium ion battery fast charging mechanism",
+    "type": "paper",
+    "review": "unreviewed",
+    "topics": [
+      "fast-charge",
+      "electrolyte"
+    ],
+    "companies": [],
+    "technologyRoutes": [],
+    "evidenceLevel": "medium"
+  },
+  {
+    "title": "Development of complex technology for pyrite-cobalt concentrate processing by sodium carbonate-carbon reductive smelting",
+    "url": "https://doi.org/10.1038/s41598-026-55555-0",
+    "source": "Scientific Reports",
+    "publishedAt": "2026-06-06",
+    "collectedAt": "2026-06-07T23:19:29.809Z",
+    "query": "sodium ion battery hard carbon review",
+    "type": "paper",
+    "review": "unreviewed",
+    "topics": [
+      "sodium-ion"
+    ],
+    "companies": [],
+    "technologyRoutes": [
+      "sodium-hard-carbon"
+    ],
+    "evidenceLevel": "medium"
+  },
+  {
+    "title": "Recent advances in potentiometric analysis of rare earth metals: The need for further research",
+    "url": "https://doi.org/10.1557/s43577-026-01119-6",
+    "source": "MRS Bulletin",
+    "publishedAt": "2026-06-05",
+    "collectedAt": "2026-06-07T23:19:29.809Z",
+    "query": "sodium ion battery hard carbon review",
+    "type": "paper",
+    "review": "unreviewed",
+    "topics": [
+      "sodium-ion"
+    ],
+    "companies": [],
+    "technologyRoutes": [
+      "sodium-hard-carbon"
+    ],
     "evidenceLevel": "medium"
   },
   {
@@ -70,62 +107,7 @@
     "url": "https://doi.org/10.3389/fsufs.2026.1849828",
     "source": "Frontiers in Sustainable Food Systems",
     "publishedAt": "2026-06-05",
-    "collectedAt": "2026-06-06T23:16:41.454Z",
-    "query": "sodium ion battery hard carbon review",
-    "type": "paper",
-    "review": "unreviewed",
-    "topics": [
-      "sodium-ion"
-    ],
-    "companies": [],
-    "technologyRoutes": [
-      "sodium-hard-carbon"
-    ],
-    "evidenceLevel": "medium"
-  },
-  {
-    "title": "Beyond Isolated Optimization: A Holistic Review Across the Pre-Mid Post-Treatment Chain for Hard Carbon in Sodium-Ion Battery",
-    "url": "https://doi.org/10.1007/s40820-026-02248-y",
-    "source": "Nano-Micro Letters",
-    "publishedAt": "2026-06-05",
-    "collectedAt": "2026-06-06T23:16:41.454Z",
-    "query": "sodium ion battery hard carbon review",
-    "type": "paper",
-    "review": "unreviewed",
-    "topics": [
-      "sodium-ion"
-    ],
-    "companies": [],
-    "technologyRoutes": [
-      "sodium-hard-carbon"
-    ],
-    "evidenceLevel": "medium"
-  },
-  {
-    "title": "Conversion-driven heterointerface reconfiguration enables fast ion migration in iron disulfide/sulfur-based positive electrodes for aqueous batteries",
-    "url": "https://doi.org/10.1038/s41467-026-73910-7",
-    "source": "Nature Communications",
-    "publishedAt": "2026-06-04",
-    "collectedAt": "2026-06-06T23:16:41.454Z",
-    "query": "sodium ion battery hard carbon review",
-    "type": "paper",
-    "review": "unreviewed",
-    "topics": [
-      "sodium-ion",
-      "solid-state"
-    ],
-    "companies": [],
-    "technologyRoutes": [
-      "sodium-hard-carbon"
-    ],
-    "evidenceLevel": "medium"
-  },
-  {
-    "title": "Assessment of Corrosion Product Formation (Iron Oxides and Oxyhydroxides) on Carbon Steel in Saline Media Containing Protic Ionic Liquids by Advanced Structural and Microstructural Characterization",
-    "url": "https://doi.org/10.1021/acsomega.6c01592",
-    "source": "ACS Omega",
-    "publishedAt": "2026-06-03",
-    "collectedAt": "2026-06-06T23:16:41.454Z",
+    "collectedAt": "2026-06-07T23:19:29.809Z",
     "query": "sodium ion battery hard carbon review",
     "type": "paper",
     "review": "unreviewed",
@@ -143,7 +125,7 @@
     "url": "https://doi.org/10.1007/s10800-026-02522-2",
     "source": "Journal of Applied Electrochemistry",
     "publishedAt": "2026-06-05",
-    "collectedAt": "2026-06-06T23:16:41.454Z",
+    "collectedAt": "2026-06-07T23:19:29.809Z",
     "query": "dry electrode lithium ion battery manufacturing",
     "type": "paper",
     "review": "unreviewed",
@@ -159,7 +141,7 @@
     "url": "https://doi.org/10.1007/s44274-026-00769-2",
     "source": "Discover Environment",
     "publishedAt": "2026-06-04",
-    "collectedAt": "2026-06-06T23:16:41.454Z",
+    "collectedAt": "2026-06-07T23:19:29.809Z",
     "query": "dry electrode lithium ion battery manufacturing",
     "type": "paper",
     "review": "unreviewed",
@@ -175,7 +157,7 @@
     "url": "https://doi.org/10.1016/j.mssp.2026.110864",
     "source": "Materials Science in Semiconductor Processing",
     "publishedAt": "2026-06-04",
-    "collectedAt": "2026-06-06T23:16:41.454Z",
+    "collectedAt": "2026-06-07T23:19:29.809Z",
     "query": "dry electrode lithium ion battery manufacturing",
     "type": "paper",
     "review": "unreviewed",
@@ -189,11 +171,11 @@
     "evidenceLevel": "medium"
   },
   {
-    "title": "Efficient H2O2 Synthesis from Seawater via Na,Pb-codoped SnSe under a Small Temperature Gradient",
-    "url": "https://doi.org/10.21203/rs.3.rs-9921548/v1",
-    "source": "Research Square",
-    "publishedAt": "2026-06-05",
-    "collectedAt": "2026-06-06T23:16:41.454Z",
+    "title": "Reducing false positives in the search for solid-state battery coatings",
+    "url": "https://doi.org/10.1038/s41524-026-02115-9",
+    "source": "npj Computational Materials",
+    "publishedAt": "2026-06-06",
+    "collectedAt": "2026-06-07T23:19:29.809Z",
     "query": "solid state battery electrolyte interface",
     "type": "paper",
     "review": "unreviewed",
@@ -206,39 +188,58 @@
     "evidenceLevel": "medium"
   },
   {
-    "title": "Stoichiometry-based machine learning enables discovery of new salt hydration reactions for thermochemical heat storage",
-    "url": "https://doi.org/10.1038/s43246-026-01200-2",
-    "source": "Communications Materials",
-    "publishedAt": "2026-06-05",
-    "collectedAt": "2026-06-06T23:16:41.454Z",
-    "query": "solid state battery electrolyte interface",
+    "title": "High-safety and multifunctional aramid gel nanofiber separator for practical lithium batteries",
+    "url": "https://doi.org/10.1016/j.jpowsour.2026.240527",
+    "source": "Journal of Power Sources",
+    "publishedAt": "2026-06-06",
+    "collectedAt": "2026-06-07T23:19:29.809Z",
+    "query": "lithium battery separator electrolyte safety",
     "type": "paper",
     "review": "unreviewed",
     "topics": [
-      "solid-state",
-      "electrolyte",
-      "thermal-management"
+      "separator",
+      "electrolyte"
     ],
     "companies": [],
     "technologyRoutes": [],
     "evidenceLevel": "medium"
   },
   {
-    "title": "Thermal Response and Aging Behavior of Lithium-ion Batteries for New-energy Locomotives under Complex Operating Conditions",
-    "url": "https://doi.org/10.21203/rs.3.rs-9790028/v1",
-    "source": "Research Square",
-    "publishedAt": "2026-06-04",
-    "collectedAt": "2026-06-06T23:16:41.454Z",
+    "title": "Synergistic Structural Coupling of MXene and La–Ti–O MOF for High-Energy-Density Flexible Solid-State Supercapacitors",
+    "url": "https://doi.org/10.20517/scierxiv202606.0389.v1",
+    "source": "OpenAlex",
+    "publishedAt": "2026-06-05",
+    "collectedAt": "2026-06-07T23:19:29.809Z",
     "query": "lithium battery separator electrolyte safety",
     "type": "paper",
     "review": "unreviewed",
     "topics": [
+      "solid-state",
       "separator",
-      "electrolyte",
-      "thermal-management"
+      "electrolyte"
     ],
     "companies": [],
     "technologyRoutes": [],
+    "evidenceLevel": "medium"
+  },
+  {
+    "title": "High-throughput discovery of Li3Sc2(PO4)3 as a protective coating for stabilizing mid-Ni NCM interfaces in all-solid-state batteries",
+    "url": "https://doi.org/10.1186/s40580-026-00555-z",
+    "source": "Nano Convergence",
+    "publishedAt": "2026-06-05",
+    "collectedAt": "2026-06-07T23:19:29.809Z",
+    "query": "lithium battery separator electrolyte safety",
+    "type": "paper",
+    "review": "unreviewed",
+    "topics": [
+      "solid-state",
+      "separator",
+      "electrolyte"
+    ],
+    "companies": [],
+    "technologyRoutes": [
+      "ncm-nca"
+    ],
     "evidenceLevel": "medium"
   },
   {
@@ -246,7 +247,7 @@
     "url": "https://doi.org/10.1007/s42461-026-01564-6",
     "source": "Mining Metallurgy & Exploration",
     "publishedAt": "2026-06-04",
-    "collectedAt": "2026-06-06T23:16:41.454Z",
+    "collectedAt": "2026-06-07T23:19:29.809Z",
     "query": "lithium ion battery recycling black mass hydrometallurgy direct recycling",
     "type": "paper",
     "review": "unreviewed",
@@ -267,7 +268,7 @@
     "url": "https://doi.org/10.15480/882.17215",
     "source": "TUHH Open Research",
     "publishedAt": "2026-05-15",
-    "collectedAt": "2026-06-06T23:16:41.454Z",
+    "collectedAt": "2026-06-07T23:19:29.809Z",
     "query": "lithium ion battery recycling black mass hydrometallurgy direct recycling",
     "type": "paper",
     "review": "unreviewed",
