@@ -4,7 +4,7 @@
     "url": "https://openalex.org/W7162162259",
     "source": "Lund University Publications (Lund University)",
     "publishedAt": "2026-06-12",
-    "collectedAt": "2026-06-07T23:19:29.809Z",
+    "collectedAt": "2026-06-08T23:36:41.564Z",
     "query": "lithium ion battery fast charging mechanism",
     "type": "paper",
     "review": "unreviewed",
@@ -16,45 +16,27 @@
     "evidenceLevel": "medium"
   },
   {
-    "title": "Grain boundary engineered aluminum current collector for energy-dense initially anode-free sodium metal batteries",
-    "url": "https://doi.org/10.1038/s41467-026-74177-8",
+    "title": "Comparative Performance Analysis of Predictive Model Deployment for Daily Energy Demand of Electric Vehicle Charging Stations",
+    "url": "https://doi.org/10.30939/ijastech..1905847",
+    "source": "International Journal of Automotive Science And Technology",
+    "publishedAt": "2026-06-06",
+    "collectedAt": "2026-06-08T23:36:41.564Z",
+    "query": "lithium ion battery fast charging mechanism",
+    "type": "paper",
+    "review": "unreviewed",
+    "topics": [
+      "fast-charge"
+    ],
+    "companies": [],
+    "technologyRoutes": [],
+    "evidenceLevel": "medium"
+  },
+  {
+    "title": "Dihydrogen-bonding interactions in ether-based electrolytes to enable high-voltage lithium metal batteries",
+    "url": "https://doi.org/10.1038/s41467-026-74013-z",
     "source": "Nature Communications",
     "publishedAt": "2026-06-06",
-    "collectedAt": "2026-06-07T23:19:29.809Z",
-    "query": "lithium ion battery fast charging mechanism",
-    "type": "paper",
-    "review": "unreviewed",
-    "topics": [
-      "fast-charge"
-    ],
-    "companies": [],
-    "technologyRoutes": [
-      "sodium-hard-carbon"
-    ],
-    "evidenceLevel": "medium"
-  },
-  {
-    "title": "All-water supercapacitor enabled by 1-nm clay channels",
-    "url": "https://doi.org/10.1038/s41467-026-73924-1",
-    "source": "Nature Communications",
-    "publishedAt": "2026-06-05",
-    "collectedAt": "2026-06-07T23:19:29.809Z",
-    "query": "lithium ion battery fast charging mechanism",
-    "type": "paper",
-    "review": "unreviewed",
-    "topics": [
-      "fast-charge"
-    ],
-    "companies": [],
-    "technologyRoutes": [],
-    "evidenceLevel": "medium"
-  },
-  {
-    "title": "Manipulating electrolyte solvation structures to build high-voltage concentration batteries for efficient energy storage",
-    "url": "https://doi.org/10.1038/s41467-026-74015-x",
-    "source": "Nature Communications",
-    "publishedAt": "2026-06-05",
-    "collectedAt": "2026-06-07T23:19:29.809Z",
+    "collectedAt": "2026-06-08T23:36:41.564Z",
     "query": "lithium ion battery fast charging mechanism",
     "type": "paper",
     "review": "unreviewed",
@@ -67,11 +49,45 @@
     "evidenceLevel": "medium"
   },
   {
+    "title": "Explainable ensemble learning for estimating strength and stiffness of clay-bearing rocks: A case study from the Gurpi formation, Iran",
+    "url": "https://doi.org/10.1038/s41598-026-56668-2",
+    "source": "Scientific Reports",
+    "publishedAt": "2026-06-06",
+    "collectedAt": "2026-06-08T23:36:41.564Z",
+    "query": "lithium ion battery fast charging mechanism",
+    "type": "paper",
+    "review": "unreviewed",
+    "topics": [
+      "fast-charge"
+    ],
+    "companies": [],
+    "technologyRoutes": [],
+    "evidenceLevel": "medium"
+  },
+  {
     "title": "Development of complex technology for pyrite-cobalt concentrate processing by sodium carbonate-carbon reductive smelting",
     "url": "https://doi.org/10.1038/s41598-026-55555-0",
     "source": "Scientific Reports",
     "publishedAt": "2026-06-06",
-    "collectedAt": "2026-06-07T23:19:29.809Z",
+    "collectedAt": "2026-06-08T23:36:41.564Z",
+    "query": "sodium ion battery hard carbon review",
+    "type": "paper",
+    "review": "unreviewed",
+    "topics": [
+      "sodium-ion"
+    ],
+    "companies": [],
+    "technologyRoutes": [
+      "sodium-hard-carbon"
+    ],
+    "evidenceLevel": "medium"
+  },
+  {
+    "title": "Grain boundary engineered aluminum current collector for energy-dense initially anode-free sodium metal batteries",
+    "url": "https://doi.org/10.1038/s41467-026-74177-8",
+    "source": "Nature Communications",
+    "publishedAt": "2026-06-06",
+    "collectedAt": "2026-06-08T23:36:41.564Z",
     "query": "sodium ion battery hard carbon review",
     "type": "paper",
     "review": "unreviewed",
@@ -89,7 +105,7 @@
     "url": "https://doi.org/10.1557/s43577-026-01119-6",
     "source": "MRS Bulletin",
     "publishedAt": "2026-06-05",
-    "collectedAt": "2026-06-07T23:19:29.809Z",
+    "collectedAt": "2026-06-08T23:36:41.564Z",
     "query": "sodium ion battery hard carbon review",
     "type": "paper",
     "review": "unreviewed",
@@ -107,7 +123,7 @@
     "url": "https://doi.org/10.3389/fsufs.2026.1849828",
     "source": "Frontiers in Sustainable Food Systems",
     "publishedAt": "2026-06-05",
-    "collectedAt": "2026-06-07T23:19:29.809Z",
+    "collectedAt": "2026-06-08T23:36:41.564Z",
     "query": "sodium ion battery hard carbon review",
     "type": "paper",
     "review": "unreviewed",
@@ -121,11 +137,28 @@
     "evidenceLevel": "medium"
   },
   {
+    "title": "Manipulating electrolyte solvation structures to build high-voltage concentration batteries for efficient energy storage",
+    "url": "https://doi.org/10.1038/s41467-026-74015-x",
+    "source": "Nature Communications",
+    "publishedAt": "2026-06-05",
+    "collectedAt": "2026-06-08T23:36:41.564Z",
+    "query": "dry electrode lithium ion battery manufacturing",
+    "type": "paper",
+    "review": "unreviewed",
+    "topics": [
+      "dry-electrode",
+      "electrolyte"
+    ],
+    "companies": [],
+    "technologyRoutes": [],
+    "evidenceLevel": "medium"
+  },
+  {
     "title": "Microporous lithium film prelithiation: a scalable strategy for high-performance dry-processed anodes in lithium-ion batteries",
     "url": "https://doi.org/10.1007/s10800-026-02522-2",
     "source": "Journal of Applied Electrochemistry",
     "publishedAt": "2026-06-05",
-    "collectedAt": "2026-06-07T23:19:29.809Z",
+    "collectedAt": "2026-06-08T23:36:41.564Z",
     "query": "dry electrode lithium ion battery manufacturing",
     "type": "paper",
     "review": "unreviewed",
@@ -141,7 +174,7 @@
     "url": "https://doi.org/10.1007/s44274-026-00769-2",
     "source": "Discover Environment",
     "publishedAt": "2026-06-04",
-    "collectedAt": "2026-06-07T23:19:29.809Z",
+    "collectedAt": "2026-06-08T23:36:41.564Z",
     "query": "dry electrode lithium ion battery manufacturing",
     "type": "paper",
     "review": "unreviewed",
@@ -157,7 +190,7 @@
     "url": "https://doi.org/10.1016/j.mssp.2026.110864",
     "source": "Materials Science in Semiconductor Processing",
     "publishedAt": "2026-06-04",
-    "collectedAt": "2026-06-07T23:19:29.809Z",
+    "collectedAt": "2026-06-08T23:36:41.564Z",
     "query": "dry electrode lithium ion battery manufacturing",
     "type": "paper",
     "review": "unreviewed",
@@ -171,11 +204,45 @@
     "evidenceLevel": "medium"
   },
   {
+    "title": "A novel demand response framework for the optimal design of hydrogen–ammonia hybrid microgrids",
+    "url": "https://openalex.org/W7162220708",
+    "source": "Strathprints: The University of Strathclyde institutional repository (University of Strathclyde)",
+    "publishedAt": "2026-09-15",
+    "collectedAt": "2026-06-08T23:36:41.564Z",
+    "query": "solid state battery electrolyte interface",
+    "type": "paper",
+    "review": "unreviewed",
+    "topics": [
+      "solid-state",
+      "electrolyte"
+    ],
+    "companies": [],
+    "technologyRoutes": [],
+    "evidenceLevel": "medium"
+  },
+  {
     "title": "Reducing false positives in the search for solid-state battery coatings",
     "url": "https://doi.org/10.1038/s41524-026-02115-9",
     "source": "npj Computational Materials",
     "publishedAt": "2026-06-06",
-    "collectedAt": "2026-06-07T23:19:29.809Z",
+    "collectedAt": "2026-06-08T23:36:41.564Z",
+    "query": "solid state battery electrolyte interface",
+    "type": "paper",
+    "review": "unreviewed",
+    "topics": [
+      "solid-state",
+      "electrolyte"
+    ],
+    "companies": [],
+    "technologyRoutes": [],
+    "evidenceLevel": "medium"
+  },
+  {
+    "title": "Nanofiber-constructed composite polymer electrolytes with dual-pathway Li⁺ transport and catalytic sulfide interfaces for lithium-sulfur batteries",
+    "url": "https://doi.org/10.1007/s42114-026-01892-7",
+    "source": "Advanced Composites and Hybrid Materials",
+    "publishedAt": "2026-06-06",
+    "collectedAt": "2026-06-08T23:36:41.564Z",
     "query": "solid state battery electrolyte interface",
     "type": "paper",
     "review": "unreviewed",
@@ -192,7 +259,7 @@
     "url": "https://doi.org/10.1016/j.jpowsour.2026.240527",
     "source": "Journal of Power Sources",
     "publishedAt": "2026-06-06",
-    "collectedAt": "2026-06-07T23:19:29.809Z",
+    "collectedAt": "2026-06-08T23:36:41.564Z",
     "query": "lithium battery separator electrolyte safety",
     "type": "paper",
     "review": "unreviewed",
@@ -209,7 +276,7 @@
     "url": "https://doi.org/10.20517/scierxiv202606.0389.v1",
     "source": "OpenAlex",
     "publishedAt": "2026-06-05",
-    "collectedAt": "2026-06-07T23:19:29.809Z",
+    "collectedAt": "2026-06-08T23:36:41.564Z",
     "query": "lithium battery separator electrolyte safety",
     "type": "paper",
     "review": "unreviewed",
@@ -227,7 +294,7 @@
     "url": "https://doi.org/10.1186/s40580-026-00555-z",
     "source": "Nano Convergence",
     "publishedAt": "2026-06-05",
-    "collectedAt": "2026-06-07T23:19:29.809Z",
+    "collectedAt": "2026-06-08T23:36:41.564Z",
     "query": "lithium battery separator electrolyte safety",
     "type": "paper",
     "review": "unreviewed",
@@ -247,7 +314,28 @@
     "url": "https://doi.org/10.1007/s42461-026-01564-6",
     "source": "Mining Metallurgy & Exploration",
     "publishedAt": "2026-06-04",
-    "collectedAt": "2026-06-07T23:19:29.809Z",
+    "collectedAt": "2026-06-08T23:36:41.564Z",
+    "query": "lithium ion battery recycling black mass hydrometallurgy direct recycling",
+    "type": "paper",
+    "review": "unreviewed",
+    "topics": [
+      "recycling"
+    ],
+    "companies": [],
+    "technologyRoutes": [
+      "battery-recycling",
+      "black-mass",
+      "hydrometallurgy",
+      "direct-regeneration"
+    ],
+    "evidenceLevel": "medium"
+  },
+  {
+    "title": "A Comparison of Two Graphite Recycling Streams: Spent Lithium-ion Battery and Lithium-ion Battery Factory Anode Scrap",
+    "url": "https://openalex.org/W7163781741",
+    "source": "VTechWorks (Virginia Tech)",
+    "publishedAt": "2026-06-03",
+    "collectedAt": "2026-06-08T23:36:41.564Z",
     "query": "lithium ion battery recycling black mass hydrometallurgy direct recycling",
     "type": "paper",
     "review": "unreviewed",
@@ -268,7 +356,7 @@
     "url": "https://doi.org/10.15480/882.17215",
     "source": "TUHH Open Research",
     "publishedAt": "2026-05-15",
-    "collectedAt": "2026-06-07T23:19:29.809Z",
+    "collectedAt": "2026-06-08T23:36:41.564Z",
     "query": "lithium ion battery recycling black mass hydrometallurgy direct recycling",
     "type": "paper",
     "review": "unreviewed",
