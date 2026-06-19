@@ -3,550 +3,79 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>锂/钠电池技术学习图谱</title>
+    <title>电池行业智能情报工作台</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <div class="app-shell">
       <aside class="sidebar">
         <div class="brand">
-          <p class="eyebrow">Battery Research Map</p>
-          <h1>锂/钠电池技术学习图谱</h1>
-          <p>像 NotebookLM 思维导图一样展开知识节点，按机理、前沿和新闻进入学习。</p>
+          <div class="brand-mark">BI</div>
+          <div>
+            <p>Battery Intelligence</p>
+            <h1>电池行业智能情报工作台</h1>
+          </div>
         </div>
 
-        <label class="search-box">
-          <span>检索词条</span>
-          <input id="searchInput" type="search" placeholder="例如：干电极、钠离子、刀片电池" />
-        </label>
-
-        <nav class="tabs" aria-label="内容板块">
-          <button class="tab is-active" data-section="overview">总览</button>
-          <button class="tab" data-section="mechanism">机理</button>
-          <button class="tab" data-section="frontier">前沿</button>
-          <button class="tab" data-section="recycling">回收</button>
-          <button class="tab" data-section="companies">公司</button>
-          <button class="tab" data-section="visualization">可视化</button>
-          <button class="tab" data-section="news">情报</button>
-          <button class="tab" data-section="ai">AI问答</button>
-          <button class="tab" data-section="evidence">证据库</button>
-          <button class="tab" data-section="trace">来源追踪</button>
+        <nav id="sideNav" class="side-nav" aria-label="主导航">
+          <button class="nav-item is-active" data-view="overview" type="button">
+            <span>总览</span><small>Dashboard</small>
+          </button>
+          <button class="nav-item" data-view="intelligence" type="button">
+            <span>情报</span><small>News / Papers</small>
+          </button>
+          <button class="nav-item" data-view="companies" type="button">
+            <span>公司</span><small>Company</small>
+          </button>
+          <button class="nav-item" data-view="technology" type="button">
+            <span>技术</span><small>Technology</small>
+          </button>
+          <button class="nav-item" data-view="supply" type="button">
+            <span>产业链</span><small>Supply Chain</small>
+          </button>
+          <button class="nav-item" data-view="recycling" type="button">
+            <span>回收</span><small>Recycling</small>
+          </button>
+          <button class="nav-item" data-view="evidence" type="button">
+            <span>证据</span><small>Evidence</small>
+          </button>
+          <button class="nav-item" data-view="trace" type="button">
+            <span>来源追踪</span><small>Trace</small>
+          </button>
+          <button class="nav-item" data-view="ai" type="button">
+            <span>AI 问答</span><small>Static RAG</small>
+          </button>
+          <button class="nav-item" data-view="backend" type="button">
+            <span>后端规划</span><small>Backend</small>
+          </button>
         </nav>
 
-        <div class="tree-tools">
-          <button id="expandAll" type="button">全部展开</button>
-          <button id="collapseAll" type="button">全部收起</button>
+        <div class="sidebar-note">
+          <strong>工作台逻辑</strong>
+          <p>先选择对象，再看证据、公司、技术、供应链、市场图和 AI 回答。所有结论都尽量回到来源。</p>
         </div>
-
-        <div id="tree" class="tree" aria-label="知识图谱"></div>
       </aside>
 
-      <main class="content">
-        <section class="hero-panel">
+      <main class="workspace">
+        <header class="topbar">
           <div>
-            <p id="sectionLabel" class="eyebrow">机理板块</p>
-            <h2 id="nodeTitle">选择一个词条开始学习</h2>
-            <p id="nodeSummary">左侧节点可逐级展开。点击词条后，这里会显示原理、学习路径、最新进展、资料来源和视频入口。</p>
+            <p id="viewKicker" class="eyebrow">Overview</p>
+            <h2 id="viewTitle">总览</h2>
           </div>
-          <div class="status-card">
-            <span>更新策略</span>
-            <strong>每周跟踪</strong>
-            <small>官方发布 / 专利 / 论文 / 工信部目录 / 视频</small>
+          <div class="topbar-controls">
+            <label>
+              <span>当前对象</span>
+              <select id="entitySelect"></select>
+            </label>
+            <label class="search-control">
+              <span>全局搜索</span>
+              <input id="globalSearch" type="search" placeholder="CATL、钠离子、隔膜、回收、dry electrode" />
+            </label>
           </div>
-        </section>
+        </header>
 
-        <section class="detail-grid">
-          <article class="detail-panel wide overview-dashboard">
-            <div class="panel-header">
-              <h3>一眼看懂：电池行业学习路径</h3>
-              <span id="overviewDataDate">2026-05-10</span>
-            </div>
-            <div class="overview-grid">
-              <section class="overview-card accent-green" data-overview-target="mechanism">
-                <span>01</span>
-                <h4>先学机理</h4>
-                <p>从正极、负极、隔膜、电解液、集流体、BMS 和热管理理解性能来源。</p>
-              </section>
-              <section class="overview-card accent-blue" data-overview-target="frontier">
-                <span>02</span>
-                <h4>再看前沿</h4>
-                <p>跟踪快充、固态、钠离子、干法电极、硅碳负极和复合集流体。</p>
-              </section>
-              <section class="overview-card accent-green" data-overview-target="recycling">
-                <span>03</span>
-                <h4>理解回收</h4>
-                <p>学习梯次利用、拆解预处理、湿法/火法、直接再生和黑粉资源化。</p>
-              </section>
-              <section class="overview-card accent-gold" data-overview-target="companies">
-                <span>04</span>
-                <h4>定位公司</h4>
-                <p>按产业链环节查看 Top 公司、市场份额口径、供应关系和对应技术线索。</p>
-              </section>
-              <section class="overview-card accent-red" data-overview-target="visualization">
-                <span>05</span>
-                <h4>看懂格局</h4>
-                <p>用排名、雷达图、趋势线和地区热力图比较市场份额与技术指标。</p>
-              </section>
-            </div>
-            <div class="overview-map" aria-label="网站内容分布">
-              <div>
-                <strong>学习层</strong>
-                <span>组成 → 机理 → 失效 → 词汇</span>
-              </div>
-              <div>
-                <strong>技术层</strong>
-                <span>路线 → 难点 → 公司 → 论文/专利</span>
-              </div>
-              <div>
-                <strong>产业层</strong>
-                <span>公司 → 供应链 → 份额 → 客户关系</span>
-              </div>
-              <div>
-                <strong>情报层</strong>
-                <span>新闻 → 论文 → 视频 → 审核状态</span>
-              </div>
-            </div>
-            <p class="source-note small-note">
-              信息来源：公开论文数据库、公司公告/年报、行业研究机构、专利检索入口和新闻媒体公开报道；自动抓取内容仅作为线索，需结合证据等级和人工审核判断。
-            </p>
-          </article>
-
-          <article class="detail-panel wide recycling-dashboard">
-            <div class="panel-header">
-              <h3>电池回收技术与市场看板</h3>
-              <span id="recyclingDataDate">整理：2026-06-03</span>
-            </div>
-            <div class="update-note">
-              以中国动力/储能电池回收产业链为主，跟踪梯次利用、预处理、火法、湿法、直接再生、黑粉资源化、代表公司和专利/论文线索。
-            </div>
-            <div class="company-layout">
-              <section class="company-card-panel">
-                <div class="panel-header">
-                  <h4>核心技术路线</h4>
-                  <span>从退役电池到资源闭环</span>
-                </div>
-                <div id="recyclingRouteMap" class="recycling-route-map"></div>
-              </section>
-              <section class="company-card-panel">
-                <div class="panel-header">
-                  <h4>回收公司 Top 10</h4>
-                  <span>复用公司数据库</span>
-                </div>
-                <div id="recyclingCompanyList" class="company-rank-list"></div>
-              </section>
-              <section class="company-card-panel wide">
-                <div class="panel-header">
-                  <h4>回收论文 / 专利 / 新闻</h4>
-                  <span id="recyclingIntelStatus">等待数据</span>
-                </div>
-                <div id="recyclingIntelList" class="intel-list"></div>
-              </section>
-            </div>
-            <div id="recyclingSources" class="source-note"></div>
-          </article>
-
-          <article class="detail-panel wide company-dashboard">
-            <div class="panel-header">
-              <h3>电池产业链公司图谱</h3>
-              <span id="companyDataDate">等待数据</span>
-            </div>
-            <div class="update-note">
-              按电池产业链环节整理 Top 10 公司、份额/排名口径、代表技术和供应关系。公司名称可点击，自动联动相关新闻、技术和专利线索。
-            </div>
-            <div class="company-controls" aria-label="公司筛选">
-              <label>
-                <span>产业链环节</span>
-                <select id="companySegment"></select>
-              </label>
-              <label>
-                <span>搜索公司/客户/技术</span>
-                <input id="companySearch" type="search" placeholder="宁德时代、璞泰来、隔膜、LFP" />
-              </label>
-              <label>
-                <span>排序</span>
-                <select id="companySort">
-                  <option value="rank">行业排名</option>
-                  <option value="share">市场份额</option>
-                  <option value="evidence">证据等级</option>
-                </select>
-              </label>
-            </div>
-            <div class="company-layout">
-              <section class="company-card-panel">
-                <div class="panel-header">
-                  <h4>Top 10 排名</h4>
-                  <span id="companySegmentNote">按公开口径整理</span>
-                </div>
-                <div id="companyRankList" class="company-rank-list"></div>
-              </section>
-              <section class="company-card-panel">
-                <div class="panel-header">
-                  <h4>公司详情</h4>
-                  <span id="selectedCompanyBadge">点击公司查看</span>
-                </div>
-                <div id="companyDetail" class="company-detail"></div>
-              </section>
-              <section class="company-card-panel wide">
-                <div class="panel-header">
-                  <h4>公司关系网</h4>
-                  <span>供应 / 客户 / 合作</span>
-                </div>
-                <div id="companyNetwork" class="network-stage"></div>
-              </section>
-              <section class="company-card-panel wide">
-                <div class="panel-header">
-                  <h4>相关情报</h4>
-                  <span id="companyIntelStatus">新闻 / 技术 / 专利</span>
-                </div>
-                <div id="companyIntelList" class="intel-list"></div>
-              </section>
-            </div>
-            <div id="companySources" class="source-note"></div>
-          </article>
-
-          <article class="detail-panel wide market-dashboard">
-            <div class="panel-header">
-              <h3>市场与技术现状可视化</h3>
-              <span id="marketDataDate">2026-05-09</span>
-            </div>
-            <div class="market-controls" aria-label="市场可视化筛选">
-              <label>
-                <span>电池类型</span>
-                <select id="marketBatteryType">
-                  <option value="all">锂电 + 钠电</option>
-                  <option value="lithium">锂电</option>
-                  <option value="sodium">钠电</option>
-                </select>
-              </label>
-              <label>
-                <span>应用场景</span>
-                <select id="marketApplication">
-                  <option value="all">全部场景</option>
-                  <option value="ev">动力电池</option>
-                  <option value="ess">储能</option>
-                  <option value="consumer">消费电子</option>
-                </select>
-              </label>
-              <label>
-                <span>视图年份</span>
-                <select id="marketYear">
-                  <option value="2026">2026</option>
-                  <option value="2025">2025</option>
-                  <option value="2024">2024</option>
-                </select>
-              </label>
-              <label>
-                <span>排序</span>
-                <select id="marketSort">
-                  <option value="share">市场份额</option>
-                  <option value="technology">技术评分</option>
-                  <option value="growth">增长动量</option>
-                </select>
-              </label>
-            </div>
-            <div id="marketKpis" class="market-kpis"></div>
-            <div class="market-grid">
-              <section class="market-card">
-                <div class="panel-header">
-                  <h4>企业份额与排名</h4>
-                  <span>水平条形图</span>
-                </div>
-                <div id="companyShareChart" class="chart-stage"></div>
-              </section>
-              <section class="market-card">
-                <div class="panel-header">
-                  <h4>技术领先雷达</h4>
-                  <span>能量/寿命/快充/成本/量产</span>
-                </div>
-                <div id="techRadarChart" class="chart-stage"></div>
-              </section>
-              <section class="market-card">
-                <div class="panel-header">
-                  <h4>应用市场占比</h4>
-                  <span>环形图</span>
-                </div>
-                <div id="applicationDonutChart" class="chart-stage"></div>
-              </section>
-              <section class="market-card">
-                <div class="panel-header">
-                  <h4>出货量与价格趋势</h4>
-                  <span>折线图</span>
-                </div>
-                <div id="trendLineChart" class="chart-stage"></div>
-              </section>
-              <section class="market-card wide">
-                <div class="panel-header">
-                  <h4>地区产能/市场热力</h4>
-                  <span>区域对比</span>
-                </div>
-                <div id="regionHeatChart" class="chart-stage"></div>
-              </section>
-            </div>
-            <div id="marketSources" class="source-note"></div>
-          </article>
-
-          <article class="detail-panel visual-panel wide">
-            <div class="panel-header">
-              <h3>图解</h3>
-              <span id="visualType">机制图</span>
-            </div>
-            <div id="visualStage" class="visual-stage"></div>
-          </article>
-
-          <article class="detail-panel wide">
-            <div class="panel-header">
-              <h3>小白速读</h3>
-              <span>Beginner</span>
-            </div>
-            <div id="beginnerGuide" class="explainer-grid"></div>
-          </article>
-
-          <article class="detail-panel">
-            <div class="panel-header">
-              <h3>学习要点</h3>
-              <span id="difficultyBadge">入门</span>
-            </div>
-            <ul id="keyPoints"></ul>
-          </article>
-
-          <article class="detail-panel">
-            <div class="panel-header">
-              <h3>研究问题</h3>
-              <span>Academic</span>
-            </div>
-            <ul id="researchQuestions"></ul>
-          </article>
-
-          <article class="detail-panel wide">
-            <div class="panel-header">
-              <h3>关键指标与行业判断</h3>
-              <span>Metrics</span>
-            </div>
-            <div id="metricList" class="metric-list"></div>
-          </article>
-
-          <article id="glossaryPanel" class="detail-panel wide is-hidden">
-            <div class="panel-header">
-              <h3>专业词汇表</h3>
-              <span>Glossary</span>
-            </div>
-            <div id="glossaryList" class="glossary-list"></div>
-          </article>
-
-          <article class="detail-panel wide">
-            <div class="panel-header">
-              <h3>最新进展与证据</h3>
-              <span id="updatedAt">2026-05-09</span>
-            </div>
-            <div id="progressList" class="progress-list"></div>
-          </article>
-
-          <article class="detail-panel">
-            <div class="panel-header">
-              <h3>资料链接</h3>
-              <span>Sources</span>
-            </div>
-            <div id="sourceLinks" class="link-list"></div>
-          </article>
-
-          <article class="detail-panel">
-            <div class="panel-header">
-              <h3>视频入口</h3>
-              <span>Video</span>
-            </div>
-            <div id="videoLinks" class="link-list"></div>
-          </article>
-
-          <article class="detail-panel wide">
-            <div class="panel-header">
-              <h3>当前词条相关情报</h3>
-              <span id="relatedIntelStatus">等待数据</span>
-            </div>
-            <div id="relatedIntelList" class="intel-list"></div>
-          </article>
-
-          <article class="detail-panel wide ai-dashboard">
-            <div class="panel-header">
-              <h3>AI 问答工作台</h3>
-              <span>Static RAG</span>
-            </div>
-            <div class="ai-workbench">
-              <section class="ai-chat-panel">
-                <div class="ai-toolbar">
-                  <label>
-                    <span>分析对象</span>
-                    <select id="aiEntitySelect"></select>
-                  </label>
-                  <label>
-                    <span>问题</span>
-                    <input id="aiQuestionInput" type="search" placeholder="例如：CATL 的快充技术来源是什么？钠离子的最新证据有哪些？" />
-                  </label>
-                  <button id="aiAskButton" type="button">提问</button>
-                </div>
-                <div id="aiConversation" class="ai-conversation"></div>
-              </section>
-              <aside class="ai-context-panel">
-                <div class="panel-header">
-                  <h4>当前检索上下文</h4>
-                  <span id="aiContextStats">等待数据</span>
-                </div>
-                <div id="aiAgentContext" class="agent-context"></div>
-              </aside>
-            </div>
-            <p class="source-note small-note">说明：首版为静态证据问答，从站内 JSON、论文、专利、新闻、视频和公司数据中生成带引用回答；自动抓取内容默认未审核，不等同于最终结论。</p>
-          </article>
-
-          <article class="detail-panel wide evidence-dashboard">
-            <div class="panel-header">
-              <h3>证据库</h3>
-              <span id="evidenceCount">0 条证据</span>
-            </div>
-            <div class="intel-controls evidence-controls" aria-label="证据筛选">
-              <label>
-                <span>搜索</span>
-                <input id="evidenceSearch" type="search" placeholder="CATL、钠离子、回收、separator、dry electrode" />
-              </label>
-              <label>
-                <span>实体</span>
-                <select id="evidenceEntity"></select>
-              </label>
-              <label>
-                <span>类型</span>
-                <select id="evidenceType">
-                  <option value="all">全部类型</option>
-                  <option value="paper">论文</option>
-                  <option value="patent">专利</option>
-                  <option value="news">新闻</option>
-                  <option value="video">视频</option>
-                  <option value="company">公司公告</option>
-                  <option value="policy">政策</option>
-                </select>
-              </label>
-              <label>
-                <span>审核</span>
-                <select id="evidenceReview">
-                  <option value="all">全部状态</option>
-                  <option value="unreviewed">未审核线索</option>
-                  <option value="reviewed">已审核</option>
-                  <option value="important">重点</option>
-                  <option value="discarded">已丢弃</option>
-                </select>
-              </label>
-            </div>
-            <div id="evidenceList" class="evidence-list"></div>
-            <p class="source-note small-note">来源口径：论文、专利、新闻、视频、公司公告和政策统一进入证据库；每条证据显示发布时间、采集时间、证据等级和审核状态。</p>
-          </article>
-
-          <article class="detail-panel wide trace-dashboard">
-            <div class="panel-header">
-              <h3>来源追踪</h3>
-              <span>Company → Technology → Evidence</span>
-            </div>
-            <div class="trace-controls">
-              <label>
-                <span>追踪对象</span>
-                <select id="traceEntitySelect"></select>
-              </label>
-            </div>
-            <div class="trace-layout">
-              <div id="traceGraph" class="trace-graph"></div>
-              <aside id="traceDetails" class="trace-details"></aside>
-            </div>
-            <p class="source-note small-note">追踪逻辑：用实体别名、主题标签、公司标签和技术路线标签建立关系。连线表示公开证据线索，不代表已经确认的供应或授权关系。</p>
-          </article>
-
-          <article class="detail-panel wide auto-updates">
-            <div class="panel-header">
-              <h3>情报中心</h3>
-              <span id="autoUpdateStatus">等待加载</span>
-            </div>
-            <div class="update-note">
-              GitHub Actions 会定期更新论文、新闻、视频入口和专利检索线索；自动抓取内容默认是未审核线索，需要结合原文和证据等级判断。
-            </div>
-            <div class="intel-controls" aria-label="情报筛选">
-              <label>
-                <span>搜索</span>
-                <input id="intelSearch" type="search" placeholder="CATL、钠离子、SEI、dry electrode" />
-              </label>
-              <label>
-                <span>主题</span>
-                <select id="intelTopic">
-                  <option value="all">全部主题</option>
-                  <option value="fast-charge">快充</option>
-                  <option value="sodium-ion">钠离子</option>
-                  <option value="solid-state">固态电池</option>
-                  <option value="dry-electrode">干法电极</option>
-                  <option value="separator">隔膜</option>
-                  <option value="electrolyte">电解液/电解质</option>
-                  <option value="bms">BMS</option>
-                  <option value="thermal-management">热管理</option>
-                  <option value="recycling">电池回收</option>
-                  <option value="catl">CATL</option>
-                  <option value="byd">BYD</option>
-                  <option value="tesla">Tesla</option>
-                </select>
-              </label>
-              <label>
-                <span>类型</span>
-                <select id="intelType">
-                  <option value="all">全部类型</option>
-                  <option value="paper">论文</option>
-                  <option value="news">新闻</option>
-                  <option value="video">视频</option>
-                  <option value="patent-search">专利</option>
-                </select>
-              </label>
-              <label>
-                <span>审核</span>
-                <select id="intelReview">
-                  <option value="all">全部状态</option>
-                  <option value="unreviewed">未审核线索</option>
-                  <option value="reviewed">已审核</option>
-                  <option value="important">重点</option>
-                  <option value="discarded">已丢弃</option>
-                </select>
-              </label>
-              <label>
-                <span>排序</span>
-                <select id="intelSort">
-                  <option value="newest">最新优先</option>
-                  <option value="evidence">证据等级优先</option>
-                </select>
-              </label>
-            </div>
-            <div class="intel-summary">
-              <span id="intelligenceCount">0 条线索</span>
-              <span id="intelligenceMeta">等待自动更新数据</span>
-            </div>
-            <div id="intelligenceList" class="intel-list"></div>
-            <div class="feed-grid">
-              <section data-feed-type="paper">
-                <h4>最新论文</h4>
-                <div id="latestPapers" class="feed-list"></div>
-              </section>
-              <section data-feed-type="news">
-                <h4>行业新闻</h4>
-                <div id="latestNews" class="feed-list"></div>
-              </section>
-              <section data-feed-type="video">
-                <h4>视频入口</h4>
-                <div id="latestVideos" class="feed-list"></div>
-              </section>
-              <section data-feed-type="patent-search">
-                <h4>专利线索</h4>
-                <div id="latestPatents" class="feed-list"></div>
-              </section>
-            </div>
-          </article>
-
-          <article class="detail-panel wide data-source-panel">
-            <div class="panel-header">
-              <h3>信息来源与口径说明</h3>
-              <span id="sourceAuditStatus">Source note</span>
-            </div>
-            <p id="pageSourceNote" class="source-note small-note"></p>
-          </article>
-        </section>
+        <section id="objectContext" class="object-context"></section>
+        <section id="viewRoot" class="view-root"></section>
       </main>
     </div>
 
