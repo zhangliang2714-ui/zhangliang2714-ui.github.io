@@ -28,6 +28,9 @@
           <button class="tab" data-section="companies">公司</button>
           <button class="tab" data-section="visualization">可视化</button>
           <button class="tab" data-section="news">情报</button>
+          <button class="tab" data-section="ai">AI问答</button>
+          <button class="tab" data-section="evidence">证据库</button>
+          <button class="tab" data-section="trace">来源追踪</button>
         </nav>
 
         <div class="tree-tools">
@@ -360,6 +363,96 @@
               <span id="relatedIntelStatus">等待数据</span>
             </div>
             <div id="relatedIntelList" class="intel-list"></div>
+          </article>
+
+          <article class="detail-panel wide ai-dashboard">
+            <div class="panel-header">
+              <h3>AI 问答工作台</h3>
+              <span>Static RAG</span>
+            </div>
+            <div class="ai-workbench">
+              <section class="ai-chat-panel">
+                <div class="ai-toolbar">
+                  <label>
+                    <span>分析对象</span>
+                    <select id="aiEntitySelect"></select>
+                  </label>
+                  <label>
+                    <span>问题</span>
+                    <input id="aiQuestionInput" type="search" placeholder="例如：CATL 的快充技术来源是什么？钠离子的最新证据有哪些？" />
+                  </label>
+                  <button id="aiAskButton" type="button">提问</button>
+                </div>
+                <div id="aiConversation" class="ai-conversation"></div>
+              </section>
+              <aside class="ai-context-panel">
+                <div class="panel-header">
+                  <h4>当前检索上下文</h4>
+                  <span id="aiContextStats">等待数据</span>
+                </div>
+                <div id="aiAgentContext" class="agent-context"></div>
+              </aside>
+            </div>
+            <p class="source-note small-note">说明：首版为静态证据问答，从站内 JSON、论文、专利、新闻、视频和公司数据中生成带引用回答；自动抓取内容默认未审核，不等同于最终结论。</p>
+          </article>
+
+          <article class="detail-panel wide evidence-dashboard">
+            <div class="panel-header">
+              <h3>证据库</h3>
+              <span id="evidenceCount">0 条证据</span>
+            </div>
+            <div class="intel-controls evidence-controls" aria-label="证据筛选">
+              <label>
+                <span>搜索</span>
+                <input id="evidenceSearch" type="search" placeholder="CATL、钠离子、回收、separator、dry electrode" />
+              </label>
+              <label>
+                <span>实体</span>
+                <select id="evidenceEntity"></select>
+              </label>
+              <label>
+                <span>类型</span>
+                <select id="evidenceType">
+                  <option value="all">全部类型</option>
+                  <option value="paper">论文</option>
+                  <option value="patent">专利</option>
+                  <option value="news">新闻</option>
+                  <option value="video">视频</option>
+                  <option value="company">公司公告</option>
+                  <option value="policy">政策</option>
+                </select>
+              </label>
+              <label>
+                <span>审核</span>
+                <select id="evidenceReview">
+                  <option value="all">全部状态</option>
+                  <option value="unreviewed">未审核线索</option>
+                  <option value="reviewed">已审核</option>
+                  <option value="important">重点</option>
+                  <option value="discarded">已丢弃</option>
+                </select>
+              </label>
+            </div>
+            <div id="evidenceList" class="evidence-list"></div>
+            <p class="source-note small-note">来源口径：论文、专利、新闻、视频、公司公告和政策统一进入证据库；每条证据显示发布时间、采集时间、证据等级和审核状态。</p>
+          </article>
+
+          <article class="detail-panel wide trace-dashboard">
+            <div class="panel-header">
+              <h3>来源追踪</h3>
+              <span>Company → Technology → Evidence</span>
+            </div>
+            <div class="trace-controls">
+              <label>
+                <span>追踪对象</span>
+                <select id="traceEntitySelect"></select>
+              </label>
+            </div>
+            <div class="trace-layout">
+              <div id="traceGraph" class="trace-graph"></div>
+              <aside id="traceDetails" class="trace-details"></aside>
+            </div>
+            <p class="source-note small-note">追踪逻辑：用实体别名、主题标签、公司标签和技术路线标签建立关系。连线表示公开证据线索，不代表已经确认的供应或授权关系。</p>
           </article>
 
           <article class="detail-panel wide auto-updates">

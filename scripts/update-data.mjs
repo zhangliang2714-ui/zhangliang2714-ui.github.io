@@ -39,6 +39,7 @@ const patentQueries = [
 ];
 
 const errors = [];
+let entityCache = [];
 
 const taxonomy = {
   topics: [
@@ -123,6 +124,29 @@ function classifyByLabels(text, entries) {
     .map((entry) => entry.id);
 }
 
+async function readEntities() {
+  if (entityCache.length) return entityCache;
+  const file = new URL("entities.json", dataDir);
+  if (!existsSync(file)) return [];
+  try {
+    const data = JSON.parse(await readFile(file, "utf8"));
+    entityCache = Array.isArray(data.entities) ? data.entities : [];
+    return entityCache;
+  } catch (error) {
+    errors.push({ source: "entities.json", message: error.message });
+    return [];
+  }
+}
+
+function classifyEntities(text, entities) {
+  const lower = text.toLowerCase();
+  return entities
+    .filter((entity) => [entity.name, ...(entity.aliases || []), ...(entity.tags || [])]
+      .filter(Boolean)
+      .some((label) => lower.includes(String(label).toLowerCase())))
+    .map((entity) => entity.id);
+}
+
 function evidenceFor(item) {
   if (item.type === "news" && /catl|byd|tesla|official|news release/i.test(`${item.source} ${item.url}`)) return "high";
   if (item.type === "paper") return "medium";
@@ -131,16 +155,32 @@ function evidenceFor(item) {
   return "low";
 }
 
-function normalizeItem(item) {
+function normalizeEvidenceType(type) {
+  if (type === "patent-search") return "patent";
+  if (type === "news-search") return "news";
+  return type || "lead";
+}
+
+function normalizeItem(item, entities = []) {
   const text = [item.title, item.source, item.query, item.url].filter(Boolean).join(" ");
   const topics = classifyByLabels(text, taxonomy.topics);
   const companies = classifyByLabels(text, taxonomy.companies);
   const technologyRoutes = classifyByLabels(text, taxonomy.routes);
+  const entityIds = [
+    ...classifyEntities(text, entities),
+    ...topics,
+    ...companies,
+    ...technologyRoutes
+  ];
   return {
     ...item,
     topics,
     companies,
     technologyRoutes,
+    entityIds: [...new Set(entityIds)].filter(Boolean),
+    evidenceType: normalizeEvidenceType(item.type),
+    claim: item.claim || item.query || item.title,
+    sourceUrl: item.sourceUrl || item.url,
     evidenceLevel: evidenceFor(item),
     review: item.review || "unreviewed"
   };
@@ -254,23 +294,53 @@ function collectPatents() {
   }));
 }
 
-function mergeReviewed(previous, fresh) {
+function mergeReviewed(previous, fresh, entities = []) {
   const reviewByUrl = new Map(previous.map((item) => [item.url, item.review || item.status]));
   return fresh.map((item) => normalizeItem({
     ...item,
     review: reviewByUrl.get(item.url) || "unreviewed"
-  }));
+  }, entities));
 }
 
 async function main() {
   const [papers, news] = await Promise.all([collectPapers(), collectNews()]);
   const videos = collectVideos();
   const patents = collectPatents();
+  const entities = await readEntities();
 
-  await writeJson("papers.json", mergeReviewed(await readExisting("papers.json"), papers));
-  await writeJson("news.json", mergeReviewed(await readExisting("news.json"), news));
-  await writeJson("videos.json", mergeReviewed(await readExisting("videos.json"), videos));
-  await writeJson("patents.json", mergeReviewed(await readExisting("patents.json"), patents));
+  const normalizedPapers = mergeReviewed(await readExisting("papers.json"), papers, entities);
+  const normalizedNews = mergeReviewed(await readExisting("news.json"), news, entities);
+  const normalizedVideos = mergeReviewed(await readExisting("videos.json"), videos, entities);
+  const normalizedPatents = mergeReviewed(await readExisting("patents.json"), patents, entities);
+
+  await writeJson("papers.json", normalizedPapers);
+  await writeJson("news.json", normalizedNews);
+  await writeJson("videos.json", normalizedVideos);
+  await writeJson("patents.json", normalizedPatents);
+  await writeJson("evidence-index.json", {
+    generatedAt: collectedAt,
+    schema: "battery-evidence-index-v1",
+    items: [...normalizedPapers, ...normalizedNews, ...normalizedVideos, ...normalizedPatents]
+      .map((item) => ({
+        id: item.url || item.title,
+        title: item.title,
+        claim: item.claim,
+        url: item.url,
+        source: item.source,
+        sourceUrl: item.sourceUrl || item.url,
+        publishedAt: item.publishedAt,
+        collectedAt: item.collectedAt,
+        evidenceType: item.evidenceType,
+        type: item.type,
+        entityIds: item.entityIds || [],
+        topics: item.topics || [],
+        companies: item.companies || [],
+        technologyRoutes: item.technologyRoutes || [],
+        evidenceLevel: item.evidenceLevel,
+        review: item.review
+      })),
+    note: "Automatically generated unified evidence index. Unreviewed items are leads, not confirmed conclusions."
+  });
   await writeJson("metadata.json", {
     collectedAt,
     sources: {
@@ -283,7 +353,8 @@ async function main() {
     taxonomy: {
       topics: taxonomy.topics.map(({ id }) => id),
       companies: taxonomy.companies.map(({ id }) => id),
-      technologyRoutes: taxonomy.routes.map(({ id }) => id)
+      technologyRoutes: taxonomy.routes.map(({ id }) => id),
+      entities: entities.map(({ id }) => id)
     },
     note: "Automatically generated by GitHub Actions. Human review is still required before treating items as confirmed evidence."
   });

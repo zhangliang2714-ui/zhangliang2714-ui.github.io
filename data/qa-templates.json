@@ -1,0 +1,42 @@
+{
+  "updatedAt": "2026-06-19",
+  "schema": "battery-qa-template-v1",
+  "templates": [
+    {
+      "id": "company-technology-source",
+      "label": "公司技术来源",
+      "question": "某公司的技术来源和证据链是什么？",
+      "intent": "company-source",
+      "answerFrame": "先列公司相关技术路线，再按论文、专利、新闻和公司公告给证据，最后说明哪些结论还需要人工审核。"
+    },
+    {
+      "id": "technology-latest-progress",
+      "label": "技术最新进展",
+      "question": "某技术路线的最新进展是什么？",
+      "intent": "technology-progress",
+      "answerFrame": "按最近证据、代表公司、关键材料/工艺、产业化状态和不确定性组织回答。"
+    },
+    {
+      "id": "material-supply-chain",
+      "label": "材料供应链",
+      "question": "某材料或产业链环节有哪些公司和证据？",
+      "intent": "supply-chain",
+      "answerFrame": "先解释该材料在电池中的作用，再列相关公司、证据类型、市场口径和需要补充的数据。"
+    },
+    {
+      "id": "recycling-evidence",
+      "label": "回收证据链",
+      "question": "电池回收技术和市场证据有哪些？",
+      "intent": "recycling",
+      "answerFrame": "按梯次利用、预处理、黑粉、火法、湿法、直接再生和材料闭环组织证据。"
+    },
+    {
+      "id": "risk-check",
+      "label": "风险核查",
+      "question": "这条新闻或技术声明有哪些风险和不确定性？",
+      "intent": "risk",
+      "answerFrame": "核查来源可靠性、是否有专利/论文/公告支撑、是否只是商业宣传、测试口径是否完整。"
+    }
+  ],
+  "note": "首版 AI 问答使用结构化模板和站内 JSON 证据生成，不调用后端大模型。"
+}

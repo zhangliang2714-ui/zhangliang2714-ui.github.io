@@ -1281,12 +1281,63 @@ const sections = {
         videos: []
       }
     ]
+  },
+  ai: {
+    label: "AI 问答",
+    roots: [
+      {
+        id: "ai-root",
+        title: "AI 问答工作台",
+        tag: "AI",
+        difficulty: "证据问答",
+        summary: "用站内实体库和证据索引模拟多 Agent 问答：先判断问题类型，再检索论文、专利、新闻、视频和公司证据，最后生成带引用的结构化回答。",
+        keyPoints: ["问题分类 Agent：判断公司、技术、市场、论文、专利、来源或风险。", "证据检索 Agent：从 data/*.json 和站内知识节点抽取相关证据。", "回答生成 Agent：必须展示引用、证据等级、审核状态和不确定性。"],
+        researchQuestions: ["某公司技术路线有哪些公开证据？", "某技术最新进展是否有论文、专利或公告支撑？", "某条新闻背后是否只是商业宣传？"],
+        progress: [{ title: "静态证据问答首版上线", date: "2026-06-19", evidence: "站内 JSON", level: "medium", text: "首版不连接后端大模型，先用结构化证据生成可追溯回答。" }],
+        sources: [],
+        videos: []
+      }
+    ]
+  },
+  evidence: {
+    label: "证据库",
+    roots: [
+      {
+        id: "evidence-root",
+        title: "统一证据库",
+        tag: "Evidence",
+        difficulty: "筛选",
+        summary: "把论文、专利、新闻、视频、公司公告和政策统一为可筛选证据卡片，默认把自动采集内容标记为未审核线索。",
+        keyPoints: ["证据字段包括标题、来源、发布时间、采集时间、实体、证据类型、证据等级和审核状态。", "未匹配实体的条目不会丢失，会作为未分类证据保留。", "证据库用于支撑公司、技术路线、回收和来源追踪。"],
+        researchQuestions: ["哪些证据是真正高可靠来源？", "哪些线索需要人工审核或丢弃？"],
+        progress: [{ title: "证据索引结构上线", date: "2026-06-19", evidence: "data/evidence-index.json", level: "medium", text: "动态抓取脚本会继续生成 papers/news/videos/patents，同时输出统一 evidence-index。" }],
+        sources: [],
+        videos: []
+      }
+    ]
+  },
+  trace: {
+    label: "来源追踪",
+    roots: [
+      {
+        id: "trace-root",
+        title: "来源追踪图谱",
+        tag: "Trace",
+        difficulty: "关系分析",
+        summary: "用关系图展示公司、技术路线、材料、产业链环节和证据之间的连接，帮助判断某项技术或新闻的来源链条。",
+        keyPoints: ["公司节点连接技术路线与供应链环节。", "技术节点连接论文、专利、新闻和视频证据。", "关系图是线索图，不等于最终事实确认。"],
+        researchQuestions: ["某技术来自哪类公司、材料和专利？", "某公司声明是否有论文或专利支撑？"],
+        progress: [{ title: "来源追踪工作台上线", date: "2026-06-19", evidence: "实体别名和证据索引", level: "medium", text: "根据实体别名、主题标签和证据标签生成静态关系图。" }],
+        sources: [],
+        videos: []
+      }
+    ]
   }
 };
 
 let activeSection = "overview";
 let selectedId = "overview-root";
-const openNodes = new Set(["overview-root", "mechanism-root", "frontier-root", "recycling-root", "news-root"]);
+const openNodes = new Set(["overview-root", "mechanism-root", "frontier-root", "recycling-root", "news-root", "ai-root", "evidence-root", "trace-root"]);
 
 const treeEl = document.querySelector("#tree");
 const searchInput = document.querySelector("#searchInput");
@@ -1302,6 +1353,13 @@ const intelControls = {
 const intelligenceState = {
   metadata: null,
   items: []
+};
+
+const knowledgeState = {
+  entities: [],
+  evidence: [],
+  templates: [],
+  selectedEntityId: "catl"
 };
 
 const companyState = {
@@ -2608,6 +2666,9 @@ function renderDetail(node) {
   document.body.classList.toggle("is-news", activeSection === "news");
   document.body.classList.toggle("is-visualization", activeSection === "visualization");
   document.body.classList.toggle("is-companies", activeSection === "companies");
+  document.body.classList.toggle("is-ai", activeSection === "ai");
+  document.body.classList.toggle("is-evidence", activeSection === "evidence");
+  document.body.classList.toggle("is-trace", activeSection === "trace");
   document.querySelector("#sectionLabel").textContent = sections[activeSection].label;
   document.querySelector("#nodeTitle").textContent = node.title;
   document.querySelector("#nodeSummary").innerHTML = linkifyTerms(node.summary);
@@ -2616,6 +2677,9 @@ function renderDetail(node) {
   if (activeSection === "visualization") renderMarketDashboard();
   if (activeSection === "recycling") renderRecyclingDashboard();
   if (activeSection === "companies") renderCompanyDashboard();
+  if (activeSection === "ai") renderAIDashboard();
+  if (activeSection === "evidence") renderEvidenceDashboard();
+  if (activeSection === "trace") renderTraceDashboard();
   renderVisual(node);
   renderCards("#beginnerGuide", node.beginnerGuide, defaultBeginnerGuide(node));
   renderList("#keyPoints", node.keyPoints);
@@ -2880,6 +2944,331 @@ function syncFeedSections(forcedType) {
   });
 }
 
+function entityById(id) {
+  return knowledgeState.entities.find((entity) => entity.id === id);
+}
+
+function entityLabel(id) {
+  return entityById(id)?.name || topicLabels[id] || id;
+}
+
+function normalizeEvidenceType(type) {
+  if (type === "patent-search") return "patent";
+  if (type === "news-search") return "news";
+  return type || "lead";
+}
+
+function evidenceId(item) {
+  return item.id || item.url || item.title;
+}
+
+function evidenceSearchText(item) {
+  return [
+    item.title,
+    item.claim,
+    item.source,
+    item.sourceUrl,
+    item.url,
+    item.query,
+    normalizeEvidenceType(item.evidenceType || item.type),
+    ...ensureArray(item.entityIds),
+    ...ensureArray(item.topics),
+    ...ensureArray(item.companies),
+    ...ensureArray(item.technologyRoutes)
+  ].filter(Boolean).join(" ").toLowerCase();
+}
+
+function evidenceMatchesEntity(item, entity) {
+  if (!entity) return true;
+  const ids = new Set([
+    ...ensureArray(item.entityIds),
+    ...ensureArray(item.topics),
+    ...ensureArray(item.companies),
+    ...ensureArray(item.technologyRoutes)
+  ]);
+  if (ids.has(entity.id)) return true;
+  const text = evidenceSearchText(item);
+  return [entity.name, ...(entity.aliases || []), ...(entity.tags || [])]
+    .filter(Boolean)
+    .some((alias) => text.includes(String(alias).toLowerCase()));
+}
+
+function normalizedEvidenceItem(item, fallbackType) {
+  const normalized = normalizeClientItem(item, fallbackType || item.evidenceType || item.type || "lead");
+  const inferredEntityIds = [
+    ...ensureArray(item.entityIds),
+    ...ensureArray(normalized.companies),
+    ...ensureArray(normalized.topics),
+    ...ensureArray(normalized.technologyRoutes)
+  ];
+  return {
+    ...normalized,
+    id: evidenceId(item),
+    sourceUrl: item.sourceUrl || item.url,
+    evidenceType: normalizeEvidenceType(item.evidenceType || item.type || fallbackType),
+    claim: item.claim || item.query || item.title,
+    entityIds: [...new Set(inferredEntityIds)].filter(Boolean)
+  };
+}
+
+function allEvidenceItems() {
+  const merged = [
+    ...knowledgeState.evidence.map((item) => normalizedEvidenceItem(item)),
+    ...intelligenceState.items.map((item) => normalizedEvidenceItem(item, item.type))
+  ];
+  const seen = new Set();
+  return merged.filter((item) => {
+    const key = evidenceId(item);
+    if (!key || seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
+}
+
+function evidenceForEntityId(entityId, limit = 12) {
+  const entity = entityById(entityId);
+  return allEvidenceItems()
+    .filter((item) => evidenceMatchesEntity(item, entity))
+    .sort((a, b) => evidenceRank(b) - evidenceRank(a) || itemDateValue(b) - itemDateValue(a))
+    .slice(0, limit);
+}
+
+function populateEntitySelect(selector, includeAll = false) {
+  const select = document.querySelector(selector);
+  if (!select) return;
+  const current = select.value || knowledgeState.selectedEntityId;
+  const groups = {
+    company: "公司",
+    technology: "技术",
+    material: "材料",
+    "supply-chain": "产业链"
+  };
+  const options = [];
+  if (includeAll) options.push('<option value="all">全部实体</option>');
+  Object.entries(groups).forEach(([type, label]) => {
+    const entities = knowledgeState.entities.filter((entity) => entity.type === type);
+    if (!entities.length) return;
+    options.push(`<optgroup label="${escapeHtml(label)}">`);
+    entities.forEach((entity) => {
+      options.push(`<option value="${escapeHtml(entity.id)}">${escapeHtml(entity.name)}</option>`);
+    });
+    options.push("</optgroup>");
+  });
+  select.innerHTML = options.join("");
+  if ([...select.options].some((option) => option.value === current)) select.value = current;
+}
+
+function renderAgentContext(entity, items) {
+  const context = document.querySelector("#aiAgentContext");
+  const stats = document.querySelector("#aiContextStats");
+  if (!context || !entity) return;
+  const highCount = items.filter((item) => item.evidenceLevel === "high").length;
+  const reviewedCount = items.filter((item) => ["reviewed", "important"].includes(item.review)).length;
+  if (stats) stats.textContent = `${items.length} 条证据 / ${highCount} 条高可信`;
+  context.innerHTML = [
+    { title: "Coordinator Agent", text: `识别对象：${entity.name}。类型：${entity.type}。相关标签：${ensureArray(entity.tags).slice(0, 6).join(" / ") || "待补充"}。` },
+    { title: "Evidence Agent", text: `检索到 ${items.length} 条相关证据，其中高可信 ${highCount} 条，已审核或重点 ${reviewedCount} 条。` },
+    { title: "Source Agent", text: "优先展示论文、专利、公司公告和政策；新闻与视频作为动态线索，默认需要人工复核。" }
+  ].map((agent) => `
+    <article class="agent-card">
+      <strong>${escapeHtml(agent.title)}</strong>
+      <p>${escapeHtml(agent.text)}</p>
+    </article>
+  `).join("");
+}
+
+function classifyQuestion(question) {
+  const text = question.toLowerCase();
+  if (/专利|patent/.test(text)) return "patent";
+  if (/论文|paper|article|scholar/.test(text)) return "paper";
+  if (/来源|source|origin|哪里来|证据链/.test(text)) return "source";
+  if (/风险|不确定|可靠|审核|真假/.test(text)) return "risk";
+  if (/市场|份额|排名|销量|产能/.test(text)) return "market";
+  if (/回收|黑粉|湿法|火法|recycling|black mass/.test(text)) return "recycling";
+  return "overview";
+}
+
+function buildAiAnswer(entity, question, items) {
+  const intent = classifyQuestion(question);
+  const topItems = items.slice(0, 6);
+  const typeCounts = topItems.reduce((acc, item) => {
+    const type = normalizeEvidenceType(item.evidenceType || item.type);
+    acc[type] = (acc[type] || 0) + 1;
+    return acc;
+  }, {});
+  const confidence = topItems.some((item) => item.evidenceLevel === "high") ? 82 : topItems.length >= 3 ? 68 : 46;
+  const typeSummary = Object.entries(typeCounts).map(([type, count]) => `${typeLabels[type] || type}: ${count}`).join(" / ") || "暂无匹配证据";
+  const focus = {
+    patent: "专利优先：重点看申请人、权利要求覆盖范围、实施例是否支撑量产。",
+    paper: "论文优先：重点看测试条件、材料体系、全电池还是半电池、是否接近产业载量。",
+    source: "来源分析：把公司、技术路线、材料和证据来源串起来，避免只看宣传结论。",
+    risk: "风险核查：新闻和视频默认只是线索，需要论文、专利、公告或政策交叉验证。",
+    market: "市场判断：公开份额口径不统一，需要区分全球/中国、动力/储能、出货量/装机量。",
+    recycling: "回收判断：按梯次利用、预处理、黑粉、湿法/火法/直接再生和材料闭环拆分证据。",
+    overview: "综合回答：先看实体定位，再看证据类型和最新时间。"
+  }[intent];
+  const citations = topItems.map((item, index) => `
+    <li><a href="${escapeHtml(item.sourceUrl || item.url)}" target="_blank" rel="noreferrer">[${index + 1}] ${escapeHtml(item.title)}</a> <span class="pill ${escapeHtml(item.evidenceLevel || "low")}">${escapeHtml(evidenceLabels[item.evidenceLevel] || item.evidenceLevel || "线索")}</span> <span class="pill">${escapeHtml(formatFeedDate(item.publishedAt || item.collectedAt))}</span></li>
+  `).join("");
+  return `
+    <article class="ai-message">
+      <h4>${escapeHtml(entity.name)}：结构化回答</h4>
+      <p>${escapeHtml(focus)}</p>
+      <p>当前检索到 ${items.length} 条相关证据，首屏引用 ${topItems.length} 条。证据类型分布：${escapeHtml(typeSummary)}。静态置信度约 ${confidence}%，主要取决于是否存在高可信来源和已审核证据。</p>
+      <p>${escapeHtml(entity.summary || "该实体还需要补充简介。")}</p>
+      <h4>引用证据</h4>
+      <ul>${citations || "<li>暂无可引用证据。建议先运行数据更新脚本或补充人工证据。</li>"}</ul>
+      <p class="small-note">限制：这是基于站内 JSON 的静态证据问答，不是实时联网大模型结论；未审核线索只代表值得继续核查。</p>
+    </article>
+  `;
+}
+
+function renderAIDashboard() {
+  populateEntitySelect("#aiEntitySelect");
+  const select = document.querySelector("#aiEntitySelect");
+  const questionInput = document.querySelector("#aiQuestionInput");
+  const conversation = document.querySelector("#aiConversation");
+  if (!conversation || !select) return;
+  const entity = entityById(select.value || knowledgeState.selectedEntityId) || knowledgeState.entities[0];
+  if (!entity) {
+    conversation.innerHTML = '<p class="empty">实体库尚未加载。请检查 data/entities.json。</p>';
+    return;
+  }
+  knowledgeState.selectedEntityId = entity.id;
+  if (select.value !== entity.id) select.value = entity.id;
+  if (questionInput && !questionInput.value) questionInput.value = `${entity.name} 的技术来源和最新证据是什么？`;
+  const items = evidenceForEntityId(entity.id, 16);
+  renderAgentContext(entity, items);
+  const question = questionInput?.value || "";
+  conversation.innerHTML = `
+    <article class="ai-message user">
+      <h4>问题</h4>
+      <p>${escapeHtml(question)}</p>
+    </article>
+    ${buildAiAnswer(entity, question, items)}
+  `;
+}
+
+function evidenceFilters() {
+  return {
+    search: document.querySelector("#evidenceSearch")?.value.trim().toLowerCase() || "",
+    entity: document.querySelector("#evidenceEntity")?.value || "all",
+    type: document.querySelector("#evidenceType")?.value || "all",
+    review: document.querySelector("#evidenceReview")?.value || "all"
+  };
+}
+
+function filteredEvidenceItems() {
+  const filters = evidenceFilters();
+  const entity = filters.entity === "all" ? null : entityById(filters.entity);
+  return allEvidenceItems()
+    .filter((item) => {
+      if (filters.search && !evidenceSearchText(item).includes(filters.search)) return false;
+      if (filters.entity !== "all" && !evidenceMatchesEntity(item, entity)) return false;
+      if (filters.type !== "all" && normalizeEvidenceType(item.evidenceType || item.type) !== filters.type) return false;
+      if (filters.review !== "all" && item.review !== filters.review) return false;
+      return true;
+    })
+    .sort((a, b) => itemDateValue(b) - itemDateValue(a) || evidenceRank(b) - evidenceRank(a));
+}
+
+function renderEvidenceDashboard() {
+  populateEntitySelect("#evidenceEntity", true);
+  const list = document.querySelector("#evidenceList");
+  const count = document.querySelector("#evidenceCount");
+  if (!list) return;
+  const items = filteredEvidenceItems();
+  if (count) count.textContent = `${items.length} 条证据`;
+  if (!items.length) {
+    list.innerHTML = '<p class="empty">没有匹配证据。可以换一个实体、类型或搜索词。</p>';
+    return;
+  }
+  list.innerHTML = items.slice(0, 60).map((item) => {
+    const entityChips = ensureArray(item.entityIds).slice(0, 6).map((id) => `<span>${escapeHtml(entityLabel(id))}</span>`).join("");
+    return `
+      <article class="evidence-card">
+        <a href="${escapeHtml(item.sourceUrl || item.url)}" target="_blank" rel="noreferrer">${escapeHtml(item.title)}</a>
+        <p>${escapeHtml(item.claim || item.query || item.source || "自动采集线索")}</p>
+        <div class="intel-meta">
+          <span>${escapeHtml(typeLabels[normalizeEvidenceType(item.evidenceType || item.type)] || normalizeEvidenceType(item.evidenceType || item.type))}</span>
+          <span>${escapeHtml(item.source || "Unknown source")}</span>
+          <span class="evidence-${escapeHtml(item.evidenceLevel || "low")}">${escapeHtml(evidenceLabels[item.evidenceLevel] || item.evidenceLevel || "线索")}</span>
+          <span class="review-${escapeHtml(item.review || "unreviewed")}">${escapeHtml(reviewLabels[item.review] || item.review || "未审核")}</span>
+          <span>发布：${escapeHtml(formatFeedDate(item.publishedAt))}</span>
+          <span>采集：${escapeHtml(formatFeedDate(item.collectedAt))}</span>
+        </div>
+        <div class="intel-tags">${entityChips}</div>
+      </article>
+    `;
+  }).join("");
+}
+
+function renderTraceDashboard() {
+  populateEntitySelect("#traceEntitySelect");
+  const select = document.querySelector("#traceEntitySelect");
+  const graph = document.querySelector("#traceGraph");
+  const details = document.querySelector("#traceDetails");
+  if (!graph || !select) return;
+  const entity = entityById(select.value || knowledgeState.selectedEntityId) || knowledgeState.entities[0];
+  if (!entity) {
+    graph.innerHTML = '<p class="empty">实体库尚未加载。</p>';
+    return;
+  }
+  knowledgeState.selectedEntityId = entity.id;
+  if (select.value !== entity.id) select.value = entity.id;
+  const related = ensureArray(entity.relatedEntityIds).map(entityById).filter(Boolean).slice(0, 8);
+  const evidenceItems = evidenceForEntityId(entity.id, 8);
+  const width = 1040;
+  const height = Math.max(560, 180 + Math.max(related.length, evidenceItems.length) * 58);
+  const center = { x: 250, y: height / 2 };
+  const relatedNodes = related.map((item, index) => ({ entity: item, x: 530, y: 120 + index * 58 }));
+  const evidenceNodes = evidenceItems.map((item, index) => ({ item, x: 870, y: 120 + index * 58 }));
+  const typeColor = { company: "#2878b5", technology: "#1f8f6a", material: "#c28b2c", "supply-chain": "#8b6bb8" };
+  graph.innerHTML = `
+    <svg viewBox="0 0 ${width} ${height}" role="img" aria-label="来源追踪关系图">
+      <g>
+        ${relatedNodes.map((node) => `<path class="trace-link is-focus" d="M${center.x + 34},${center.y} C390,${center.y} 420,${node.y} ${node.x - 34},${node.y}"></path>`).join("")}
+        ${evidenceNodes.map((node, index) => {
+          const source = relatedNodes[index % Math.max(relatedNodes.length, 1)] || { x: center.x, y: center.y };
+          return `<path class="trace-link" d="M${source.x + 34},${source.y} C650,${source.y} 720,${node.y} ${node.x - 34},${node.y}"></path>`;
+        }).join("")}
+      </g>
+      <g class="trace-node">
+        <circle cx="${center.x}" cy="${center.y}" r="46" fill="${typeColor[entity.type] || "#1f8f6a"}"></circle>
+        <text x="${center.x}" y="${center.y + 66}" text-anchor="middle">${escapeHtml(entity.name.slice(0, 18))}</text>
+      </g>
+      ${relatedNodes.map((node) => `
+        <g class="trace-node">
+          <circle cx="${node.x}" cy="${node.y}" r="30" fill="${typeColor[node.entity.type] || "#7fa69b"}"></circle>
+          <text x="${node.x}" y="${node.y + 48}" text-anchor="middle">${escapeHtml(node.entity.name.slice(0, 16))}</text>
+        </g>
+      `).join("")}
+      ${evidenceNodes.map((node, index) => `
+        <g class="trace-node">
+          <circle cx="${node.x}" cy="${node.y}" r="24" fill="${node.item.evidenceLevel === "high" ? "#1f8f6a" : node.item.evidenceLevel === "medium" ? "#c28b2c" : "#7f8d88"}"></circle>
+          <text x="${node.x}" y="${node.y + 42}" text-anchor="middle">证据 ${index + 1}</text>
+        </g>
+      `).join("")}
+    </svg>
+  `;
+  if (details) {
+    details.innerHTML = `
+      <h4>${escapeHtml(entity.name)}</h4>
+      <p>${escapeHtml(entity.summary || "暂无实体摘要。")}</p>
+      <div class="company-tags">${ensureArray(entity.tags).map((tag) => `<span>${escapeHtml(tag)}</span>`).join("")}</div>
+      <h4>相关证据</h4>
+      <div class="trace-detail-list">
+        ${evidenceItems.slice(0, 6).map((item, index) => `
+          <article class="agent-card">
+            <strong><a href="${escapeHtml(item.sourceUrl || item.url)}" target="_blank" rel="noreferrer">[${index + 1}] ${escapeHtml(item.title)}</a></strong>
+            <p>${escapeHtml(item.source || "Unknown source")} / ${escapeHtml(formatFeedDate(item.publishedAt || item.collectedAt))} / ${escapeHtml(evidenceLabels[item.evidenceLevel] || item.evidenceLevel || "线索")}</p>
+          </article>
+        `).join("") || '<p class="empty">暂无相关证据。</p>'}
+      </div>
+    `;
+  }
+}
+
 function renderIntelligenceCenter() {
   const items = filteredIntelligenceItems();
   const count = document.querySelector("#intelligenceCount");
@@ -2942,6 +3331,9 @@ async function loadDynamicFeeds() {
     renderIntelligenceCenter();
     renderRelatedIntel(findNode(selectedId));
     renderRecyclingDashboard();
+    renderAIDashboard();
+    renderEvidenceDashboard();
+    renderTraceDashboard();
   } catch (error) {
     status.textContent = "加载失败";
     intelligenceState.items = [];
@@ -2952,6 +3344,35 @@ async function loadDynamicFeeds() {
     renderIntelligenceCenter();
     renderRelatedIntel(findNode(selectedId));
     renderRecyclingDashboard();
+    renderAIDashboard();
+    renderEvidenceDashboard();
+    renderTraceDashboard();
+  }
+}
+
+async function loadKnowledgeData() {
+  try {
+    const [entitiesData, evidenceData, templatesData] = await Promise.all([
+      loadJson("data/entities.json"),
+      loadJson("data/evidence-index.json"),
+      loadJson("data/qa-templates.json")
+    ]);
+    knowledgeState.entities = ensureArray(entitiesData.entities);
+    knowledgeState.evidence = ensureArray(evidenceData.items);
+    knowledgeState.templates = ensureArray(templatesData.templates);
+    if (!entityById(knowledgeState.selectedEntityId)) {
+      knowledgeState.selectedEntityId = knowledgeState.entities[0]?.id || "catl";
+    }
+    renderAIDashboard();
+    renderEvidenceDashboard();
+    renderTraceDashboard();
+  } catch (error) {
+    knowledgeState.entities = [];
+    knowledgeState.evidence = [];
+    knowledgeState.templates = [];
+    renderAIDashboard();
+    renderEvidenceDashboard();
+    renderTraceDashboard();
   }
 }
 
@@ -2959,6 +3380,22 @@ Object.values(intelControls).forEach((control) => {
   control?.addEventListener("input", renderIntelligenceCenter);
   control?.addEventListener("change", renderIntelligenceCenter);
 });
+
+["#aiEntitySelect", "#aiQuestionInput"].forEach((selector) => {
+  const control = document.querySelector(selector);
+  control?.addEventListener("input", renderAIDashboard);
+  control?.addEventListener("change", renderAIDashboard);
+});
+
+document.querySelector("#aiAskButton")?.addEventListener("click", renderAIDashboard);
+
+["#evidenceSearch", "#evidenceEntity", "#evidenceType", "#evidenceReview"].forEach((selector) => {
+  const control = document.querySelector(selector);
+  control?.addEventListener("input", renderEvidenceDashboard);
+  control?.addEventListener("change", renderEvidenceDashboard);
+});
+
+document.querySelector("#traceEntitySelect")?.addEventListener("change", renderTraceDashboard);
 
 ["#marketBatteryType", "#marketApplication", "#marketYear", "#marketSort"].forEach((selector) => {
   document.querySelector(selector)?.addEventListener("change", renderMarketDashboard);
@@ -2985,5 +3422,6 @@ document.addEventListener("click", (event) => {
 
 renderTree();
 renderDetail(findNode(selectedId));
+loadKnowledgeData();
 loadDynamicFeeds();
 loadCompanyData();

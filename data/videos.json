@@ -4,13 +4,17 @@
     "url": "https://www.youtube.com/results?search_query=lithium%20ion%20battery%20mechanism%20explained",
     "source": "YouTube search",
     "publishedAt": null,
-    "collectedAt": "2026-06-19T00:00:17.602Z",
+    "collectedAt": "2026-06-19T02:57:19.568Z",
     "query": "lithium ion battery mechanism explained",
     "type": "video",
     "review": "unreviewed",
     "topics": [],
     "companies": [],
     "technologyRoutes": [],
+    "entityIds": [],
+    "evidenceType": "video",
+    "claim": "lithium ion battery mechanism explained",
+    "sourceUrl": "https://www.youtube.com/results?search_query=lithium%20ion%20battery%20mechanism%20explained",
     "evidenceLevel": "low"
   },
   {
@@ -18,7 +22,7 @@
     "url": "https://www.youtube.com/results?search_query=CATL%20BYD%20Tesla%20battery%20technology",
     "source": "YouTube search",
     "publishedAt": null,
-    "collectedAt": "2026-06-19T00:00:17.602Z",
+    "collectedAt": "2026-06-19T02:57:19.568Z",
     "query": "CATL BYD Tesla battery technology",
     "type": "video",
     "review": "unreviewed",
@@ -29,6 +33,14 @@
       "tesla"
     ],
     "technologyRoutes": [],
+    "entityIds": [
+      "catl",
+      "byd",
+      "tesla"
+    ],
+    "evidenceType": "video",
+    "claim": "CATL BYD Tesla battery technology",
+    "sourceUrl": "https://www.youtube.com/results?search_query=CATL%20BYD%20Tesla%20battery%20technology",
     "evidenceLevel": "low"
   },
   {
@@ -36,7 +48,7 @@
     "url": "https://www.youtube.com/results?search_query=sodium%20ion%20battery%20explained",
     "source": "YouTube search",
     "publishedAt": null,
-    "collectedAt": "2026-06-19T00:00:17.602Z",
+    "collectedAt": "2026-06-19T02:57:19.568Z",
     "query": "sodium ion battery explained",
     "type": "video",
     "review": "unreviewed",
@@ -47,6 +59,13 @@
     "technologyRoutes": [
       "sodium-hard-carbon"
     ],
+    "entityIds": [
+      "sodium-ion",
+      "sodium-hard-carbon"
+    ],
+    "evidenceType": "video",
+    "claim": "sodium ion battery explained",
+    "sourceUrl": "https://www.youtube.com/results?search_query=sodium%20ion%20battery%20explained",
     "evidenceLevel": "low"
   },
   {
@@ -54,7 +73,7 @@
     "url": "https://www.youtube.com/results?search_query=solid%20state%20battery%20latest",
     "source": "YouTube search",
     "publishedAt": null,
-    "collectedAt": "2026-06-19T00:00:17.602Z",
+    "collectedAt": "2026-06-19T02:57:19.568Z",
     "query": "solid state battery latest",
     "type": "video",
     "review": "unreviewed",
@@ -63,6 +82,12 @@
     ],
     "companies": [],
     "technologyRoutes": [],
+    "entityIds": [
+      "solid-state"
+    ],
+    "evidenceType": "video",
+    "claim": "solid state battery latest",
+    "sourceUrl": "https://www.youtube.com/results?search_query=solid%20state%20battery%20latest",
     "evidenceLevel": "low"
   },
   {
@@ -70,7 +95,7 @@
     "url": "https://www.youtube.com/results?search_query=lithium%20ion%20battery%20recycling%20process%20black%20mass",
     "source": "YouTube search",
     "publishedAt": null,
-    "collectedAt": "2026-06-19T00:00:17.602Z",
+    "collectedAt": "2026-06-19T02:57:19.568Z",
     "query": "lithium ion battery recycling process black mass",
     "type": "video",
     "review": "unreviewed",
@@ -82,6 +107,20 @@
       "battery-recycling",
       "black-mass"
     ],
+    "entityIds": [
+      "catl",
+      "brunp",
+      "gem",
+      "huayou",
+      "redwood",
+      "li-cycle",
+      "recycling",
+      "battery-recycling",
+      "black-mass"
+    ],
+    "evidenceType": "video",
+    "claim": "lithium ion battery recycling process black mass",
+    "sourceUrl": "https://www.youtube.com/results?search_query=lithium%20ion%20battery%20recycling%20process%20black%20mass",
     "evidenceLevel": "low"
   }
 ]

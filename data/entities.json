@@ -1,0 +1,195 @@
+{
+  "updatedAt": "2026-06-19",
+  "schema": "battery-entity-index-v1",
+  "entities": [
+    {
+      "id": "catl",
+      "name": "宁德时代 CATL",
+      "type": "company",
+      "aliases": ["CATL", "Contemporary Amperex", "宁德时代"],
+      "tags": ["cell-pack", "lfp", "ctp-ctb", "fast-charge", "sodium-ion", "recycling"],
+      "summary": "全球动力电池龙头之一，技术线索主要集中在 LFP、麒麟电池/CTP、快充、钠离子、电池回收与储能系统。",
+      "relatedEntityIds": ["brunp", "fast-charge", "sodium-ion", "recycling", "lfp", "separator"]
+    },
+    {
+      "id": "byd",
+      "name": "比亚迪 BYD",
+      "type": "company",
+      "aliases": ["BYD", "比亚迪", "FinDreams", "弗迪", "Blade Battery", "刀片电池"],
+      "tags": ["cell-pack", "lfp", "blade-battery", "thermal-safety", "sodium-ion"],
+      "summary": "垂直一体化电池与整车公司，核心线索包括刀片电池、LFP 安全结构、CTB、储能和钠离子布局。",
+      "relatedEntityIds": ["lfp", "thermal-management", "sodium-ion", "cell-pack"]
+    },
+    {
+      "id": "tesla",
+      "name": "Tesla",
+      "type": "company",
+      "aliases": ["Tesla", "特斯拉", "4680", "Maxwell"],
+      "tags": ["cell-pack", "4680", "dry-electrode", "thermal-management"],
+      "summary": "以整车系统牵引电池方案，重点线索包括 4680 圆柱、干法电极、结构电池包和热管理。",
+      "relatedEntityIds": ["dry-electrode", "thermal-management", "4680", "current-collector"]
+    },
+    {
+      "id": "lg-energy",
+      "name": "LG Energy Solution",
+      "type": "company",
+      "aliases": ["LG Energy", "LGES", "LG Energy Solution"],
+      "tags": ["cell-pack", "ncm-nca", "solid-state"],
+      "summary": "日韩代表性动力电池公司，重点线索包括高镍三元、圆柱/软包路线和固态电池研发。",
+      "relatedEntityIds": ["ncm-nca", "solid-state", "electrolyte"]
+    },
+    {
+      "id": "brunp",
+      "name": "邦普循环",
+      "type": "company",
+      "aliases": ["Brunp", "邦普", "邦普循环"],
+      "tags": ["recycling", "black-mass", "hydrometallurgy"],
+      "summary": "动力电池回收与材料再生企业，和宁德时代产业链关系紧密。",
+      "relatedEntityIds": ["catl", "recycling", "black-mass", "hydrometallurgy"]
+    },
+    {
+      "id": "gem",
+      "name": "格林美",
+      "type": "company",
+      "aliases": ["GEM", "格林美"],
+      "tags": ["recycling", "precursor", "hydrometallurgy"],
+      "summary": "回收、前驱体和资源循环代表企业，适合跟踪黑粉、镍钴锂回收和前驱体闭环。",
+      "relatedEntityIds": ["recycling", "black-mass", "hydrometallurgy", "cathode"]
+    },
+    {
+      "id": "huayou",
+      "name": "华友钴业",
+      "type": "company",
+      "aliases": ["Huayou", "华友", "华友钴业"],
+      "tags": ["recycling", "precursor", "ncm-nca"],
+      "summary": "钴镍资源、前驱体和回收环节重要公司。",
+      "relatedEntityIds": ["recycling", "ncm-nca", "cathode"]
+    },
+    {
+      "id": "redwood",
+      "name": "Redwood Materials",
+      "type": "company",
+      "aliases": ["Redwood", "Redwood Materials"],
+      "tags": ["recycling", "black-mass"],
+      "summary": "海外电池回收与材料闭环代表企业，适合作为中国回收体系的对照案例。",
+      "relatedEntityIds": ["recycling", "black-mass"]
+    },
+    {
+      "id": "li-cycle",
+      "name": "Li-Cycle",
+      "type": "company",
+      "aliases": ["Li-Cycle", "Li Cycle"],
+      "tags": ["recycling", "black-mass", "hydrometallurgy"],
+      "summary": "海外黑粉和湿法回收企业，适合跟踪商业化、产能和财务风险证据。",
+      "relatedEntityIds": ["recycling", "black-mass", "hydrometallurgy"]
+    },
+    {
+      "id": "fast-charge",
+      "name": "快充",
+      "type": "technology",
+      "aliases": ["fast charging", "fast charge", "超充", "快充", "4C", "5C"],
+      "tags": ["electrolyte", "anode", "thermal-management", "bms"],
+      "summary": "快充能力由负极析锂风险、电解液/SEI、极片传输、热管理和 BMS 策略共同决定。",
+      "relatedEntityIds": ["catl", "electrolyte", "anode", "thermal-management", "bms"]
+    },
+    {
+      "id": "sodium-ion",
+      "name": "钠离子电池",
+      "type": "technology",
+      "aliases": ["sodium ion", "sodium-ion", "Na-ion", "钠离子", "钠电", "硬碳"],
+      "tags": ["hard-carbon", "cathode", "electrolyte"],
+      "summary": "钠离子电池以资源成本、低温和安全潜力为优势，当前重点看硬碳负极、正极体系和产业化场景。",
+      "relatedEntityIds": ["catl", "byd", "anode", "cathode", "electrolyte"]
+    },
+    {
+      "id": "solid-state",
+      "name": "固态电池",
+      "type": "technology",
+      "aliases": ["solid-state", "solid state", "全固态", "固态电池", "sulfide", "oxide electrolyte"],
+      "tags": ["electrolyte", "lithium-metal", "interface"],
+      "summary": "固态电池的核心证据要看电解质体系、界面阻抗、锂金属负极和制造一致性。",
+      "relatedEntityIds": ["lg-energy", "electrolyte", "anode"]
+    },
+    {
+      "id": "dry-electrode",
+      "name": "干法电极",
+      "type": "technology",
+      "aliases": ["dry electrode", "dry coating", "solvent-free", "干法电极", "干电极"],
+      "tags": ["manufacturing", "electrode", "binder"],
+      "summary": "干法电极关注无溶剂成膜、粘结剂纤维化、厚电极传输和制造良率。",
+      "relatedEntityIds": ["tesla", "binder", "current-collector"]
+    },
+    {
+      "id": "recycling",
+      "name": "电池回收",
+      "type": "technology",
+      "aliases": ["battery recycling", "recycling", "回收", "梯次利用", "退役电池", "资源化"],
+      "tags": ["black-mass", "hydrometallurgy", "pyrometallurgy", "direct-regeneration"],
+      "summary": "回收证据链包括退役电池来源、拆解预处理、黑粉、火法/湿法/直接再生、再生材料进入正极或前驱体。",
+      "relatedEntityIds": ["brunp", "gem", "huayou", "redwood", "li-cycle", "black-mass"]
+    },
+    {
+      "id": "separator",
+      "name": "隔膜",
+      "type": "material",
+      "aliases": ["separator", "membrane", "隔膜", "陶瓷涂覆", "polyolefin"],
+      "tags": ["safety", "materials"],
+      "summary": "隔膜影响离子传输、热收缩、安全关闭和电解液浸润，是安全与倍率的重要组成。",
+      "relatedEntityIds": ["fast-charge", "electrolyte"]
+    },
+    {
+      "id": "electrolyte",
+      "name": "电解液/电解质",
+      "type": "material",
+      "aliases": ["electrolyte", "SEI", "CEI", "LiPF6", "LiFSI", "电解液", "电解质", "添加剂"],
+      "tags": ["materials", "interface", "fast-charge", "solid-state"],
+      "summary": "电解液/电解质决定离子传输、界面膜和安全窗口，是快充、寿命和固态路线的关键证据源。",
+      "relatedEntityIds": ["fast-charge", "solid-state", "separator"]
+    },
+    {
+      "id": "cathode",
+      "name": "正极材料",
+      "type": "supply-chain",
+      "aliases": ["cathode", "正极", "LFP", "NCM", "NCA", "LMFP"],
+      "tags": ["lfp", "ncm-nca", "lmfp"],
+      "summary": "正极材料决定能量密度、成本、安全和资源约束，需要按 LFP、三元、LMFP、钠电正极等路线拆分。",
+      "relatedEntityIds": ["lfp", "ncm-nca", "sodium-ion", "recycling"]
+    },
+    {
+      "id": "anode",
+      "name": "负极材料",
+      "type": "supply-chain",
+      "aliases": ["anode", "负极", "graphite", "silicon carbon", "hard carbon", "石墨", "硅碳", "硬碳"],
+      "tags": ["graphite", "silicon-carbon", "hard-carbon"],
+      "summary": "负极材料控制快充、低温、首次效率和循环寿命，硬碳是钠离子路线核心。",
+      "relatedEntityIds": ["fast-charge", "sodium-ion", "dry-electrode"]
+    },
+    {
+      "id": "current-collector",
+      "name": "集流体",
+      "type": "supply-chain",
+      "aliases": ["current collector", "copper foil", "aluminum foil", "集流体", "铜箔", "铝箔", "复合集流体"],
+      "tags": ["materials", "safety"],
+      "summary": "集流体影响导电、重量、安全和成本，复合集流体需重点核查安全收益与制造良率证据。",
+      "relatedEntityIds": ["dry-electrode", "cathode", "anode"]
+    },
+    {
+      "id": "bms",
+      "name": "BMS",
+      "type": "technology",
+      "aliases": ["BMS", "Battery Management System", "SOC", "SOH", "电池管理系统"],
+      "tags": ["system", "safety", "thermal-management"],
+      "summary": "BMS 负责电压、电流、温度监控和 SOC/SOH/SOP 估计，是整包安全和寿命管理的系统证据层。",
+      "relatedEntityIds": ["fast-charge", "thermal-management", "cell-pack"]
+    },
+    {
+      "id": "thermal-management",
+      "name": "热管理",
+      "type": "technology",
+      "aliases": ["thermal management", "thermal runaway", "cooling", "热管理", "热失控", "液冷"],
+      "tags": ["safety", "pack"],
+      "summary": "热管理决定快充温升、热失控传播和整包安全边界，需要结合材料、结构和 BMS 看证据。",
+      "relatedEntityIds": ["fast-charge", "bms", "byd", "tesla"]
+    }
+  ]
+}

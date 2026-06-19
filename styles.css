@@ -90,7 +90,7 @@ input {
 .tabs,
 .tree-tools {
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(74px, 1fr));
   gap: 8px;
 }
 
@@ -251,6 +251,9 @@ input {
 .market-dashboard,
 .company-dashboard,
 .recycling-dashboard,
+.ai-dashboard,
+.evidence-dashboard,
+.trace-dashboard,
 .overview-dashboard {
   display: none;
 }
@@ -258,13 +261,19 @@ input {
 body.is-overview .overview-dashboard,
 body.is-recycling .recycling-dashboard,
 body.is-visualization .market-dashboard,
-body.is-companies .company-dashboard {
+body.is-companies .company-dashboard,
+body.is-ai .ai-dashboard,
+body.is-evidence .evidence-dashboard,
+body.is-trace .trace-dashboard {
   display: block;
 }
 
 body.is-overview .detail-grid > .detail-panel:not(.overview-dashboard):not(.auto-updates):not(.data-source-panel),
 body.is-visualization .detail-grid > .detail-panel:not(.market-dashboard),
-body.is-companies .detail-grid > .detail-panel:not(.company-dashboard) {
+body.is-companies .detail-grid > .detail-panel:not(.company-dashboard),
+body.is-ai .detail-grid > .detail-panel:not(.ai-dashboard):not(.data-source-panel),
+body.is-evidence .detail-grid > .detail-panel:not(.evidence-dashboard):not(.data-source-panel),
+body.is-trace .detail-grid > .detail-panel:not(.trace-dashboard):not(.data-source-panel) {
   display: none;
 }
 
@@ -1412,6 +1421,177 @@ ul {
   font-weight: 800;
 }
 
+.ai-workbench,
+.trace-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(300px, 0.8fr);
+  gap: 14px;
+}
+
+.ai-chat-panel,
+.ai-context-panel,
+.trace-details {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 16px;
+  background: #fff;
+}
+
+.ai-toolbar,
+.trace-controls {
+  display: grid;
+  grid-template-columns: minmax(170px, 0.7fr) minmax(240px, 1.3fr) auto;
+  gap: 10px;
+  align-items: end;
+  margin-bottom: 14px;
+}
+
+.trace-controls {
+  grid-template-columns: minmax(220px, 360px);
+}
+
+.ai-toolbar label,
+.trace-controls label {
+  display: grid;
+  gap: 6px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.ai-toolbar select,
+.ai-toolbar input,
+.trace-controls select,
+.evidence-controls input,
+.evidence-controls select {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 10px 11px;
+  background: #fff;
+  color: var(--ink);
+  font: inherit;
+}
+
+.ai-toolbar button {
+  border: 0;
+  border-radius: 8px;
+  padding: 11px 18px;
+  background: var(--green);
+  color: #fff;
+  font: inherit;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.ai-conversation {
+  display: grid;
+  gap: 12px;
+}
+
+.ai-message {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 14px;
+  background: #fbfdfc;
+}
+
+.ai-message.user {
+  background: #eef7f3;
+  border-color: #b9d8cb;
+}
+
+.ai-message h4 {
+  margin: 0 0 8px;
+  font-size: 16px;
+}
+
+.ai-message p,
+.ai-message li,
+.agent-card p,
+.evidence-card p,
+.trace-details p {
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.agent-context,
+.evidence-list {
+  display: grid;
+  gap: 12px;
+}
+
+.agent-card,
+.evidence-card {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 14px;
+  background: #fbfdfc;
+}
+
+.agent-card strong,
+.evidence-card a {
+  display: block;
+  margin-bottom: 7px;
+  color: var(--blue);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.evidence-card a:hover {
+  text-decoration: underline;
+}
+
+.evidence-card {
+  display: grid;
+  gap: 8px;
+}
+
+.trace-graph {
+  min-height: 560px;
+  overflow: auto;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: linear-gradient(180deg, #fbfdfc, #f2f7f5);
+}
+
+.trace-graph svg {
+  display: block;
+  width: 100%;
+  min-width: 880px;
+  height: auto;
+}
+
+.trace-link {
+  fill: none;
+  stroke: #a8bdb6;
+  stroke-width: 2;
+}
+
+.trace-link.is-focus {
+  stroke: var(--green);
+  stroke-width: 3;
+}
+
+.trace-node circle {
+  stroke: #fff;
+  stroke-width: 3;
+  filter: drop-shadow(0 8px 14px rgba(31, 49, 42, 0.12));
+}
+
+.trace-node text {
+  paint-order: stroke;
+  stroke: #fff;
+  stroke-width: 5px;
+  fill: var(--ink);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.trace-detail-list {
+  display: grid;
+  gap: 10px;
+}
+
 @media (max-width: 980px) {
   .app-shell {
     grid-template-columns: 1fr;
@@ -1446,6 +1626,10 @@ ul {
   .intel-list,
   .company-controls,
   .company-layout,
+  .ai-workbench,
+  .ai-toolbar,
+  .trace-layout,
+  .trace-controls,
   .overview-grid,
   .overview-map,
   .market-controls,

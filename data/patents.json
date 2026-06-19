@@ -4,7 +4,7 @@
     "url": "https://patents.google.com/?q=(CATL%20fast%20charging%20battery%20electrode%20electrolyte)",
     "source": "Google Patents search",
     "publishedAt": null,
-    "collectedAt": "2026-06-19T00:00:17.602Z",
+    "collectedAt": "2026-06-19T02:57:19.568Z",
     "query": "CATL fast charging battery electrode electrolyte",
     "type": "patent-search",
     "review": "unreviewed",
@@ -16,6 +16,17 @@
       "catl"
     ],
     "technologyRoutes": [],
+    "entityIds": [
+      "catl",
+      "fast-charge",
+      "sodium-ion",
+      "solid-state",
+      "dry-electrode",
+      "electrolyte"
+    ],
+    "evidenceType": "patent",
+    "claim": "CATL fast charging battery electrode electrolyte",
+    "sourceUrl": "https://patents.google.com/?q=(CATL%20fast%20charging%20battery%20electrode%20electrolyte)",
     "evidenceLevel": "medium"
   },
   {
@@ -23,7 +34,7 @@
     "url": "https://patents.google.com/?q=(BYD%20blade%20battery%20pack%20thermal%20safety)",
     "source": "Google Patents search",
     "publishedAt": null,
-    "collectedAt": "2026-06-19T00:00:17.602Z",
+    "collectedAt": "2026-06-19T02:57:19.568Z",
     "query": "BYD blade battery pack thermal safety",
     "type": "patent-search",
     "review": "unreviewed",
@@ -34,6 +45,16 @@
       "byd"
     ],
     "technologyRoutes": [],
+    "entityIds": [
+      "byd",
+      "separator",
+      "current-collector",
+      "bms",
+      "thermal-management"
+    ],
+    "evidenceType": "patent",
+    "claim": "BYD blade battery pack thermal safety",
+    "sourceUrl": "https://patents.google.com/?q=(BYD%20blade%20battery%20pack%20thermal%20safety)",
     "evidenceLevel": "medium"
   },
   {
@@ -41,7 +62,7 @@
     "url": "https://patents.google.com/?q=(Tesla%20dry%20electrode%204680%20battery)",
     "source": "Google Patents search",
     "publishedAt": null,
-    "collectedAt": "2026-06-19T00:00:17.602Z",
+    "collectedAt": "2026-06-19T02:57:19.568Z",
     "query": "Tesla dry electrode 4680 battery",
     "type": "patent-search",
     "review": "unreviewed",
@@ -54,6 +75,14 @@
     "technologyRoutes": [
       "4680"
     ],
+    "entityIds": [
+      "tesla",
+      "dry-electrode",
+      "4680"
+    ],
+    "evidenceType": "patent",
+    "claim": "Tesla dry electrode 4680 battery",
+    "sourceUrl": "https://patents.google.com/?q=(Tesla%20dry%20electrode%204680%20battery)",
     "evidenceLevel": "medium"
   },
   {
@@ -61,7 +90,7 @@
     "url": "https://patents.google.com/?q=(sodium%20ion%20battery%20hard%20carbon%20electrolyte)",
     "source": "Google Patents search",
     "publishedAt": null,
-    "collectedAt": "2026-06-19T00:00:17.602Z",
+    "collectedAt": "2026-06-19T02:57:19.568Z",
     "query": "sodium ion battery hard carbon electrolyte",
     "type": "patent-search",
     "review": "unreviewed",
@@ -73,6 +102,17 @@
     "technologyRoutes": [
       "sodium-hard-carbon"
     ],
+    "entityIds": [
+      "fast-charge",
+      "sodium-ion",
+      "solid-state",
+      "electrolyte",
+      "anode",
+      "sodium-hard-carbon"
+    ],
+    "evidenceType": "patent",
+    "claim": "sodium ion battery hard carbon electrolyte",
+    "sourceUrl": "https://patents.google.com/?q=(sodium%20ion%20battery%20hard%20carbon%20electrolyte)",
     "evidenceLevel": "medium"
   },
   {
@@ -80,7 +120,7 @@
     "url": "https://patents.google.com/?q=(battery%20recycling%20black%20mass%20hydrometallurgy%20direct%20regeneration)",
     "source": "Google Patents search",
     "publishedAt": null,
-    "collectedAt": "2026-06-19T00:00:17.602Z",
+    "collectedAt": "2026-06-19T02:57:19.568Z",
     "query": "battery recycling black mass hydrometallurgy direct regeneration",
     "type": "patent-search",
     "review": "unreviewed",
@@ -94,6 +134,22 @@
       "hydrometallurgy",
       "direct-regeneration"
     ],
+    "entityIds": [
+      "catl",
+      "brunp",
+      "gem",
+      "huayou",
+      "redwood",
+      "li-cycle",
+      "recycling",
+      "battery-recycling",
+      "black-mass",
+      "hydrometallurgy",
+      "direct-regeneration"
+    ],
+    "evidenceType": "patent",
+    "claim": "battery recycling black mass hydrometallurgy direct regeneration",
+    "sourceUrl": "https://patents.google.com/?q=(battery%20recycling%20black%20mass%20hydrometallurgy%20direct%20regeneration)",
     "evidenceLevel": "medium"
   }
 ]
