@@ -1,10 +1,26 @@
 [
   {
+    "title": "Regulating amorphous/microcrystalline heterostructures to synergistically optimize fast charging performance by adjusting phosphating reaction time",
+    "url": "https://doi.org/10.1016/j.est.2026.123224",
+    "source": "Journal of Energy Storage",
+    "publishedAt": "2026-06-17",
+    "collectedAt": "2026-06-19T00:00:17.602Z",
+    "query": "lithium ion battery fast charging mechanism",
+    "type": "paper",
+    "review": "unreviewed",
+    "topics": [
+      "fast-charge"
+    ],
+    "companies": [],
+    "technologyRoutes": [],
+    "evidenceLevel": "medium"
+  },
+  {
     "title": "Safety-Oriented Multi-Parameter Monitoring and Response Time Assessment of Battery Energy Storage Systems",
     "url": "https://doi.org/10.62762/tepns.2026.458291",
     "source": "ICCK Transactions on Electric Power Networks and Systems",
     "publishedAt": "2026-06-16",
-    "collectedAt": "2026-06-17T23:50:42.629Z",
+    "collectedAt": "2026-06-19T00:00:17.602Z",
     "query": "lithium ion battery fast charging mechanism",
     "type": "paper",
     "review": "unreviewed",
@@ -16,11 +32,11 @@
     "evidenceLevel": "medium"
   },
   {
-    "title": "Structural, dielectric, and radiation shielding properties of erbium doped phosphate glasses",
-    "url": "https://doi.org/10.1038/s41598-026-54578-x",
-    "source": "Scientific Reports",
+    "title": "Graph-theoretic visualization of ion conduction pathways: Concepts and a tutorial",
+    "url": "https://doi.org/10.1557/s43577-026-01109-8",
+    "source": "MRS Bulletin",
     "publishedAt": "2026-06-16",
-    "collectedAt": "2026-06-17T23:50:42.629Z",
+    "collectedAt": "2026-06-19T00:00:17.602Z",
     "query": "lithium ion battery fast charging mechanism",
     "type": "paper",
     "review": "unreviewed",
@@ -32,11 +48,11 @@
     "evidenceLevel": "medium"
   },
   {
-    "title": "Physics-guided deep learning for health estimation and prediction of lithium-ion batteries",
-    "url": "https://doi.org/10.1016/j.est.2026.123232",
-    "source": "Journal of Energy Storage",
+    "title": "Defect-Induced Single-Photon Emission in ZnPS <sub>3</sub>",
+    "url": "https://doi.org/10.1021/acsnano.5c19936",
+    "source": "ACS Nano",
     "publishedAt": "2026-06-16",
-    "collectedAt": "2026-06-17T23:50:42.629Z",
+    "collectedAt": "2026-06-19T00:00:17.602Z",
     "query": "lithium ion battery fast charging mechanism",
     "type": "paper",
     "review": "unreviewed",
@@ -48,27 +64,11 @@
     "evidenceLevel": "medium"
   },
   {
-    "title": "From theoretical energy to practical utilization: interfacial stability, transport kinetics, and cell-level design in high-energy lithium-metal batteries",
-    "url": "https://doi.org/10.3389/fchem.2026.1870974",
-    "source": "Frontiers in Chemistry",
-    "publishedAt": "2026-06-16",
-    "collectedAt": "2026-06-17T23:50:42.629Z",
-    "query": "lithium ion battery fast charging mechanism",
-    "type": "paper",
-    "review": "unreviewed",
-    "topics": [
-      "fast-charge"
-    ],
-    "companies": [],
-    "technologyRoutes": [],
-    "evidenceLevel": "medium"
-  },
-  {
-    "title": "Securing European lithium: assessing future demand, primary supply, trade and the role of recycling",
-    "url": "https://doi.org/10.1038/s44296-026-00114-x",
-    "source": "npj Materials Sustainability",
-    "publishedAt": "2026-06-15",
-    "collectedAt": "2026-06-17T23:50:42.629Z",
+    "title": "Trends in Li/Na-Ion Battery Applications of Carbon-Based Anode Materials Derived from Biomass Recycling",
+    "url": "https://doi.org/10.3390/en19122869",
+    "source": "Energies",
+    "publishedAt": "2026-06-17",
+    "collectedAt": "2026-06-19T00:00:17.602Z",
     "query": "sodium ion battery hard carbon review",
     "type": "paper",
     "review": "unreviewed",
@@ -83,11 +83,11 @@
     "evidenceLevel": "medium"
   },
   {
-    "title": "Two-dimensional nanomaterials in biodegradable food packaging: enhancing barrier properties, mechanical strength, and active functionality",
-    "url": "https://doi.org/10.1007/s00289-026-06542-y",
-    "source": "Polymer Bulletin",
-    "publishedAt": "2026-06-15",
-    "collectedAt": "2026-06-17T23:50:42.629Z",
+    "title": "Carbon materials derived from waste polyethylene terephthalate for sodium-ion batteries: Progress, challenges, and future perspectives",
+    "url": "https://doi.org/10.1016/j.est.2026.123113",
+    "source": "Journal of Energy Storage",
+    "publishedAt": "2026-06-17",
+    "collectedAt": "2026-06-19T00:00:17.602Z",
     "query": "sodium ion battery hard carbon review",
     "type": "paper",
     "review": "unreviewed",
@@ -101,17 +101,16 @@
     "evidenceLevel": "medium"
   },
   {
-    "title": "Carbonaceous Interlayers as Contact Mediators for Sodium Electrodeposition in “Anode-Free” Solid-State Batteries",
-    "url": "https://doi.org/10.1021/acselectrochem.6c00121",
-    "source": "ACS electrochemistry.",
-    "publishedAt": "2026-06-15",
-    "collectedAt": "2026-06-17T23:50:42.629Z",
+    "title": "Intelligent process control and stimulus-responsive 4D transformation in extrusion-based 3D food printing: A critical review",
+    "url": "https://doi.org/10.36922/ijb026200182",
+    "source": "International Journal of Bioprinting",
+    "publishedAt": "2026-06-16",
+    "collectedAt": "2026-06-19T00:00:17.602Z",
     "query": "sodium ion battery hard carbon review",
     "type": "paper",
     "review": "unreviewed",
     "topics": [
-      "sodium-ion",
-      "solid-state"
+      "sodium-ion"
     ],
     "companies": [],
     "technologyRoutes": [
@@ -120,11 +119,11 @@
     "evidenceLevel": "medium"
   },
   {
-    "title": "Hydrolysis time-controlled pore and defect engineering in nanocellulose-derived biochar for enhanced ethylene glycol sensing",
-    "url": "https://doi.org/10.1007/s42773-026-00624-w",
-    "source": "Biochar",
-    "publishedAt": "2026-06-15",
-    "collectedAt": "2026-06-17T23:50:42.629Z",
+    "title": "Electrochemical Efficiency of Tomato and Pineapple Peel Waste-Based Bio-Batteries with KCl Inclusion",
+    "url": "https://doi.org/10.29165/ajarcde.v10i2.1081",
+    "source": "AJARCDE (Asian Journal of Applied Research for Community Development and Empowerment)",
+    "publishedAt": "2026-06-16",
+    "collectedAt": "2026-06-19T00:00:17.602Z",
     "query": "sodium ion battery hard carbon review",
     "type": "paper",
     "review": "unreviewed",
@@ -142,7 +141,7 @@
     "url": "https://doi.org/10.1007/s40820-026-02263-z",
     "source": "Nano-Micro Letters",
     "publishedAt": "2026-06-16",
-    "collectedAt": "2026-06-17T23:50:42.629Z",
+    "collectedAt": "2026-06-19T00:00:17.602Z",
     "query": "dry electrode lithium ion battery manufacturing",
     "type": "paper",
     "review": "unreviewed",
@@ -158,7 +157,7 @@
     "url": "https://doi.org/10.1038/s41467-026-74524-9",
     "source": "Nature Communications",
     "publishedAt": "2026-06-15",
-    "collectedAt": "2026-06-17T23:50:42.629Z",
+    "collectedAt": "2026-06-19T00:00:17.602Z",
     "query": "dry electrode lithium ion battery manufacturing",
     "type": "paper",
     "review": "unreviewed",
@@ -175,7 +174,7 @@
     "url": "https://doi.org/10.21203/rs.3.rs-9932626/v1",
     "source": "Research Square",
     "publishedAt": "2026-06-15",
-    "collectedAt": "2026-06-17T23:50:42.629Z",
+    "collectedAt": "2026-06-19T00:00:17.602Z",
     "query": "dry electrode lithium ion battery manufacturing",
     "type": "paper",
     "review": "unreviewed",
@@ -191,7 +190,7 @@
     "url": "https://doi.org/10.53964/id.2026008",
     "source": "Innovation Discovery",
     "publishedAt": "2026-06-15",
-    "collectedAt": "2026-06-17T23:50:42.629Z",
+    "collectedAt": "2026-06-19T00:00:17.602Z",
     "query": "dry electrode lithium ion battery manufacturing",
     "type": "paper",
     "review": "unreviewed",
@@ -207,7 +206,7 @@
     "url": "https://openalex.org/W7162220708",
     "source": "Strathprints: The University of Strathclyde institutional repository (University of Strathclyde)",
     "publishedAt": "2026-09-15",
-    "collectedAt": "2026-06-17T23:50:42.629Z",
+    "collectedAt": "2026-06-19T00:00:17.602Z",
     "query": "solid state battery electrolyte interface",
     "type": "paper",
     "review": "unreviewed",
@@ -220,23 +219,89 @@
     "evidenceLevel": "medium"
   },
   {
-    "title": "Titanium oxide engineered ceramic electrolytes and layered metal oxide cathodes for high-performance solid-state sodium-ion batteries",
-    "url": "https://doi.org/10.1016/j.est.2026.123218",
-    "source": "Journal of Energy Storage",
-    "publishedAt": "2026-06-16",
-    "collectedAt": "2026-06-17T23:50:42.629Z",
+    "title": "TOWARDS SAFER BATTERIES SOLID-STATE ELECTROLYTES AND INTERFACE STABILIZATION MECHANISMS",
+    "url": "https://doi.org/10.5281/zenodo.20728479",
+    "source": "Zenodo (CERN European Organization for Nuclear Research)",
+    "publishedAt": "2026-06-17",
+    "collectedAt": "2026-06-19T00:00:17.602Z",
     "query": "solid state battery electrolyte interface",
     "type": "paper",
     "review": "unreviewed",
     "topics": [
-      "sodium-ion",
       "solid-state",
       "electrolyte"
     ],
     "companies": [],
-    "technologyRoutes": [
-      "sodium-hard-carbon"
+    "technologyRoutes": [],
+    "evidenceLevel": "medium"
+  },
+  {
+    "title": "An Inorganic Layered Coordination Polymer as High‐Performance Solid‐State Electrolyte for Stable Lithium Metal Batteries",
+    "url": "https://doi.org/10.1002/adma.73754",
+    "source": "Advanced Materials",
+    "publishedAt": "2026-06-17",
+    "collectedAt": "2026-06-19T00:00:17.602Z",
+    "query": "solid state battery electrolyte interface",
+    "type": "paper",
+    "review": "unreviewed",
+    "topics": [
+      "solid-state",
+      "electrolyte"
     ],
+    "companies": [],
+    "technologyRoutes": [],
+    "evidenceLevel": "medium"
+  },
+  {
+    "title": "TOWARDS SAFER BATTERIES SOLID-STATE ELECTROLYTES AND INTERFACE STABILIZATION MECHANISMS",
+    "url": "https://doi.org/10.5281/zenodo.20728478",
+    "source": "Zenodo (CERN European Organization for Nuclear Research)",
+    "publishedAt": "2026-06-17",
+    "collectedAt": "2026-06-19T00:00:17.602Z",
+    "query": "solid state battery electrolyte interface",
+    "type": "paper",
+    "review": "unreviewed",
+    "topics": [
+      "solid-state",
+      "electrolyte"
+    ],
+    "companies": [],
+    "technologyRoutes": [],
+    "evidenceLevel": "medium"
+  },
+  {
+    "title": "Fabrication of Composite Polyimide Separator for Lithium Ion Battery Thermal Safety Improvement",
+    "url": "https://doi.org/10.3390/en19122867",
+    "source": "Energies",
+    "publishedAt": "2026-06-17",
+    "collectedAt": "2026-06-19T00:00:17.602Z",
+    "query": "lithium battery separator electrolyte safety",
+    "type": "paper",
+    "review": "unreviewed",
+    "topics": [
+      "separator",
+      "electrolyte",
+      "thermal-management"
+    ],
+    "companies": [],
+    "technologyRoutes": [],
+    "evidenceLevel": "medium"
+  },
+  {
+    "title": "Metal-Organic Frameworks as Multifunctional Materials for Triboelectric Nanogenerators Applied in Self-Charging Power Sources",
+    "url": "https://doi.org/10.1021/acsomega.6c03646",
+    "source": "ACS Omega",
+    "publishedAt": "2026-06-16",
+    "collectedAt": "2026-06-19T00:00:17.602Z",
+    "query": "lithium battery separator electrolyte safety",
+    "type": "paper",
+    "review": "unreviewed",
+    "topics": [
+      "separator",
+      "electrolyte"
+    ],
+    "companies": [],
+    "technologyRoutes": [],
     "evidenceLevel": "medium"
   },
   {
@@ -244,7 +309,7 @@
     "url": "https://doi.org/10.3390/batteries12060218",
     "source": "Batteries",
     "publishedAt": "2026-06-16",
-    "collectedAt": "2026-06-17T23:50:42.629Z",
+    "collectedAt": "2026-06-19T00:00:17.602Z",
     "query": "lithium battery separator electrolyte safety",
     "type": "paper",
     "review": "unreviewed",
@@ -257,42 +322,20 @@
     "evidenceLevel": "medium"
   },
   {
-    "title": "Mesoporous spatial separator rectified ion transport model for durable aqueous batteries",
-    "url": "https://doi.org/10.1007/s44503-026-00009-x",
-    "source": "Watt",
+    "title": "From theoretical energy to practical utilization: interfacial stability, transport kinetics, and cell-level design in high-energy lithium-metal batteries",
+    "url": "https://doi.org/10.3389/fchem.2026.1870974",
+    "source": "Frontiers in Chemistry",
     "publishedAt": "2026-06-16",
-    "collectedAt": "2026-06-17T23:50:42.629Z",
+    "collectedAt": "2026-06-19T00:00:17.602Z",
     "query": "lithium battery separator electrolyte safety",
     "type": "paper",
     "review": "unreviewed",
     "topics": [
       "separator",
-      "electrolyte",
-      "bms"
+      "electrolyte"
     ],
     "companies": [],
     "technologyRoutes": [],
-    "evidenceLevel": "medium"
-  },
-  {
-    "title": "Multi-Physics Coupled Modeling and Failure Deduction of Large-Capacity LFP Batteries During Overcharge-Induced Thermal Runaway",
-    "url": "https://doi.org/10.1149/1945-7111/ae7d60",
-    "source": "Journal of The Electrochemical Society",
-    "publishedAt": "2026-06-15",
-    "collectedAt": "2026-06-17T23:50:42.629Z",
-    "query": "lithium battery separator electrolyte safety",
-    "type": "paper",
-    "review": "unreviewed",
-    "topics": [
-      "separator",
-      "electrolyte",
-      "bms",
-      "thermal-management"
-    ],
-    "companies": [],
-    "technologyRoutes": [
-      "lfp"
-    ],
     "evidenceLevel": "medium"
   },
   {
@@ -300,7 +343,7 @@
     "url": "https://doi.org/10.1007/s42461-026-01564-6",
     "source": "Mining Metallurgy & Exploration",
     "publishedAt": "2026-06-04",
-    "collectedAt": "2026-06-17T23:50:42.629Z",
+    "collectedAt": "2026-06-19T00:00:17.602Z",
     "query": "lithium ion battery recycling black mass hydrometallurgy direct recycling",
     "type": "paper",
     "review": "unreviewed",
