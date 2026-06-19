@@ -1446,6 +1446,35 @@ const marketVisualData = {
   radarAxes: ["能量密度", "循环寿命", "快充", "成本", "量产"]
 };
 
+const globalBatteryMapData = {
+  regions: [
+    { id: "china", name: "China", zh: "中国", x: 725, y: 285, value: 72, stages: ["原料", "材料", "电芯", "整车", "回收"], note: "全球电池制造、材料加工和回收闭环最集中的区域。" },
+    { id: "eu", name: "Europe", zh: "欧洲", x: 505, y: 218, value: 12, stages: ["材料", "电芯", "整车", "回收"], note: "受本土化制造、碳足迹和电池法规驱动。" },
+    { id: "usa", name: "United States", zh: "美国", x: 250, y: 245, value: 9, stages: ["原料", "电芯", "整车", "回收"], note: "IRA、整车厂和储能需求推动本土供应链建设。" },
+    { id: "japan-korea", name: "Japan / Korea", zh: "日韩", x: 807, y: 267, value: 7, stages: ["材料", "电芯", "设备"], note: "材料、电芯制造和设备环节具有长期技术积累。" },
+    { id: "aus", name: "Australia", zh: "澳大利亚", x: 790, y: 420, value: 5, stages: ["原料"], note: "锂矿和关键矿产资源是上游供应链重要来源。" },
+    { id: "south-america", name: "South America", zh: "南美", x: 330, y: 440, value: 4, stages: ["原料"], note: "盐湖锂资源和上游开发影响全球锂供给。" }
+  ],
+  flows: [
+    { from: "aus", to: "china", label: "锂矿 / 原料", strength: 3, stage: "原料" },
+    { from: "south-america", to: "china", label: "盐湖锂资源", strength: 2, stage: "原料" },
+    { from: "china", to: "eu", label: "材料 / 电芯 / 设备", strength: 4, stage: "材料" },
+    { from: "china", to: "usa", label: "材料与设备线索", strength: 3, stage: "材料" },
+    { from: "japan-korea", to: "usa", label: "电芯与车企供应", strength: 2, stage: "电芯" },
+    { from: "japan-korea", to: "eu", label: "电芯与材料", strength: 2, stage: "电芯" },
+    { from: "usa", to: "china", label: "回收/黑粉流向线索", strength: 1, stage: "回收" },
+    { from: "eu", to: "china", label: "回收与材料闭环", strength: 1, stage: "回收" }
+  ],
+  stageColors: {
+    "原料": "#1f8f6a",
+    "材料": "#2878b5",
+    "电芯": "#7b6fd0",
+    "整车": "#c28b2c",
+    "设备": "#8b6bb8",
+    "回收": "#d45c5c"
+  }
+};
+
 function flatten(nodes) {
   return nodes.flatMap((node) => [node, ...flatten(node.children || [])]);
 }
@@ -2266,17 +2295,81 @@ function renderTrendLine() {
 }
 
 function renderRegionHeat() {
-  const max = Math.max(...marketVisualData.regions.map((region) => region.value), 1);
-  document.querySelector("#regionHeatChart").innerHTML = `
-    <div class="heat-grid">
-      ${marketVisualData.regions.map((region) => {
-        const alpha = 0.16 + (region.value / max) * 0.55;
-        return `<div class="heat-cell" style="background:rgba(31,143,106,${alpha})" title="${escapeHtml(region.note)}">
-          <strong>${escapeHtml(region.name)}</strong>
-          <span>${region.value}%</span>
-          <small>${escapeHtml(region.note)}</small>
-        </div>`;
-      }).join("")}
+  const chart = document.querySelector("#regionHeatChart");
+  if (!chart) return;
+  const regions = globalBatteryMapData.regions;
+  const byId = new Map(regions.map((region) => [region.id, region]));
+  const max = Math.max(...regions.map((region) => region.value), 1);
+  const stageLegend = Object.entries(globalBatteryMapData.stageColors)
+    .map(([stage, color]) => `<span><i style="background:${color}"></i>${escapeHtml(stage)}</span>`)
+    .join("");
+  const flowPaths = globalBatteryMapData.flows.map((flow) => {
+    const from = byId.get(flow.from);
+    const to = byId.get(flow.to);
+    if (!from || !to) return "";
+    const dx = to.x - from.x;
+    const curve = Math.max(42, Math.min(150, Math.abs(dx) * 0.22));
+    const controlY = Math.min(from.y, to.y) - curve;
+    const color = globalBatteryMapData.stageColors[flow.stage] || "#7f8d88";
+    return `
+      <path class="world-flow" d="M${from.x},${from.y} C${from.x + dx * 0.28},${controlY} ${to.x - dx * 0.28},${controlY} ${to.x},${to.y}" stroke="${color}" stroke-width="${1.2 + flow.strength}" />
+      <text class="world-flow-label" x="${(from.x + to.x) / 2}" y="${controlY - 6}" text-anchor="middle">${escapeHtml(flow.label)}</text>
+    `;
+  }).join("");
+  const regionNodes = regions.map((region) => {
+    const radius = 10 + (region.value / max) * 30;
+    const color = region.id === "china" ? "#1f8f6a" : region.stages.includes("原料") ? "#c28b2c" : "#2878b5";
+    const stageDots = region.stages.map((stage, index) => `<circle cx="${region.x - 18 + index * 9}" cy="${region.y + radius + 17}" r="3.2" fill="${globalBatteryMapData.stageColors[stage] || "#7f8d88"}"></circle>`).join("");
+    return `
+      <g class="world-node">
+        <circle cx="${region.x}" cy="${region.y}" r="${radius + 7}" fill="${color}" opacity="0.14"></circle>
+        <circle cx="${region.x}" cy="${region.y}" r="${radius}" fill="${color}" fill-opacity="0.86"></circle>
+        <text x="${region.x}" y="${region.y + radius + 34}" text-anchor="middle">${escapeHtml(region.zh)}</text>
+        <text x="${region.x}" y="${region.y + 4}" text-anchor="middle" class="world-node-value">${region.value}%</text>
+        ${stageDots}
+      </g>
+    `;
+  }).join("");
+  const regionCards = regions
+    .slice()
+    .sort((a, b) => b.value - a.value)
+    .map((region) => `
+      <article class="world-region-card">
+        <div><strong>${escapeHtml(region.zh)}</strong><span>${escapeHtml(region.name)}</span></div>
+        <b>${region.value}%</b>
+        <p>${escapeHtml(region.note)}</p>
+        <div class="world-stage-tags">${region.stages.map((stage) => `<span style="border-color:${globalBatteryMapData.stageColors[stage]}">${escapeHtml(stage)}</span>`).join("")}</div>
+      </article>
+    `).join("");
+  chart.innerHTML = `
+    <div class="world-map-panel">
+      <div class="world-map-toolbar">
+        <div>
+          <strong>全球电池产业链流向图</strong>
+          <span>节点大小表示参考份额/密度，连线表示原料、材料、电芯、回收等公开线索流向。</span>
+        </div>
+        <div class="world-map-legend">${stageLegend}</div>
+      </div>
+      <div class="world-map-layout">
+        <div class="world-map-stage">
+          <svg viewBox="0 0 980 560" role="img" aria-label="全球电池供应链流向地图">
+            <defs>
+              <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+                <feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#23352f" flood-opacity="0.12"></feDropShadow>
+              </filter>
+            </defs>
+            <ellipse cx="490" cy="285" rx="440" ry="235" fill="#f3f8f6" stroke="#dbe8e2"></ellipse>
+            <path class="world-land" d="M145 210 C190 145 290 135 350 180 C390 210 372 270 325 280 C270 294 225 268 180 292 C135 314 105 270 145 210Z"></path>
+            <path class="world-land" d="M245 330 C300 320 352 360 350 430 C348 495 280 514 240 468 C205 428 205 350 245 330Z"></path>
+            <path class="world-land" d="M465 165 C530 130 625 158 640 220 C652 270 596 300 540 292 C490 286 442 258 420 220 C405 194 427 176 465 165Z"></path>
+            <path class="world-land" d="M560 260 C640 225 775 238 835 300 C890 357 840 438 744 425 C670 416 610 370 555 330 C520 304 525 278 560 260Z"></path>
+            <path class="world-land" d="M735 395 C798 380 858 408 866 455 C874 502 810 512 765 490 C720 468 698 420 735 395Z"></path>
+            ${flowPaths}
+            ${regionNodes}
+          </svg>
+        </div>
+        <aside class="world-map-list">${regionCards}</aside>
+      </div>
     </div>
   `;
 }

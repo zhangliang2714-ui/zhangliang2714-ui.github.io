@@ -1190,6 +1190,164 @@ ul {
   font-weight: 800;
 }
 
+.world-map-panel {
+  display: grid;
+  gap: 14px;
+}
+
+.world-map-toolbar {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.world-map-toolbar strong,
+.world-map-toolbar span {
+  display: block;
+}
+
+.world-map-toolbar span {
+  margin-top: 5px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.world-map-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  justify-content: flex-end;
+}
+
+.world-map-legend span,
+.world-stage-tags span {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 4px 8px;
+  color: var(--muted);
+  background: #fff;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.world-map-legend i {
+  width: 9px;
+  height: 9px;
+  border-radius: 999px;
+}
+
+.world-map-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 280px;
+  gap: 14px;
+}
+
+.world-map-stage {
+  min-height: 480px;
+  overflow: auto;
+  border: 1px solid #dfe9e4;
+  border-radius: 8px;
+  background: linear-gradient(180deg, #f8fbfa, #edf5f2);
+}
+
+.world-map-stage svg {
+  display: block;
+  width: 100%;
+  min-width: 780px;
+  height: auto;
+}
+
+.world-land {
+  fill: #e3ece8;
+  stroke: #cadbd3;
+  stroke-width: 1.2;
+}
+
+.world-flow {
+  fill: none;
+  opacity: 0.68;
+  stroke-linecap: round;
+  stroke-dasharray: 8 7;
+}
+
+.world-flow-label {
+  fill: #52645c;
+  font-size: 11px;
+  paint-order: stroke;
+  stroke: #fff;
+  stroke-width: 4px;
+}
+
+.world-node circle {
+  filter: url(#softShadow);
+}
+
+.world-node text {
+  fill: var(--ink);
+  font-size: 13px;
+  font-weight: 800;
+  paint-order: stroke;
+  stroke: #fff;
+  stroke-width: 5px;
+}
+
+.world-node .world-node-value {
+  fill: #fff;
+  stroke: none;
+  font-size: 13px;
+}
+
+.world-map-list {
+  display: grid;
+  gap: 10px;
+  max-height: 480px;
+  overflow: auto;
+}
+
+.world-region-card {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 12px;
+  background: #fff;
+}
+
+.world-region-card strong,
+.world-region-card span {
+  display: block;
+}
+
+.world-region-card span,
+.world-region-card p {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.world-region-card b {
+  color: var(--blue);
+  font-size: 20px;
+}
+
+.world-region-card p,
+.world-stage-tags {
+  grid-column: 1 / -1;
+  margin: 0;
+}
+
+.world-stage-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
 .source-note {
   margin-top: 14px;
   color: var(--muted);
@@ -1630,6 +1788,7 @@ ul {
   .ai-toolbar,
   .trace-layout,
   .trace-controls,
+  .world-map-layout,
   .overview-grid,
   .overview-map,
   .market-controls,
