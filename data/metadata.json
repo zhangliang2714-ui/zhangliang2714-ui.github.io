@@ -1,12 +1,43 @@
 {
-  "collectedAt": "2026-07-17T23:08:04.559Z",
+  "collectedAt": "2026-07-18T23:10:58.791Z",
   "sources": {
     "papers": "OpenAlex API",
     "news": "Google News RSS",
     "videos": "YouTube search links",
     "patents": "Google Patents search links"
   },
-  "errors": [],
+  "errors": [
+    {
+      "source": "OpenAlex",
+      "query": "lithium ion battery fast charging mechanism",
+      "message": "429 Too Many Requests: https://api.openalex.org/works?search=lithium+ion+battery+fast+charging+mechanism&filter=from_publication_date%3A2025-01-01&sort=publication_date%3Adesc&per-page=4"
+    },
+    {
+      "source": "OpenAlex",
+      "query": "sodium ion battery hard carbon review",
+      "message": "429 Too Many Requests: https://api.openalex.org/works?search=sodium+ion+battery+hard+carbon+review&filter=from_publication_date%3A2025-01-01&sort=publication_date%3Adesc&per-page=4"
+    },
+    {
+      "source": "OpenAlex",
+      "query": "dry electrode lithium ion battery manufacturing",
+      "message": "429 Too Many Requests: https://api.openalex.org/works?search=dry+electrode+lithium+ion+battery+manufacturing&filter=from_publication_date%3A2025-01-01&sort=publication_date%3Adesc&per-page=4"
+    },
+    {
+      "source": "OpenAlex",
+      "query": "solid state battery electrolyte interface",
+      "message": "429 Too Many Requests: https://api.openalex.org/works?search=solid+state+battery+electrolyte+interface&filter=from_publication_date%3A2025-01-01&sort=publication_date%3Adesc&per-page=4"
+    },
+    {
+      "source": "OpenAlex",
+      "query": "lithium battery separator electrolyte safety",
+      "message": "429 Too Many Requests: https://api.openalex.org/works?search=lithium+battery+separator+electrolyte+safety&filter=from_publication_date%3A2025-01-01&sort=publication_date%3Adesc&per-page=4"
+    },
+    {
+      "source": "OpenAlex",
+      "query": "lithium ion battery recycling black mass hydrometallurgy direct recycling",
+      "message": "429 Too Many Requests: https://api.openalex.org/works?search=lithium+ion+battery+recycling+black+mass+hydrometallurgy+direct+recycling&filter=from_publication_date%3A2025-01-01&sort=publication_date%3Adesc&per-page=4"
+    }
+  ],
   "taxonomy": {
     "topics": [
       "fast-charge",
