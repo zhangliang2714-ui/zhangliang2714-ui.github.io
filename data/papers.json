@@ -1,1 +1,440 @@
-[]
+[
+  {
+    "title": "Electric and Optical Properties of Synthesised Nano-Phase Stannic Dioxide Semiconductor",
+    "url": "https://doi.org/10.21275/sr26714083546",
+    "source": "International Journal of Science and Research (IJSR)",
+    "publishedAt": "2026-07-17",
+    "collectedAt": "2026-07-19T23:11:18.501Z",
+    "query": "lithium ion battery fast charging mechanism",
+    "type": "paper",
+    "review": "unreviewed",
+    "topics": [
+      "fast-charge"
+    ],
+    "companies": [],
+    "technologyRoutes": [],
+    "entityIds": [
+      "fast-charge"
+    ],
+    "evidenceType": "paper",
+    "claim": "lithium ion battery fast charging mechanism",
+    "sourceUrl": "https://doi.org/10.21275/sr26714083546",
+    "evidenceLevel": "medium"
+  },
+  {
+    "title": "Interfacial coronas of green-energy nanomaterials: A life-cycle eco-to-protein corona framework and molecular fingerprints",
+    "url": "https://doi.org/10.1016/j.ecoenv.2026.120518",
+    "source": "Ecotoxicology and Environmental Safety",
+    "publishedAt": "2026-07-17",
+    "collectedAt": "2026-07-19T23:11:18.501Z",
+    "query": "lithium ion battery fast charging mechanism",
+    "type": "paper",
+    "review": "unreviewed",
+    "topics": [
+      "fast-charge"
+    ],
+    "companies": [],
+    "technologyRoutes": [],
+    "entityIds": [
+      "fast-charge",
+      "separator",
+      "electrolyte",
+      "current-collector",
+      "bms",
+      "thermal-management"
+    ],
+    "evidenceType": "paper",
+    "claim": "lithium ion battery fast charging mechanism",
+    "sourceUrl": "https://doi.org/10.1016/j.ecoenv.2026.120518",
+    "evidenceLevel": "medium"
+  },
+  {
+    "title": "Porous superparamagnetic activated carbon from biomass: Adsorption behaviour and regeneration performance for 2,4-dichlorophenoxyacetic acid removal",
+    "url": "https://doi.org/10.1371/journal.pone.0353663",
+    "source": "PLoS ONE",
+    "publishedAt": "2026-07-17",
+    "collectedAt": "2026-07-19T23:11:18.501Z",
+    "query": "lithium ion battery fast charging mechanism",
+    "type": "paper",
+    "review": "unreviewed",
+    "topics": [
+      "fast-charge"
+    ],
+    "companies": [],
+    "technologyRoutes": [],
+    "entityIds": [
+      "fast-charge"
+    ],
+    "evidenceType": "paper",
+    "claim": "lithium ion battery fast charging mechanism",
+    "sourceUrl": "https://doi.org/10.1371/journal.pone.0353663",
+    "evidenceLevel": "medium"
+  },
+  {
+    "title": "In operando neutron diffraction for energy materials: a practical guide to design, execution, and data analysis",
+    "url": "https://doi.org/10.1088/2515-7655/ae8cbe",
+    "source": "Journal of Physics Energy",
+    "publishedAt": "2026-07-17",
+    "collectedAt": "2026-07-19T23:11:18.501Z",
+    "query": "lithium ion battery fast charging mechanism",
+    "type": "paper",
+    "review": "unreviewed",
+    "topics": [
+      "fast-charge"
+    ],
+    "companies": [],
+    "technologyRoutes": [],
+    "entityIds": [
+      "fast-charge",
+      "separator",
+      "electrolyte",
+      "current-collector"
+    ],
+    "evidenceType": "paper",
+    "claim": "lithium ion battery fast charging mechanism",
+    "sourceUrl": "https://doi.org/10.1088/2515-7655/ae8cbe",
+    "evidenceLevel": "medium"
+  },
+  {
+    "title": "A Review of Graphite Anode Recycling in Lithium-Ion Batteries: Technical Challenges and Geopolitical and Economic Implications",
+    "url": "https://doi.org/10.3390/batteries12070259",
+    "source": "Batteries",
+    "publishedAt": "2026-07-17",
+    "collectedAt": "2026-07-19T23:11:18.501Z",
+    "query": "sodium ion battery hard carbon review",
+    "type": "paper",
+    "review": "unreviewed",
+    "topics": [
+      "sodium-ion",
+      "recycling"
+    ],
+    "companies": [],
+    "technologyRoutes": [
+      "sodium-hard-carbon"
+    ],
+    "entityIds": [
+      "catl",
+      "brunp",
+      "gem",
+      "huayou",
+      "redwood",
+      "li-cycle",
+      "fast-charge",
+      "sodium-ion",
+      "recycling",
+      "anode",
+      "sodium-hard-carbon"
+    ],
+    "evidenceType": "paper",
+    "claim": "sodium ion battery hard carbon review",
+    "sourceUrl": "https://doi.org/10.3390/batteries12070259",
+    "evidenceLevel": "medium"
+  },
+  {
+    "title": "Hard Carbon Anodes for Sodium‐Ion Batteries: Industrial Precursors, Structural Regulation, and Future Prospects",
+    "url": "https://doi.org/10.1002/smll.74334",
+    "source": "Small",
+    "publishedAt": "2026-07-17",
+    "collectedAt": "2026-07-19T23:11:18.501Z",
+    "query": "sodium ion battery hard carbon review",
+    "type": "paper",
+    "review": "unreviewed",
+    "topics": [
+      "sodium-ion"
+    ],
+    "companies": [],
+    "technologyRoutes": [
+      "sodium-hard-carbon"
+    ],
+    "entityIds": [
+      "gem",
+      "huayou",
+      "fast-charge",
+      "sodium-ion",
+      "anode",
+      "sodium-hard-carbon"
+    ],
+    "evidenceType": "paper",
+    "claim": "sodium ion battery hard carbon review",
+    "sourceUrl": "https://doi.org/10.1002/smll.74334",
+    "evidenceLevel": "medium"
+  },
+  {
+    "title": "Designing better anodes for sodium-ion batteries: Carbon materials, carbon–metal oxide composites and predictive modeling insights",
+    "url": "https://doi.org/10.1016/j.nxener.2026.100806",
+    "source": "Next Energy",
+    "publishedAt": "2026-07-17",
+    "collectedAt": "2026-07-19T23:11:18.501Z",
+    "query": "sodium ion battery hard carbon review",
+    "type": "paper",
+    "review": "unreviewed",
+    "topics": [
+      "sodium-ion"
+    ],
+    "companies": [],
+    "technologyRoutes": [
+      "sodium-hard-carbon"
+    ],
+    "entityIds": [
+      "catl",
+      "byd",
+      "fast-charge",
+      "sodium-ion",
+      "separator",
+      "electrolyte",
+      "anode",
+      "current-collector",
+      "sodium-hard-carbon"
+    ],
+    "evidenceType": "paper",
+    "claim": "sodium ion battery hard carbon review",
+    "sourceUrl": "https://doi.org/10.1016/j.nxener.2026.100806",
+    "evidenceLevel": "medium"
+  },
+  {
+    "title": "Self-healing ion blocking via adaptive surface fluorination of graphene lamellas",
+    "url": "https://doi.org/10.1038/s42004-026-02139-8",
+    "source": "Communications Chemistry",
+    "publishedAt": "2026-07-17",
+    "collectedAt": "2026-07-19T23:11:18.501Z",
+    "query": "dry electrode lithium ion battery manufacturing",
+    "type": "paper",
+    "review": "unreviewed",
+    "topics": [
+      "dry-electrode"
+    ],
+    "companies": [],
+    "technologyRoutes": [],
+    "entityIds": [
+      "dry-electrode"
+    ],
+    "evidenceType": "paper",
+    "claim": "dry electrode lithium ion battery manufacturing",
+    "sourceUrl": "https://doi.org/10.1038/s42004-026-02139-8",
+    "evidenceLevel": "medium"
+  },
+  {
+    "title": "Biogas-derived sulfur enhances microbial sulfuric acid production",
+    "url": "https://doi.org/10.1016/j.wasman.2026.115748",
+    "source": "Waste Management",
+    "publishedAt": "2026-07-17",
+    "collectedAt": "2026-07-19T23:11:18.501Z",
+    "query": "dry electrode lithium ion battery manufacturing",
+    "type": "paper",
+    "review": "unreviewed",
+    "topics": [
+      "dry-electrode"
+    ],
+    "companies": [
+      "gem"
+    ],
+    "technologyRoutes": [],
+    "entityIds": [
+      "gem",
+      "dry-electrode"
+    ],
+    "evidenceType": "paper",
+    "claim": "dry electrode lithium ion battery manufacturing",
+    "sourceUrl": "https://doi.org/10.1016/j.wasman.2026.115748",
+    "evidenceLevel": "medium"
+  },
+  {
+    "title": "A novel demand response framework for the optimal design of hydrogen–ammonia hybrid microgrids",
+    "url": "https://openalex.org/W7162220708",
+    "source": "Strathprints: The University of Strathclyde institutional repository (University of Strathclyde)",
+    "publishedAt": "2026-09-15",
+    "collectedAt": "2026-07-19T23:11:18.501Z",
+    "query": "solid state battery electrolyte interface",
+    "type": "paper",
+    "review": "unreviewed",
+    "topics": [
+      "solid-state",
+      "electrolyte"
+    ],
+    "companies": [],
+    "technologyRoutes": [],
+    "entityIds": [
+      "fast-charge",
+      "sodium-ion",
+      "solid-state",
+      "electrolyte"
+    ],
+    "evidenceType": "paper",
+    "claim": "solid state battery electrolyte interface",
+    "sourceUrl": "https://openalex.org/W7162220708",
+    "evidenceLevel": "medium"
+  },
+  {
+    "title": "Performance of quasi-solid-state silicon-based lithium-ion batteries under different operating external pressure",
+    "url": "https://doi.org/10.1016/j.est.2026.123664",
+    "source": "Journal of Energy Storage",
+    "publishedAt": "2026-07-18",
+    "collectedAt": "2026-07-19T23:11:18.501Z",
+    "query": "solid state battery electrolyte interface",
+    "type": "paper",
+    "review": "unreviewed",
+    "topics": [
+      "solid-state",
+      "electrolyte"
+    ],
+    "companies": [],
+    "technologyRoutes": [],
+    "entityIds": [
+      "lg-energy",
+      "fast-charge",
+      "sodium-ion",
+      "solid-state",
+      "electrolyte"
+    ],
+    "evidenceType": "paper",
+    "claim": "solid state battery electrolyte interface",
+    "sourceUrl": "https://doi.org/10.1016/j.est.2026.123664",
+    "evidenceLevel": "medium"
+  },
+  {
+    "title": "Toward sustainable electric vehicle battery materials: Frontier chemistries and global challenges",
+    "url": "https://doi.org/10.1016/j.nxmate.2026.102805",
+    "source": "Next Materials",
+    "publishedAt": "2026-07-17",
+    "collectedAt": "2026-07-19T23:11:18.501Z",
+    "query": "lithium battery separator electrolyte safety",
+    "type": "paper",
+    "review": "unreviewed",
+    "topics": [
+      "separator",
+      "electrolyte"
+    ],
+    "companies": [],
+    "technologyRoutes": [],
+    "entityIds": [
+      "fast-charge",
+      "sodium-ion",
+      "solid-state",
+      "separator",
+      "electrolyte",
+      "current-collector",
+      "bms",
+      "thermal-management"
+    ],
+    "evidenceType": "paper",
+    "claim": "lithium battery separator electrolyte safety",
+    "sourceUrl": "https://doi.org/10.1016/j.nxmate.2026.102805",
+    "evidenceLevel": "medium"
+  },
+  {
+    "title": "Key Challenges of Lithium-Ion Battery Recycling and Future Direction",
+    "url": "https://doi.org/10.5772/geet.20250083",
+    "source": "Green Energy and Environmental Technology",
+    "publishedAt": "2026-07-16",
+    "collectedAt": "2026-07-19T23:11:18.501Z",
+    "query": "lithium battery separator electrolyte safety",
+    "type": "paper",
+    "review": "unreviewed",
+    "topics": [
+      "separator",
+      "electrolyte",
+      "recycling"
+    ],
+    "companies": [],
+    "technologyRoutes": [
+      "battery-recycling"
+    ],
+    "entityIds": [
+      "catl",
+      "brunp",
+      "gem",
+      "huayou",
+      "redwood",
+      "li-cycle",
+      "fast-charge",
+      "sodium-ion",
+      "solid-state",
+      "recycling",
+      "separator",
+      "electrolyte",
+      "current-collector",
+      "bms",
+      "thermal-management",
+      "battery-recycling"
+    ],
+    "evidenceType": "paper",
+    "claim": "lithium battery separator electrolyte safety",
+    "sourceUrl": "https://doi.org/10.5772/geet.20250083",
+    "evidenceLevel": "medium"
+  },
+  {
+    "title": "Innovation of Electrolyte and Electrode Materials and Interface Construction Strategies in Sodium-Ion Batteries",
+    "url": "https://doi.org/10.3390/coatings16070851",
+    "source": "Coatings",
+    "publishedAt": "2026-07-16",
+    "collectedAt": "2026-07-19T23:11:18.501Z",
+    "query": "lithium battery separator electrolyte safety",
+    "type": "paper",
+    "review": "unreviewed",
+    "topics": [
+      "sodium-ion",
+      "separator",
+      "electrolyte"
+    ],
+    "companies": [],
+    "technologyRoutes": [
+      "sodium-hard-carbon"
+    ],
+    "entityIds": [
+      "catl",
+      "byd",
+      "fast-charge",
+      "sodium-ion",
+      "solid-state",
+      "dry-electrode",
+      "separator",
+      "electrolyte",
+      "current-collector",
+      "bms",
+      "thermal-management",
+      "sodium-hard-carbon"
+    ],
+    "evidenceType": "paper",
+    "claim": "lithium battery separator electrolyte safety",
+    "sourceUrl": "https://doi.org/10.3390/coatings16070851",
+    "evidenceLevel": "medium"
+  },
+  {
+    "title": "Comparative study of separation techniques of black mass from the current collector: LiFePO4 case",
+    "url": "https://doi.org/10.1016/j.rechem.2026.103647",
+    "source": "Results in Chemistry",
+    "publishedAt": "2026-07-16",
+    "collectedAt": "2026-07-19T23:11:18.501Z",
+    "query": "lithium ion battery recycling black mass hydrometallurgy direct recycling",
+    "type": "paper",
+    "review": "unreviewed",
+    "topics": [
+      "recycling"
+    ],
+    "companies": [],
+    "technologyRoutes": [
+      "battery-recycling",
+      "black-mass",
+      "hydrometallurgy",
+      "direct-regeneration"
+    ],
+    "entityIds": [
+      "catl",
+      "brunp",
+      "gem",
+      "huayou",
+      "redwood",
+      "li-cycle",
+      "recycling",
+      "current-collector",
+      "battery-recycling",
+      "black-mass",
+      "hydrometallurgy",
+      "direct-regeneration"
+    ],
+    "evidenceType": "paper",
+    "claim": "lithium ion battery recycling black mass hydrometallurgy direct recycling",
+    "sourceUrl": "https://doi.org/10.1016/j.rechem.2026.103647",
+    "evidenceLevel": "medium"
+  }
+]
