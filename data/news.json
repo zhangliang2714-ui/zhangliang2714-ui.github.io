@@ -4,7 +4,7 @@
     "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQbWhndEFibVRaQUZrRmVvb21lUkZBUEJCc2puaXMwajZ3VV9lSVMtWENtNUV6bjNFZUNVaUY1VlVDZTVDSTRSTGFxQlNieEFjQkZRTVNUWVM2N3VKUEtQdk1HTGhlaXFjLTBLN2Q2ZFY5em8yamwyeDRndVVlMTF0SDVJTHZyN0hIbzV6VGZ3dnBLSk1DV212MktST0xXZ1FkdlQ1OUpqbDZ0bHVZZ1Bna1ln?oc=5",
     "source": "EnergyNow.com",
     "publishedAt": "2026-08-31T08:33:50.000Z",
-    "collectedAt": "2026-09-02T00:14:33.731Z",
+    "collectedAt": "2026-09-03T00:16:10.983Z",
     "query": "CATL battery technology",
     "type": "news",
     "review": "unreviewed",
@@ -25,58 +25,11 @@
     "evidenceLevel": "low"
   },
   {
-    "title": "CATL Achieves 2025 Core Operation Carbon Neutrality Target, Sets Path to 2035 Value-Chain Goal - 宁德时代·CATL",
-    "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1tSndJelZmUEthZkRsN01RbkRCclRpZWxMVXRaZkpJWGxfbVdsM2FDUDA0TXM3c0dsTDdnX3BNV0FxWTBQUzZlZVJ0MWZFbnM?oc=5",
-    "source": "宁德时代·CATL",
-    "publishedAt": "2026-08-17T07:00:00.000Z",
-    "collectedAt": "2026-09-02T00:14:33.731Z",
-    "query": "CATL battery technology",
-    "type": "news",
-    "review": "unreviewed",
-    "topics": [],
-    "companies": [
-      "catl"
-    ],
-    "technologyRoutes": [],
-    "entityIds": [
-      "catl"
-    ],
-    "evidenceType": "news",
-    "claim": "CATL battery technology",
-    "sourceUrl": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1tSndJelZmUEthZkRsN01RbkRCclRpZWxMVXRaZkpJWGxfbVdsM2FDUDA0TXM3c0dsTDdnX3BNV0FxWTBQUzZlZVJ0MWZFbnM?oc=5",
-    "evidenceLevel": "high"
-  },
-  {
-    "title": "CATL’s next-generation EV battery research focuses on lithium-air technology - Charged EVs",
-    "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPTXo2S2ZIeTh6YTFoUTJnNVg3dE5MWlVEaXNtWmlDLUZYSERQWi02N3ZYQXBQYUpWRk1NbXZpXzMweXlaSm1DZHRiUkg3Wjk4ZWpaWWVQQ0RaSEVfNWlhaXJ5amJtRlZ1Z2ZXMjIwcjVxQmlUb1U3ak5ESXJ6WWhtOE9MVGxkRHRPRDcyWUMyZE5oOG1SaVlzOXpWd3Y1a2Jzbzh0Q3RoRmtyQk15?oc=5",
-    "source": "Charged EVs",
-    "publishedAt": "2026-06-16T07:00:00.000Z",
-    "collectedAt": "2026-09-02T00:14:33.731Z",
-    "query": "CATL battery technology",
-    "type": "news",
-    "review": "unreviewed",
-    "topics": [
-      "fast-charge"
-    ],
-    "companies": [
-      "catl"
-    ],
-    "technologyRoutes": [],
-    "entityIds": [
-      "catl",
-      "fast-charge"
-    ],
-    "evidenceType": "news",
-    "claim": "CATL battery technology",
-    "sourceUrl": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPTXo2S2ZIeTh6YTFoUTJnNVg3dE5MWlVEaXNtWmlDLUZYSERQWi02N3ZYQXBQYUpWRk1NbXZpXzMweXlaSm1DZHRiUkg3Wjk4ZWpaWWVQQ0RaSEVfNWlhaXJ5amJtRlZ1Z2ZXMjIwcjVxQmlUb1U3ak5ESXJ6WWhtOE9MVGxkRHRPRDcyWUMyZE5oOG1SaVlzOXpWd3Y1a2Jzbzh0Q3RoRmtyQk15?oc=5",
-    "evidenceLevel": "low"
-  },
-  {
-    "title": "CATL 8C ultra-fast charging battery – what it means for commercial EV fleets - EV Infrastructure News",
+    "title": "CATL 8C ultra-fast charging battery – what it means for commercial EV fleets - evinfrastructurenews.com",
     "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOMDBjeWd1T040aTBMMVNfclNza1JfZklmNjBvR1JiRTVPcWVRRU5fMl83clRxZUYzbTRpaWo1OFA0VDkweXN0VWlrR3J0NXEzZ3ZSanZ4WnhwbGQ3Nm1sdkxpU2ZFdVA2VDhFRW9GamNHdWk4MHM3SlhKVjB4cVBQSVdoNW81Wnc4djBmeXl1WVh2d295c3hNX19sUkhZV0NZN3dFNUY2Uk11Zw?oc=5",
-    "source": "EV Infrastructure News",
+    "source": "evinfrastructurenews.com",
     "publishedAt": "2026-07-22T07:00:00.000Z",
-    "collectedAt": "2026-09-02T00:14:33.731Z",
+    "collectedAt": "2026-09-03T00:16:10.983Z",
     "query": "CATL battery technology",
     "type": "news",
     "review": "unreviewed",
@@ -101,7 +54,7 @@
     "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPbEppSEFfOU5wUG9zVWR2YzQ2bFR3UlNXRzRXN0g3WXFzazFyNE9xZ0NFc1JhSGhoY0ZxTVN4aGVvbm9vc1BDYVhsOElHeGJ0UW16dHZtUEtCM1JuMEdueGlTVHlteDRHaUxuVF9WWmNQUEE1MGRkOU05blZ5aDJ0Z0NWRHdncUxmUDMwU1pLY2N4TTNvNW5rRTRPSUlPNDVnRlo4dUhGNi0tSG05MFV6ckVqdUlic3U0Tk1hYlkwcnhZc2tUVWY5d1l0UF90a2PSAc8BQVVfeXFMUFptN3B3WVBlaG52WHRQdVVkbmpXc1NPVDNZR3hXQTgzRWNoLWlHSFE3ZGs5eTVaQVVZbDFyYWVCYmxVOGhuT1JqWjh0OHBfUFdLR25FSnB4dU1hcjdSRFFWQy15blhfWVZId3ZhLWR2STBFYkFJS19nRlRzaTF0QzNHNmx4dXZ3MzRwVWdKczl6YkdVX2NDbFAwY0U1WHFCRVdqcVlESnBJNXZYcmpnVlZCRk03OVphangwUDIwNHZkcS0zaFpoV1A2bThqUVZN?oc=5",
     "source": "South China Morning Post",
     "publishedAt": "2026-06-25T07:00:00.000Z",
-    "collectedAt": "2026-09-02T00:14:33.731Z",
+    "collectedAt": "2026-09-03T00:16:10.983Z",
     "query": "CATL battery technology",
     "type": "news",
     "review": "unreviewed",
@@ -122,42 +75,11 @@
     "evidenceLevel": "low"
   },
   {
-    "title": "CATL achieves sodium-ion battery mass production - batterytechonline.com",
-    "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOOVRUVllRdmtrSVdYYWE1QXRSdU5jb0NyNVNWSWQ5VENtWE9oU0lDMVhmTFh3NUhrODF6b0YwVkE2NTBsVVdRc2Vya1pMNm4xWFBSbmxIMVBYWW1FWmRrUHdCd2ZuMkNibGZKVGI1eDhDdVJrZW1nblpNNEF6Y215ZDRsbFFUV1NuRDEwUVhZOElJMXlEUkQ4anRrUjJKa0JnaWNiNFZBS0pNOW1aOW1peXlpWkxXUXNqU2psVmtrbjV6eUEyVXA3cUtn?oc=5",
-    "source": "batterytechonline.com",
-    "publishedAt": "2026-08-05T07:00:00.000Z",
-    "collectedAt": "2026-09-02T00:14:33.731Z",
-    "query": "CATL battery technology",
-    "type": "news",
-    "review": "unreviewed",
-    "topics": [
-      "fast-charge",
-      "sodium-ion"
-    ],
-    "companies": [
-      "catl"
-    ],
-    "technologyRoutes": [
-      "sodium-hard-carbon"
-    ],
-    "entityIds": [
-      "catl",
-      "byd",
-      "fast-charge",
-      "sodium-ion",
-      "sodium-hard-carbon"
-    ],
-    "evidenceType": "news",
-    "claim": "CATL battery technology",
-    "sourceUrl": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOOVRUVllRdmtrSVdYYWE1QXRSdU5jb0NyNVNWSWQ5VENtWE9oU0lDMVhmTFh3NUhrODF6b0YwVkE2NTBsVVdRc2Vya1pMNm4xWFBSbmxIMVBYWW1FWmRrUHdCd2ZuMkNibGZKVGI1eDhDdVJrZW1nblpNNEF6Y215ZDRsbFFUV1NuRDEwUVhZOElJMXlEUkQ4anRrUjJKa0JnaWNiNFZBS0pNOW1aOW1peXlpWkxXUXNqU2psVmtrbjV6eUEyVXA3cUtn?oc=5",
-    "evidenceLevel": "low"
-  },
-  {
     "title": "Sodium Battery Technology - NextBigFuture.com",
     "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9fVG9WMTdhMzlraVk1TldheXd6aDhwVk81VWdybmJSMFBRNFp0RVVHbFZiZ1J0a2pNUVhtYm5nalBmVWxvMndLb0VtcXdkaDNlcF9zcXFYZlE4bHZYeXN3dllxdm9TMGVKczAwa3VxTURjZGl6Q2Jj?oc=5",
     "source": "NextBigFuture.com",
     "publishedAt": "2026-08-25T06:05:22.000Z",
-    "collectedAt": "2026-09-02T00:14:33.731Z",
+    "collectedAt": "2026-09-03T00:16:10.983Z",
     "query": "CATL battery technology",
     "type": "news",
     "review": "unreviewed",
@@ -178,11 +100,97 @@
     "evidenceLevel": "low"
   },
   {
+    "title": "CATL Battery Innovations: 6 Technologies Explained - Battery Technology",
+    "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxNMDdiV0MtelctcnRwaGx5VmRkOU1zZGlJOWFuWmV2anFyTUFBN1d0UGRMQnd0SnFBWTJBWDJVVWxodmtuZzhhUmk3VlZUVXdUWkdJb0NyTUNtUkVLVnpVTVd0OVdLZG13RFV6Y1RNTmd0WGxxRl94Ni1WYlhCUTh2WDhhU0xoVXNsQndna1Riai1UcFBYRkJqdDhIaXhQRlh5NGhCaE9ucTBlVTczeXRTcEdicV9TWXo3Q1pkR2pTNVVJbzRQeGlDYVM5eGlJb2RoQlRSRXFSeW4?oc=5",
+    "source": "Battery Technology",
+    "publishedAt": "2026-04-27T16:49:06.000Z",
+    "collectedAt": "2026-09-03T00:16:10.983Z",
+    "query": "CATL battery technology",
+    "type": "news",
+    "review": "unreviewed",
+    "topics": [
+      "fast-charge"
+    ],
+    "companies": [
+      "catl"
+    ],
+    "technologyRoutes": [
+      "ctp-ctb"
+    ],
+    "entityIds": [
+      "catl",
+      "fast-charge",
+      "ctp-ctb"
+    ],
+    "evidenceType": "news",
+    "claim": "CATL battery technology",
+    "sourceUrl": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxNMDdiV0MtelctcnRwaGx5VmRkOU1zZGlJOWFuWmV2anFyTUFBN1d0UGRMQnd0SnFBWTJBWDJVVWxodmtuZzhhUmk3VlZUVXdUWkdJb0NyTUNtUkVLVnpVTVd0OVdLZG13RFV6Y1RNTmd0WGxxRl94Ni1WYlhCUTh2WDhhU0xoVXNsQndna1Riai1UcFBYRkJqdDhIaXhQRlh5NGhCaE9ucTBlVTczeXRTcEdicV9TWXo3Q1pkR2pTNVVJbzRQeGlDYVM5eGlJb2RoQlRSRXFSeW4?oc=5",
+    "evidenceLevel": "low"
+  },
+  {
+    "title": "CATL unveils six battery innovations including 350 Wh/kg condensed cells - Charged EVs",
+    "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQZjlTNXF6MzAyNkFXbmJ3ak1hdEVwR1hYWG5EZG1DS01VOHB3a1phVUVGQzhkODhabm10RzdCRjlkTzh1N1lwb0FEaElTWmFPQUo4N0ZZRVB5Ml81SzJ5UzlVaE4yTjcxNFZ6cGhDVlhoMURKQnFtVnVXNC1MV1lvODdiN3dyekpuTjNCM0lHSUR0S25OdDhSdFlCcHNwLWk5b0lrNU5ndUY?oc=5",
+    "source": "Charged EVs",
+    "publishedAt": "2026-04-23T07:00:00.000Z",
+    "collectedAt": "2026-09-03T00:16:10.983Z",
+    "query": "CATL battery technology",
+    "type": "news",
+    "review": "unreviewed",
+    "topics": [
+      "fast-charge"
+    ],
+    "companies": [
+      "catl"
+    ],
+    "technologyRoutes": [
+      "ncm-nca"
+    ],
+    "entityIds": [
+      "catl",
+      "fast-charge",
+      "cathode",
+      "ncm-nca"
+    ],
+    "evidenceType": "news",
+    "claim": "CATL battery technology",
+    "sourceUrl": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQZjlTNXF6MzAyNkFXbmJ3ak1hdEVwR1hYWG5EZG1DS01VOHB3a1phVUVGQzhkODhabm10RzdCRjlkTzh1N1lwb0FEaElTWmFPQUo4N0ZZRVB5Ml81SzJ5UzlVaE4yTjcxNFZ6cGhDVlhoMURKQnFtVnVXNC1MV1lvODdiN3dyekpuTjNCM0lHSUR0S25OdDhSdFlCcHNwLWk5b0lrNU5ndUY?oc=5",
+    "evidenceLevel": "low"
+  },
+  {
+    "title": "CATL and CHANGAN Launch World’s First Mass-Production Sodium-Ion Passenger Vehicle - CATL",
+    "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBFR1Y0azhfeENfRWF1T0xlcmlRSGhaZWlUSHVsaFVsR2hVU1VlTDBCaVlCX3lKa1BjREw0NUsxbmZyOGxFUl9OeEl2U3FpM0k?oc=5",
+    "source": "CATL",
+    "publishedAt": "2026-02-05T08:00:00.000Z",
+    "collectedAt": "2026-09-03T00:16:10.983Z",
+    "query": "CATL battery technology",
+    "type": "news",
+    "review": "unreviewed",
+    "topics": [
+      "sodium-ion"
+    ],
+    "companies": [
+      "catl"
+    ],
+    "technologyRoutes": [
+      "sodium-hard-carbon"
+    ],
+    "entityIds": [
+      "catl",
+      "byd",
+      "sodium-ion",
+      "sodium-hard-carbon"
+    ],
+    "evidenceType": "news",
+    "claim": "CATL battery technology",
+    "sourceUrl": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBFR1Y0azhfeENfRWF1T0xlcmlRSGhaZWlUSHVsaFVsR2hVU1VlTDBCaVlCX3lKa1BjREw0NUsxbmZyOGxFUl9OeEl2U3FpM0k?oc=5",
+    "evidenceLevel": "high"
+  },
+  {
     "title": "CATL Debuts Battery Storage System Using New Sodium Technology - Bloomberg.com",
     "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxONTk5ODkzSjJLWUVKdDRJU0hDRTVueFlNRnQ5dHJYN1lsMEFJalRHVW03MkhkS1ZHZXlIMC14RHJzSVlueUJIcDhlVnJRNnJmbjZpendmdExucWs5c2xFUkRGZWt1STMzN1laQTNuOTVqTjdnV1BDOGpJVUEtTEpZYTVwMzFkM19RdU1LZkpxRHBYNDR5ZnMzeXI3Y2k5WmNIZXgwZmdMU00tYkt0U1RhRzZNaw?oc=5",
     "source": "Bloomberg.com",
     "publishedAt": "2026-06-23T07:00:00.000Z",
-    "collectedAt": "2026-09-02T00:14:33.731Z",
+    "collectedAt": "2026-09-03T00:16:10.983Z",
     "query": "CATL battery technology",
     "type": "news",
     "review": "unreviewed",
@@ -211,7 +219,7 @@
     "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQeUNHcXIwcS1NZDUtaF9kUFFianBreWt1UGpFTzBYbE84Q1YwVUNQb3h1cjFkclo4YXowZ0JITGpFM0FfSDRzeWNNSUZhaHM4TFVvTG9CXzBPUkNwaVZrc0lTR09qcm1aOWpZQVdGaTRheWhkMU96Wk9YRjV1YXVFbU1YWEltS1lLemo3X3Q4OUdGc2NJbDRz?oc=5",
     "source": "Electrek",
     "publishedAt": "2026-04-08T07:00:00.000Z",
-    "collectedAt": "2026-09-02T00:14:33.731Z",
+    "collectedAt": "2026-09-03T00:16:10.983Z",
     "query": "BYD blade battery sodium ion",
     "type": "news",
     "review": "unreviewed",
@@ -245,7 +253,7 @@
     "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPYmVhc19CQmhQSHlnT0ZGMmllZ3BQaTlXbVF6ek9IV2k0S3dBSjRUZmlvbEhpRlB4QXhycUJ6UzBsMnRDbzQzWjlzWENYS3o5TUhCd1VBSWRadXVKeVRQc2JMM0JmX3RNMjNxWllBZDdET1BGYVh1TWxuaU9PcWpyWXhrNmpfOVVzN2Y3X2NZMkNtdzM1alQwZnRKU3NPNDg?oc=5",
     "source": "CleanTechnica",
     "publishedAt": "2026-06-11T07:00:00.000Z",
-    "collectedAt": "2026-09-02T00:14:33.731Z",
+    "collectedAt": "2026-09-03T00:16:10.983Z",
     "query": "BYD blade battery sodium ion",
     "type": "news",
     "review": "unreviewed",
@@ -272,11 +280,11 @@
     "evidenceLevel": "low"
   },
   {
-    "title": "Battery giants are signing deals – but the latest energy storage tech still has to prove its business case - Recharge News",
+    "title": "Battery giants are signing deals – but the latest energy storage tech still has to prove its business case - rechargenews.com",
     "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxQYkJXbG1BMU5IUWd3TF9oMm5EQy1RNlIybnlTWV92N3hjZHc4X3JVZzNoQUt5UVRCV3doRXpKV25iak1xbFl4VV8yNi1iaDVJcnp2TkVSWmZOZUhUV1NvRUZKTE5PS0Rpd0FpM0Q1ZUZLLWN3RlVlZ1dYM1FhWm1XVks5WHhZZHNFaW5JVHAtV1I1bWxuV19nczNYcHdGRkxlbVNPaUNDckhQS3JUY0JxRjM0bzdXNEd6TVJXQVRIQXh6UVNUV2tWVTlNdUZWa3Zwci0tU1VFMW9OS1k5RnpOblowVmRmOXc3T0E?oc=5",
-    "source": "Recharge News",
+    "source": "rechargenews.com",
     "publishedAt": "2026-04-28T07:00:00.000Z",
-    "collectedAt": "2026-09-02T00:14:33.731Z",
+    "collectedAt": "2026-09-03T00:16:10.983Z",
     "query": "BYD blade battery sodium ion",
     "type": "news",
     "review": "unreviewed",
@@ -306,7 +314,7 @@
     "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTFA4aWpvMERyOGVJLWo0c3h5NXFrUkExbUJQNWZOcVBPTHNXVmxWMGRObWtjVmFoQ2NEa2szSV9JSUdiNU9RSFZhUklNMzZ1Z2poOTl0QUZqNm9TSDJwaWRESmRhaFBiMjN4RlBHQnEyZGVNeUF0dW53RGhuaw?oc=5",
     "source": "bestmag.co.uk",
     "publishedAt": "2026-02-10T08:00:00.000Z",
-    "collectedAt": "2026-09-02T00:14:33.731Z",
+    "collectedAt": "2026-09-03T00:16:10.983Z",
     "query": "BYD blade battery sodium ion",
     "type": "news",
     "review": "unreviewed",
@@ -335,17 +343,18 @@
     "evidenceLevel": "low"
   },
   {
-    "title": "BYD launches sodium-ion grid-scale BESS product - Energy-Storage.News",
-    "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPeFpNWUJDM3pwMHVyS0dVY3V2ZVhjMzhicGhocVB1S1hSNXhlMXMtcDBzdDVXTkJqT2VRcGZ5ekdRNTloTWk3MjN1VW5TaWNYcmNMUTFoaFloamNKQ1I3Y0VFWUJSQjYxMGoyc1VCdG5vbmcwY1VNWUVEa29WS2RhclZDNjFEWFk?oc=5",
-    "source": "Energy-Storage.News",
-    "publishedAt": "2024-11-27T08:00:00.000Z",
-    "collectedAt": "2026-09-02T00:14:33.731Z",
+    "title": "BYD prefers its fast-charging Blade battery over hyped solid-state tech… for now - WhichCar",
+    "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOZ202NndhVGI2X1ZNY0VybTczRmtuU2xpakd1a1QxeWNmdDFSRXNFZW1Va2lNNE9KWGZ2ZF9tSllFZHZVSGtMSE40d1ZIMUx5QldnNm5GZG5sNTVZSlpSY0lhNGxtRTVsNVhWcUVtTm9XcjE0QWtXVUV3YXA2SUNjdUFFdElrSWdsUUZqWXJweEd1TFU?oc=5",
+    "source": "WhichCar",
+    "publishedAt": "2026-06-03T07:00:00.000Z",
+    "collectedAt": "2026-09-03T00:16:10.983Z",
     "query": "BYD blade battery sodium ion",
     "type": "news",
     "review": "unreviewed",
     "topics": [
       "fast-charge",
-      "sodium-ion"
+      "sodium-ion",
+      "solid-state"
     ],
     "companies": [
       "byd"
@@ -354,79 +363,17 @@
       "sodium-hard-carbon"
     ],
     "entityIds": [
-      "catl",
       "byd",
+      "lg-energy",
       "fast-charge",
       "sodium-ion",
+      "solid-state",
+      "electrolyte",
       "sodium-hard-carbon"
     ],
     "evidenceType": "news",
     "claim": "BYD blade battery sodium ion",
-    "sourceUrl": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPeFpNWUJDM3pwMHVyS0dVY3V2ZVhjMzhicGhocVB1S1hSNXhlMXMtcDBzdDVXTkJqT2VRcGZ5ekdRNTloTWk3MjN1VW5TaWNYcmNMUTFoaFloamNKQ1I3Y0VFWUJSQjYxMGoyc1VCdG5vbmcwY1VNWUVEa29WS2RhclZDNjFEWFk?oc=5",
-    "evidenceLevel": "low"
-  },
-  {
-    "title": "CATL, BYD headline China’s inaugural Golden Lithium Awards with next‑gen battery wins - CarNewsChina.com",
-    "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNY0h6cWtxWjJRYlpsRktldU9kMXBGQjR1VEpZblFTdUdENkdEVDNKUUh6R1lZcnkyYUJ4X1ViRU9FTG1qOHczX0pTZVFXU3BtOFJ6eFFkaHdNNG9oT2l1VDlCT1NBcG81YVpTdzgyRl9ieDVXZm5tMVNNVkUwbGlvWjJLTXh1U0pESTVOVmpMLUNteXZZN1JPM0phTXh6WWZJaTAta1kycUtRdHVJaFZYY1dXcGVILWFqZkZGNQ?oc=5",
-    "source": "CarNewsChina.com",
-    "publishedAt": "2026-05-16T07:00:00.000Z",
-    "collectedAt": "2026-09-02T00:14:33.731Z",
-    "query": "BYD blade battery sodium ion",
-    "type": "news",
-    "review": "unreviewed",
-    "topics": [
-      "fast-charge",
-      "sodium-ion"
-    ],
-    "companies": [
-      "catl",
-      "byd"
-    ],
-    "technologyRoutes": [
-      "sodium-hard-carbon"
-    ],
-    "entityIds": [
-      "catl",
-      "byd",
-      "fast-charge",
-      "sodium-ion",
-      "sodium-hard-carbon"
-    ],
-    "evidenceType": "news",
-    "claim": "BYD blade battery sodium ion",
-    "sourceUrl": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNY0h6cWtxWjJRYlpsRktldU9kMXBGQjR1VEpZblFTdUdENkdEVDNKUUh6R1lZcnkyYUJ4X1ViRU9FTG1qOHczX0pTZVFXU3BtOFJ6eFFkaHdNNG9oT2l1VDlCT1NBcG81YVpTdzgyRl9ieDVXZm5tMVNNVkUwbGlvWjJLTXh1U0pESTVOVmpMLUNteXZZN1JPM0phTXh6WWZJaTAta1kycUtRdHVJaFZYY1dXcGVILWFqZkZGNQ?oc=5",
-    "evidenceLevel": "low"
-  },
-  {
-    "title": "CATL accelerates sodium-ion battery development, announces new battery with 600km range will enter production this year – EV Central - EV Central",
-    "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxQNFkwUHoxUlMyNjBGWWFYSTYtMi1nMVBsWVI2LVUtZkNRaFlRUkFveVdRZENzbGE4Sm84WlZhT0ZWbVFLTW8wd0pJaHYzcUF6ZFk1cHl2N1kxQzZrSTdwRnhNNk1FSXBPZGJySjkyZGxZVjV4VjBvVjBxNExBaHFVZGdTLU5BcUkyUURkek96SV9PSW4zWTNhMHFuS3hyUEpCMlFEWXhueUwzTDVDcDNVWHpqOTFLMlJFQWY2cWpmNDE1OTFDQThBWkxTNjAwck9ZcXdJNnplcmVXUnZS?oc=5",
-    "source": "EV Central",
-    "publishedAt": "2026-06-09T02:18:07.000Z",
-    "collectedAt": "2026-09-02T00:14:33.731Z",
-    "query": "BYD blade battery sodium ion",
-    "type": "news",
-    "review": "unreviewed",
-    "topics": [
-      "fast-charge",
-      "sodium-ion"
-    ],
-    "companies": [
-      "catl",
-      "byd"
-    ],
-    "technologyRoutes": [
-      "sodium-hard-carbon"
-    ],
-    "entityIds": [
-      "catl",
-      "byd",
-      "fast-charge",
-      "sodium-ion",
-      "sodium-hard-carbon"
-    ],
-    "evidenceType": "news",
-    "claim": "BYD blade battery sodium ion",
-    "sourceUrl": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxQNFkwUHoxUlMyNjBGWWFYSTYtMi1nMVBsWVI2LVUtZkNRaFlRUkFveVdRZENzbGE4Sm84WlZhT0ZWbVFLTW8wd0pJaHYzcUF6ZFk1cHl2N1kxQzZrSTdwRnhNNk1FSXBPZGJySjkyZGxZVjV4VjBvVjBxNExBaHFVZGdTLU5BcUkyUURkek96SV9PSW4zWTNhMHFuS3hyUEpCMlFEWXhueUwzTDVDcDNVWHpqOTFLMlJFQWY2cWpmNDE1OTFDQThBWkxTNjAwck9ZcXdJNnplcmVXUnZS?oc=5",
+    "sourceUrl": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOZ202NndhVGI2X1ZNY0VybTczRmtuU2xpakd1a1QxeWNmdDFSRXNFZW1Va2lNNE9KWGZ2ZF9tSllFZHZVSGtMSE40d1ZIMUx5QldnNm5GZG5sNTVZSlpSY0lhNGxtRTVsNVhWcUVtTm9XcjE0QWtXVUV3YXA2SUNjdUFFdElrSWdsUUZqWXJweEd1TFU?oc=5",
     "evidenceLevel": "low"
   },
   {
@@ -434,7 +381,7 @@
     "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQQkN0aS1HcmQxVWtqQXJ2eUdFZURDbzltY0JweXdXMFJlcEhWTzU2VDhjQ1BGOG1GWEdtVHBtUEE1cmtxMG0wTUUxY0UwemR3RzEyYzgtMEt2VE1pNTdhY1l4ZDBmSjJBcUFmdDVGUEtIMHNLczY2TzNac1FHdG9KTUFR?oc=5",
     "source": "Electrek",
     "publishedAt": "2026-04-22T07:00:00.000Z",
-    "collectedAt": "2026-09-02T00:14:33.731Z",
+    "collectedAt": "2026-09-03T00:16:10.983Z",
     "query": "BYD blade battery sodium ion",
     "type": "news",
     "review": "unreviewed",
@@ -464,107 +411,72 @@
     "evidenceLevel": "low"
   },
   {
-    "title": "Tesla confirms that it finally solved its 4680 battery’s dry cathode process - Teslarati",
-    "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNNWh1SlpHbEhmelMwYWpaYzVYOTd3WWtpLVhfeTNXVjUtTkRabXlodVc5NkRqOWVoNHd1UnR3dE9XcnRQeTM0WTVhSk9VWkMta1dqc1NVQzZWWk8yTG1WLWxVSk0zSDlTYXBqNTdLZWxfNlZsYzMtVzlJbDZKOG1YZDM4QWJFR3hKS0NzREY2UmNZc3M?oc=5",
-    "source": "Teslarati",
-    "publishedAt": "2026-01-30T08:00:00.000Z",
-    "collectedAt": "2026-09-02T00:14:33.731Z",
-    "query": "Tesla 4680 dry electrode battery",
+    "title": "The Strange Time Compression of Sodium-Ion Battery Development - CleanTechnica",
+    "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNSWdtTzdWQUVnWGNZUUFVSG95ck1uTDhQLXBwQi13alJfdkExZXoxTFN0WDhaNkNiY1JEczAzdUxTNjhxZDJJQ2FiTWhLRWdkeno5QzJQQ1NoU1ZCcndObTRwUnM1aWZEYzB6cTdndkMtUERFZklmVHlEbXJYVGg1NzY1S21ZWUpVcXFZV09qM0N4SjFhNkROQ2lxSjB6bXAwM2c?oc=5",
+    "source": "CleanTechnica",
+    "publishedAt": "2025-11-30T08:00:00.000Z",
+    "collectedAt": "2026-09-03T00:16:10.983Z",
+    "query": "BYD blade battery sodium ion",
     "type": "news",
     "review": "unreviewed",
     "topics": [
       "fast-charge",
-      "dry-electrode"
+      "sodium-ion"
     ],
     "companies": [
-      "tesla"
+      "byd"
     ],
     "technologyRoutes": [
-      "4680"
+      "sodium-hard-carbon"
     ],
     "entityIds": [
-      "tesla",
+      "catl",
+      "byd",
       "fast-charge",
       "sodium-ion",
-      "dry-electrode",
-      "cathode",
-      "4680"
+      "sodium-hard-carbon"
     ],
     "evidenceType": "news",
-    "claim": "Tesla 4680 dry electrode battery",
-    "sourceUrl": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNNWh1SlpHbEhmelMwYWpaYzVYOTd3WWtpLVhfeTNXVjUtTkRabXlodVc5NkRqOWVoNHd1UnR3dE9XcnRQeTM0WTVhSk9VWkMta1dqc1NVQzZWWk8yTG1WLWxVSk0zSDlTYXBqNTdLZWxfNlZsYzMtVzlJbDZKOG1YZDM4QWJFR3hKS0NzREY2UmNZc3M?oc=5",
-    "evidenceLevel": "high"
+    "claim": "BYD blade battery sodium ion",
+    "sourceUrl": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNSWdtTzdWQUVnWGNZUUFVSG95ck1uTDhQLXBwQi13alJfdkExZXoxTFN0WDhaNkNiY1JEczAzdUxTNjhxZDJJQ2FiTWhLRWdkeno5QzJQQ1NoU1ZCcndObTRwUnM1aWZEYzB6cTdndkMtUERFZklmVHlEbXJYVGg1NzY1S21ZWUpVcXFZV09qM0N4SjFhNkROQ2lxSjB6bXAwM2c?oc=5",
+    "evidenceLevel": "low"
   },
   {
-    "title": "Tesla's Giga Texas Cathode Plant Goes Live — First Look Inside - BASENOR - Tesla Accessories",
-    "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQUWUyeXhwTVYxZ2RFRlBCa3ZCYTMzMkplbUdyNjdCZDVKQjYzYllBdnZxcXZrbUF4QV9Vd0ZuNTkyai1vUC1MNE5xRjluRXY3ZmpwTVVTUTJWcTA2VFZKaElqblptdUYxdFpfb3doblYyR2cxWTY2TWZVV2VxQW84VVB5RUY2ZWt0b2U4NTBiM21DdkljVXd6NW5B?oc=5",
-    "source": "BASENOR - Tesla Accessories",
-    "publishedAt": "2026-08-21T07:00:00.000Z",
-    "collectedAt": "2026-09-02T00:14:33.731Z",
-    "query": "Tesla 4680 dry electrode battery",
+    "title": "BYD’s Five-Minute EV Battery Is Detroit’s Problem - WKRG",
+    "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5KTlpXS1BuNVlPd25idkNzb1NWMExqYjFKOVZ5RnJobUtsa3lGY3htUzhxaTFRRzZTdUxZZHJZYUw0Q2k3eWZmRU5ic04zbWhNcTRuWmxYOEVsSm1kWXZ0dERzVWpQMXhLbTdSNlRQblY4bFNyNkEzUGhsSENWdDTSAYQBQVVfeXFMT0Y0ckQ3Qm53Uk1vYktuWm05ZzgwTzhjcXB0cEtpc1B3dEZfQ1RrR0Myc0h1Y09DcjFzSjZCQ0R6bzFlTDFuQlljajRCVzB6cHYwbEJnZThWbjJVV19RemR0NVA4cXZtX25oRjhRcVZpWW51OUxrT0Zoam1zZmhEV2tJU2Ez?oc=5",
+    "source": "WKRG",
+    "publishedAt": "2026-06-19T07:00:00.000Z",
+    "collectedAt": "2026-09-03T00:16:10.983Z",
+    "query": "BYD blade battery sodium ion",
     "type": "news",
     "review": "unreviewed",
     "topics": [
       "fast-charge",
-      "dry-electrode"
+      "sodium-ion"
     ],
     "companies": [
-      "tesla"
+      "byd"
     ],
     "technologyRoutes": [
-      "4680"
+      "sodium-hard-carbon"
     ],
     "entityIds": [
-      "tesla",
+      "byd",
       "fast-charge",
       "sodium-ion",
-      "dry-electrode",
-      "cathode",
-      "4680"
+      "sodium-hard-carbon"
     ],
     "evidenceType": "news",
-    "claim": "Tesla 4680 dry electrode battery",
-    "sourceUrl": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQUWUyeXhwTVYxZ2RFRlBCa3ZCYTMzMkplbUdyNjdCZDVKQjYzYllBdnZxcXZrbUF4QV9Vd0ZuNTkyai1vUC1MNE5xRjluRXY3ZmpwTVVTUTJWcTA2VFZKaElqblptdUYxdFpfb3doblYyR2cxWTY2TWZVV2VxQW84VVB5RUY2ZWt0b2U4NTBiM21DdkljVXd6NW5B?oc=5",
-    "evidenceLevel": "high"
-  },
-  {
-    "title": "Tesla’s Dry Cathode Breakthrough Will Drastically Reduce Battery Costs [Musk Responds] - Not a Tesla App",
-    "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOMWg1V1psaWdOVjBNQm5wWDU5ZDBrb2MwUzdTOEN1SHFsSGktUk9tSm5ESUVIM0NmRjVXanJfOWJ1amZVUFpqcDNmcDZNbkk3cjZ1eVVTYmRoaE95TlpCakxDal80SGZoRko0SzRRdHNmekJmYVdmZjlDZHFfQmp5SDJ4MmVtczhZbDFSTFY3Nl9BNFZ3d2tZc1lJeFB2eWdCSGJRWUR6LVZrSVBkVmc?oc=5",
-    "source": "Not a Tesla App",
-    "publishedAt": "2026-05-25T07:00:00.000Z",
-    "collectedAt": "2026-09-02T00:14:33.731Z",
-    "query": "Tesla 4680 dry electrode battery",
-    "type": "news",
-    "review": "unreviewed",
-    "topics": [
-      "fast-charge",
-      "dry-electrode"
-    ],
-    "companies": [
-      "tesla"
-    ],
-    "technologyRoutes": [
-      "4680"
-    ],
-    "entityIds": [
-      "tesla",
-      "fast-charge",
-      "sodium-ion",
-      "dry-electrode",
-      "cathode",
-      "4680"
-    ],
-    "evidenceType": "news",
-    "claim": "Tesla 4680 dry electrode battery",
-    "sourceUrl": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOMWg1V1psaWdOVjBNQm5wWDU5ZDBrb2MwUzdTOEN1SHFsSGktUk9tSm5ESUVIM0NmRjVXanJfOWJ1amZVUFpqcDNmcDZNbkk3cjZ1eVVTYmRoaE95TlpCakxDal80SGZoRko0SzRRdHNmekJmYVdmZjlDZHFfQmp5SDJ4MmVtczhZbDFSTFY3Nl9BNFZ3d2tZc1lJeFB2eWdCSGJRWUR6LVZrSVBkVmc?oc=5",
-    "evidenceLevel": "high"
+    "claim": "BYD blade battery sodium ion",
+    "sourceUrl": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5KTlpXS1BuNVlPd25idkNzb1NWMExqYjFKOVZ5RnJobUtsa3lGY3htUzhxaTFRRzZTdUxZZHJZYUw0Q2k3eWZmRU5ic04zbWhNcTRuWmxYOEVsSm1kWXZ0dERzVWpQMXhLbTdSNlRQblY4bFNyNkEzUGhsSENWdDTSAYQBQVVfeXFMT0Y0ckQ3Qm53Uk1vYktuWm05ZzgwTzhjcXB0cEtpc1B3dEZfQ1RrR0Myc0h1Y09DcjFzSjZCQ0R6bzFlTDFuQlljajRCVzB6cHYwbEJnZThWbjJVV19RemR0NVA4cXZtX25oRjhRcVZpWW51OUxrT0Zoam1zZmhEV2tJU2Ez?oc=5",
+    "evidenceLevel": "low"
   },
   {
     "title": "U-turn: Tesla reinstalls its own 4680 cells in the Model Y - electrive.com",
     "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNNFJVX3AxdEhHSkRxdXZqeW96ZjJHVGhHYU54bEh3VW1nVFdWUVlrNEtuYWltNjB4MVBSU1g0NE0tRDJGZFJDbWVfaE9VcUlkRkc2WDZLMGFDRDlGOVUzdG95dlVvQ1FtNDY3VlQyNzF3cHVMSThmU24yTVNIMy01RnNFWFpRdkhlTHpLOHNoUHItX25ybkNHUnlrVQ?oc=5",
     "source": "electrive.com",
     "publishedAt": "2026-01-29T08:00:00.000Z",
-    "collectedAt": "2026-09-02T00:14:33.731Z",
+    "collectedAt": "2026-09-03T00:16:10.983Z",
     "query": "Tesla 4680 dry electrode battery",
     "type": "news",
     "review": "unreviewed",
@@ -590,103 +502,11 @@
     "evidenceLevel": "low"
   },
   {
-    "title": "Elon Musk confirms Tesla dry cathode tech could \"significantly reduce\" battery costs - The Driven IO",
-    "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNTGtweW0tdHZYcmh2VWxaZF9RNDFzY3RIYkZnVk4zeEVFbW9iM0djVldtT0FVQ0lKVkFCMkVWcmNDSXBFTHN0X05WU1ZXUjlfc1lGNUl3N2lkYUNjVmtnN0toYkRUd19WaExqWDRrZXRScVdXQkFYT2xRZUc2OTBaWFJHUmFNMUdqSWpKZ3lyS0lIdVM1bGo3VTZTX25ON3ZWeUZ1aEJOU0g0RllBZUowdE1aSEkyUQ?oc=5",
-    "source": "The Driven IO",
-    "publishedAt": "2026-05-27T07:00:00.000Z",
-    "collectedAt": "2026-09-02T00:14:33.731Z",
-    "query": "Tesla 4680 dry electrode battery",
-    "type": "news",
-    "review": "unreviewed",
-    "topics": [
-      "fast-charge",
-      "dry-electrode"
-    ],
-    "companies": [
-      "tesla"
-    ],
-    "technologyRoutes": [
-      "4680"
-    ],
-    "entityIds": [
-      "tesla",
-      "fast-charge",
-      "sodium-ion",
-      "dry-electrode",
-      "cathode",
-      "4680"
-    ],
-    "evidenceType": "news",
-    "claim": "Tesla 4680 dry electrode battery",
-    "sourceUrl": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNTGtweW0tdHZYcmh2VWxaZF9RNDFzY3RIYkZnVk4zeEVFbW9iM0djVldtT0FVQ0lKVkFCMkVWcmNDSXBFTHN0X05WU1ZXUjlfc1lGNUl3N2lkYUNjVmtnN0toYkRUd19WaExqWDRrZXRScVdXQkFYT2xRZUc2OTBaWFJHUmFNMUdqSWpKZ3lyS0lIdVM1bGo3VTZTX25ON3ZWeUZ1aEJOU0g0RllBZUowdE1aSEkyUQ?oc=5",
-    "evidenceLevel": "low"
-  },
-  {
-    "title": "Musk Admits That Pursuing the Dry Battery Electrode Process in 4680 Cells Was a Mistake - autoevolution",
-    "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPc0R5UFZRUnIyemt4dEJxYzJoN085MFpIQlJuZDI2UGpWUUo3UGxBSFBISVEwOTB6N1l6bWVRQlhMRGlHYlJIbjlLTmR5ZXU0WTZRTmNlekI5QzBHOHJmUy1DeDN0RHpiMFoyQVpReW84dGNoZjN0RUo1ZjRjbFp6c3ltSVVjUEFoa1hXSEluRHlBSXNSRGJWZ1phTjd3TjRaLVlCUWZGWEVjNUJEczBnak94SnhBMVVzNEp5Wmx5d1FwUzQ4cGw3UXo5QWVVQU0?oc=5",
-    "source": "autoevolution",
-    "publishedAt": "2025-11-07T08:00:00.000Z",
-    "collectedAt": "2026-09-02T00:14:33.731Z",
-    "query": "Tesla 4680 dry electrode battery",
-    "type": "news",
-    "review": "unreviewed",
-    "topics": [
-      "fast-charge",
-      "dry-electrode"
-    ],
-    "companies": [
-      "tesla"
-    ],
-    "technologyRoutes": [
-      "4680"
-    ],
-    "entityIds": [
-      "tesla",
-      "fast-charge",
-      "dry-electrode",
-      "4680"
-    ],
-    "evidenceType": "news",
-    "claim": "Tesla 4680 dry electrode battery",
-    "sourceUrl": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPc0R5UFZRUnIyemt4dEJxYzJoN085MFpIQlJuZDI2UGpWUUo3UGxBSFBISVEwOTB6N1l6bWVRQlhMRGlHYlJIbjlLTmR5ZXU0WTZRTmNlekI5QzBHOHJmUy1DeDN0RHpiMFoyQVpReW84dGNoZjN0RUo1ZjRjbFp6c3ltSVVjUEFoa1hXSEluRHlBSXNSRGJWZ1phTjd3TjRaLVlCUWZGWEVjNUJEczBnak94SnhBMVVzNEp5Wmx5d1FwUzQ4cGw3UXo5QWVVQU0?oc=5",
-    "evidenceLevel": "low"
-  },
-  {
-    "title": "Elon Musk says Tesla has solved dry electrode battery manufacturing at scale - driveteslacanada.ca",
-    "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOVmNGbHpzVGt4b1YydzhJU2VXWEY2VlJMX2E4Y2RQWGJIaVBzSTNQZ2d6b05FZTV2cE5Yb2ZydUlqa2plQUdJVGFVaWtoOUF1RV9mcFRQMlgxYUlZYmloajJscXZrNS0yZ3FNVl9mdl9yUnpHdE5wbHF6WXhEcHBIMGxmcDNHUWQ4dmNyaUFORUFlX0w2V0hCWGNFYkd1ZDFBZzl4eko5bFEyZlJ6c09R?oc=5",
-    "source": "driveteslacanada.ca",
-    "publishedAt": "2026-02-02T08:00:00.000Z",
-    "collectedAt": "2026-09-02T00:14:33.731Z",
-    "query": "Tesla 4680 dry electrode battery",
-    "type": "news",
-    "review": "unreviewed",
-    "topics": [
-      "fast-charge",
-      "dry-electrode"
-    ],
-    "companies": [
-      "tesla"
-    ],
-    "technologyRoutes": [
-      "4680"
-    ],
-    "entityIds": [
-      "tesla",
-      "fast-charge",
-      "dry-electrode",
-      "4680"
-    ],
-    "evidenceType": "news",
-    "claim": "Tesla 4680 dry electrode battery",
-    "sourceUrl": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOVmNGbHpzVGt4b1YydzhJU2VXWEY2VlJMX2E4Y2RQWGJIaVBzSTNQZ2d6b05FZTV2cE5Yb2ZydUlqa2plQUdJVGFVaWtoOUF1RV9mcFRQMlgxYUlZYmloajJscXZrNS0yZ3FNVl9mdl9yUnpHdE5wbHF6WXhEcHBIMGxmcDNHUWQ4dmNyaUFORUFlX0w2V0hCWGNFYkd1ZDFBZzl4eko5bFEyZlJ6c09R?oc=5",
-    "evidenceLevel": "high"
-  },
-  {
     "title": "Tesla’s 4680 battery cells are underperforming and frustrating buyers - Electrek",
     "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNOUJxZXpMUnVFZ3h4T0w0bms4VDhKRUxSa0kzSnIwZ2ZIeXYzVm1QcjJQaVh0Y3JZM2swdHJYZk1DMEZIdnljSUJsRm1scDZuYU4zSkUxRUNhR2JpREhBS1VLUkgxSnEtcjFacGV2a3h5SUNIeWxKUE5DVy1JX0VCcTIxcnRUUndwclVoc0lQem15SUdtbHJQQ2JhZU1HZ3Bi?oc=5",
     "source": "Electrek",
     "publishedAt": "2026-05-07T07:00:00.000Z",
-    "collectedAt": "2026-09-02T00:14:33.731Z",
+    "collectedAt": "2026-09-03T00:16:10.983Z",
     "query": "Tesla 4680 dry electrode battery",
     "type": "news",
     "review": "unreviewed",
@@ -712,5 +532,187 @@
     "claim": "Tesla 4680 dry electrode battery",
     "sourceUrl": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNOUJxZXpMUnVFZ3h4T0w0bms4VDhKRUxSa0kzSnIwZ2ZIeXYzVm1QcjJQaVh0Y3JZM2swdHJYZk1DMEZIdnljSUJsRm1scDZuYU4zSkUxRUNhR2JpREhBS1VLUkgxSnEtcjFacGV2a3h5SUNIeWxKUE5DVy1JX0VCcTIxcnRUUndwclVoc0lQem15SUdtbHJQQ2JhZU1HZ3Bi?oc=5",
     "evidenceLevel": "low"
+  },
+  {
+    "title": "Tesla Opens Gigafactory Berlin to Startups to Crack 4680 Battery Bottleneck - Tech Times",
+    "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQX2lKV0lZV1kxUkdiaFZ6eWt3U0NtY2RwVTlvelhSVldNRzhRWFdWYkgxelJGdUJoMmtXUHZ1UEx2YXNNU19mLWFlNzlJQWdWT1JnSExsaUJ5cmtuOFFrZmwtQmlsRVozZU1xOTM0RnNRekVaOWtpWFRFZzZyeWVaUllRN0FNV0s2dE51RGt4UTRtTEdFMXdNZ3YtQUFsc1YxOWZkazlVaTd5S1NVaHNEel9CV2VkSE9kS2dXUDEtWkxrQQ?oc=5",
+    "source": "Tech Times",
+    "publishedAt": "2026-07-09T07:00:00.000Z",
+    "collectedAt": "2026-09-03T00:16:10.983Z",
+    "query": "Tesla 4680 dry electrode battery",
+    "type": "news",
+    "review": "unreviewed",
+    "topics": [
+      "fast-charge",
+      "dry-electrode"
+    ],
+    "companies": [
+      "tesla"
+    ],
+    "technologyRoutes": [
+      "4680"
+    ],
+    "entityIds": [
+      "tesla",
+      "fast-charge",
+      "dry-electrode",
+      "4680"
+    ],
+    "evidenceType": "news",
+    "claim": "Tesla 4680 dry electrode battery",
+    "sourceUrl": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQX2lKV0lZV1kxUkdiaFZ6eWt3U0NtY2RwVTlvelhSVldNRzhRWFdWYkgxelJGdUJoMmtXUHZ1UEx2YXNNU19mLWFlNzlJQWdWT1JnSExsaUJ5cmtuOFFrZmwtQmlsRVozZU1xOTM0RnNRekVaOWtpWFRFZzZyeWVaUllRN0FNV0s2dE51RGt4UTRtTEdFMXdNZ3YtQUFsc1YxOWZkazlVaTd5S1NVaHNEel9CV2VkSE9kS2dXUDEtWkxrQQ?oc=5",
+    "evidenceLevel": "low"
+  },
+  {
+    "title": "Tesla 4680 Battery Cell Production Is 'Getting Good': What It Means - BASENOR - Tesla Accessories",
+    "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPS1UyYnl3cmJ1ZDhiMURPYzhQNUMwSG4wTUNsc1pDandocGdVX1h5VHJQTjNXNTl4STFZTzNremI2UV9oTjhfdUU2UU1oVE13SjBpd1JpcUNpejlqbUlycjhsRVBRYk5Zb0FHTkdqZ3BUX2lXa3oxRUFNbFNvTUdOekxhb1FNT2I5djd6T2xQdHhDV2liUTRQMVVHbWZNaWxB?oc=5",
+    "source": "BASENOR - Tesla Accessories",
+    "publishedAt": "2026-03-07T08:00:00.000Z",
+    "collectedAt": "2026-09-03T00:16:10.983Z",
+    "query": "Tesla 4680 dry electrode battery",
+    "type": "news",
+    "review": "unreviewed",
+    "topics": [
+      "fast-charge",
+      "dry-electrode"
+    ],
+    "companies": [
+      "tesla"
+    ],
+    "technologyRoutes": [
+      "4680"
+    ],
+    "entityIds": [
+      "tesla",
+      "fast-charge",
+      "dry-electrode",
+      "4680"
+    ],
+    "evidenceType": "news",
+    "claim": "Tesla 4680 dry electrode battery",
+    "sourceUrl": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPS1UyYnl3cmJ1ZDhiMURPYzhQNUMwSG4wTUNsc1pDandocGdVX1h5VHJQTjNXNTl4STFZTzNremI2UV9oTjhfdUU2UU1oVE13SjBpd1JpcUNpejlqbUlycjhsRVBRYk5Zb0FHTkdqZ3BUX2lXa3oxRUFNbFNvTUdOekxhb1FNT2I5djd6T2xQdHhDV2liUTRQMVVHbWZNaWxB?oc=5",
+    "evidenceLevel": "high"
+  },
+  {
+    "title": "Sakuu Explores Challenges in Tesla’s DBE Technology Production - Battery Technology",
+    "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQa1BtTmR2WkVhbGllOFpuc1k5WEhZNEFtcnNxTkxncTlyblJsTV9CbW44LU9zTDUwb3VEd2VNM1ZXclVub1VmUWxjR1d4U1dPT0ZRR0g1NDZiaGM3SW9pWTRLODJSUDR4bzVCb3ctekFxVGcwRENZU2xFc2FwRGtZMzdTUkNUam01YTlfNmItdUtxclNaRVFTUi1nOE5WOHg5M3hPdHNSckxuc2xzbWZ5UkdIb2JXWHhZRVE?oc=5",
+    "source": "Battery Technology",
+    "publishedAt": "2026-02-05T08:00:00.000Z",
+    "collectedAt": "2026-09-03T00:16:10.983Z",
+    "query": "Tesla 4680 dry electrode battery",
+    "type": "news",
+    "review": "unreviewed",
+    "topics": [
+      "fast-charge",
+      "dry-electrode"
+    ],
+    "companies": [
+      "tesla"
+    ],
+    "technologyRoutes": [
+      "4680"
+    ],
+    "entityIds": [
+      "tesla",
+      "fast-charge",
+      "dry-electrode",
+      "4680"
+    ],
+    "evidenceType": "news",
+    "claim": "Tesla 4680 dry electrode battery",
+    "sourceUrl": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQa1BtTmR2WkVhbGllOFpuc1k5WEhZNEFtcnNxTkxncTlyblJsTV9CbW44LU9zTDUwb3VEd2VNM1ZXclVub1VmUWxjR1d4U1dPT0ZRR0g1NDZiaGM3SW9pWTRLODJSUDR4bzVCb3ctekFxVGcwRENZU2xFc2FwRGtZMzdTUkNUam01YTlfNmItdUtxclNaRVFTUi1nOE5WOHg5M3hPdHNSckxuc2xzbWZ5UkdIb2JXWHhZRVE?oc=5",
+    "evidenceLevel": "low"
+  },
+  {
+    "title": "Elon Musk says Tesla has solved dry electrode battery manufacturing at scale - driveteslacanada.ca",
+    "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOVmNGbHpzVGt4b1YydzhJU2VXWEY2VlJMX2E4Y2RQWGJIaVBzSTNQZ2d6b05FZTV2cE5Yb2ZydUlqa2plQUdJVGFVaWtoOUF1RV9mcFRQMlgxYUlZYmloajJscXZrNS0yZ3FNVl9mdl9yUnpHdE5wbHF6WXhEcHBIMGxmcDNHUWQ4dmNyaUFORUFlX0w2V0hCWGNFYkd1ZDFBZzl4eko5bFEyZlJ6c09R?oc=5",
+    "source": "driveteslacanada.ca",
+    "publishedAt": "2026-02-02T08:00:00.000Z",
+    "collectedAt": "2026-09-03T00:16:10.983Z",
+    "query": "Tesla 4680 dry electrode battery",
+    "type": "news",
+    "review": "unreviewed",
+    "topics": [
+      "fast-charge",
+      "dry-electrode"
+    ],
+    "companies": [
+      "tesla"
+    ],
+    "technologyRoutes": [
+      "4680"
+    ],
+    "entityIds": [
+      "tesla",
+      "fast-charge",
+      "dry-electrode",
+      "4680"
+    ],
+    "evidenceType": "news",
+    "claim": "Tesla 4680 dry electrode battery",
+    "sourceUrl": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOVmNGbHpzVGt4b1YydzhJU2VXWEY2VlJMX2E4Y2RQWGJIaVBzSTNQZ2d6b05FZTV2cE5Yb2ZydUlqa2plQUdJVGFVaWtoOUF1RV9mcFRQMlgxYUlZYmloajJscXZrNS0yZ3FNVl9mdl9yUnpHdE5wbHF6WXhEcHBIMGxmcDNHUWQ4dmNyaUFORUFlX0w2V0hCWGNFYkd1ZDFBZzl4eko5bFEyZlJ6c09R?oc=5",
+    "evidenceLevel": "high"
+  },
+  {
+    "title": "Tesla Plays Another \"Cost-Cutting Masterstroke\" - Gasgoo",
+    "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNOWJuX053UkhQejRYN0RCVDJIS08tU0g3NWZIdkEzdldUYWZRM1ZzMXVHeTdrYWIxZW04bk14UFVEVG44ZVFGSHQ2VktBYU5uWl9adi03TkZLRmtMMEFWNmJKbS14RkwyNElvQUhBak9HTUt3aXRoQXg1UXpQcFBOcFN6YkptMnFrdXpORENNUVdfYlpVdGZvQlVKamZCT3ZHNnZubVNHZkxlcEU?oc=5",
+    "source": "Gasgoo",
+    "publishedAt": "2026-02-04T08:00:00.000Z",
+    "collectedAt": "2026-09-03T00:16:10.983Z",
+    "query": "Tesla 4680 dry electrode battery",
+    "type": "news",
+    "review": "unreviewed",
+    "topics": [
+      "fast-charge",
+      "dry-electrode"
+    ],
+    "companies": [
+      "tesla"
+    ],
+    "technologyRoutes": [
+      "4680"
+    ],
+    "entityIds": [
+      "tesla",
+      "fast-charge",
+      "dry-electrode",
+      "4680"
+    ],
+    "evidenceType": "news",
+    "claim": "Tesla 4680 dry electrode battery",
+    "sourceUrl": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNOWJuX053UkhQejRYN0RCVDJIS08tU0g3NWZIdkEzdldUYWZRM1ZzMXVHeTdrYWIxZW04bk14UFVEVG44ZVFGSHQ2VktBYU5uWl9adi03TkZLRmtMMEFWNmJKbS14RkwyNElvQUhBak9HTUt3aXRoQXg1UXpQcFBOcFN6YkptMnFrdXpORENNUVdfYlpVdGZvQlVKamZCT3ZHNnZubVNHZkxlcEU?oc=5",
+    "evidenceLevel": "low"
+  },
+  {
+    "title": "Tesla’s Dry Cathode Breakthrough Could Drastically Reduce Battery Costs - teslahubs.com",
+    "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxObk1NMExVdW5nZE1vdVAxOHNLbXctRW1lNnltNDNxTC1vXzl4cy1hYXdGb0xYSHRUWEtKWG9WdmdTVGZudHlMaDBMMmRTMnZhNW9lY2dLOTY0RVhOSjZJN0QtNWJsODFyU1Jka2RVaE5PT0lxLV9CZDNKdmdCVlNqOWM5Z2pFNkdzUFdCX0x4akF2SVplNXI4a0N0emhSd08wNU5QcVgwWQ?oc=5",
+    "source": "teslahubs.com",
+    "publishedAt": "2026-05-25T07:00:00.000Z",
+    "collectedAt": "2026-09-03T00:16:10.983Z",
+    "query": "Tesla 4680 dry electrode battery",
+    "type": "news",
+    "review": "unreviewed",
+    "topics": [
+      "fast-charge",
+      "dry-electrode"
+    ],
+    "companies": [
+      "tesla"
+    ],
+    "technologyRoutes": [
+      "4680"
+    ],
+    "entityIds": [
+      "tesla",
+      "fast-charge",
+      "sodium-ion",
+      "dry-electrode",
+      "cathode",
+      "4680"
+    ],
+    "evidenceType": "news",
+    "claim": "Tesla 4680 dry electrode battery",
+    "sourceUrl": "https://news.google.com/rss/articles/CBMipwFBVV95cUxObk1NMExVdW5nZE1vdVAxOHNLbXctRW1lNnltNDNxTC1vXzl4cy1hYXdGb0xYSHRUWEtKWG9WdmdTVGZudHlMaDBMMmRTMnZhNW9lY2dLOTY0RVhOSjZJN0QtNWJsODFyU1Jka2RVaE5PT0lxLV9CZDNKdmdCVlNqOWM5Z2pFNkdzUFdCX0x4akF2SVplNXI4a0N0emhSd08wNU5QcVgwWQ?oc=5",
+    "evidenceLevel": "high"
   }
 ]
