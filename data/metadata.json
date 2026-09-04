@@ -1,12 +1,23 @@
 {
-  "collectedAt": "2026-09-03T00:16:10.983Z",
+  "collectedAt": "2026-09-04T00:06:39.551Z",
   "sources": {
     "papers": "OpenAlex API",
     "news": "Google News RSS",
     "videos": "YouTube search links",
     "patents": "Google Patents search links"
   },
-  "errors": [],
+  "errors": [
+    {
+      "source": "OpenAlex",
+      "query": "lithium ion battery fast charging mechanism",
+      "message": "429 Too Many Requests: https://api.openalex.org/works?search=lithium+ion+battery+fast+charging+mechanism&filter=from_publication_date%3A2025-01-01&sort=publication_date%3Adesc&per-page=4"
+    },
+    {
+      "source": "OpenAlex",
+      "query": "solid state battery electrolyte interface",
+      "message": "429 Too Many Requests: https://api.openalex.org/works?search=solid+state+battery+electrolyte+interface&filter=from_publication_date%3A2025-01-01&sort=publication_date%3Adesc&per-page=4"
+    }
+  ],
   "taxonomy": {
     "topics": [
       "fast-charge",
