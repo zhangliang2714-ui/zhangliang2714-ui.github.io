@@ -1,10 +1,170 @@
 [
   {
+    "title": "ELECTROCHEMICAL RECHARGEABLE BATTERY TECHNOLOGIES: A COMPARATIVE STATE-OF-THE-ART REVIEW",
+    "url": "https://doi.org/10.53464/jmte.02.2026.07",
+    "source": "Journal of marine Technology and Environment",
+    "publishedAt": "2026-09-16",
+    "collectedAt": "2026-09-17T00:32:43.283Z",
+    "query": "lithium ion battery fast charging mechanism",
+    "type": "paper",
+    "review": "unreviewed",
+    "topics": [
+      "fast-charge"
+    ],
+    "companies": [],
+    "technologyRoutes": [],
+    "entityIds": [
+      "fast-charge"
+    ],
+    "evidenceType": "paper",
+    "claim": "lithium ion battery fast charging mechanism",
+    "sourceUrl": "https://doi.org/10.53464/jmte.02.2026.07",
+    "evidenceLevel": "medium"
+  },
+  {
+    "title": "A novel demand response framework for the optimal design of hydrogen–ammonia hybrid microgrids",
+    "url": "https://openalex.org/W7162220708",
+    "source": "Strathprints: The University of Strathclyde institutional repository (University of Strathclyde)",
+    "publishedAt": "2026-09-15",
+    "collectedAt": "2026-09-17T00:32:43.283Z",
+    "query": "lithium ion battery fast charging mechanism",
+    "type": "paper",
+    "review": "unreviewed",
+    "topics": [
+      "fast-charge"
+    ],
+    "companies": [],
+    "technologyRoutes": [],
+    "entityIds": [
+      "fast-charge"
+    ],
+    "evidenceType": "paper",
+    "claim": "lithium ion battery fast charging mechanism",
+    "sourceUrl": "https://openalex.org/W7162220708",
+    "evidenceLevel": "medium"
+  },
+  {
+    "title": "Lunar electrical grid development concepts",
+    "url": "https://doi.org/10.1007/s44461-026-00016-9",
+    "source": "Space and Planetary Resources",
+    "publishedAt": "2026-09-15",
+    "collectedAt": "2026-09-17T00:32:43.283Z",
+    "query": "lithium ion battery fast charging mechanism",
+    "type": "paper",
+    "review": "unreviewed",
+    "topics": [
+      "fast-charge"
+    ],
+    "companies": [],
+    "technologyRoutes": [],
+    "entityIds": [
+      "fast-charge"
+    ],
+    "evidenceType": "paper",
+    "claim": "lithium ion battery fast charging mechanism",
+    "sourceUrl": "https://doi.org/10.1007/s44461-026-00016-9",
+    "evidenceLevel": "medium"
+  },
+  {
+    "title": "Enhanced electrochemical and optical properties of polyaniline-based Ag2O/NiO/ reduced carbon black nanocomposites for renewable energy applications",
+    "url": "https://doi.org/10.1038/s41598-026-69315-7",
+    "source": "Scientific Reports",
+    "publishedAt": "2026-09-15",
+    "collectedAt": "2026-09-17T00:32:43.283Z",
+    "query": "lithium ion battery fast charging mechanism",
+    "type": "paper",
+    "review": "unreviewed",
+    "topics": [
+      "fast-charge"
+    ],
+    "companies": [],
+    "technologyRoutes": [],
+    "entityIds": [
+      "fast-charge"
+    ],
+    "evidenceType": "paper",
+    "claim": "lithium ion battery fast charging mechanism",
+    "sourceUrl": "https://doi.org/10.1038/s41598-026-69315-7",
+    "evidenceLevel": "medium"
+  },
+  {
+    "title": "Radio frequency response as a non-destructive readout associated with tensile-strength degradation in nanoporous carbon electrodes",
+    "url": "https://doi.org/10.1038/s41598-026-70775-0",
+    "source": "Scientific Reports",
+    "publishedAt": "2026-09-15",
+    "collectedAt": "2026-09-17T00:32:43.283Z",
+    "query": "dry electrode lithium ion battery manufacturing",
+    "type": "paper",
+    "review": "unreviewed",
+    "topics": [
+      "dry-electrode",
+      "bms"
+    ],
+    "companies": [],
+    "technologyRoutes": [],
+    "entityIds": [
+      "dry-electrode",
+      "bms"
+    ],
+    "evidenceType": "paper",
+    "claim": "dry electrode lithium ion battery manufacturing",
+    "sourceUrl": "https://doi.org/10.1038/s41598-026-70775-0",
+    "evidenceLevel": "medium"
+  },
+  {
+    "title": "The Influence of Silicon Anode Morphology on Energy Storage Performance in Lithium-Ion Batteries",
+    "url": "https://doi.org/10.54254/2755-2721/2026.ch36926",
+    "source": "Applied and Computational Engineering",
+    "publishedAt": "2026-09-15",
+    "collectedAt": "2026-09-17T00:32:43.283Z",
+    "query": "dry electrode lithium ion battery manufacturing",
+    "type": "paper",
+    "review": "unreviewed",
+    "topics": [
+      "dry-electrode"
+    ],
+    "companies": [],
+    "technologyRoutes": [],
+    "entityIds": [
+      "fast-charge",
+      "dry-electrode",
+      "anode"
+    ],
+    "evidenceType": "paper",
+    "claim": "dry electrode lithium ion battery manufacturing",
+    "sourceUrl": "https://doi.org/10.54254/2755-2721/2026.ch36926",
+    "evidenceLevel": "medium"
+  },
+  {
+    "title": "Magnetic and Electrochemical Dynamics in Thermal Annealed Mg0.5Mn0.5Fe2O4",
+    "url": "https://doi.org/10.21203/rs.3.rs-10937292/v1",
+    "source": "Research Square",
+    "publishedAt": "2026-09-15",
+    "collectedAt": "2026-09-17T00:32:43.283Z",
+    "query": "dry electrode lithium ion battery manufacturing",
+    "type": "paper",
+    "review": "unreviewed",
+    "topics": [
+      "dry-electrode",
+      "thermal-management"
+    ],
+    "companies": [],
+    "technologyRoutes": [],
+    "entityIds": [
+      "dry-electrode",
+      "thermal-management"
+    ],
+    "evidenceType": "paper",
+    "claim": "dry electrode lithium ion battery manufacturing",
+    "sourceUrl": "https://doi.org/10.21203/rs.3.rs-10937292/v1",
+    "evidenceLevel": "medium"
+  },
+  {
     "title": "Characterization of polymeric binders for silicon anodes in next-generation lithium-ion batteries",
     "url": "https://doi.org/10.48676/unibo/amsdottorato/13135",
     "source": "AMS Dottorato Institutional Doctoral Theses Repository (University of Bologna)",
     "publishedAt": "2026-09-14",
-    "collectedAt": "2026-09-16T00:20:25.822Z",
+    "collectedAt": "2026-09-17T00:32:43.283Z",
     "query": "dry electrode lithium ion battery manufacturing",
     "type": "paper",
     "review": "unreviewed",
@@ -24,84 +184,109 @@
     "evidenceLevel": "medium"
   },
   {
-    "title": "New requirements for quality and in-process controls of next-generation batteries",
-    "url": "https://doi.org/10.48676/unibo/amsdottorato/12503",
-    "source": "AMS Dottorato Institutional Doctoral Theses Repository (University of Bologna)",
-    "publishedAt": "2026-09-14",
-    "collectedAt": "2026-09-16T00:20:25.822Z",
-    "query": "dry electrode lithium ion battery manufacturing",
+    "title": "Polyimide Separators Navigating Challenges and Opportunities in Next-Generation Lithium Batteries",
+    "url": "https://doi.org/10.53941/gefr.2026.100011",
+    "source": "Green energy and fuel research.",
+    "publishedAt": "2026-09-16",
+    "collectedAt": "2026-09-17T00:32:43.283Z",
+    "query": "lithium battery separator electrolyte safety",
     "type": "paper",
     "review": "unreviewed",
     "topics": [
-      "dry-electrode"
+      "separator",
+      "electrolyte"
     ],
     "companies": [],
     "technologyRoutes": [],
     "entityIds": [
-      "dry-electrode"
+      "fast-charge",
+      "sodium-ion",
+      "solid-state",
+      "separator",
+      "electrolyte",
+      "current-collector",
+      "bms",
+      "thermal-management"
     ],
     "evidenceType": "paper",
-    "claim": "dry electrode lithium ion battery manufacturing",
-    "sourceUrl": "https://doi.org/10.48676/unibo/amsdottorato/12503",
+    "claim": "lithium battery separator electrolyte safety",
+    "sourceUrl": "https://doi.org/10.53941/gefr.2026.100011",
     "evidenceLevel": "medium"
   },
   {
-    "title": "Current breakthroughs and critical perceptions on the application of artificial intelligence in power systems: A systematic review",
-    "url": "https://doi.org/10.65206/pajes.76574",
-    "source": "Pamukkale University Journal of Engineering Sciences",
-    "publishedAt": "2026-09-13",
-    "collectedAt": "2026-09-16T00:20:25.822Z",
-    "query": "dry electrode lithium ion battery manufacturing",
+    "title": "Functional Modification of Bacterial Cellulose and its Research Progress in the Field of Electrochemistry",
+    "url": "https://doi.org/10.54254/2755-2721/2026.ch36909",
+    "source": "Applied and Computational Engineering",
+    "publishedAt": "2026-09-15",
+    "collectedAt": "2026-09-17T00:32:43.283Z",
+    "query": "lithium battery separator electrolyte safety",
     "type": "paper",
     "review": "unreviewed",
     "topics": [
-      "dry-electrode"
+      "separator",
+      "electrolyte"
     ],
     "companies": [],
     "technologyRoutes": [],
     "entityIds": [
-      "dry-electrode",
-      "bms"
+      "fast-charge",
+      "sodium-ion",
+      "solid-state",
+      "separator",
+      "electrolyte",
+      "current-collector",
+      "bms",
+      "thermal-management"
     ],
     "evidenceType": "paper",
-    "claim": "dry electrode lithium ion battery manufacturing",
-    "sourceUrl": "https://doi.org/10.65206/pajes.76574",
+    "claim": "lithium battery separator electrolyte safety",
+    "sourceUrl": "https://doi.org/10.54254/2755-2721/2026.ch36909",
     "evidenceLevel": "medium"
   },
   {
-    "title": "Biogenic sulfuric acid-driven leaching coupled with ionic liquid-modified solvent extraction for enhanced copper recovery from waste telecommunications printed circuit boards",
-    "url": "https://doi.org/10.1038/s41598-026-70163-8",
-    "source": "Scientific Reports",
-    "publishedAt": "2026-09-13",
-    "collectedAt": "2026-09-16T00:20:25.822Z",
-    "query": "dry electrode lithium ion battery manufacturing",
+    "title": "Sodium-sulfur batteries break the voltage ceiling",
+    "url": "https://doi.org/10.20517/energyz.2026.35",
+    "source": "Energy Z",
+    "publishedAt": "2026-09-15",
+    "collectedAt": "2026-09-17T00:32:43.283Z",
+    "query": "lithium battery separator electrolyte safety",
     "type": "paper",
     "review": "unreviewed",
     "topics": [
-      "dry-electrode"
+      "separator",
+      "electrolyte"
     ],
     "companies": [],
-    "technologyRoutes": [],
+    "technologyRoutes": [
+      "sodium-hard-carbon"
+    ],
     "entityIds": [
-      "dry-electrode"
+      "fast-charge",
+      "sodium-ion",
+      "solid-state",
+      "separator",
+      "electrolyte",
+      "current-collector",
+      "bms",
+      "thermal-management",
+      "sodium-hard-carbon"
     ],
     "evidenceType": "paper",
-    "claim": "dry electrode lithium ion battery manufacturing",
-    "sourceUrl": "https://doi.org/10.1038/s41598-026-70163-8",
+    "claim": "lithium battery separator electrolyte safety",
+    "sourceUrl": "https://doi.org/10.20517/energyz.2026.35",
     "evidenceLevel": "medium"
   },
   {
-    "title": "MnO₂ catalyzed hydrothermal regeneration of spent LiFePO₄ cathode materials for sustainable lithium-ion battery recycling",
-    "url": "https://doi.org/10.21203/rs.3.rs-10790610/v1",
-    "source": "Research Square",
-    "publishedAt": "2026-09-04",
-    "collectedAt": "2026-09-16T00:20:25.822Z",
+    "title": "Improved activity of LMNO cathodes through strategic substitution with recycled battery waste metals",
+    "url": "https://doi.org/10.1016/j.cejgas.2026.100124",
+    "source": "Chemical Engineering Journal Green and Sustainable",
+    "publishedAt": "2026-09-07",
+    "collectedAt": "2026-09-17T00:32:43.283Z",
     "query": "lithium ion battery recycling black mass hydrometallurgy direct recycling",
     "type": "paper",
     "review": "unreviewed",
     "topics": [
-      "recycling",
-      "thermal-management"
+      "recycling"
     ],
     "companies": [],
     "technologyRoutes": [
@@ -119,11 +304,7 @@
       "li-cycle",
       "sodium-ion",
       "recycling",
-      "separator",
-      "electrolyte",
       "cathode",
-      "current-collector",
-      "thermal-management",
       "battery-recycling",
       "black-mass",
       "hydrometallurgy",
@@ -131,7 +312,7 @@
     ],
     "evidenceType": "paper",
     "claim": "lithium ion battery recycling black mass hydrometallurgy direct recycling",
-    "sourceUrl": "https://doi.org/10.21203/rs.3.rs-10790610/v1",
+    "sourceUrl": "https://doi.org/10.1016/j.cejgas.2026.100124",
     "evidenceLevel": "medium"
   }
 ]
