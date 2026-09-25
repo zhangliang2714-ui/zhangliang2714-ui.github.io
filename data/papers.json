@@ -1,1 +1,101 @@
-[]
+[
+  {
+    "title": "Manufacturing process modeling of bilayer cathode for graded thick electrode design",
+    "url": "https://doi.org/10.26434/chemrxiv.15009237/v1",
+    "source": "ChemRxiv",
+    "publishedAt": "2026-09-22",
+    "collectedAt": "2026-09-25T00:33:17.194Z",
+    "query": "dry electrode lithium ion battery manufacturing",
+    "type": "paper",
+    "review": "unreviewed",
+    "topics": [
+      "dry-electrode"
+    ],
+    "companies": [],
+    "technologyRoutes": [],
+    "entityIds": [
+      "sodium-ion",
+      "dry-electrode",
+      "cathode"
+    ],
+    "evidenceType": "paper",
+    "claim": "dry electrode lithium ion battery manufacturing",
+    "sourceUrl": "https://doi.org/10.26434/chemrxiv.15009237/v1",
+    "evidenceLevel": "medium"
+  },
+  {
+    "title": "Binder-conductive additive design for practical sulfurized polyacrylonitrile lithium–sulfur batteries",
+    "url": "https://doi.org/10.1007/s44503-026-00019-9",
+    "source": "Watt",
+    "publishedAt": "2026-09-20",
+    "collectedAt": "2026-09-25T00:33:17.194Z",
+    "query": "dry electrode lithium ion battery manufacturing",
+    "type": "paper",
+    "review": "unreviewed",
+    "topics": [
+      "dry-electrode",
+      "electrolyte"
+    ],
+    "companies": [],
+    "technologyRoutes": [],
+    "entityIds": [
+      "dry-electrode",
+      "electrolyte"
+    ],
+    "evidenceType": "paper",
+    "claim": "dry electrode lithium ion battery manufacturing",
+    "sourceUrl": "https://doi.org/10.1007/s44503-026-00019-9",
+    "evidenceLevel": "medium"
+  },
+  {
+    "title": "Comparative framework of solvent-assisted delamination for direct regeneration of NMC cathodes",
+    "url": "https://doi.org/10.1016/j.est.2026.124758",
+    "source": "Journal of Energy Storage",
+    "publishedAt": "2026-09-19",
+    "collectedAt": "2026-09-25T00:33:17.194Z",
+    "query": "dry electrode lithium ion battery manufacturing",
+    "type": "paper",
+    "review": "unreviewed",
+    "topics": [
+      "dry-electrode",
+      "recycling"
+    ],
+    "companies": [],
+    "technologyRoutes": [
+      "direct-regeneration"
+    ],
+    "entityIds": [
+      "sodium-ion",
+      "dry-electrode",
+      "cathode",
+      "recycling",
+      "direct-regeneration"
+    ],
+    "evidenceType": "paper",
+    "claim": "dry electrode lithium ion battery manufacturing",
+    "sourceUrl": "https://doi.org/10.1016/j.est.2026.124758",
+    "evidenceLevel": "medium"
+  },
+  {
+    "title": "Experimental evaluation of a new prototype lithium-sulfur cell for application in a single-engine electric aircraft",
+    "url": "https://doi.org/10.1016/j.est.2026.124798",
+    "source": "Journal of Energy Storage",
+    "publishedAt": "2026-09-19",
+    "collectedAt": "2026-09-25T00:33:17.194Z",
+    "query": "dry electrode lithium ion battery manufacturing",
+    "type": "paper",
+    "review": "unreviewed",
+    "topics": [
+      "dry-electrode"
+    ],
+    "companies": [],
+    "technologyRoutes": [],
+    "entityIds": [
+      "dry-electrode"
+    ],
+    "evidenceType": "paper",
+    "claim": "dry electrode lithium ion battery manufacturing",
+    "sourceUrl": "https://doi.org/10.1016/j.est.2026.124798",
+    "evidenceLevel": "medium"
+  }
+]
