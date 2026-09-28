@@ -1,5 +1,5 @@
 {
-  "collectedAt": "2026-09-27T00:36:25.149Z",
+  "collectedAt": "2026-09-28T00:47:01.152Z",
   "sources": {
     "papers": "OpenAlex API",
     "news": "Google News RSS",
@@ -16,11 +16,6 @@
       "source": "OpenAlex",
       "query": "dry electrode lithium ion battery manufacturing",
       "message": "429 Too Many Requests: https://api.openalex.org/works?search=dry+electrode+lithium+ion+battery+manufacturing&filter=from_publication_date%3A2025-01-01&sort=publication_date%3Adesc&per-page=4"
-    },
-    {
-      "source": "OpenAlex",
-      "query": "solid state battery electrolyte interface",
-      "message": "429 Too Many Requests: https://api.openalex.org/works?search=solid+state+battery+electrolyte+interface&filter=from_publication_date%3A2025-01-01&sort=publication_date%3Adesc&per-page=4"
     },
     {
       "source": "OpenAlex",

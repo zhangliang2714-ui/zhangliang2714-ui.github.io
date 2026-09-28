@@ -4,7 +4,7 @@
     "url": "https://doi.org/10.1016/j.jelechem.2026.120456",
     "source": "CityU Scholars",
     "publishedAt": "2026-10-15",
-    "collectedAt": "2026-09-27T00:36:25.149Z",
+    "collectedAt": "2026-09-28T00:47:01.152Z",
     "query": "lithium ion battery fast charging mechanism",
     "type": "paper",
     "review": "unreviewed",
@@ -28,7 +28,7 @@
     "url": "https://doi.org/10.1016/j.nanoms.2025.02.006",
     "source": "DOAJ (DOAJ: Directory of Open Access Journals)",
     "publishedAt": "2026-10-01",
-    "collectedAt": "2026-09-27T00:36:25.149Z",
+    "collectedAt": "2026-09-28T00:47:01.152Z",
     "query": "lithium ion battery fast charging mechanism",
     "type": "paper",
     "review": "unreviewed",
@@ -50,40 +50,34 @@
     "evidenceLevel": "medium"
   },
   {
-    "title": "Thermal characterization of lithium iron phosphate pouch cells using a spatially resolving isoperibolic calorimeter",
-    "url": "https://doi.org/10.1007/s10973-026-16168-x",
-    "source": "Journal of Thermal Analysis and Calorimetry",
-    "publishedAt": "2026-09-24",
-    "collectedAt": "2026-09-27T00:36:25.149Z",
+    "title": "Motivations and Challenges in Deploying Battery Energy Storage Systems (BESS) within Smart Grids",
+    "url": "https://doi.org/10.64518/uohjs.2026.06",
+    "source": "The University of Ha’il Journal of Science (UOHJS)",
+    "publishedAt": "2026-09-26",
+    "collectedAt": "2026-09-28T00:47:01.152Z",
     "query": "lithium ion battery fast charging mechanism",
     "type": "paper",
     "review": "unreviewed",
     "topics": [
-      "fast-charge",
-      "bms",
-      "thermal-management"
+      "fast-charge"
     ],
     "companies": [],
-    "technologyRoutes": [
-      "lfp"
-    ],
+    "technologyRoutes": [],
     "entityIds": [
       "fast-charge",
-      "bms",
-      "thermal-management",
-      "lfp"
+      "bms"
     ],
     "evidenceType": "paper",
     "claim": "lithium ion battery fast charging mechanism",
-    "sourceUrl": "https://doi.org/10.1007/s10973-026-16168-x",
+    "sourceUrl": "https://doi.org/10.64518/uohjs.2026.06",
     "evidenceLevel": "medium"
   },
   {
-    "title": "自修复粘结剂综述",
-    "url": "https://doi.org/10.68070/dxbw2w92",
-    "source": "应用科技研究",
-    "publishedAt": "2026-09-24",
-    "collectedAt": "2026-09-27T00:36:25.149Z",
+    "title": "Internet of Things: Foundations and Research Directions",
+    "url": "https://doi.org/10.65725/rchub/9788199461949",
+    "source": "OpenAlex",
+    "publishedAt": "2026-09-26",
+    "collectedAt": "2026-09-28T00:47:01.152Z",
     "query": "lithium ion battery fast charging mechanism",
     "type": "paper",
     "review": "unreviewed",
@@ -97,7 +91,91 @@
     ],
     "evidenceType": "paper",
     "claim": "lithium ion battery fast charging mechanism",
-    "sourceUrl": "https://doi.org/10.68070/dxbw2w92",
+    "sourceUrl": "https://doi.org/10.65725/rchub/9788199461949",
+    "evidenceLevel": "medium"
+  },
+  {
+    "title": "Flexible lithium‐ion batteries: Materials design, interfacial regulation, and strain‐adaptive device architectures",
+    "url": "https://doi.org/10.1002/flm2.70147",
+    "source": "FlexMat.",
+    "publishedAt": "2026-09-26",
+    "collectedAt": "2026-09-28T00:47:01.152Z",
+    "query": "solid state battery electrolyte interface",
+    "type": "paper",
+    "review": "unreviewed",
+    "topics": [
+      "solid-state",
+      "electrolyte"
+    ],
+    "companies": [],
+    "technologyRoutes": [],
+    "entityIds": [
+      "fast-charge",
+      "sodium-ion",
+      "solid-state",
+      "separator",
+      "electrolyte",
+      "current-collector"
+    ],
+    "evidenceType": "paper",
+    "claim": "solid state battery electrolyte interface",
+    "sourceUrl": "https://doi.org/10.1002/flm2.70147",
+    "evidenceLevel": "medium"
+  },
+  {
+    "title": "Chemical-Delithiation-Induced Surface Reconstruction in Layered Oxide Cathodes for High-Performance All-Solid-State Batteries",
+    "url": "https://doi.org/10.1021/jacs.6c11457",
+    "source": "Journal of the American Chemical Society",
+    "publishedAt": "2026-09-26",
+    "collectedAt": "2026-09-28T00:47:01.152Z",
+    "query": "solid state battery electrolyte interface",
+    "type": "paper",
+    "review": "unreviewed",
+    "topics": [
+      "solid-state",
+      "electrolyte",
+      "bms"
+    ],
+    "companies": [],
+    "technologyRoutes": [],
+    "entityIds": [
+      "lg-energy",
+      "fast-charge",
+      "sodium-ion",
+      "solid-state",
+      "electrolyte",
+      "cathode",
+      "bms"
+    ],
+    "evidenceType": "paper",
+    "claim": "solid state battery electrolyte interface",
+    "sourceUrl": "https://doi.org/10.1021/jacs.6c11457",
+    "evidenceLevel": "medium"
+  },
+  {
+    "title": "Molecular Modelling of Aqueous Batteries",
+    "url": "https://doi.org/10.1039/9781837674626-00311",
+    "source": "OpenAlex",
+    "publishedAt": "2026-09-25",
+    "collectedAt": "2026-09-28T00:47:01.152Z",
+    "query": "solid state battery electrolyte interface",
+    "type": "paper",
+    "review": "unreviewed",
+    "topics": [
+      "solid-state",
+      "electrolyte"
+    ],
+    "companies": [],
+    "technologyRoutes": [],
+    "entityIds": [
+      "fast-charge",
+      "sodium-ion",
+      "solid-state",
+      "electrolyte"
+    ],
+    "evidenceType": "paper",
+    "claim": "solid state battery electrolyte interface",
+    "sourceUrl": "https://doi.org/10.1039/9781837674626-00311",
     "evidenceLevel": "medium"
   }
 ]
