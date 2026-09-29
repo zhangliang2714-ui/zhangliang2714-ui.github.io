@@ -1,5 +1,5 @@
 {
-  "collectedAt": "2026-09-28T00:47:01.152Z",
+  "collectedAt": "2026-09-29T01:57:28.873Z",
   "sources": {
     "papers": "OpenAlex API",
     "news": "Google News RSS",
@@ -7,6 +7,11 @@
     "patents": "Google Patents search links"
   },
   "errors": [
+    {
+      "source": "OpenAlex",
+      "query": "lithium ion battery fast charging mechanism",
+      "message": "429 Too Many Requests: https://api.openalex.org/works?search=lithium+ion+battery+fast+charging+mechanism&filter=from_publication_date%3A2025-01-01&sort=publication_date%3Adesc&per-page=4"
+    },
     {
       "source": "OpenAlex",
       "query": "sodium ion battery hard carbon review",

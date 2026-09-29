@@ -1,105 +1,10 @@
 [
   {
-    "title": "Interface-engineered CuMoO4-LDH-rGO composites for high-performance asymmetric supercapacitor",
-    "url": "https://doi.org/10.1016/j.jelechem.2026.120456",
-    "source": "CityU Scholars",
-    "publishedAt": "2026-10-15",
-    "collectedAt": "2026-09-28T00:47:01.152Z",
-    "query": "lithium ion battery fast charging mechanism",
-    "type": "paper",
-    "review": "unreviewed",
-    "topics": [
-      "fast-charge"
-    ],
-    "companies": [],
-    "technologyRoutes": [],
-    "entityIds": [
-      "fast-charge",
-      "solid-state",
-      "electrolyte"
-    ],
-    "evidenceType": "paper",
-    "claim": "lithium ion battery fast charging mechanism",
-    "sourceUrl": "https://doi.org/10.1016/j.jelechem.2026.120456",
-    "evidenceLevel": "medium"
-  },
-  {
-    "title": "Construction of N-doped carbon encapsulated hollow FeSe",
-    "url": "https://doi.org/10.1016/j.nanoms.2025.02.006",
-    "source": "DOAJ (DOAJ: Directory of Open Access Journals)",
-    "publishedAt": "2026-10-01",
-    "collectedAt": "2026-09-28T00:47:01.152Z",
-    "query": "lithium ion battery fast charging mechanism",
-    "type": "paper",
-    "review": "unreviewed",
-    "topics": [
-      "fast-charge"
-    ],
-    "companies": [],
-    "technologyRoutes": [
-      "ncm-nca"
-    ],
-    "entityIds": [
-      "fast-charge",
-      "cathode",
-      "ncm-nca"
-    ],
-    "evidenceType": "paper",
-    "claim": "lithium ion battery fast charging mechanism",
-    "sourceUrl": "https://doi.org/10.1016/j.nanoms.2025.02.006",
-    "evidenceLevel": "medium"
-  },
-  {
-    "title": "Motivations and Challenges in Deploying Battery Energy Storage Systems (BESS) within Smart Grids",
-    "url": "https://doi.org/10.64518/uohjs.2026.06",
-    "source": "The University of Ha’il Journal of Science (UOHJS)",
-    "publishedAt": "2026-09-26",
-    "collectedAt": "2026-09-28T00:47:01.152Z",
-    "query": "lithium ion battery fast charging mechanism",
-    "type": "paper",
-    "review": "unreviewed",
-    "topics": [
-      "fast-charge"
-    ],
-    "companies": [],
-    "technologyRoutes": [],
-    "entityIds": [
-      "fast-charge",
-      "bms"
-    ],
-    "evidenceType": "paper",
-    "claim": "lithium ion battery fast charging mechanism",
-    "sourceUrl": "https://doi.org/10.64518/uohjs.2026.06",
-    "evidenceLevel": "medium"
-  },
-  {
-    "title": "Internet of Things: Foundations and Research Directions",
-    "url": "https://doi.org/10.65725/rchub/9788199461949",
-    "source": "OpenAlex",
-    "publishedAt": "2026-09-26",
-    "collectedAt": "2026-09-28T00:47:01.152Z",
-    "query": "lithium ion battery fast charging mechanism",
-    "type": "paper",
-    "review": "unreviewed",
-    "topics": [
-      "fast-charge"
-    ],
-    "companies": [],
-    "technologyRoutes": [],
-    "entityIds": [
-      "fast-charge"
-    ],
-    "evidenceType": "paper",
-    "claim": "lithium ion battery fast charging mechanism",
-    "sourceUrl": "https://doi.org/10.65725/rchub/9788199461949",
-    "evidenceLevel": "medium"
-  },
-  {
-    "title": "Flexible lithium‐ion batteries: Materials design, interfacial regulation, and strain‐adaptive device architectures",
-    "url": "https://doi.org/10.1002/flm2.70147",
-    "source": "FlexMat.",
-    "publishedAt": "2026-09-26",
-    "collectedAt": "2026-09-28T00:47:01.152Z",
+    "title": "“Lithium‐Free” Anode Solid‐State Batteries Enabled by 3D Structured Miec Garnet",
+    "url": "https://doi.org/10.1002/aenm.71648",
+    "source": "Advanced Energy Materials",
+    "publishedAt": "2026-09-27",
+    "collectedAt": "2026-09-29T01:57:28.873Z",
     "query": "solid state battery electrolyte interface",
     "type": "paper",
     "review": "unreviewed",
@@ -115,49 +20,80 @@
       "solid-state",
       "separator",
       "electrolyte",
+      "anode",
       "current-collector"
     ],
     "evidenceType": "paper",
     "claim": "solid state battery electrolyte interface",
-    "sourceUrl": "https://doi.org/10.1002/flm2.70147",
+    "sourceUrl": "https://doi.org/10.1002/aenm.71648",
     "evidenceLevel": "medium"
   },
   {
-    "title": "Chemical-Delithiation-Induced Surface Reconstruction in Layered Oxide Cathodes for High-Performance All-Solid-State Batteries",
-    "url": "https://doi.org/10.1021/jacs.6c11457",
-    "source": "Journal of the American Chemical Society",
-    "publishedAt": "2026-09-26",
-    "collectedAt": "2026-09-28T00:47:01.152Z",
+    "title": "Synergistic Spatiotemporal Regulation of Li + ‐Flux During Formation Enables Stable Solid‐Electrolyte Interphase for Ah‐Level Si/C Anode‐Based Quasi‐Solid‐State Lithium Batteries",
+    "url": "https://doi.org/10.1002/smll.76038",
+    "source": "Small",
+    "publishedAt": "2026-09-27",
+    "collectedAt": "2026-09-29T01:57:28.873Z",
     "query": "solid state battery electrolyte interface",
     "type": "paper",
     "review": "unreviewed",
     "topics": [
       "solid-state",
-      "electrolyte",
-      "bms"
+      "electrolyte"
     ],
     "companies": [],
     "technologyRoutes": [],
+    "entityIds": [
+      "fast-charge",
+      "sodium-ion",
+      "solid-state",
+      "electrolyte",
+      "anode"
+    ],
+    "evidenceType": "paper",
+    "claim": "solid state battery electrolyte interface",
+    "sourceUrl": "https://doi.org/10.1002/smll.76038",
+    "evidenceLevel": "medium"
+  },
+  {
+    "title": "Al-substituted Na5FeS4 as earth-abundant positive electrode active materials for all-solid-state sodium batteries",
+    "url": "https://doi.org/10.1038/s41598-026-71083-3",
+    "source": "Scientific Reports",
+    "publishedAt": "2026-09-27",
+    "collectedAt": "2026-09-29T01:57:28.873Z",
+    "query": "solid state battery electrolyte interface",
+    "type": "paper",
+    "review": "unreviewed",
+    "topics": [
+      "solid-state",
+      "electrolyte"
+    ],
+    "companies": [],
+    "technologyRoutes": [
+      "sodium-hard-carbon"
+    ],
     "entityIds": [
       "lg-energy",
       "fast-charge",
       "sodium-ion",
       "solid-state",
+      "dry-electrode",
+      "separator",
       "electrolyte",
-      "cathode",
-      "bms"
+      "current-collector",
+      "sodium-hard-carbon"
     ],
     "evidenceType": "paper",
     "claim": "solid state battery electrolyte interface",
-    "sourceUrl": "https://doi.org/10.1021/jacs.6c11457",
+    "sourceUrl": "https://doi.org/10.1038/s41598-026-71083-3",
     "evidenceLevel": "medium"
   },
   {
-    "title": "Molecular Modelling of Aqueous Batteries",
-    "url": "https://doi.org/10.1039/9781837674626-00311",
-    "source": "OpenAlex",
-    "publishedAt": "2026-09-25",
-    "collectedAt": "2026-09-28T00:47:01.152Z",
+    "title": "Green-synthesized Co₃O₄ nanoparticles: Structural, vibrational, magnetic, and electrochemical insights for high-performance energy storage applications",
+    "url": "https://doi.org/10.1016/j.nxnano.2026.100811",
+    "source": "Next Nanotechnology",
+    "publishedAt": "2026-09-26",
+    "collectedAt": "2026-09-29T01:57:28.873Z",
     "query": "solid state battery electrolyte interface",
     "type": "paper",
     "review": "unreviewed",
@@ -175,7 +111,7 @@
     ],
     "evidenceType": "paper",
     "claim": "solid state battery electrolyte interface",
-    "sourceUrl": "https://doi.org/10.1039/9781837674626-00311",
+    "sourceUrl": "https://doi.org/10.1016/j.nxnano.2026.100811",
     "evidenceLevel": "medium"
   }
 ]
