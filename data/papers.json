@@ -1,34 +1,32 @@
 [
   {
-    "title": "Decoupling Reversible Dynamics from Irreversible Aging: A Physics-Aware Framework for Robust SOH Diagnosis under Diverse Conditions",
-    "url": "https://doi.org/10.33961/jecst.2026.00829",
-    "source": "Journal of Electrochemical Science and Technology",
-    "publishedAt": "2026-11-03",
-    "collectedAt": "2026-11-05T02:28:28.691Z",
+    "title": "Operando Quantifying Li Plating Processes in Lithium‐Ion Pouch Cells",
+    "url": "https://doi.org/10.1002/ange.1710608",
+    "source": "Angewandte Chemie",
+    "publishedAt": "2026-11-04",
+    "collectedAt": "2026-11-06T02:26:09.080Z",
     "query": "lithium ion battery fast charging mechanism",
     "type": "paper",
     "review": "unreviewed",
     "topics": [
-      "fast-charge",
-      "bms"
+      "fast-charge"
     ],
     "companies": [],
     "technologyRoutes": [],
     "entityIds": [
-      "fast-charge",
-      "bms"
+      "fast-charge"
     ],
     "evidenceType": "paper",
     "claim": "lithium ion battery fast charging mechanism",
-    "sourceUrl": "https://doi.org/10.33961/jecst.2026.00829",
+    "sourceUrl": "https://doi.org/10.1002/ange.1710608",
     "evidenceLevel": "medium"
   },
   {
-    "title": "Electrical conductivity of cement composites incorporating carbon nanofillers for low-grade thermoelectric energy harvesting",
-    "url": "https://doi.org/10.1007/s40243-026-00407-0",
-    "source": "Materials for Renewable and Sustainable Energy",
-    "publishedAt": "2026-11-03",
-    "collectedAt": "2026-11-05T02:28:28.691Z",
+    "title": "Evidence-grounded decision support for cleantech innovation scouting: a system-oriented design-science study",
+    "url": "https://doi.org/10.3389/frai.2026.1890105",
+    "source": "Frontiers in Artificial Intelligence",
+    "publishedAt": "2026-11-04",
+    "collectedAt": "2026-11-06T02:26:09.080Z",
     "query": "lithium ion battery fast charging mechanism",
     "type": "paper",
     "review": "unreviewed",
@@ -39,67 +37,148 @@
     "technologyRoutes": [],
     "entityIds": [
       "fast-charge",
+      "bms"
+    ],
+    "evidenceType": "paper",
+    "claim": "lithium ion battery fast charging mechanism",
+    "sourceUrl": "https://doi.org/10.3389/frai.2026.1890105",
+    "evidenceLevel": "medium"
+  },
+  {
+    "title": "Toward Intelligent Thermal Fluids: AI-Driven Design of Zeta-Engineered Nanofluids and Self-Organized Thermal Transport Networks",
+    "url": "https://doi.org/10.21203/rs.3.rs-11352574/v1",
+    "source": "Research Square",
+    "publishedAt": "2026-11-04",
+    "collectedAt": "2026-11-06T02:26:09.080Z",
+    "query": "lithium ion battery fast charging mechanism",
+    "type": "paper",
+    "review": "unreviewed",
+    "topics": [
+      "fast-charge",
+      "thermal-management"
+    ],
+    "companies": [],
+    "technologyRoutes": [],
+    "entityIds": [
+      "fast-charge",
+      "thermal-management"
+    ],
+    "evidenceType": "paper",
+    "claim": "lithium ion battery fast charging mechanism",
+    "sourceUrl": "https://doi.org/10.21203/rs.3.rs-11352574/v1",
+    "evidenceLevel": "medium"
+  },
+  {
+    "title": "Engineering constraints in rechargeable batteries from material performance to full cell validation",
+    "url": "https://doi.org/10.3389/fchem.2026.1962145",
+    "source": "Frontiers in Chemistry",
+    "publishedAt": "2026-11-04",
+    "collectedAt": "2026-11-06T02:26:09.080Z",
+    "query": "lithium ion battery fast charging mechanism",
+    "type": "paper",
+    "review": "unreviewed",
+    "topics": [
+      "fast-charge"
+    ],
+    "companies": [],
+    "technologyRoutes": [],
+    "entityIds": [
+      "fast-charge"
+    ],
+    "evidenceType": "paper",
+    "claim": "lithium ion battery fast charging mechanism",
+    "sourceUrl": "https://doi.org/10.3389/fchem.2026.1962145",
+    "evidenceLevel": "medium"
+  },
+  {
+    "title": "From the Rock Floor to the Cloud: A Systematic Review of State-of-the-Art NLP in Battery Life Cycle",
+    "url": "https://doi.org/10.3390/ai7110459",
+    "source": "AI",
+    "publishedAt": "2026-11-04",
+    "collectedAt": "2026-11-06T02:26:09.080Z",
+    "query": "sodium ion battery hard carbon review",
+    "type": "paper",
+    "review": "unreviewed",
+    "topics": [
+      "sodium-ion"
+    ],
+    "companies": [],
+    "technologyRoutes": [
+      "sodium-hard-carbon"
+    ],
+    "entityIds": [
+      "sodium-ion",
+      "anode",
+      "bms",
+      "sodium-hard-carbon"
+    ],
+    "evidenceType": "paper",
+    "claim": "sodium ion battery hard carbon review",
+    "sourceUrl": "https://doi.org/10.3390/ai7110459",
+    "evidenceLevel": "medium"
+  },
+  {
+    "title": "Engineering Electro-Regenerative Microenvironment for Bone Repair: Advances in Electroactive Biomaterials",
+    "url": "https://doi.org/10.53941/rmd.2026.100016",
+    "source": "Regenerative medicine and dentistry.",
+    "publishedAt": "2026-11-03",
+    "collectedAt": "2026-11-06T02:26:09.080Z",
+    "query": "sodium ion battery hard carbon review",
+    "type": "paper",
+    "review": "unreviewed",
+    "topics": [
+      "sodium-ion"
+    ],
+    "companies": [],
+    "technologyRoutes": [
+      "sodium-hard-carbon"
+    ],
+    "entityIds": [
+      "sodium-ion",
       "separator",
       "electrolyte",
-      "current-collector"
+      "anode",
+      "current-collector",
+      "sodium-hard-carbon"
     ],
     "evidenceType": "paper",
-    "claim": "lithium ion battery fast charging mechanism",
-    "sourceUrl": "https://doi.org/10.1007/s40243-026-00407-0",
+    "claim": "sodium ion battery hard carbon review",
+    "sourceUrl": "https://doi.org/10.53941/rmd.2026.100016",
     "evidenceLevel": "medium"
   },
   {
-    "title": "Quantum Sensing of Lithium Ions with Defect-Engineered Recognition Pockets in a TEMPO-Modified Covalent Organic Framework",
-    "url": "https://doi.org/10.1021/jacs.6c16503",
-    "source": "Journal of the American Chemical Society",
+    "title": "Na 2 S Cathodes for Safer and High‐Energy Sodium‐Ion Storage",
+    "url": "https://doi.org/10.1002/smll.76523",
+    "source": "Small",
     "publishedAt": "2026-11-03",
-    "collectedAt": "2026-11-05T02:28:28.691Z",
-    "query": "lithium ion battery fast charging mechanism",
+    "collectedAt": "2026-11-06T02:26:09.080Z",
+    "query": "sodium ion battery hard carbon review",
     "type": "paper",
     "review": "unreviewed",
     "topics": [
-      "fast-charge",
-      "bms"
+      "sodium-ion"
     ],
     "companies": [],
-    "technologyRoutes": [],
+    "technologyRoutes": [
+      "sodium-hard-carbon"
+    ],
     "entityIds": [
-      "fast-charge",
-      "bms"
+      "sodium-ion",
+      "cathode",
+      "anode",
+      "sodium-hard-carbon"
     ],
     "evidenceType": "paper",
-    "claim": "lithium ion battery fast charging mechanism",
-    "sourceUrl": "https://doi.org/10.1021/jacs.6c16503",
+    "claim": "sodium ion battery hard carbon review",
+    "sourceUrl": "https://doi.org/10.1002/smll.76523",
     "evidenceLevel": "medium"
   },
   {
-    "title": "Out-of-Plane Oscillating Electric Fields Unlock Low-Temperature Nonequilibrium Superionicity in Quasi-Two-Dimensional AgCrSe2",
-    "url": "https://doi.org/10.21203/rs.3.rs-11474705/v1",
-    "source": "Research Square",
-    "publishedAt": "2026-11-03",
-    "collectedAt": "2026-11-05T02:28:28.691Z",
-    "query": "lithium ion battery fast charging mechanism",
-    "type": "paper",
-    "review": "unreviewed",
-    "topics": [
-      "fast-charge"
-    ],
-    "companies": [],
-    "technologyRoutes": [],
-    "entityIds": [
-      "fast-charge"
-    ],
-    "evidenceType": "paper",
-    "claim": "lithium ion battery fast charging mechanism",
-    "sourceUrl": "https://doi.org/10.21203/rs.3.rs-11474705/v1",
-    "evidenceLevel": "medium"
-  },
-  {
-    "title": "Spiers Memorial Lecture. Bridging electrochemical devices across Earth and space: A planetary perspective",
-    "url": "https://doi.org/10.1039/d6fd00142d",
-    "source": "Faraday Discussions",
-    "publishedAt": "2026-11-02",
-    "collectedAt": "2026-11-05T02:28:28.691Z",
+    "title": "Sequential Electrochemical Construction of Hierarchical LIG/PPy/MnO2 Microsupercapacitors with High Areal Capacitance and Device-Level Stability",
+    "url": "https://doi.org/10.1021/acsomega.6c10408",
+    "source": "ACS Omega",
+    "publishedAt": "2026-11-04",
+    "collectedAt": "2026-11-06T02:26:09.080Z",
     "query": "dry electrode lithium ion battery manufacturing",
     "type": "paper",
     "review": "unreviewed",
@@ -113,84 +192,131 @@
     ],
     "evidenceType": "paper",
     "claim": "dry electrode lithium ion battery manufacturing",
-    "sourceUrl": "https://doi.org/10.1039/d6fd00142d",
+    "sourceUrl": "https://doi.org/10.1021/acsomega.6c10408",
     "evidenceLevel": "medium"
   },
   {
-    "title": "Lead-free soft hybrid materials for piezoelectric sensors: A paradigm shift from toxic lead-based ceramics to sustainable electronics",
-    "url": "https://doi.org/10.1016/j.nxmate.2026.103928",
-    "source": "Next Materials",
-    "publishedAt": "2026-11-02",
-    "collectedAt": "2026-11-05T02:28:28.691Z",
-    "query": "dry electrode lithium ion battery manufacturing",
-    "type": "paper",
-    "review": "unreviewed",
-    "topics": [
-      "dry-electrode"
-    ],
-    "companies": [],
-    "technologyRoutes": [],
-    "entityIds": [
-      "dry-electrode",
-      "separator",
-      "electrolyte",
-      "current-collector"
-    ],
-    "evidenceType": "paper",
-    "claim": "dry electrode lithium ion battery manufacturing",
-    "sourceUrl": "https://doi.org/10.1016/j.nxmate.2026.103928",
-    "evidenceLevel": "medium"
-  },
-  {
-    "title": "Amal Bio-Energy: Hydrogen production throughout methane pyrolysis from purified biogas of agricultural wastes, for distributed generation",
-    "url": "https://doi.org/10.21203/rs.3.rs-11555238/v1",
-    "source": "Research Square",
-    "publishedAt": "2026-11-02",
-    "collectedAt": "2026-11-05T02:28:28.691Z",
-    "query": "dry electrode lithium ion battery manufacturing",
-    "type": "paper",
-    "review": "unreviewed",
-    "topics": [
-      "dry-electrode"
-    ],
-    "companies": [],
-    "technologyRoutes": [],
-    "entityIds": [
-      "dry-electrode"
-    ],
-    "evidenceType": "paper",
-    "claim": "dry electrode lithium ion battery manufacturing",
-    "sourceUrl": "https://doi.org/10.21203/rs.3.rs-11555238/v1",
-    "evidenceLevel": "medium"
-  },
-  {
-    "title": "A novel method for mechanical battery abuse testing: Planetary mill calorimetric evaluation of all-solid-state battery materials and their safety",
-    "url": "https://doi.org/10.1016/j.est.2026.125365",
-    "source": "Journal of Energy Storage",
-    "publishedAt": "2026-11-02",
-    "collectedAt": "2026-11-05T02:28:28.691Z",
-    "query": "dry electrode lithium ion battery manufacturing",
+    "title": "Insights into silicon solid-state battery mechanical degradations with Operando FIB-SEM and Digital image correlation",
+    "url": "https://openalex.org/W7204618756",
+    "source": "HAL",
+    "publishedAt": "2026-11-16",
+    "collectedAt": "2026-11-06T02:26:09.080Z",
+    "query": "solid state battery electrolyte interface",
     "type": "paper",
     "review": "unreviewed",
     "topics": [
       "solid-state",
-      "dry-electrode"
+      "electrolyte"
     ],
     "companies": [],
     "technologyRoutes": [],
     "entityIds": [
       "lg-energy",
+      "fast-charge",
+      "sodium-ion",
       "solid-state",
-      "dry-electrode",
-      "separator",
-      "electrolyte",
-      "current-collector",
-      "bms",
-      "thermal-management"
+      "electrolyte"
     ],
     "evidenceType": "paper",
-    "claim": "dry electrode lithium ion battery manufacturing",
-    "sourceUrl": "https://doi.org/10.1016/j.est.2026.125365",
+    "claim": "solid state battery electrolyte interface",
+    "sourceUrl": "https://openalex.org/W7204618756",
+    "evidenceLevel": "medium"
+  },
+  {
+    "title": "Advanced multimodal multiscale characterization workflow",
+    "url": "https://openalex.org/W7217130375",
+    "source": "HAL",
+    "publishedAt": "2026-11-16",
+    "collectedAt": "2026-11-06T02:26:09.080Z",
+    "query": "solid state battery electrolyte interface",
+    "type": "paper",
+    "review": "unreviewed",
+    "topics": [
+      "solid-state",
+      "electrolyte"
+    ],
+    "companies": [],
+    "technologyRoutes": [],
+    "entityIds": [
+      "fast-charge",
+      "sodium-ion",
+      "solid-state",
+      "electrolyte"
+    ],
+    "evidenceType": "paper",
+    "claim": "solid state battery electrolyte interface",
+    "sourceUrl": "https://openalex.org/W7217130375",
+    "evidenceLevel": "medium"
+  },
+  {
+    "title": "Fabrication of polyaniline-encapsulated ammonium vanadate for high-performance aqueous zinc-ion storage",
+    "url": "https://doi.org/10.21203/rs.3.rs-11246497/v1",
+    "source": "Research Square",
+    "publishedAt": "2026-11-03",
+    "collectedAt": "2026-11-06T02:26:09.080Z",
+    "query": "lithium battery separator electrolyte safety",
+    "type": "paper",
+    "review": "unreviewed",
+    "topics": [
+      "separator",
+      "electrolyte"
+    ],
+    "companies": [],
+    "technologyRoutes": [
+      "ncm-nca"
+    ],
+    "entityIds": [
+      "fast-charge",
+      "sodium-ion",
+      "solid-state",
+      "separator",
+      "electrolyte",
+      "cathode",
+      "current-collector",
+      "bms",
+      "thermal-management",
+      "ncm-nca"
+    ],
+    "evidenceType": "paper",
+    "claim": "lithium battery separator electrolyte safety",
+    "sourceUrl": "https://doi.org/10.21203/rs.3.rs-11246497/v1",
+    "evidenceLevel": "medium"
+  },
+  {
+    "title": "A comprehensive review of sustainable recycling technologies and circular economy strategies for toy lithium battery waste",
+    "url": "https://doi.org/10.1007/s44274-026-01196-z",
+    "source": "Discover Environment",
+    "publishedAt": "2026-11-03",
+    "collectedAt": "2026-11-06T02:26:09.080Z",
+    "query": "lithium ion battery recycling black mass hydrometallurgy direct recycling",
+    "type": "paper",
+    "review": "unreviewed",
+    "topics": [
+      "recycling"
+    ],
+    "companies": [],
+    "technologyRoutes": [
+      "battery-recycling",
+      "black-mass",
+      "hydrometallurgy",
+      "direct-regeneration"
+    ],
+    "entityIds": [
+      "catl",
+      "brunp",
+      "gem",
+      "huayou",
+      "redwood",
+      "li-cycle",
+      "recycling",
+      "battery-recycling",
+      "black-mass",
+      "hydrometallurgy",
+      "direct-regeneration"
+    ],
+    "evidenceType": "paper",
+    "claim": "lithium ion battery recycling black mass hydrometallurgy direct recycling",
+    "sourceUrl": "https://doi.org/10.1007/s44274-026-01196-z",
     "evidenceLevel": "medium"
   }
 ]
