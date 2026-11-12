@@ -1,38 +1,12 @@
 {
-  "collectedAt": "2026-11-11T01:56:13.924Z",
+  "collectedAt": "2026-11-12T02:59:35.764Z",
   "sources": {
     "papers": "OpenAlex API",
     "news": "Google News RSS",
     "videos": "YouTube search links",
     "patents": "Google Patents search links"
   },
-  "errors": [
-    {
-      "source": "Google News RSS",
-      "query": "CATL battery technology",
-      "message": "503 Service Unavailable: https://news.google.com/rss/search?q=CATL%20battery%20technology&hl=en-US&gl=US&ceid=US:en"
-    },
-    {
-      "source": "Google News RSS",
-      "query": "BYD blade battery sodium ion",
-      "message": "503 Service Unavailable: https://news.google.com/rss/search?q=BYD%20blade%20battery%20sodium%20ion&hl=en-US&gl=US&ceid=US:en"
-    },
-    {
-      "source": "Google News RSS",
-      "query": "Tesla 4680 dry electrode battery",
-      "message": "503 Service Unavailable: https://news.google.com/rss/search?q=Tesla%204680%20dry%20electrode%20battery&hl=en-US&gl=US&ceid=US:en"
-    },
-    {
-      "source": "Google News RSS",
-      "query": "sodium ion battery industry",
-      "message": "503 Service Unavailable: https://news.google.com/rss/search?q=sodium%20ion%20battery%20industry&hl=en-US&gl=US&ceid=US:en"
-    },
-    {
-      "source": "Google News RSS",
-      "query": "China lithium battery recycling black mass",
-      "message": "503 Service Unavailable: https://news.google.com/rss/search?q=China%20lithium%20battery%20recycling%20black%20mass&hl=en-US&gl=US&ceid=US:en"
-    }
-  ],
+  "errors": [],
   "taxonomy": {
     "topics": [
       "fast-charge",
