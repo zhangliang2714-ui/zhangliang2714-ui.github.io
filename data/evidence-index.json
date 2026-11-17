@@ -1,7 +1,55 @@
 {
-  "generatedAt": "2026-11-16T02:07:52.290Z",
+  "generatedAt": "2026-11-17T04:28:41.068Z",
   "schema": "battery-evidence-index-v1",
   "items": [
+    {
+      "id": "https://doi.org/10.1038/s41467-026-79524-3",
+      "title": "Encapsulating an iron complex within a heme and anthraquinone codecorated capsule for multiphoton C(sp3)−H bond oxygenation",
+      "claim": "lithium ion battery fast charging mechanism",
+      "url": "https://doi.org/10.1038/s41467-026-79524-3",
+      "source": "Nature Communications",
+      "sourceUrl": "https://doi.org/10.1038/s41467-026-79524-3",
+      "publishedAt": "2026-11-16",
+      "collectedAt": "2026-11-17T04:28:41.068Z",
+      "evidenceType": "paper",
+      "type": "paper",
+      "entityIds": [
+        "fast-charge",
+        "cathode",
+        "ncm-nca"
+      ],
+      "topics": [
+        "fast-charge"
+      ],
+      "companies": [],
+      "technologyRoutes": [
+        "ncm-nca"
+      ],
+      "evidenceLevel": "medium",
+      "review": "unreviewed"
+    },
+    {
+      "id": "https://doi.org/10.1038/s41598-026-80576-0",
+      "title": "Charging schedule as a design variable for active harmonic filter sizing in unbalanced low-voltage networks: when do optimisation and V2G add value?",
+      "claim": "lithium ion battery fast charging mechanism",
+      "url": "https://doi.org/10.1038/s41598-026-80576-0",
+      "source": "Scientific Reports",
+      "sourceUrl": "https://doi.org/10.1038/s41598-026-80576-0",
+      "publishedAt": "2026-11-15",
+      "collectedAt": "2026-11-17T04:28:41.068Z",
+      "evidenceType": "paper",
+      "type": "paper",
+      "entityIds": [
+        "fast-charge"
+      ],
+      "topics": [
+        "fast-charge"
+      ],
+      "companies": [],
+      "technologyRoutes": [],
+      "evidenceLevel": "medium",
+      "review": "unreviewed"
+    },
     {
       "id": "https://doi.org/10.1016/j.commatsci.2026.115242",
       "title": "AutoREC: A reinforcement learning platform for equivalent circuit model generation",
@@ -10,7 +58,7 @@
       "source": "Computational Materials Science",
       "sourceUrl": "https://doi.org/10.1016/j.commatsci.2026.115242",
       "publishedAt": "2026-11-14",
-      "collectedAt": "2026-11-16T02:07:52.290Z",
+      "collectedAt": "2026-11-17T04:28:41.068Z",
       "evidenceType": "paper",
       "type": "paper",
       "entityIds": [
@@ -35,7 +83,7 @@
       "source": "Journal of Power Sources",
       "sourceUrl": "https://doi.org/10.1016/j.jpowsour.2026.242010",
       "publishedAt": "2026-11-14",
-      "collectedAt": "2026-11-16T02:07:52.290Z",
+      "collectedAt": "2026-11-17T04:28:41.068Z",
       "evidenceType": "paper",
       "type": "paper",
       "entityIds": [
@@ -56,73 +104,23 @@
       "review": "unreviewed"
     },
     {
-      "id": "https://doi.org/10.1038/s41598-026-75154-3",
-      "title": "Unravelling capacity fading in valve regulated lead acid battery pack for e-Rickshaw applications",
-      "claim": "lithium ion battery fast charging mechanism",
-      "url": "https://doi.org/10.1038/s41598-026-75154-3",
-      "source": "Scientific Reports",
-      "sourceUrl": "https://doi.org/10.1038/s41598-026-75154-3",
-      "publishedAt": "2026-11-14",
-      "collectedAt": "2026-11-16T02:07:52.290Z",
-      "evidenceType": "paper",
-      "type": "paper",
-      "entityIds": [
-        "fast-charge",
-        "thermal-management"
-      ],
-      "topics": [
-        "fast-charge"
-      ],
-      "companies": [],
-      "technologyRoutes": [],
-      "evidenceLevel": "medium",
-      "review": "unreviewed"
-    },
-    {
       "id": "https://doi.org/10.1007/s11164-026-06170-1",
       "title": "Setaria viridis-inspired hierarchical Co3O4/CoS nanowire/nanosheet architecture on carbon cloth for advanced lithium storage",
-      "claim": "lithium ion battery fast charging mechanism",
+      "claim": "sodium ion battery hard carbon review",
       "url": "https://doi.org/10.1007/s11164-026-06170-1",
       "source": "Research on Chemical Intermediates",
       "sourceUrl": "https://doi.org/10.1007/s11164-026-06170-1",
       "publishedAt": "2026-11-14",
-      "collectedAt": "2026-11-16T02:07:52.290Z",
+      "collectedAt": "2026-11-17T04:28:41.068Z",
       "evidenceType": "paper",
       "type": "paper",
       "entityIds": [
-        "fast-charge"
-      ],
-      "topics": [
-        "fast-charge"
-      ],
-      "companies": [],
-      "technologyRoutes": [],
-      "evidenceLevel": "medium",
-      "review": "unreviewed"
-    },
-    {
-      "id": "https://doi.org/10.1126/sciadv.ael0210",
-      "title": "Time-evolved hetero-alkali interphases enable long-life sulfide-based anode-free solid-state batteries",
-      "claim": "sodium ion battery hard carbon review",
-      "url": "https://doi.org/10.1126/sciadv.ael0210",
-      "source": "Science Advances",
-      "sourceUrl": "https://doi.org/10.1126/sciadv.ael0210",
-      "publishedAt": "2026-11-13",
-      "collectedAt": "2026-11-16T02:07:52.290Z",
-      "evidenceType": "paper",
-      "type": "paper",
-      "entityIds": [
-        "lg-energy",
-        "fast-charge",
         "sodium-ion",
-        "solid-state",
-        "electrolyte",
         "anode",
         "sodium-hard-carbon"
       ],
       "topics": [
-        "sodium-ion",
-        "solid-state"
+        "sodium-ion"
       ],
       "companies": [],
       "technologyRoutes": [
@@ -132,34 +130,88 @@
       "review": "unreviewed"
     },
     {
-      "id": "https://doi.org/10.1021/acs.chemmater.6c01944",
-      "title": "Investigating the Role of Silica Coating toward Artificial Solid Electrolyte Interphase Formation for Na-Ion Anodes",
+      "id": "https://doi.org/10.1002/adma.75698",
+      "title": "Spin‐State Regulation Engineering of Pyrophosphate‐Based Polyanionic Cathodes for Ultra‐Long‐Life Sodium‐Ion Batteries",
       "claim": "sodium ion battery hard carbon review",
-      "url": "https://doi.org/10.1021/acs.chemmater.6c01944",
-      "source": "Chemistry of Materials",
-      "sourceUrl": "https://doi.org/10.1021/acs.chemmater.6c01944",
-      "publishedAt": "2026-11-13",
-      "collectedAt": "2026-11-16T02:07:52.290Z",
+      "url": "https://doi.org/10.1002/adma.75698",
+      "source": "Advanced Materials",
+      "sourceUrl": "https://doi.org/10.1002/adma.75698",
+      "publishedAt": "2026-11-14",
+      "collectedAt": "2026-11-17T04:28:41.068Z",
       "evidenceType": "paper",
       "type": "paper",
       "entityIds": [
-        "fast-charge",
         "sodium-ion",
-        "solid-state",
         "separator",
         "electrolyte",
+        "cathode",
         "anode",
         "current-collector",
         "sodium-hard-carbon"
       ],
       "topics": [
-        "sodium-ion",
-        "electrolyte"
+        "sodium-ion"
       ],
       "companies": [],
       "technologyRoutes": [
         "sodium-hard-carbon"
       ],
+      "evidenceLevel": "medium",
+      "review": "unreviewed"
+    },
+    {
+      "id": "https://doi.org/10.1002/sst3.70071",
+      "title": "Closing the Loop From Manufacturing Defects to Field Failures: Root Causes, Detection, and Quality Control Strategies for Preventing Thermal Runaway in Lithium‐Ion Batteries",
+      "claim": "sodium ion battery hard carbon review",
+      "url": "https://doi.org/10.1002/sst3.70071",
+      "source": "Safety Science and Technology",
+      "sourceUrl": "https://doi.org/10.1002/sst3.70071",
+      "publishedAt": "2026-11-14",
+      "collectedAt": "2026-11-17T04:28:41.068Z",
+      "evidenceType": "paper",
+      "type": "paper",
+      "entityIds": [
+        "sodium-ion",
+        "dry-electrode",
+        "separator",
+        "anode",
+        "current-collector",
+        "bms",
+        "thermal-management",
+        "sodium-hard-carbon"
+      ],
+      "topics": [
+        "sodium-ion",
+        "thermal-management"
+      ],
+      "companies": [],
+      "technologyRoutes": [
+        "sodium-hard-carbon"
+      ],
+      "evidenceLevel": "medium",
+      "review": "unreviewed"
+    },
+    {
+      "id": "https://doi.org/10.31661/jbpe.v0i0.2508-1976",
+      "title": "Flexible Neural Interfaces based on Graphene–PAN Composite for the Treatment of Constipation via Sacral Nerve Stimulation",
+      "claim": "dry electrode lithium ion battery manufacturing",
+      "url": "https://doi.org/10.31661/jbpe.v0i0.2508-1976",
+      "source": "Journal of Biomedical Physics and Engineering",
+      "sourceUrl": "https://doi.org/10.31661/jbpe.v0i0.2508-1976",
+      "publishedAt": "2026-12-01",
+      "collectedAt": "2026-11-17T04:28:41.068Z",
+      "evidenceType": "paper",
+      "type": "paper",
+      "entityIds": [
+        "solid-state",
+        "dry-electrode",
+        "electrolyte"
+      ],
+      "topics": [
+        "dry-electrode"
+      ],
+      "companies": [],
+      "technologyRoutes": [],
       "evidenceLevel": "medium",
       "review": "unreviewed"
     },
@@ -171,7 +223,7 @@
       "source": "HAL",
       "sourceUrl": "https://openalex.org/W7225840497",
       "publishedAt": "2026-11-16",
-      "collectedAt": "2026-11-16T02:07:52.290Z",
+      "collectedAt": "2026-11-17T04:28:41.068Z",
       "evidenceType": "paper",
       "type": "paper",
       "entityIds": [
@@ -191,51 +243,21 @@
       "review": "unreviewed"
     },
     {
-      "id": "https://doi.org/10.1002/adfm.79609",
-      "title": "Dual Molecular Confinement Engineering of Graphene Oxide‐Based Monovalent Cation‐Selective Membrane for Osmotic Energy Harvesting and Chlor‐Alkali Process",
+      "id": "https://doi.org/10.1002/anie.6121408",
+      "title": "Unveiling the Intrinsic Disparity of Ethylene Carbonate and Fluoroethylene Carbonate in Lithium Metal Battery Exceeding 600 Wh kg −1",
       "claim": "dry electrode lithium ion battery manufacturing",
-      "url": "https://doi.org/10.1002/adfm.79609",
-      "source": "Advanced Functional Materials",
-      "sourceUrl": "https://doi.org/10.1002/adfm.79609",
-      "publishedAt": "2026-11-13",
-      "collectedAt": "2026-11-16T02:07:52.290Z",
+      "url": "https://doi.org/10.1002/anie.6121408",
+      "source": "Angewandte Chemie International Edition",
+      "sourceUrl": "https://doi.org/10.1002/anie.6121408",
+      "publishedAt": "2026-11-14",
+      "collectedAt": "2026-11-17T04:28:41.068Z",
       "evidenceType": "paper",
       "type": "paper",
       "entityIds": [
-        "dry-electrode",
-        "separator",
-        "electrolyte",
-        "current-collector"
+        "dry-electrode"
       ],
       "topics": [
-        "dry-electrode",
-        "separator"
-      ],
-      "companies": [],
-      "technologyRoutes": [],
-      "evidenceLevel": "medium",
-      "review": "unreviewed"
-    },
-    {
-      "id": "https://doi.org/10.1149/1945-7111/aec201",
-      "title": "Achieving Cyclic Structural Stability in 20% Si/C Anodes via a Hydroxyl-Rich Ternary Copolymer Binder",
-      "claim": "dry electrode lithium ion battery manufacturing",
-      "url": "https://doi.org/10.1149/1945-7111/aec201",
-      "source": "Journal of The Electrochemical Society",
-      "sourceUrl": "https://doi.org/10.1149/1945-7111/aec201",
-      "publishedAt": "2026-11-13",
-      "collectedAt": "2026-11-16T02:07:52.290Z",
-      "evidenceType": "paper",
-      "type": "paper",
-      "entityIds": [
-        "fast-charge",
-        "dry-electrode",
-        "anode",
-        "bms"
-      ],
-      "topics": [
-        "dry-electrode",
-        "bms"
+        "dry-electrode"
       ],
       "companies": [],
       "technologyRoutes": [],
@@ -250,7 +272,7 @@
       "source": "HAL",
       "sourceUrl": "https://openalex.org/W7204618756",
       "publishedAt": "2026-11-16",
-      "collectedAt": "2026-11-16T02:07:52.290Z",
+      "collectedAt": "2026-11-17T04:28:41.068Z",
       "evidenceType": "paper",
       "type": "paper",
       "entityIds": [
@@ -277,7 +299,33 @@
       "source": "HAL",
       "sourceUrl": "https://openalex.org/W7217130375",
       "publishedAt": "2026-11-16",
-      "collectedAt": "2026-11-16T02:07:52.290Z",
+      "collectedAt": "2026-11-17T04:28:41.068Z",
+      "evidenceType": "paper",
+      "type": "paper",
+      "entityIds": [
+        "fast-charge",
+        "sodium-ion",
+        "solid-state",
+        "electrolyte"
+      ],
+      "topics": [
+        "solid-state",
+        "electrolyte"
+      ],
+      "companies": [],
+      "technologyRoutes": [],
+      "evidenceLevel": "medium",
+      "review": "unreviewed"
+    },
+    {
+      "id": "https://doi.org/10.1038/s41467-026-79620-4",
+      "title": "Phosphorus-mediated reverse hydrogen spillover enables rate-matched nitrate-sulfate paired electrolysis for ammonium persulfate synthesis",
+      "claim": "solid state battery electrolyte interface",
+      "url": "https://doi.org/10.1038/s41467-026-79620-4",
+      "source": "Nature Communications",
+      "sourceUrl": "https://doi.org/10.1038/s41467-026-79620-4",
+      "publishedAt": "2026-11-15",
+      "collectedAt": "2026-11-17T04:28:41.068Z",
       "evidenceType": "paper",
       "type": "paper",
       "entityIds": [
@@ -303,7 +351,7 @@
       "source": "Small Methods",
       "sourceUrl": "https://doi.org/10.1002/smtd.71209",
       "publishedAt": "2026-11-14",
-      "collectedAt": "2026-11-16T02:07:52.290Z",
+      "collectedAt": "2026-11-17T04:28:41.068Z",
       "evidenceType": "paper",
       "type": "paper",
       "entityIds": [
@@ -327,14 +375,14 @@
       "review": "unreviewed"
     },
     {
-      "id": "https://doi.org/10.1002/adma.75712",
-      "title": "Dynamic Interfacial S–O Bonding Stabilizes Oxygen Redox Through Reversible Electron Confinement",
+      "id": "https://doi.org/10.53941/echem.2026.100013",
+      "title": "Interlayer Engineering by Ionic-Liquid Cation Pre-Intercalation for High-Performance Aqueous Zinc-Ion Batteries",
       "claim": "lithium battery separator electrolyte safety",
-      "url": "https://doi.org/10.1002/adma.75712",
-      "source": "Advanced Materials",
-      "sourceUrl": "https://doi.org/10.1002/adma.75712",
+      "url": "https://doi.org/10.53941/echem.2026.100013",
+      "source": "eChem",
+      "sourceUrl": "https://doi.org/10.53941/echem.2026.100013",
       "publishedAt": "2026-11-13",
-      "collectedAt": "2026-11-16T02:07:52.290Z",
+      "collectedAt": "2026-11-17T04:28:41.068Z",
       "evidenceType": "paper",
       "type": "paper",
       "entityIds": [
@@ -357,14 +405,14 @@
       "review": "unreviewed"
     },
     {
-      "id": "https://doi.org/10.1002/aenm.71795",
-      "title": "Breaking the Thermal Limits: Solvation Chemistry of Hydrogel Electrolytes for Extreme‐Temperature Stable Zinc‐Ion Batteries",
+      "id": "https://doi.org/10.1021/acs.chemmater.6c01944",
+      "title": "Investigating the Role of Silica Coating toward Artificial Solid Electrolyte Interphase Formation for Na-Ion Anodes",
       "claim": "lithium battery separator electrolyte safety",
-      "url": "https://doi.org/10.1002/aenm.71795",
-      "source": "Advanced Energy Materials",
-      "sourceUrl": "https://doi.org/10.1002/aenm.71795",
+      "url": "https://doi.org/10.1021/acs.chemmater.6c01944",
+      "source": "Chemistry of Materials",
+      "sourceUrl": "https://doi.org/10.1021/acs.chemmater.6c01944",
       "publishedAt": "2026-11-13",
-      "collectedAt": "2026-11-16T02:07:52.290Z",
+      "collectedAt": "2026-11-17T04:28:41.068Z",
       "evidenceType": "paper",
       "type": "paper",
       "entityIds": [
@@ -373,14 +421,15 @@
         "solid-state",
         "separator",
         "electrolyte",
+        "anode",
         "current-collector",
         "bms",
         "thermal-management"
       ],
       "topics": [
+        "sodium-ion",
         "separator",
-        "electrolyte",
-        "thermal-management"
+        "electrolyte"
       ],
       "companies": [],
       "technologyRoutes": [],
@@ -395,7 +444,7 @@
       "source": "Chemistry - A European Journal",
       "sourceUrl": "https://doi.org/10.1002/chem.71887",
       "publishedAt": "2026-11-09",
-      "collectedAt": "2026-11-16T02:07:52.290Z",
+      "collectedAt": "2026-11-17T04:28:41.068Z",
       "evidenceType": "paper",
       "type": "paper",
       "entityIds": [
@@ -433,7 +482,7 @@
       "source": "Ionics",
       "sourceUrl": "https://doi.org/10.1007/s11581-026-07616-7",
       "publishedAt": "2026-11-06",
-      "collectedAt": "2026-11-16T02:07:52.290Z",
+      "collectedAt": "2026-11-17T04:28:41.068Z",
       "evidenceType": "paper",
       "type": "paper",
       "entityIds": [
@@ -467,81 +516,28 @@
       "review": "unreviewed"
     },
     {
-      "id": "https://doi.org/10.1038/s41467-026-78307-0",
-      "title": "Full-sunlight-driven photocatalytic recovery of critical metals from spent lithium-ion batteries via organic acid leaching",
-      "claim": "lithium ion battery recycling black mass hydrometallurgy direct recycling",
-      "url": "https://doi.org/10.1038/s41467-026-78307-0",
-      "source": "Nature Communications",
-      "sourceUrl": "https://doi.org/10.1038/s41467-026-78307-0",
-      "publishedAt": "2026-11-06",
-      "collectedAt": "2026-11-16T02:07:52.290Z",
-      "evidenceType": "paper",
-      "type": "paper",
+      "id": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPVzdqRzZWSFVwaENhUVoxTHdkNXpUSFc0LV9EaEg4TFphX1JrSVFBTjNEUE9pWUFtLVN1bUpwcVRBd2swVzVweGUxN1Z5NVJkeFFGcVZvWUVRb0Z4ZnN3MUdyRFVXc21PNXpLLTBMcUQ0WFdzNmUwaGVJMmUtbDhZWlhXRUpSY2ZGXzFMODNUYlpjN1F0bl9FR2dZUGRxSkZRdW5IYUstSC1xLVhkYTBNN0JNMA?oc=5",
+      "title": "CATL Explores Lithium-Air Battery Technology to Advance Next-Generation Electric Vehicles - ELE Times",
+      "claim": "CATL battery technology",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPVzdqRzZWSFVwaENhUVoxTHdkNXpUSFc0LV9EaEg4TFphX1JrSVFBTjNEUE9pWUFtLVN1bUpwcVRBd2swVzVweGUxN1Z5NVJkeFFGcVZvWUVRb0Z4ZnN3MUdyRFVXc21PNXpLLTBMcUQ0WFdzNmUwaGVJMmUtbDhZWlhXRUpSY2ZGXzFMODNUYlpjN1F0bl9FR2dZUGRxSkZRdW5IYUstSC1xLVhkYTBNN0JNMA?oc=5",
+      "source": "ELE Times",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPVzdqRzZWSFVwaENhUVoxTHdkNXpUSFc0LV9EaEg4TFphX1JrSVFBTjNEUE9pWUFtLVN1bUpwcVRBd2swVzVweGUxN1Z5NVJkeFFGcVZvWUVRb0Z4ZnN3MUdyRFVXc21PNXpLLTBMcUQ0WFdzNmUwaGVJMmUtbDhZWlhXRUpSY2ZGXzFMODNUYlpjN1F0bl9FR2dZUGRxSkZRdW5IYUstSC1xLVhkYTBNN0JNMA?oc=5",
+      "publishedAt": "2026-11-16T11:26:55.000Z",
+      "collectedAt": "2026-11-17T04:28:41.068Z",
+      "evidenceType": "news",
+      "type": "news",
       "entityIds": [
         "catl",
-        "brunp",
-        "gem",
-        "huayou",
-        "redwood",
-        "li-cycle",
-        "recycling",
-        "battery-recycling",
-        "black-mass",
-        "hydrometallurgy",
-        "direct-regeneration"
+        "fast-charge"
       ],
       "topics": [
-        "recycling"
+        "fast-charge"
       ],
-      "companies": [],
-      "technologyRoutes": [
-        "battery-recycling",
-        "black-mass",
-        "hydrometallurgy",
-        "direct-regeneration"
+      "companies": [
+        "catl"
       ],
-      "evidenceLevel": "medium",
-      "review": "unreviewed"
-    },
-    {
-      "id": "https://doi.org/10.1007/s40820-026-02451-x",
-      "title": "Defect-to-Phase Transduction and Interface Reconstruction Enable Regeneration of Spent LiFePO4 Cathodes",
-      "claim": "lithium ion battery recycling black mass hydrometallurgy direct recycling",
-      "url": "https://doi.org/10.1007/s40820-026-02451-x",
-      "source": "Nano-Micro Letters",
-      "sourceUrl": "https://doi.org/10.1007/s40820-026-02451-x",
-      "publishedAt": "2026-11-06",
-      "collectedAt": "2026-11-16T02:07:52.290Z",
-      "evidenceType": "paper",
-      "type": "paper",
-      "entityIds": [
-        "catl",
-        "brunp",
-        "gem",
-        "huayou",
-        "redwood",
-        "li-cycle",
-        "sodium-ion",
-        "solid-state",
-        "recycling",
-        "electrolyte",
-        "cathode",
-        "battery-recycling",
-        "black-mass",
-        "hydrometallurgy",
-        "direct-regeneration"
-      ],
-      "topics": [
-        "recycling"
-      ],
-      "companies": [],
-      "technologyRoutes": [
-        "battery-recycling",
-        "black-mass",
-        "hydrometallurgy",
-        "direct-regeneration"
-      ],
-      "evidenceLevel": "medium",
+      "technologyRoutes": [],
+      "evidenceLevel": "low",
       "review": "unreviewed"
     },
     {
@@ -552,7 +548,7 @@
       "source": "Electrek",
       "sourceUrl": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQTHpwWUVpdEFvM3dEaUNuQWo3b0llZzI4TU1hS09nUHV3SEFoR1pCeENPUnhOZklKellpM3MwQjg2ZkIyWmNUUGU5ekFITWdDdmhSaDQzTWNPOHdNd0pwSEtYcVJUVVhRSGhMcjVTZnJpWVVzcGdaN1F5QnhLRGJQOWp2LUgxUGRIanF6YVZXN3huUUNm?oc=5",
       "publishedAt": "2026-10-28T07:00:00.000Z",
-      "collectedAt": "2026-11-16T02:07:52.290Z",
+      "collectedAt": "2026-11-17T04:28:41.068Z",
       "evidenceType": "news",
       "type": "news",
       "entityIds": [
@@ -574,14 +570,14 @@
       "review": "unreviewed"
     },
     {
-      "id": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPYTBwTWc0TmluWlZ5N0kyRlV0cHhfcEgzdG11aE03ZmNPT2k5b3plV1hzMzRpRDE0M0VNMjJyZW1YZ0hPX0x5VElubDBaUkpQM0x6bHhQVXZQenRYV1VtWWxZS3pBcTJVQzhHa2ZmWWhSTU9NMEJINU1BT0ZYWkJoaW5Bb3RuUTlRWElLN0hwQkVKTVVscEgtMmxHcDNQZkFKdmRaN1dMR2pWbEhvOTdPRkNRRHE4NkNYN1NfNnViQ1RLRmRxbkxnTldwYy1RQQ?oc=5",
+      "id": "https://news.google.com/rss/articles/CBMizgFBVV95cUxOeTZZSEVxZExFWGNKV0dmSHFxWEFacU1kOXdDRlNHSVpRUVc1cWF4NzZFQURrVjBaZ1ZBQ1BhTFVDYklRcXdyYVV4RVF5S3JfSzhFUWlCaDNHQzZhSFZCZV9XaTJJMVdKRUhIMkZOWWZzYUZwY1RnTGROUkhock9MTnNzQUFVeG1uUk9UX2phT01DRlVRTXR6dnpJdHcxOFFJUEdFU2pTZk1CaGl4cWFiY1ZXa0Nfbjk1WU4zclRYdi1mTGJyeXc5WjV0RlhaQdIBzgFBVV95cUxOeTZZSEVxZExFWGNKV0dmSHFxWEFacU1kOXdDRlNHSVpRUVc1cWF4NzZFQURrVjBaZ1ZBQ1BhTFVDYklRcXdyYVV4RVF5S3JfSzhFUWlCaDNHQzZhSFZCZV9XaTJJMVdKRUhIMkZOWWZzYUZwY1RnTGROUkhock9MTnNzQUFVeG1uUk9UX2phT01DRlVRTXR6dnpJdHcxOFFJUEdFU2pTZk1CaGl4cWFiY1ZXa0Nfbjk1WU4zclRYdi1mTGJyeXc5WjV0RlhaQQ?oc=5",
       "title": "CATL’s US$130b drop: why has China’s biggest battery maker plunged in value? - South China Morning Post",
       "claim": "CATL battery technology",
-      "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPYTBwTWc0TmluWlZ5N0kyRlV0cHhfcEgzdG11aE03ZmNPT2k5b3plV1hzMzRpRDE0M0VNMjJyZW1YZ0hPX0x5VElubDBaUkpQM0x6bHhQVXZQenRYV1VtWWxZS3pBcTJVQzhHa2ZmWWhSTU9NMEJINU1BT0ZYWkJoaW5Bb3RuUTlRWElLN0hwQkVKTVVscEgtMmxHcDNQZkFKdmRaN1dMR2pWbEhvOTdPRkNRRHE4NkNYN1NfNnViQ1RLRmRxbkxnTldwYy1RQQ?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxOeTZZSEVxZExFWGNKV0dmSHFxWEFacU1kOXdDRlNHSVpRUVc1cWF4NzZFQURrVjBaZ1ZBQ1BhTFVDYklRcXdyYVV4RVF5S3JfSzhFUWlCaDNHQzZhSFZCZV9XaTJJMVdKRUhIMkZOWWZzYUZwY1RnTGROUkhock9MTnNzQUFVeG1uUk9UX2phT01DRlVRTXR6dnpJdHcxOFFJUEdFU2pTZk1CaGl4cWFiY1ZXa0Nfbjk1WU4zclRYdi1mTGJyeXc5WjV0RlhaQdIBzgFBVV95cUxOeTZZSEVxZExFWGNKV0dmSHFxWEFacU1kOXdDRlNHSVpRUVc1cWF4NzZFQURrVjBaZ1ZBQ1BhTFVDYklRcXdyYVV4RVF5S3JfSzhFUWlCaDNHQzZhSFZCZV9XaTJJMVdKRUhIMkZOWWZzYUZwY1RnTGROUkhock9MTnNzQUFVeG1uUk9UX2phT01DRlVRTXR6dnpJdHcxOFFJUEdFU2pTZk1CaGl4cWFiY1ZXa0Nfbjk1WU4zclRYdi1mTGJyeXc5WjV0RlhaQQ?oc=5",
       "source": "South China Morning Post",
-      "sourceUrl": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPYTBwTWc0TmluWlZ5N0kyRlV0cHhfcEgzdG11aE03ZmNPT2k5b3plV1hzMzRpRDE0M0VNMjJyZW1YZ0hPX0x5VElubDBaUkpQM0x6bHhQVXZQenRYV1VtWWxZS3pBcTJVQzhHa2ZmWWhSTU9NMEJINU1BT0ZYWkJoaW5Bb3RuUTlRWElLN0hwQkVKTVVscEgtMmxHcDNQZkFKdmRaN1dMR2pWbEhvOTdPRkNRRHE4NkNYN1NfNnViQ1RLRmRxbkxnTldwYy1RQQ?oc=5",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMizgFBVV95cUxOeTZZSEVxZExFWGNKV0dmSHFxWEFacU1kOXdDRlNHSVpRUVc1cWF4NzZFQURrVjBaZ1ZBQ1BhTFVDYklRcXdyYVV4RVF5S3JfSzhFUWlCaDNHQzZhSFZCZV9XaTJJMVdKRUhIMkZOWWZzYUZwY1RnTGROUkhock9MTnNzQUFVeG1uUk9UX2phT01DRlVRTXR6dnpJdHcxOFFJUEdFU2pTZk1CaGl4cWFiY1ZXa0Nfbjk1WU4zclRYdi1mTGJyeXc5WjV0RlhaQdIBzgFBVV95cUxOeTZZSEVxZExFWGNKV0dmSHFxWEFacU1kOXdDRlNHSVpRUVc1cWF4NzZFQURrVjBaZ1ZBQ1BhTFVDYklRcXdyYVV4RVF5S3JfSzhFUWlCaDNHQzZhSFZCZV9XaTJJMVdKRUhIMkZOWWZzYUZwY1RnTGROUkhock9MTnNzQUFVeG1uUk9UX2phT01DRlVRTXR6dnpJdHcxOFFJUEdFU2pTZk1CaGl4cWFiY1ZXa0Nfbjk1WU4zclRYdi1mTGJyeXc5WjV0RlhaQQ?oc=5",
       "publishedAt": "2026-11-14T07:00:07.000Z",
-      "collectedAt": "2026-11-16T02:07:52.290Z",
+      "collectedAt": "2026-11-17T04:28:41.068Z",
       "evidenceType": "news",
       "type": "news",
       "entityIds": [
@@ -591,6 +587,105 @@
       "topics": [
         "fast-charge"
       ],
+      "companies": [
+        "catl"
+      ],
+      "technologyRoutes": [],
+      "evidenceLevel": "low",
+      "review": "unreviewed"
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPU2dsSHVSZld5cGVWZnNMeHNoTS02czQ3V1BZaWFmYkFtNmZ2dmRLRXoxZWtMeWlNLW1QTkVOaFJQT00xR1dlZTRLN005c0M3b2FtMmJ2cURzTTNnMHpxOTF1WXEyNUQ2aVpHbno0cWpxd05tNW05S0gxcFNaSzJRbmZWUVktN1p3cFYwbnRta09YREZCZWVpNE5LYzY4N2E5elp4MjJnOA?oc=5",
+      "title": "CATL is exploring an air-breathing battery. Could it give EVs 2,000 km of range? - Batteries News",
+      "claim": "CATL battery technology",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPU2dsSHVSZld5cGVWZnNMeHNoTS02czQ3V1BZaWFmYkFtNmZ2dmRLRXoxZWtMeWlNLW1QTkVOaFJQT00xR1dlZTRLN005c0M3b2FtMmJ2cURzTTNnMHpxOTF1WXEyNUQ2aVpHbno0cWpxd05tNW05S0gxcFNaSzJRbmZWUVktN1p3cFYwbnRta09YREZCZWVpNE5LYzY4N2E5elp4MjJnOA?oc=5",
+      "source": "Batteries News",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPU2dsSHVSZld5cGVWZnNMeHNoTS02czQ3V1BZaWFmYkFtNmZ2dmRLRXoxZWtMeWlNLW1QTkVOaFJQT00xR1dlZTRLN005c0M3b2FtMmJ2cURzTTNnMHpxOTF1WXEyNUQ2aVpHbno0cWpxd05tNW05S0gxcFNaSzJRbmZWUVktN1p3cFYwbnRta09YREZCZWVpNE5LYzY4N2E5elp4MjJnOA?oc=5",
+      "publishedAt": "2026-11-16T06:10:32.000Z",
+      "collectedAt": "2026-11-17T04:28:41.068Z",
+      "evidenceType": "news",
+      "type": "news",
+      "entityIds": [
+        "catl",
+        "fast-charge"
+      ],
+      "topics": [
+        "fast-charge"
+      ],
+      "companies": [
+        "catl"
+      ],
+      "technologyRoutes": [],
+      "evidenceLevel": "low",
+      "review": "unreviewed"
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOMlQ1emlJWVZGVU9XbmJfbzV0R2RJZ2RBd2NmbExmTHBLMGZTM2tfU3JvSFRmVzBIcU9tSk1WQ19zam5fWmxLX3FaNE9wdWFFX2dYSDBrb2RLNlpVYnVfZk5KVlJvUXcyWE54LXRHQzd3UVQxVU8wZmZ2d2tSSGxINlBodjBtQkVzLXUwR2pjaXBzRkFxM2lSNg?oc=5",
+      "title": "Semi-solid state batteries for BESS: potential and challenges - Energy-Storage.News",
+      "claim": "CATL battery technology",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOMlQ1emlJWVZGVU9XbmJfbzV0R2RJZ2RBd2NmbExmTHBLMGZTM2tfU3JvSFRmVzBIcU9tSk1WQ19zam5fWmxLX3FaNE9wdWFFX2dYSDBrb2RLNlpVYnVfZk5KVlJvUXcyWE54LXRHQzd3UVQxVU8wZmZ2d2tSSGxINlBodjBtQkVzLXUwR2pjaXBzRkFxM2lSNg?oc=5",
+      "source": "Energy-Storage.News",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOMlQ1emlJWVZGVU9XbmJfbzV0R2RJZ2RBd2NmbExmTHBLMGZTM2tfU3JvSFRmVzBIcU9tSk1WQ19zam5fWmxLX3FaNE9wdWFFX2dYSDBrb2RLNlpVYnVfZk5KVlJvUXcyWE54LXRHQzd3UVQxVU8wZmZ2d2tSSGxINlBodjBtQkVzLXUwR2pjaXBzRkFxM2lSNg?oc=5",
+      "publishedAt": "2026-11-11T12:22:59.000Z",
+      "collectedAt": "2026-11-17T04:28:41.068Z",
+      "evidenceType": "news",
+      "type": "news",
+      "entityIds": [
+        "catl",
+        "fast-charge",
+        "solid-state"
+      ],
+      "topics": [
+        "fast-charge",
+        "solid-state"
+      ],
+      "companies": [
+        "catl"
+      ],
+      "technologyRoutes": [],
+      "evidenceLevel": "low",
+      "review": "unreviewed"
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOTlZ0U0ZTX2xIWVc3ZWRpVG5SeE1ac2NZQkYtTmIxUG1PUlFvdVZkRnIxMnJ1RjV1cW9nVlZtVlJBcWw1ODVUM2JwUWxYcDdac2FxRXJCbThrdlVMVXFrb2VQVmlhdi1zTW9zTi1IQmVYVjczeXJqelhwWV8yU1RPZ1NkWG9ndkE5LUJfZzJvdFFPS01JLVNmMEZlMllMUUI5OWFOMGdydFZXZkNTWi10M1hUT0YxeERr?oc=5",
+      "title": "CATL Expands Aviation Battery Push as eVTOL Market Takes Shape - Caixin Global",
+      "claim": "CATL battery technology",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOTlZ0U0ZTX2xIWVc3ZWRpVG5SeE1ac2NZQkYtTmIxUG1PUlFvdVZkRnIxMnJ1RjV1cW9nVlZtVlJBcWw1ODVUM2JwUWxYcDdac2FxRXJCbThrdlVMVXFrb2VQVmlhdi1zTW9zTi1IQmVYVjczeXJqelhwWV8yU1RPZ1NkWG9ndkE5LUJfZzJvdFFPS01JLVNmMEZlMllMUUI5OWFOMGdydFZXZkNTWi10M1hUT0YxeERr?oc=5",
+      "source": "Caixin Global",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOTlZ0U0ZTX2xIWVc3ZWRpVG5SeE1ac2NZQkYtTmIxUG1PUlFvdVZkRnIxMnJ1RjV1cW9nVlZtVlJBcWw1ODVUM2JwUWxYcDdac2FxRXJCbThrdlVMVXFrb2VQVmlhdi1zTW9zTi1IQmVYVjczeXJqelhwWV8yU1RPZ1NkWG9ndkE5LUJfZzJvdFFPS01JLVNmMEZlMllMUUI5OWFOMGdydFZXZkNTWi10M1hUT0YxeERr?oc=5",
+      "publishedAt": "2026-11-13T17:29:00.000Z",
+      "collectedAt": "2026-11-17T04:28:41.068Z",
+      "evidenceType": "news",
+      "type": "news",
+      "entityIds": [
+        "catl",
+        "fast-charge"
+      ],
+      "topics": [
+        "fast-charge"
+      ],
+      "companies": [
+        "catl"
+      ],
+      "technologyRoutes": [],
+      "evidenceLevel": "low",
+      "review": "unreviewed"
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMiREFVX3lxTE1WZGhWeVluVnVCaUFBZ2l0UkpRM20xdXdHTjFYQTMwRVhjVHZYdG56SFg1ZVpxYmFZUkNWUEp1SUVtMG9q0gFCQVVfeXFMTUszMjFoaVEtUkhBS3NxYk9QSFVNZ1RYTm5mdF8yb1VDYUVQZVlRWTZxS1NwdjJoVjZXSE1xLTVRbWx3?oc=5",
+      "title": "Arcfox Beta S3 and Beta T1 Use CATL Battery Swap Technology - VOI.ID",
+      "claim": "CATL battery technology",
+      "url": "https://news.google.com/rss/articles/CBMiREFVX3lxTE1WZGhWeVluVnVCaUFBZ2l0UkpRM20xdXdHTjFYQTMwRVhjVHZYdG56SFg1ZVpxYmFZUkNWUEp1SUVtMG9q0gFCQVVfeXFMTUszMjFoaVEtUkhBS3NxYk9QSFVNZ1RYTm5mdF8yb1VDYUVQZVlRWTZxS1NwdjJoVjZXSE1xLTVRbWx3?oc=5",
+      "source": "VOI.ID",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMiREFVX3lxTE1WZGhWeVluVnVCaUFBZ2l0UkpRM20xdXdHTjFYQTMwRVhjVHZYdG56SFg1ZVpxYmFZUkNWUEp1SUVtMG9q0gFCQVVfeXFMTUszMjFoaVEtUkhBS3NxYk9QSFVNZ1RYTm5mdF8yb1VDYUVQZVlRWTZxS1NwdjJoVjZXSE1xLTVRbWx3?oc=5",
+      "publishedAt": "2026-11-16T04:35:00.000Z",
+      "collectedAt": "2026-11-17T04:28:41.068Z",
+      "evidenceType": "news",
+      "type": "news",
+      "entityIds": [
+        "catl"
+      ],
+      "topics": [],
       "companies": [
         "catl"
       ],
@@ -606,138 +701,7 @@
       "source": "The Guardian",
       "sourceUrl": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQbTJJcE96ejJOa2p5dFV4MjZGMVNBNGZobjBUSmVmNzdHUEZKTWdKZ1RHdTBOSmhGblhzdTAwRExXejBKRmtGTDBnRzFtLVdINktRUTJHMHo3NDFSQ0F3TjJnWGVSQ3lYNzV5dUt3dUpfWGtRNG5rNzlLNU9aVTA1QWZ6a2Z0N0V1cnJNQWlfd2NEMzlBU1ZFaXhXbkppRlN5WXZYT3dISFA?oc=5",
       "publishedAt": "2026-11-13T10:39:00.000Z",
-      "collectedAt": "2026-11-16T02:07:52.290Z",
-      "evidenceType": "news",
-      "type": "news",
-      "entityIds": [
-        "catl",
-        "fast-charge"
-      ],
-      "topics": [
-        "fast-charge"
-      ],
-      "companies": [
-        "catl"
-      ],
-      "technologyRoutes": [],
-      "evidenceLevel": "low",
-      "review": "unreviewed"
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOTWJlTHVMbUh2MDdtUWctS0xsUkR3XzA1TVpsTFMxTWVLMVBEb0tUM0FmZkYxaUd5VXhQSW5GNGhJSmFpYXdBanY0T1kyNDZxSGRCb0NZWDlDak9TTHFUdjZjVFBLbzhLRHYtSWw5NHVuRkpway11Ykt6blJIc1BjSURhWndoYndUQnRFQ0hiMHZJVUlOTjY4ZnhSUnFwMHFVOUY1a1c4TE05Zi1BS0hDQ0RB?oc=5",
-      "title": "CATL researching lithium-air EV batteries, which could make a 2,000km range EV possible - ElectricDrives",
-      "claim": "CATL battery technology",
-      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOTWJlTHVMbUh2MDdtUWctS0xsUkR3XzA1TVpsTFMxTWVLMVBEb0tUM0FmZkYxaUd5VXhQSW5GNGhJSmFpYXdBanY0T1kyNDZxSGRCb0NZWDlDak9TTHFUdjZjVFBLbzhLRHYtSWw5NHVuRkpway11Ykt6blJIc1BjSURhWndoYndUQnRFQ0hiMHZJVUlOTjY4ZnhSUnFwMHFVOUY1a1c4TE05Zi1BS0hDQ0RB?oc=5",
-      "source": "ElectricDrives",
-      "sourceUrl": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOTWJlTHVMbUh2MDdtUWctS0xsUkR3XzA1TVpsTFMxTWVLMVBEb0tUM0FmZkYxaUd5VXhQSW5GNGhJSmFpYXdBanY0T1kyNDZxSGRCb0NZWDlDak9TTHFUdjZjVFBLbzhLRHYtSWw5NHVuRkpway11Ykt6blJIc1BjSURhWndoYndUQnRFQ0hiMHZJVUlOTjY4ZnhSUnFwMHFVOUY1a1c4TE05Zi1BS0hDQ0RB?oc=5",
-      "publishedAt": "2026-11-11T14:48:33.000Z",
-      "collectedAt": "2026-11-16T02:07:52.290Z",
-      "evidenceType": "news",
-      "type": "news",
-      "entityIds": [
-        "catl",
-        "fast-charge"
-      ],
-      "topics": [
-        "fast-charge"
-      ],
-      "companies": [
-        "catl"
-      ],
-      "technologyRoutes": [],
-      "evidenceLevel": "low",
-      "review": "unreviewed"
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPRzR0TGhGbkpmTENJX2JIbTRHWGJ5RC1wSzZxMGppVnFvUDdqTmliLWZKTFZCX2lsZlhFUkdReHVFVmoxSkdMRFQyWlUyUFRQVFFYRWRsWURweEVHdlFHd3JoYkFDeFdTYkM2b3I2aEdTUGI0dE9nZ0Q5VjVOU2d1V3puZEFmbk5GY0RBb1piQjJMN2ZtQnpyOVZGd1ZmWHI3NDVqOWtnbTk?oc=5",
-      "title": "CATL is solving the sodium-ion battery range anxiety problem - Notebookcheck",
-      "claim": "CATL battery technology",
-      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPRzR0TGhGbkpmTENJX2JIbTRHWGJ5RC1wSzZxMGppVnFvUDdqTmliLWZKTFZCX2lsZlhFUkdReHVFVmoxSkdMRFQyWlUyUFRQVFFYRWRsWURweEVHdlFHd3JoYkFDeFdTYkM2b3I2aEdTUGI0dE9nZ0Q5VjVOU2d1V3puZEFmbk5GY0RBb1piQjJMN2ZtQnpyOVZGd1ZmWHI3NDVqOWtnbTk?oc=5",
-      "source": "Notebookcheck",
-      "sourceUrl": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPRzR0TGhGbkpmTENJX2JIbTRHWGJ5RC1wSzZxMGppVnFvUDdqTmliLWZKTFZCX2lsZlhFUkdReHVFVmoxSkdMRFQyWlUyUFRQVFFYRWRsWURweEVHdlFHd3JoYkFDeFdTYkM2b3I2aEdTUGI0dE9nZ0Q5VjVOU2d1V3puZEFmbk5GY0RBb1piQjJMN2ZtQnpyOVZGd1ZmWHI3NDVqOWtnbTk?oc=5",
-      "publishedAt": "2026-11-13T10:08:00.000Z",
-      "collectedAt": "2026-11-16T02:07:52.290Z",
-      "evidenceType": "news",
-      "type": "news",
-      "entityIds": [
-        "catl",
-        "byd",
-        "fast-charge",
-        "sodium-ion",
-        "sodium-hard-carbon"
-      ],
-      "topics": [
-        "fast-charge",
-        "sodium-ion"
-      ],
-      "companies": [
-        "catl"
-      ],
-      "technologyRoutes": [
-        "sodium-hard-carbon"
-      ],
-      "evidenceLevel": "low",
-      "review": "unreviewed"
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOTlZ0U0ZTX2xIWVc3ZWRpVG5SeE1ac2NZQkYtTmIxUG1PUlFvdVZkRnIxMnJ1RjV1cW9nVlZtVlJBcWw1ODVUM2JwUWxYcDdac2FxRXJCbThrdlVMVXFrb2VQVmlhdi1zTW9zTi1IQmVYVjczeXJqelhwWV8yU1RPZ1NkWG9ndkE5LUJfZzJvdFFPS01JLVNmMEZlMllMUUI5OWFOMGdydFZXZkNTWi10M1hUT0YxeERr?oc=5",
-      "title": "CATL Expands Aviation Battery Push as eVTOL Market Takes Shape - Caixin Global",
-      "claim": "CATL battery technology",
-      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOTlZ0U0ZTX2xIWVc3ZWRpVG5SeE1ac2NZQkYtTmIxUG1PUlFvdVZkRnIxMnJ1RjV1cW9nVlZtVlJBcWw1ODVUM2JwUWxYcDdac2FxRXJCbThrdlVMVXFrb2VQVmlhdi1zTW9zTi1IQmVYVjczeXJqelhwWV8yU1RPZ1NkWG9ndkE5LUJfZzJvdFFPS01JLVNmMEZlMllMUUI5OWFOMGdydFZXZkNTWi10M1hUT0YxeERr?oc=5",
-      "source": "Caixin Global",
-      "sourceUrl": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOTlZ0U0ZTX2xIWVc3ZWRpVG5SeE1ac2NZQkYtTmIxUG1PUlFvdVZkRnIxMnJ1RjV1cW9nVlZtVlJBcWw1ODVUM2JwUWxYcDdac2FxRXJCbThrdlVMVXFrb2VQVmlhdi1zTW9zTi1IQmVYVjczeXJqelhwWV8yU1RPZ1NkWG9ndkE5LUJfZzJvdFFPS01JLVNmMEZlMllMUUI5OWFOMGdydFZXZkNTWi10M1hUT0YxeERr?oc=5",
-      "publishedAt": "2026-11-13T17:29:00.000Z",
-      "collectedAt": "2026-11-16T02:07:52.290Z",
-      "evidenceType": "news",
-      "type": "news",
-      "entityIds": [
-        "catl",
-        "fast-charge"
-      ],
-      "topics": [
-        "fast-charge"
-      ],
-      "companies": [
-        "catl"
-      ],
-      "technologyRoutes": [],
-      "evidenceLevel": "low",
-      "review": "unreviewed"
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPSWRrRE8wODd6MEhDRkh6cE4ySjA4a0hnOHNmRTFTVVRWXy1hRVpaejM3dXU1bzE5YWxBZ3RRTXRRWTd6VHhXb2dYTzd4STFXbTA5MFRFVU43dG5VS1lWc2lQY1o2YTRlTVliUUxaRUFfd3I2SE1LaFRiQThPVmtfUFhUZVdMWEN1cUFnZmpjTjJRZ3B0WjMzR1U2RGxvU0hOX1gyQmd3?oc=5",
-      "title": "CATL explores lithium-air batteries as a long-term research focus - electrive.com",
-      "claim": "CATL battery technology",
-      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPSWRrRE8wODd6MEhDRkh6cE4ySjA4a0hnOHNmRTFTVVRWXy1hRVpaejM3dXU1bzE5YWxBZ3RRTXRRWTd6VHhXb2dYTzd4STFXbTA5MFRFVU43dG5VS1lWc2lQY1o2YTRlTVliUUxaRUFfd3I2SE1LaFRiQThPVmtfUFhUZVdMWEN1cUFnZmpjTjJRZ3B0WjMzR1U2RGxvU0hOX1gyQmd3?oc=5",
-      "source": "electrive.com",
-      "sourceUrl": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPSWRrRE8wODd6MEhDRkh6cE4ySjA4a0hnOHNmRTFTVVRWXy1hRVpaejM3dXU1bzE5YWxBZ3RRTXRRWTd6VHhXb2dYTzd4STFXbTA5MFRFVU43dG5VS1lWc2lQY1o2YTRlTVliUUxaRUFfd3I2SE1LaFRiQThPVmtfUFhUZVdMWEN1cUFnZmpjTjJRZ3B0WjMzR1U2RGxvU0hOX1gyQmd3?oc=5",
-      "publishedAt": "2026-11-10T12:30:00.000Z",
-      "collectedAt": "2026-11-16T02:07:52.290Z",
-      "evidenceType": "news",
-      "type": "news",
-      "entityIds": [
-        "catl",
-        "fast-charge"
-      ],
-      "topics": [
-        "fast-charge"
-      ],
-      "companies": [
-        "catl"
-      ],
-      "technologyRoutes": [],
-      "evidenceLevel": "low",
-      "review": "unreviewed"
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQdkppZ3NsVTBpa3NaX1VIN2d5N2wyZnd5S043SVhwV3Bjck12TjdUVTRkVEVram5SUjlYaXNDTlVDdDdLSXpqU2s0X0oxRlZ3SUUxcE05cEpndVNIbktOMWFuXzVZMFFvdFRNSmItSHdCdXZTRm1TQWxZd05BOFZUMHBneHZZTjd4ZzJxVXR2eG9rSlkzRWo5U1VaWDgxZllpNlRlVVVUYllaZFBSVzhvbEU4bTc?oc=5",
-      "title": "CATL is exploring an air-breathing battery. Could it give EVs 2,000 km of range? - CarNewsChina.com",
-      "claim": "CATL battery technology",
-      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQdkppZ3NsVTBpa3NaX1VIN2d5N2wyZnd5S043SVhwV3Bjck12TjdUVTRkVEVram5SUjlYaXNDTlVDdDdLSXpqU2s0X0oxRlZ3SUUxcE05cEpndVNIbktOMWFuXzVZMFFvdFRNSmItSHdCdXZTRm1TQWxZd05BOFZUMHBneHZZTjd4ZzJxVXR2eG9rSlkzRWo5U1VaWDgxZllpNlRlVVVUYllaZFBSVzhvbEU4bTc?oc=5",
-      "source": "CarNewsChina.com",
-      "sourceUrl": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQdkppZ3NsVTBpa3NaX1VIN2d5N2wyZnd5S043SVhwV3Bjck12TjdUVTRkVEVram5SUjlYaXNDTlVDdDdLSXpqU2s0X0oxRlZ3SUUxcE05cEpndVNIbktOMWFuXzVZMFFvdFRNSmItSHdCdXZTRm1TQWxZd05BOFZUMHBneHZZTjd4ZzJxVXR2eG9rSlkzRWo5U1VaWDgxZllpNlRlVVVUYllaZFBSVzhvbEU4bTc?oc=5",
-      "publishedAt": "2026-11-07T08:00:00.000Z",
-      "collectedAt": "2026-11-16T02:07:52.290Z",
+      "collectedAt": "2026-11-17T04:28:41.068Z",
       "evidenceType": "news",
       "type": "news",
       "entityIds": [
@@ -762,7 +726,7 @@
       "source": "electrive.com",
       "sourceUrl": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPWnZVendyTFF0Rm5wUnlBejdBal9RZ3lnZ2VvRTR1c0RCeFI5RWxfQXZwT0FkOXBmTF9US2J5Xy1IVFhZcnpLWk9admxjSTRoLWdEbG5qaGRHeUxtanFFVlo2YUFIZFBCdF92bndET3NrNHpWanBscTBaQnJ6TTNjeEJYbFlad1BmYWdZbUp2a3pjZHAxbFF1V3h0dE8?oc=5",
       "publishedAt": "2026-02-09T08:00:00.000Z",
-      "collectedAt": "2026-11-16T02:07:52.290Z",
+      "collectedAt": "2026-11-17T04:28:41.068Z",
       "evidenceType": "news",
       "type": "news",
       "entityIds": [
@@ -799,7 +763,7 @@
       "source": "CnEVPost",
       "sourceUrl": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPZGNKbS05ZUVmdDJ0aHp4Z041ZlBqZEdBbHlsVE05bEsxd3BfRm1qeVdsVWhtV3ZUMFJsNFdTOUZFdHFqaXREa2cxSFcwbFZzcEJHQmtkU1o5NmdwaFp0S0NRSFJIbDE1cUg0eDE4aEJIYVY1TU1HTk9Rd3JSZEwwNWlTeTdnUmpBM09CUQ?oc=5",
       "publishedAt": "2026-02-08T08:00:00.000Z",
-      "collectedAt": "2026-11-16T02:07:52.290Z",
+      "collectedAt": "2026-11-17T04:28:41.068Z",
       "evidenceType": "news",
       "type": "news",
       "entityIds": [
@@ -822,31 +786,31 @@
       "review": "unreviewed"
     },
     {
-      "id": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQeUNHcXIwcS1NZDUtaF9kUFFianBreWt1UGpFTzBYbE84Q1YwVUNQb3h1cjFkclo4YXowZ0JITGpFM0FfSDRzeWNNSUZhaHM4TFVvTG9CXzBPUkNwaVZrc0lTR09qcm1aOWpZQVdGaTRheWhkMU96Wk9YRjV1YXVFbU1YWEltS1lLemo3X3Q4OUdGc2NJbDRz?oc=5",
-      "title": "BYD’s chief scientist says solid-state EV batteries hit a ‘critical stage,’ but there’s more to it - Electrek",
+      "id": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQQkN0aS1HcmQxVWtqQXJ2eUdFZURDbzltY0JweXdXMFJlcEhWTzU2VDhjQ1BGOG1GWEdtVHBtUEE1cmtxMG0wTUUxY0UwemR3RzEyYzgtMEt2VE1pNTdhY1l4ZDBmSjJBcUFmdDVGUEtIMHNLczY2TzNac1FHdG9KTUFR?oc=5",
+      "title": "CATL is launching sodium-ion batteries in EVs in 2026, aiming for 370+ miles range - Electrek",
       "claim": "BYD blade battery sodium ion",
-      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQeUNHcXIwcS1NZDUtaF9kUFFianBreWt1UGpFTzBYbE84Q1YwVUNQb3h1cjFkclo4YXowZ0JITGpFM0FfSDRzeWNNSUZhaHM4TFVvTG9CXzBPUkNwaVZrc0lTR09qcm1aOWpZQVdGaTRheWhkMU96Wk9YRjV1YXVFbU1YWEltS1lLemo3X3Q4OUdGc2NJbDRz?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQQkN0aS1HcmQxVWtqQXJ2eUdFZURDbzltY0JweXdXMFJlcEhWTzU2VDhjQ1BGOG1GWEdtVHBtUEE1cmtxMG0wTUUxY0UwemR3RzEyYzgtMEt2VE1pNTdhY1l4ZDBmSjJBcUFmdDVGUEtIMHNLczY2TzNac1FHdG9KTUFR?oc=5",
       "source": "Electrek",
-      "sourceUrl": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQeUNHcXIwcS1NZDUtaF9kUFFianBreWt1UGpFTzBYbE84Q1YwVUNQb3h1cjFkclo4YXowZ0JITGpFM0FfSDRzeWNNSUZhaHM4TFVvTG9CXzBPUkNwaVZrc0lTR09qcm1aOWpZQVdGaTRheWhkMU96Wk9YRjV1YXVFbU1YWEltS1lLemo3X3Q4OUdGc2NJbDRz?oc=5",
-      "publishedAt": "2026-04-08T07:00:00.000Z",
-      "collectedAt": "2026-11-16T02:07:52.290Z",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQQkN0aS1HcmQxVWtqQXJ2eUdFZURDbzltY0JweXdXMFJlcEhWTzU2VDhjQ1BGOG1GWEdtVHBtUEE1cmtxMG0wTUUxY0UwemR3RzEyYzgtMEt2VE1pNTdhY1l4ZDBmSjJBcUFmdDVGUEtIMHNLczY2TzNac1FHdG9KTUFR?oc=5",
+      "publishedAt": "2026-04-22T07:00:00.000Z",
+      "collectedAt": "2026-11-17T04:28:41.068Z",
       "evidenceType": "news",
       "type": "news",
       "entityIds": [
+        "catl",
         "byd",
-        "lg-energy",
         "fast-charge",
         "sodium-ion",
-        "solid-state",
-        "electrolyte",
+        "bms",
         "sodium-hard-carbon"
       ],
       "topics": [
         "fast-charge",
         "sodium-ion",
-        "solid-state"
+        "bms"
       ],
       "companies": [
+        "catl",
         "byd"
       ],
       "technologyRoutes": [
@@ -863,7 +827,7 @@
       "source": "Asia Times",
       "sourceUrl": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQU3JJWllEeUV5cl9rUm9GQXhlVDJaWW1hM0hGQi1KSEZyLUlLSWl6Yl9BOXN2M2hQY3UySmhtRkdZd3RoSVVkNnlUbU5uMjJ5THgzdGxTTkJpd05sa2kzajRFcFE4eUh5by02NFlKNWF3V3FvSkFmMnRyY0RFMUhtOW1HOUZobTNkSEo5a244amFRdHF5eUJvY2l3?oc=5",
       "publishedAt": "2026-07-01T07:00:00.000Z",
-      "collectedAt": "2026-11-16T02:07:52.290Z",
+      "collectedAt": "2026-11-17T04:28:41.068Z",
       "evidenceType": "news",
       "type": "news",
       "entityIds": [
@@ -893,10 +857,41 @@
       "source": "Recharge News",
       "sourceUrl": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxQYkJXbG1BMU5IUWd3TF9oMm5EQy1RNlIybnlTWV92N3hjZHc4X3JVZzNoQUt5UVRCV3doRXpKV25iak1xbFl4VV8yNi1iaDVJcnp2TkVSWmZOZUhUV1NvRUZKTE5PS0Rpd0FpM0Q1ZUZLLWN3RlVlZ1dYM1FhWm1XVks5WHhZZHNFaW5JVHAtV1I1bWxuV19nczNYcHdGRkxlbVNPaUNDckhQS3JUY0JxRjM0bzdXNEd6TVJXQVRIQXh6UVNUV2tWVTlNdUZWa3Zwci0tU1VFMW9OS1k5RnpOblowVmRmOXc3T0E?oc=5",
       "publishedAt": "2026-04-28T07:00:00.000Z",
-      "collectedAt": "2026-11-16T02:07:52.290Z",
+      "collectedAt": "2026-11-17T04:28:41.068Z",
       "evidenceType": "news",
       "type": "news",
       "entityIds": [
+        "byd",
+        "fast-charge",
+        "sodium-ion",
+        "sodium-hard-carbon"
+      ],
+      "topics": [
+        "fast-charge",
+        "sodium-ion"
+      ],
+      "companies": [
+        "byd"
+      ],
+      "technologyRoutes": [
+        "sodium-hard-carbon"
+      ],
+      "evidenceLevel": "low",
+      "review": "unreviewed"
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPYmVhc19CQmhQSHlnT0ZGMmllZ3BQaTlXbVF6ek9IV2k0S3dBSjRUZmlvbEhpRlB4QXhycUJ6UzBsMnRDbzQzWjlzWENYS3o5TUhCd1VBSWRadXVKeVRQc2JMM0JmX3RNMjNxWllBZDdET1BGYVh1TWxuaU9PcWpyWXhrNmpfOVVzN2Y3X2NZMkNtdzM1alQwZnRKU3NPNDg?oc=5",
+      "title": "Why GM Will Focus On Sodium-Ion Batteries For Energy Storage - CleanTechnica",
+      "claim": "BYD blade battery sodium ion",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPYmVhc19CQmhQSHlnT0ZGMmllZ3BQaTlXbVF6ek9IV2k0S3dBSjRUZmlvbEhpRlB4QXhycUJ6UzBsMnRDbzQzWjlzWENYS3o5TUhCd1VBSWRadXVKeVRQc2JMM0JmX3RNMjNxWllBZDdET1BGYVh1TWxuaU9PcWpyWXhrNmpfOVVzN2Y3X2NZMkNtdzM1alQwZnRKU3NPNDg?oc=5",
+      "source": "CleanTechnica",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPYmVhc19CQmhQSHlnT0ZGMmllZ3BQaTlXbVF6ek9IV2k0S3dBSjRUZmlvbEhpRlB4QXhycUJ6UzBsMnRDbzQzWjlzWENYS3o5TUhCd1VBSWRadXVKeVRQc2JMM0JmX3RNMjNxWllBZDdET1BGYVh1TWxuaU9PcWpyWXhrNmpfOVVzN2Y3X2NZMkNtdzM1alQwZnRKU3NPNDg?oc=5",
+      "publishedAt": "2026-06-11T07:00:00.000Z",
+      "collectedAt": "2026-11-17T04:28:41.068Z",
+      "evidenceType": "news",
+      "type": "news",
+      "entityIds": [
+        "catl",
         "byd",
         "fast-charge",
         "sodium-ion",
@@ -923,7 +918,7 @@
       "source": "Electric Vehicles",
       "sourceUrl": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxObXBlR2U2Ml8tWXZkQW45dXJ4Wjd6SEtuUFJzTXprS0hhRGI4N0hVNloxcEhhR0RRWlF1TDlyT2lMTV9yclhHVTVNekJ2Z0RZTVlmYTJ1cWNlXzJ1WkZkR09YejN6d2wyTlFaWHNualNyeGk5QWQtZEFPaUNZaDE5djE2RWNpN0tCN2EyWEUxSmhvcU1LSWM4MVp5X1lvMkEwbGliRmkwUEo?oc=5",
       "publishedAt": "2026-04-21T07:00:00.000Z",
-      "collectedAt": "2026-11-16T02:07:52.290Z",
+      "collectedAt": "2026-11-17T04:28:41.068Z",
       "evidenceType": "news",
       "type": "news",
       "entityIds": [
@@ -939,37 +934,6 @@
       ],
       "companies": [
         "catl",
-        "byd"
-      ],
-      "technologyRoutes": [
-        "sodium-hard-carbon"
-      ],
-      "evidenceLevel": "low",
-      "review": "unreviewed"
-    },
-    {
-      "id": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPYmVhc19CQmhQSHlnT0ZGMmllZ3BQaTlXbVF6ek9IV2k0S3dBSjRUZmlvbEhpRlB4QXhycUJ6UzBsMnRDbzQzWjlzWENYS3o5TUhCd1VBSWRadXVKeVRQc2JMM0JmX3RNMjNxWllBZDdET1BGYVh1TWxuaU9PcWpyWXhrNmpfOVVzN2Y3X2NZMkNtdzM1alQwZnRKU3NPNDg?oc=5",
-      "title": "Why GM Will Focus On Sodium-Ion Batteries For Energy Storage - CleanTechnica",
-      "claim": "BYD blade battery sodium ion",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPYmVhc19CQmhQSHlnT0ZGMmllZ3BQaTlXbVF6ek9IV2k0S3dBSjRUZmlvbEhpRlB4QXhycUJ6UzBsMnRDbzQzWjlzWENYS3o5TUhCd1VBSWRadXVKeVRQc2JMM0JmX3RNMjNxWllBZDdET1BGYVh1TWxuaU9PcWpyWXhrNmpfOVVzN2Y3X2NZMkNtdzM1alQwZnRKU3NPNDg?oc=5",
-      "source": "CleanTechnica",
-      "sourceUrl": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPYmVhc19CQmhQSHlnT0ZGMmllZ3BQaTlXbVF6ek9IV2k0S3dBSjRUZmlvbEhpRlB4QXhycUJ6UzBsMnRDbzQzWjlzWENYS3o5TUhCd1VBSWRadXVKeVRQc2JMM0JmX3RNMjNxWllBZDdET1BGYVh1TWxuaU9PcWpyWXhrNmpfOVVzN2Y3X2NZMkNtdzM1alQwZnRKU3NPNDg?oc=5",
-      "publishedAt": "2026-06-11T07:00:00.000Z",
-      "collectedAt": "2026-11-16T02:07:52.290Z",
-      "evidenceType": "news",
-      "type": "news",
-      "entityIds": [
-        "catl",
-        "byd",
-        "fast-charge",
-        "sodium-ion",
-        "sodium-hard-carbon"
-      ],
-      "topics": [
-        "fast-charge",
-        "sodium-ion"
-      ],
-      "companies": [
         "byd"
       ],
       "technologyRoutes": [
@@ -986,7 +950,7 @@
       "source": "www.bestmag.co.uk",
       "sourceUrl": "https://news.google.com/rss/articles/CBMie0FVX3lxTFA4aWpvMERyOGVJLWo0c3h5NXFrUkExbUJQNWZOcVBPTHNXVmxWMGRObWtjVmFoQ2NEa2szSV9JSUdiNU9RSFZhUklNMzZ1Z2poOTl0QUZqNm9TSDJwaWRESmRhaFBiMjN4RlBHQnEyZGVNeUF0dW53RGhuaw?oc=5",
       "publishedAt": "2026-02-10T08:00:00.000Z",
-      "collectedAt": "2026-11-16T02:07:52.290Z",
+      "collectedAt": "2026-11-17T04:28:41.068Z",
       "evidenceType": "news",
       "type": "news",
       "entityIds": [
@@ -1012,36 +976,6 @@
       "review": "unreviewed"
     },
     {
-      "id": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNb2JQdnJJdk5JM0tONWtSdFZjV1MzMTV3Y0I3RDgxUzR0bmVLa2dNMncydm9WTWZFTmYtdmUxOGI1S2FxczRvTldHZldjZWtfaU5EeUdXS0lnVzVBeTdkZmZOZFVOMFA0NmhveFhUeFdGQWRLaklfUHhQWU5pdExmOGM4bDY3MzJYMENF?oc=5",
-      "title": "Who Makes Tesla Batteries, And Where Are They Produced? - BGR",
-      "claim": "Tesla 4680 dry electrode battery",
-      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNb2JQdnJJdk5JM0tONWtSdFZjV1MzMTV3Y0I3RDgxUzR0bmVLa2dNMncydm9WTWZFTmYtdmUxOGI1S2FxczRvTldHZldjZWtfaU5EeUdXS0lnVzVBeTdkZmZOZFVOMFA0NmhveFhUeFdGQWRLaklfUHhQWU5pdExmOGM4bDY3MzJYMENF?oc=5",
-      "source": "BGR",
-      "sourceUrl": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNb2JQdnJJdk5JM0tONWtSdFZjV1MzMTV3Y0I3RDgxUzR0bmVLa2dNMncydm9WTWZFTmYtdmUxOGI1S2FxczRvTldHZldjZWtfaU5EeUdXS0lnVzVBeTdkZmZOZFVOMFA0NmhveFhUeFdGQWRLaklfUHhQWU5pdExmOGM4bDY3MzJYMENF?oc=5",
-      "publishedAt": "2026-11-14T17:47:00.000Z",
-      "collectedAt": "2026-11-16T02:07:52.290Z",
-      "evidenceType": "news",
-      "type": "news",
-      "entityIds": [
-        "tesla",
-        "fast-charge",
-        "dry-electrode",
-        "4680"
-      ],
-      "topics": [
-        "fast-charge",
-        "dry-electrode"
-      ],
-      "companies": [
-        "tesla"
-      ],
-      "technologyRoutes": [
-        "4680"
-      ],
-      "evidenceLevel": "low",
-      "review": "unreviewed"
-    },
-    {
       "id": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNNWh1SlpHbEhmelMwYWpaYzVYOTd3WWtpLVhfeTNXVjUtTkRabXlodVc5NkRqOWVoNHd1UnR3dE9XcnRQeTM0WTVhSk9VWkMta1dqc1NVQzZWWk8yTG1WLWxVSk0zSDlTYXBqNTdLZWxfNlZsYzMtVzlJbDZKOG1YZDM4QWJFR3hKS0NzREY2UmNZc3M?oc=5",
       "title": "Tesla confirms that it finally solved its 4680 battery’s dry cathode process - Teslarati",
       "claim": "Tesla 4680 dry electrode battery",
@@ -1049,7 +983,7 @@
       "source": "Teslarati",
       "sourceUrl": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNNWh1SlpHbEhmelMwYWpaYzVYOTd3WWtpLVhfeTNXVjUtTkRabXlodVc5NkRqOWVoNHd1UnR3dE9XcnRQeTM0WTVhSk9VWkMta1dqc1NVQzZWWk8yTG1WLWxVSk0zSDlTYXBqNTdLZWxfNlZsYzMtVzlJbDZKOG1YZDM4QWJFR3hKS0NzREY2UmNZc3M?oc=5",
       "publishedAt": "2026-01-30T08:00:00.000Z",
-      "collectedAt": "2026-11-16T02:07:52.290Z",
+      "collectedAt": "2026-11-17T04:28:41.068Z",
       "evidenceType": "news",
       "type": "news",
       "entityIds": [
@@ -1081,7 +1015,7 @@
       "source": "BASENOR - Tesla Accessories",
       "sourceUrl": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOSk1CZng5MFlFM0NTRjFDbzd2UkQ1SV9RaTA1d3hmLTFJYS1IcE1zaFJxeEs5Y2h6aEtOcjkweU9oWW82X21xWDJieTVPRzV0N0hZdXhUQlR6ME9PVnNzaUZYSk9TN2x3SkM1UUM1d1dVeUtCeG9hWXhxYnJJTGpubXFfVEpIRFMtMU9URzNCZUhEX0xaYWZXMzhzTHNTZUdj?oc=5",
       "publishedAt": "2026-07-07T07:00:00.000Z",
-      "collectedAt": "2026-11-16T02:07:52.290Z",
+      "collectedAt": "2026-11-17T04:28:41.068Z",
       "evidenceType": "news",
       "type": "news",
       "entityIds": [
@@ -1111,7 +1045,7 @@
       "source": "Electrek",
       "sourceUrl": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNOUJxZXpMUnVFZ3h4T0w0bms4VDhKRUxSa0kzSnIwZ2ZIeXYzVm1QcjJQaVh0Y3JZM2swdHJYZk1DMEZIdnljSUJsRm1scDZuYU4zSkUxRUNhR2JpREhBS1VLUkgxSnEtcjFacGV2a3h5SUNIeWxKUE5DVy1JX0VCcTIxcnRUUndwclVoc0lQem15SUdtbHJQQ2JhZU1HZ3Bi?oc=5",
       "publishedAt": "2026-05-07T07:00:00.000Z",
-      "collectedAt": "2026-11-16T02:07:52.290Z",
+      "collectedAt": "2026-11-17T04:28:41.068Z",
       "evidenceType": "news",
       "type": "news",
       "entityIds": [
@@ -1143,7 +1077,7 @@
       "source": "Drive Tesla Canada",
       "sourceUrl": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOVmNGbHpzVGt4b1YydzhJU2VXWEY2VlJMX2E4Y2RQWGJIaVBzSTNQZ2d6b05FZTV2cE5Yb2ZydUlqa2plQUdJVGFVaWtoOUF1RV9mcFRQMlgxYUlZYmloajJscXZrNS0yZ3FNVl9mdl9yUnpHdE5wbHF6WXhEcHBIMGxmcDNHUWQ4dmNyaUFORUFlX0w2V0hCWGNFYkd1ZDFBZzl4eko5bFEyZlJ6c09R?oc=5",
       "publishedAt": "2026-02-02T08:00:00.000Z",
-      "collectedAt": "2026-11-16T02:07:52.290Z",
+      "collectedAt": "2026-11-17T04:28:41.068Z",
       "evidenceType": "news",
       "type": "news",
       "entityIds": [
@@ -1166,36 +1100,6 @@
       "review": "unreviewed"
     },
     {
-      "id": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNNFJVX3AxdEhHSkRxdXZqeW96ZjJHVGhHYU54bEh3VW1nVFdWUVlrNEtuYWltNjB4MVBSU1g0NE0tRDJGZFJDbWVfaE9VcUlkRkc2WDZLMGFDRDlGOVUzdG95dlVvQ1FtNDY3VlQyNzF3cHVMSThmU24yTVNIMy01RnNFWFpRdkhlTHpLOHNoUHItX25ybkNHUnlrVQ?oc=5",
-      "title": "U-turn: Tesla reinstalls its own 4680 cells in the Model Y - electrive.com",
-      "claim": "Tesla 4680 dry electrode battery",
-      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNNFJVX3AxdEhHSkRxdXZqeW96ZjJHVGhHYU54bEh3VW1nVFdWUVlrNEtuYWltNjB4MVBSU1g0NE0tRDJGZFJDbWVfaE9VcUlkRkc2WDZLMGFDRDlGOVUzdG95dlVvQ1FtNDY3VlQyNzF3cHVMSThmU24yTVNIMy01RnNFWFpRdkhlTHpLOHNoUHItX25ybkNHUnlrVQ?oc=5",
-      "source": "electrive.com",
-      "sourceUrl": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNNFJVX3AxdEhHSkRxdXZqeW96ZjJHVGhHYU54bEh3VW1nVFdWUVlrNEtuYWltNjB4MVBSU1g0NE0tRDJGZFJDbWVfaE9VcUlkRkc2WDZLMGFDRDlGOVUzdG95dlVvQ1FtNDY3VlQyNzF3cHVMSThmU24yTVNIMy01RnNFWFpRdkhlTHpLOHNoUHItX25ybkNHUnlrVQ?oc=5",
-      "publishedAt": "2026-01-29T08:00:00.000Z",
-      "collectedAt": "2026-11-16T02:07:52.290Z",
-      "evidenceType": "news",
-      "type": "news",
-      "entityIds": [
-        "tesla",
-        "fast-charge",
-        "dry-electrode",
-        "4680"
-      ],
-      "topics": [
-        "fast-charge",
-        "dry-electrode"
-      ],
-      "companies": [
-        "tesla"
-      ],
-      "technologyRoutes": [
-        "4680"
-      ],
-      "evidenceLevel": "low",
-      "review": "unreviewed"
-    },
-    {
       "id": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNTGtweW0tdHZYcmh2VWxaZF9RNDFzY3RIYkZnVk4zeEVFbW9iM0djVldtT0FVQ0lKVkFCMkVWcmNDSXBFTHN0X05WU1ZXUjlfc1lGNUl3N2lkYUNjVmtnN0toYkRUd19WaExqWDRrZXRScVdXQkFYT2xRZUc2OTBaWFJHUmFNMUdqSWpKZ3lyS0lIdVM1bGo3VTZTX25ON3ZWeUZ1aEJOU0g0RllBZUowdE1aSEkyUQ?oc=5",
       "title": "Elon Musk confirms Tesla dry cathode tech could \"significantly reduce\" battery costs - The Driven",
       "claim": "Tesla 4680 dry electrode battery",
@@ -1203,7 +1107,7 @@
       "source": "The Driven",
       "sourceUrl": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNTGtweW0tdHZYcmh2VWxaZF9RNDFzY3RIYkZnVk4zeEVFbW9iM0djVldtT0FVQ0lKVkFCMkVWcmNDSXBFTHN0X05WU1ZXUjlfc1lGNUl3N2lkYUNjVmtnN0toYkRUd19WaExqWDRrZXRScVdXQkFYT2xRZUc2OTBaWFJHUmFNMUdqSWpKZ3lyS0lIdVM1bGo3VTZTX25ON3ZWeUZ1aEJOU0g0RllBZUowdE1aSEkyUQ?oc=5",
       "publishedAt": "2026-05-27T07:00:00.000Z",
-      "collectedAt": "2026-11-16T02:07:52.290Z",
+      "collectedAt": "2026-11-17T04:28:41.068Z",
       "evidenceType": "news",
       "type": "news",
       "entityIds": [
@@ -1228,6 +1132,36 @@
       "review": "unreviewed"
     },
     {
+      "id": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNNFJVX3AxdEhHSkRxdXZqeW96ZjJHVGhHYU54bEh3VW1nVFdWUVlrNEtuYWltNjB4MVBSU1g0NE0tRDJGZFJDbWVfaE9VcUlkRkc2WDZLMGFDRDlGOVUzdG95dlVvQ1FtNDY3VlQyNzF3cHVMSThmU24yTVNIMy01RnNFWFpRdkhlTHpLOHNoUHItX25ybkNHUnlrVQ?oc=5",
+      "title": "U-turn: Tesla reinstalls its own 4680 cells in the Model Y - electrive.com",
+      "claim": "Tesla 4680 dry electrode battery",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNNFJVX3AxdEhHSkRxdXZqeW96ZjJHVGhHYU54bEh3VW1nVFdWUVlrNEtuYWltNjB4MVBSU1g0NE0tRDJGZFJDbWVfaE9VcUlkRkc2WDZLMGFDRDlGOVUzdG95dlVvQ1FtNDY3VlQyNzF3cHVMSThmU24yTVNIMy01RnNFWFpRdkhlTHpLOHNoUHItX25ybkNHUnlrVQ?oc=5",
+      "source": "electrive.com",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNNFJVX3AxdEhHSkRxdXZqeW96ZjJHVGhHYU54bEh3VW1nVFdWUVlrNEtuYWltNjB4MVBSU1g0NE0tRDJGZFJDbWVfaE9VcUlkRkc2WDZLMGFDRDlGOVUzdG95dlVvQ1FtNDY3VlQyNzF3cHVMSThmU24yTVNIMy01RnNFWFpRdkhlTHpLOHNoUHItX25ybkNHUnlrVQ?oc=5",
+      "publishedAt": "2026-01-29T08:00:00.000Z",
+      "collectedAt": "2026-11-17T04:28:41.068Z",
+      "evidenceType": "news",
+      "type": "news",
+      "entityIds": [
+        "tesla",
+        "fast-charge",
+        "dry-electrode",
+        "4680"
+      ],
+      "topics": [
+        "fast-charge",
+        "dry-electrode"
+      ],
+      "companies": [
+        "tesla"
+      ],
+      "technologyRoutes": [
+        "4680"
+      ],
+      "evidenceLevel": "low",
+      "review": "unreviewed"
+    },
+    {
       "id": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQa1BtTmR2WkVhbGllOFpuc1k5WEhZNEFtcnNxTkxncTlyblJsTV9CbW44LU9zTDUwb3VEd2VNM1ZXclVub1VmUWxjR1d4U1dPT0ZRR0g1NDZiaGM3SW9pWTRLODJSUDR4bzVCb3ctekFxVGcwRENZU2xFc2FwRGtZMzdTUkNUam01YTlfNmItdUtxclNaRVFTUi1nOE5WOHg5M3hPdHNSckxuc2xzbWZ5UkdIb2JXWHhZRVE?oc=5",
       "title": "Sakuu Explores Challenges in Tesla’s DBE Technology Production - Battery Technology",
       "claim": "Tesla 4680 dry electrode battery",
@@ -1235,7 +1169,37 @@
       "source": "Battery Technology",
       "sourceUrl": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQa1BtTmR2WkVhbGllOFpuc1k5WEhZNEFtcnNxTkxncTlyblJsTV9CbW44LU9zTDUwb3VEd2VNM1ZXclVub1VmUWxjR1d4U1dPT0ZRR0g1NDZiaGM3SW9pWTRLODJSUDR4bzVCb3ctekFxVGcwRENZU2xFc2FwRGtZMzdTUkNUam01YTlfNmItdUtxclNaRVFTUi1nOE5WOHg5M3hPdHNSckxuc2xzbWZ5UkdIb2JXWHhZRVE?oc=5",
       "publishedAt": "2026-02-05T08:00:00.000Z",
-      "collectedAt": "2026-11-16T02:07:52.290Z",
+      "collectedAt": "2026-11-17T04:28:41.068Z",
+      "evidenceType": "news",
+      "type": "news",
+      "entityIds": [
+        "tesla",
+        "fast-charge",
+        "dry-electrode",
+        "4680"
+      ],
+      "topics": [
+        "fast-charge",
+        "dry-electrode"
+      ],
+      "companies": [
+        "tesla"
+      ],
+      "technologyRoutes": [
+        "4680"
+      ],
+      "evidenceLevel": "low",
+      "review": "unreviewed"
+    },
+    {
+      "id": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQX2lKV0lZV1kxUkdiaFZ6eWt3U0NtY2RwVTlvelhSVldNRzhRWFdWYkgxelJGdUJoMmtXUHZ1UEx2YXNNU19mLWFlNzlJQWdWT1JnSExsaUJ5cmtuOFFrZmwtQmlsRVozZU1xOTM0RnNRekVaOWtpWFRFZzZyeWVaUllRN0FNV0s2dE51RGt4UTRtTEdFMXdNZ3YtQUFsc1YxOWZkazlVaTd5S1NVaHNEel9CV2VkSE9kS2dXUDEtWkxrQQ?oc=5",
+      "title": "Tesla Opens Gigafactory Berlin to Startups to Crack 4680 Battery Bottleneck - Tech Times",
+      "claim": "Tesla 4680 dry electrode battery",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQX2lKV0lZV1kxUkdiaFZ6eWt3U0NtY2RwVTlvelhSVldNRzhRWFdWYkgxelJGdUJoMmtXUHZ1UEx2YXNNU19mLWFlNzlJQWdWT1JnSExsaUJ5cmtuOFFrZmwtQmlsRVozZU1xOTM0RnNRekVaOWtpWFRFZzZyeWVaUllRN0FNV0s2dE51RGt4UTRtTEdFMXdNZ3YtQUFsc1YxOWZkazlVaTd5S1NVaHNEel9CV2VkSE9kS2dXUDEtWkxrQQ?oc=5",
+      "source": "Tech Times",
+      "sourceUrl": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQX2lKV0lZV1kxUkdiaFZ6eWt3U0NtY2RwVTlvelhSVldNRzhRWFdWYkgxelJGdUJoMmtXUHZ1UEx2YXNNU19mLWFlNzlJQWdWT1JnSExsaUJ5cmtuOFFrZmwtQmlsRVozZU1xOTM0RnNRekVaOWtpWFRFZzZyeWVaUllRN0FNV0s2dE51RGt4UTRtTEdFMXdNZ3YtQUFsc1YxOWZkazlVaTd5S1NVaHNEel9CV2VkSE9kS2dXUDEtWkxrQQ?oc=5",
+      "publishedAt": "2026-07-09T07:00:00.000Z",
+      "collectedAt": "2026-11-17T04:28:41.068Z",
       "evidenceType": "news",
       "type": "news",
       "entityIds": [
@@ -1265,7 +1229,7 @@
       "source": "YouTube search",
       "sourceUrl": "https://www.youtube.com/results?search_query=lithium%20ion%20battery%20mechanism%20explained",
       "publishedAt": null,
-      "collectedAt": "2026-11-16T02:07:52.290Z",
+      "collectedAt": "2026-11-17T04:28:41.068Z",
       "evidenceType": "video",
       "type": "video",
       "entityIds": [],
@@ -1283,7 +1247,7 @@
       "source": "YouTube search",
       "sourceUrl": "https://www.youtube.com/results?search_query=CATL%20BYD%20Tesla%20battery%20technology",
       "publishedAt": null,
-      "collectedAt": "2026-11-16T02:07:52.290Z",
+      "collectedAt": "2026-11-17T04:28:41.068Z",
       "evidenceType": "video",
       "type": "video",
       "entityIds": [
@@ -1309,7 +1273,7 @@
       "source": "YouTube search",
       "sourceUrl": "https://www.youtube.com/results?search_query=sodium%20ion%20battery%20explained",
       "publishedAt": null,
-      "collectedAt": "2026-11-16T02:07:52.290Z",
+      "collectedAt": "2026-11-17T04:28:41.068Z",
       "evidenceType": "video",
       "type": "video",
       "entityIds": [
@@ -1334,7 +1298,7 @@
       "source": "YouTube search",
       "sourceUrl": "https://www.youtube.com/results?search_query=solid%20state%20battery%20latest",
       "publishedAt": null,
-      "collectedAt": "2026-11-16T02:07:52.290Z",
+      "collectedAt": "2026-11-17T04:28:41.068Z",
       "evidenceType": "video",
       "type": "video",
       "entityIds": [
@@ -1356,7 +1320,7 @@
       "source": "YouTube search",
       "sourceUrl": "https://www.youtube.com/results?search_query=lithium%20ion%20battery%20recycling%20process%20black%20mass",
       "publishedAt": null,
-      "collectedAt": "2026-11-16T02:07:52.290Z",
+      "collectedAt": "2026-11-17T04:28:41.068Z",
       "evidenceType": "video",
       "type": "video",
       "entityIds": [
@@ -1389,7 +1353,7 @@
       "source": "Google Patents search",
       "sourceUrl": "https://patents.google.com/?q=(CATL%20fast%20charging%20battery%20electrode%20electrolyte)",
       "publishedAt": null,
-      "collectedAt": "2026-11-16T02:07:52.290Z",
+      "collectedAt": "2026-11-17T04:28:41.068Z",
       "evidenceType": "patent",
       "type": "patent-search",
       "entityIds": [
@@ -1419,7 +1383,7 @@
       "source": "Google Patents search",
       "sourceUrl": "https://patents.google.com/?q=(BYD%20blade%20battery%20pack%20thermal%20safety)",
       "publishedAt": null,
-      "collectedAt": "2026-11-16T02:07:52.290Z",
+      "collectedAt": "2026-11-17T04:28:41.068Z",
       "evidenceType": "patent",
       "type": "patent-search",
       "entityIds": [
@@ -1447,7 +1411,7 @@
       "source": "Google Patents search",
       "sourceUrl": "https://patents.google.com/?q=(Tesla%20dry%20electrode%204680%20battery)",
       "publishedAt": null,
-      "collectedAt": "2026-11-16T02:07:52.290Z",
+      "collectedAt": "2026-11-17T04:28:41.068Z",
       "evidenceType": "patent",
       "type": "patent-search",
       "entityIds": [
@@ -1475,7 +1439,7 @@
       "source": "Google Patents search",
       "sourceUrl": "https://patents.google.com/?q=(sodium%20ion%20battery%20hard%20carbon%20electrolyte)",
       "publishedAt": null,
-      "collectedAt": "2026-11-16T02:07:52.290Z",
+      "collectedAt": "2026-11-17T04:28:41.068Z",
       "evidenceType": "patent",
       "type": "patent-search",
       "entityIds": [
@@ -1505,7 +1469,7 @@
       "source": "Google Patents search",
       "sourceUrl": "https://patents.google.com/?q=(battery%20recycling%20black%20mass%20hydrometallurgy%20direct%20regeneration)",
       "publishedAt": null,
-      "collectedAt": "2026-11-16T02:07:52.290Z",
+      "collectedAt": "2026-11-17T04:28:41.068Z",
       "evidenceType": "patent",
       "type": "patent-search",
       "entityIds": [
