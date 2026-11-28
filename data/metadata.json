@@ -1,18 +1,12 @@
 {
-  "collectedAt": "2026-11-27T04:15:08.134Z",
+  "collectedAt": "2026-11-28T03:54:04.676Z",
   "sources": {
     "papers": "OpenAlex API",
     "news": "Google News RSS",
     "videos": "YouTube search links",
     "patents": "Google Patents search links"
   },
-  "errors": [
-    {
-      "source": "Google News RSS",
-      "query": "China lithium battery recycling black mass",
-      "message": "429 Too Many Requests: https://news.google.com/rss/search?q=China%20lithium%20battery%20recycling%20black%20mass&hl=en-US&gl=US&ceid=US:en"
-    }
-  ],
+  "errors": [],
   "taxonomy": {
     "topics": [
       "fast-charge",
